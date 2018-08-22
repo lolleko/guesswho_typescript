@@ -1,0 +1,235 @@
+"guesswho_typescript"
+{
+	"title"			"Guess Who TS"
+	"menusystem"	"1"
+	"base"			"base"
+	"workshopid"	"480998235"
+
+	"settings"
+	{
+		1
+		{
+			"name"		"gw_minseekers"
+			"text"		"Minimum Hunters"
+			"help"		"The minimum Amount of Hunters before the game starts."
+			"type"		"Numeric"
+			"default"	"1"
+		}
+		2
+		{
+			"name"		"gw_minhiders"
+			"text"		"Minimum Hiders"
+			"help"		"The minimum Amount of Hiders before the game starts."
+			"type"		"Numeric"
+			"default"	"1"
+		}
+		3
+		{
+			"name"		"gw_maxrounds"
+			"text"		"Amount of rounds"
+			"help"		"The Amount of Rounds before a map change."
+			"type"		"Numeric"
+			"default"	"8"
+		}
+		4
+		{
+			"name"		"gw_basewalkeramount"
+			"text"		"The base amount of NPCs"
+			"help"		"The base amount (minimum) of NPCs that spawn in a round."
+			"type"		"Numeric"
+			"default"	"15"
+		}
+		5
+		{
+			"name"		"gw_pregameduration"
+			"text"		"The delay after map change"
+			"help"		"The duration of the pause after a map change in seconds."
+			"type"		"Numeric"
+			"default"	"20"
+		}
+		6
+		{
+			"name"		"gw_roundduration"
+			"text"		"The round duration"
+			"help"		"The duration of a round (Seeking) in seconds"
+			"type"		"Numeric"
+			"default"	"300"
+		}
+		7
+		{
+			"name"		"gw_hideduration"
+			"text"		"The hide duration"
+			"help"		"The time that the hiding team gets to disappear in seconds."
+			"type"		"Numeric"
+			"default"	"30"
+		}
+		8
+		{
+			"name"		"gw_postroundduration"
+			"text"		"The post round duration"
+			"help"		"The duration for the post round in seconds."
+			"type"		"Numeric"
+			"default"	"5"
+		}
+		9
+		{
+			"name"		"gw_damageonfailguess"
+			"text"		"Damage on Fail guess"
+			"help"		"The damage a hunter receives if he hits an NPC and not a player."
+			"type"		"Numeric"
+			"default"	"10"
+		}
+		10
+		{
+			"name"		"gw_taunt_voice_enabled"
+			"text"		"Voice taunts enabled"
+			"help"		"Sets if voice taunts are enabled."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		11
+		{
+			"name"		"gw_taunt_voice_seeker_enabled"
+			"text"		"Voice taunts seeker enabled"
+			"help"		"Sets if voice taunts for seekers are enabled."
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		12
+		{
+			"name"		"gw_taunt_voice_cooldown"
+			"text"		"Voice taunts cooldown"
+			"help"		"Sets how long the cooldown on voice taunts should be (prevents spaming)."
+			"type"		"Numeric"
+			"default"	"10"
+		}
+		13
+		{
+			"name"		"gw_taunt_body_enabled"
+			"text"		"Body taunts enabled"
+			"help"		"Sets if body taunts are enabled."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		14
+		{
+			"name"		"gw_walkerperplayer"
+			"text"		"Extra NPCs per player."
+			"help"		"The amount of NPCs to add for each player on the server."
+			"type"		"Numeric"
+			"default"	"1"
+		}
+		15
+		{
+			"name"		"gw_abilities_enabled"
+			"text"		"Enable abilities"
+			"help"		"Should hiding have abilities or not."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		16
+		{
+			"name"		"gw_disguise_seeker"
+			"text"		"Disguise seekers"
+			"help"		"Wether seekers should have NPC models or not."
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		17
+		{
+			"name"		"gw_changemodel_hiding"
+			"text"		"Allow model change"
+			"help"		"Wether hiding can change their model or not."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		18
+		{
+			"name"		"gw_target_finder_enabled"
+			"text"		"Target Finder"
+			"help"		"Wether the target finder is enabled or not."
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		19
+		{
+			"name"		"gw_target_finder_threshold"
+			"text"		"Target Finder Threshold"
+			"help"		"The distance before the target finder will display nearby"
+			"type"		"Numeric"
+			"default"	"700"
+		}
+		20
+		{
+			"name"		"gw_touches_enabled"
+			"text"		"Touch for Weapon"
+			"help"		"Wether touching for weapons is enabled."
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		21
+		{
+			"name"		"gw_touches_required"
+			"text"		"Touches required"
+			"help"		"The amount of seeker touches that are required for a hider to receive a new weapon."
+			"type"		"Numeric"
+			"default"	"3"
+		}
+		22
+		{
+			"name"		"gw_propfreeze_enabled"
+			"text"		"Freeze props"
+			"help"		"Shoud props freeze or not."
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		23
+		{
+			"name"		"gw_easter_egg_hunt_enabled"
+			"text"		"Enable Easter Event"
+			"help"		"Should easter eggs be spawned or not"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+		24
+		{
+			"name"		"gw_hiding_walk_speed"
+			"text"		"Hiding Walk Speed"
+			"help"		"Hiding Walk Speed"
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		25
+		{
+			"name"		"gw_hiding_run_speed"
+			"text"		"Hiding Run Speed"
+			"help"		"Hiding Run Speed"
+			"type"		"Numeric"
+			"default"	"200"
+		}
+		26
+		{
+			"name"		"gw_seeker_walk_speed"
+			"text"		"Seeker Walk Speed"
+			"help"		"Seeker Walk Speed"
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		27
+		{
+			"name"		"gw_seeker_run_speed"
+			"text"		"Seeker Run Speed"
+			"help"		"Seeker Run Speed"
+			"type"		"Numeric"
+			"default"	"200"
+		}
+		28
+		{
+			"name"		"gw_double_jump_enabled"
+			"text"		"Double Jump"
+			"help"		"Wether Double Jumps are enabled or not"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+	}
+}
