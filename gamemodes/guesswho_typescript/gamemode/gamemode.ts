@@ -1,15 +1,29 @@
 import { GWGamerules } from "../entities/entities/gw_gamerules";
 
-import { GWClassNames } from "./classnames";
+import { GWConfigManager, GWConfigData } from "./configmanager"
+import { GWClassName } from "./classname";
 import { GWTeam } from "./team";
 
 AddCSLuaFile();
 
 /** !Extension GM */
-class GWGamemode extends GM {
-    private Gamerules: GWGamerules;
+export class GWGamemode extends Gamemode {
+    private gamerules: GWGamerules;
+    private configManager: GWConfigManager;
 
-    protected CreateTeams(): void {
+    public get Gamerules(): GWGamerules {
+        return this.gamerules;
+    }
+
+    public get ConfigManager(): GWConfigManager {
+        return this.configManager;
+    }
+
+    public get ConfigData(): GWConfigData {
+        return this.configManager.Data;
+    }
+
+    public CreateTeams(): void {
         // TODO color in cfg or gamerules
         team.SetUp(GWTeam.HIDERS, "Hiding", Color(0, 0, 0));
         team.SetClass(GWTeam.HIDERS, "player_hiding");
@@ -32,12 +46,14 @@ class GWGamemode extends GM {
         team.SetSpawnPoint(TEAM.TEAM_SPECTATOR, "worldspawn");
     }
 
-    protected InitPostEntity(): void {
+    public InitPostEntity(): void {
         print("Creating gamerules");
         if (SERVER) {
-            this.Gamerules = ents.Create(GWClassNames.ENT_GAMERULES) as GWGamerules;
+            this.gamerules = ents.Create(GWClassName.ENT_GAMERULES) as GWGamerules;
         } else {
-            this.Gamerules = ents.FindByClass(GWClassNames.ENT_GAMERULES) as GWGamerules;
+            this.gamerules = ents.FindByClass(GWClassName.ENT_GAMERULES)[0] as GWGamerules;
         }
+
+        this.configManager = new GWConfigManager();
     }
 }

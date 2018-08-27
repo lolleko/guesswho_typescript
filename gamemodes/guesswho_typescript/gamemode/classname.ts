@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-export enum GWClassNames {
+export enum GWClassName {
   NPC_WALKER = "gw_npc_walker",
   HIDER_PLAYER_CLASS = "gw_player_hider",
   SEEKER_PLAYER_CLASS = "gw_player_seeker",

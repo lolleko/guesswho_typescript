@@ -36,14 +36,17 @@ function __TS__ArrayPush(arr,...)
 end
 
 local exports = exports or {}
-local classnames0 = include("../../gamemode/classnames.lua")
-local GWClassNames = classnames0.GWClassNames
+local classname0 = include("../../gamemode/classname.lua")
+local GWClassName = classname0.GWClassName
 local gamestate1 = include("../../gamemode/gamestate.lua")
 local GWGameState = gamestate1.GWGameState
 local team2 = include("../../gamemode/team.lua")
 local GWTeam = team2.GWTeam
 AddCSLuaFile()
 ENT.Type = "point"
+function ENT.get__SpawnPoints(self)
+    return self.spawnPoints
+end
 function ENT.get__SettingBaseWalkerAmount(self)
     return GetConVar("gw_basewalkeramount"):GetInt()
 end
@@ -72,19 +75,19 @@ function ENT.get__SettingMinSeekers(self)
     return GetConVar("gw_minseekers"):GetInt()
 end
 function ENT.get__GameTimerEndTime(self)
-    return self["dt"].GameTimerEndTime
+    return self:GetDTFloat(0)
 end
 function ENT.get__GameTime(self)
     return self:get__GameTimerEndTime()-CurTime()
 end
 function ENT.get__GameState(self)
-    return self["dt"].GameState
+    return self:GetDTInt(0)
 end
 function ENT.set__GameTimerEndTime(self,time)
-    self["dt"].GameTimerEndTime = time
+    self:SetDTFloat(0,time)
 end
 function ENT.set__GameState(self,state)
-    self["dt"].GameState = state
+    self:SetDTInt(0,state)
 end
 function ENT.SetupDataTables(self)
     self:DTVar("Float",0,"GameTimerEndTime")
@@ -104,7 +107,7 @@ function ENT.Think(self)
     if SERVER then
         if self:get__GameState()==GWGameState.WAITING then
             if (team.NumPlayers(GWTeam.HIDERS)<self:get__SettingMinHiders()) or (team.NumPlayers(GWTeam.SEEKERS)<self:get__SettingMinSeekers()) then
-                __TS__ArrayForEach((ents.FindByClass(GWClassNames.NPC_WALKER)), function(ent) return ent:Remove() end)
+                __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(ent) return ent:Remove() end)
                 self:NextThink(CurTime()+1)
                 print("Wating")
                 return true
@@ -116,7 +119,7 @@ function ENT.Think(self)
     return false
 end
 function ENT.UpdateTransmitState(self)
-    return TRANSMIT_ALWAYS
+    return TRANSMIT.TRANSMIT_ALWAYS
 end
 function ENT.HandlePlayerDeath(self,victim,inflictor,attacker)
     local playersOnVictimTeam = team.GetPlayers(victim:Team())
@@ -133,16 +136,16 @@ function ENT.HandleWaiting(self)
 end
 function ENT.HandleCreating(self)
     self:set__GameState(GWGameState.CREATING)
-    self.WalkerCount = 0
+    self.walkerCount = 0
     local playerCount = player.GetCount()
 
-    self.MaxWalkers = (self:get__SettingBaseWalkerAmount()+(playerCount*self:get__SettingWalkerPerPly()))
-    if #self.SpawnPoints>=self.MaxWalkers then
+    self.maxWalkers = (self:get__SettingBaseWalkerAmount()+(playerCount*self:get__SettingWalkerPerPly()))
+    if #self.spawnPoints>=self.maxWalkers then
         local walkersSpawned = self:SpawnNPCWave()
 
         MsgN("GW Spawned ",walkersSpawned," NPCs in 1 wave.")
     else
-        local spawnRounds = math.floor(self.MaxWalkers/#self.SpawnPoints)
+        local spawnRounds = math.floor(self.maxWalkers/#self.spawnPoints)
 
         self:set__GameTimerEndTime((CurTime()+(spawnRounds*5)))
         local wave = 0
@@ -190,20 +193,20 @@ end
 function ENT.UpdateSpawnpoints(self)
     local spawnPointClasses = {"info_player_start","info_player_deathmatch","info_player_combine","info_player_rebel","info_player_counterterrorist","info_player_terrorist","info_player_axis","info_player_allies","gmod_player_start","info_player_teamspawn","ins_spawnpoint","aoc_spawnpoint","dys_spawn_point","info_player_pirate","info_player_viking","info_player_knight","diprip_start_team_blue","diprip_start_team_red","info_player_red","info_player_blue","info_player_coop","info_player_human","info_player_zombie","info_player_deathmatch","info_player_zombiemaster"}
 
-    self.SpawnPoints = {}
-    __TS__ArrayForEach(spawnPointClasses, function(sp) return __TS__ArrayPush(self.SpawnPoints, unpack((ents.FindByClass(sp)))) end)
+    self.spawnPoints = {}
+    __TS__ArrayForEach(spawnPointClasses, function(sp) return __TS__ArrayPush(self.spawnPoints, unpack(ents.FindByClass(sp))) end)
     local rand = math.random
 
-    local n = #self.SpawnPoints-1
+    local n = #self.spawnPoints-1
 
     while n>2 do
         do
             local k = rand(1,n)
 
-            local temp = self.SpawnPoints[n+1]
+            local temp = self.spawnPoints[n+1]
 
-            self.SpawnPoints[n+1] = self.SpawnPoints[k+1]
-            self.SpawnPoints[k+1] = temp
+            self.spawnPoints[n+1] = self.spawnPoints[k+1]
+            self.spawnPoints[k+1] = temp
             n = (n-1)
         end
         ::__continue1::
@@ -212,16 +215,16 @@ end
 function ENT.SpawnNPCWave(self)
     local spawnedWalkers = 0
 
-    __TS__ArrayForEach(self.SpawnPoints, function(sp)
-        if self.WalkerCount<self.MaxWalkers then
+    __TS__ArrayForEach(self.spawnPoints, function(sp)
+        if self.walkerCount<self.maxWalkers then
             local mins = sp:GetPos()+Vector(-16,-16,0)
 
             local maxs = sp:GetPos()+Vector(16,16,64)
 
-            local occupied = __TS__ArraySome((ents.FindInBox(mins,maxs)), function(ent) return ent:GetClass()==GWClassNames.NPC_WALKER end)
+            local occupied = __TS__ArraySome(ents.FindInBox(mins,maxs), function(ent) return ent:GetClass()==GWClassName.NPC_WALKER end)
 
             if (not occupied) then
-                local walker = ents.Create(GWClassNames.NPC_WALKER)
+                local walker = ents.Create(GWClassName.NPC_WALKER)
 
                 if IsValid(walker) then
                     walker:SetPos(sp:GetPos())
@@ -233,7 +236,7 @@ function ENT.SpawnNPCWave(self)
         end
     end
 )
-    self.WalkerCount = (self.WalkerCount+spawnedWalkers)
+    self.walkerCount = (self.walkerCount+spawnedWalkers)
     return spawnedWalkers
 end
 return exports

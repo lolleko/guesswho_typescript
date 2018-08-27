@@ -1,4 +1,4 @@
-import { GWClassNames } from "../../gamemode/classnames";
+import { GWClassName } from "../../gamemode/classname";
 import { GWGameState } from "../../gamemode/gamestate";
 import { GWTeam } from "../../gamemode/team";
 
@@ -8,11 +8,15 @@ AddCSLuaFile();
 export class GWGamerules extends Entity {
     public Type: string = "point";
 
-    private SpawnPoints: Entity[];
+    public get SpawnPoints(): Entity[] {
+        return this.spawnPoints;
+    }
 
-    private WalkerCount: number;
+    private spawnPoints: Entity[];
 
-    private MaxWalkers: number;
+    private walkerCount: number;
+
+    private maxWalkers: number;
 
     public get SettingBaseWalkerAmount(): number {
         return GetConVar("gw_basewalkeramount").GetInt();
@@ -43,11 +47,11 @@ export class GWGamerules extends Entity {
     }
 
     private get GameTimerEndTime(): number {
-        return this["dt"].GameTimerEndTime;
+        return this.GetDTFloat(0);
     }
 
     private set GameTimerEndTime(time: number) {
-        this["dt"].GameTimerEndTime = time;
+        this.SetDTFloat(0, time);
     }
 
     public get GameTime(): number {
@@ -55,11 +59,11 @@ export class GWGamerules extends Entity {
     }
 
     public get GameState(): GWGameState {
-        return this["dt"].GameState;
+        return this.GetDTInt(0);
     }
 
     public set GameState(state: GWGameState) {
-        this["dt"].GameState = state;
+        this.SetDTInt(0, state);
     }
 
     protected SetupDataTables(): void {
@@ -88,7 +92,7 @@ export class GWGamerules extends Entity {
             if (this.GameState === GWGameState.WAITING) {
                 if (team.NumPlayers(GWTeam.HIDERS) < this.SettingMinHiders ||
                     team.NumPlayers(GWTeam.SEEKERS) < this.SettingMinSeekers) {
-                    (ents.FindByClass(GWClassNames.NPC_WALKER) as Entity[]).forEach(ent => ent.Remove());
+                    ents.FindByClass(GWClassName.NPC_WALKER).forEach(ent => ent.Remove());
                     this.NextThink(CurTime() + 1);
                     print("Wating");
                     return true;
@@ -121,17 +125,17 @@ export class GWGamerules extends Entity {
     private HandleCreating(): void {
         this.GameState = GWGameState.CREATING;
 
-        this.WalkerCount = 0;
+        this.walkerCount = 0;
 
         const playerCount = player.GetCount();
 
-        this.MaxWalkers = this.SettingBaseWalkerAmount + (playerCount * this.SettingWalkerPerPly);
+        this.maxWalkers = this.SettingBaseWalkerAmount + (playerCount * this.SettingWalkerPerPly);
 
-        if (this.SpawnPoints.length >= this.MaxWalkers) {
+        if (this.spawnPoints.length >= this.maxWalkers) {
             const walkersSpawned = this.SpawnNPCWave();
             MsgN("GW Spawned ", walkersSpawned, " NPCs in 1 wave.");
         } else {
-            const spawnRounds = math.floor(this.MaxWalkers / this.SpawnPoints.length);
+            const spawnRounds = math.floor(this.maxWalkers / this.spawnPoints.length);
             this.GameTimerEndTime = CurTime() + spawnRounds * 5;
             for (let wave = 0; wave <= spawnRounds; wave++) {
                 timer.Simple(wave * 5, () => {
@@ -199,34 +203,34 @@ export class GWGamerules extends Entity {
             "info_player_zombiemaster",
         ];
 
-        this.SpawnPoints = [];
+        this.spawnPoints = [];
 
-        spawnPointClasses.forEach(sp => this.SpawnPoints.push(...(ents.FindByClass(sp) as Entity[])));
+        spawnPointClasses.forEach(sp => this.spawnPoints.push(...ents.FindByClass(sp)));
 
         // fast schuffle
         const rand = math.random;
-        let n = this.SpawnPoints.length - 1;
+        let n = this.spawnPoints.length - 1;
 
         while (n > 2) {
             const k = rand(1, n);  // 1 <= k <= n
 
-            const temp = this.SpawnPoints[n];
-            this.SpawnPoints[n] = this.SpawnPoints[k];
-            this.SpawnPoints[k] = temp;
+            const temp = this.spawnPoints[n];
+            this.spawnPoints[n] = this.spawnPoints[k];
+            this.spawnPoints[k] = temp;
             n = n - 1;
         }
     }
 
     private SpawnNPCWave(): number {
         let spawnedWalkers = 0;
-        this.SpawnPoints.forEach(sp => {
-            if (this.WalkerCount < this.MaxWalkers) {
-                const mins: Vector = sp.GetPos() as any + new Vector(-16, -16, 0) as any;
-                const maxs: Vector = sp.GetPos() as any + new Vector(16, 16, 64) as any;
+        this.spawnPoints.forEach(sp => {
+            if (this.walkerCount < this.maxWalkers) {
+                const mins: Vector = sp.GetPos() as any + new Vector(-16, -16, 0);
+                const maxs: Vector = sp.GetPos() as any + new Vector(16, 16, 64);
                 const occupied =
-                    (ents.FindInBox(mins, maxs) as Entity[]).some(ent => ent.GetClass() === GWClassNames.NPC_WALKER);
+                    ents.FindInBox(mins, maxs).some(ent => ent.GetClass() === GWClassName.NPC_WALKER);
                 if (!occupied) {
-                    const walker = ents.Create(GWClassNames.NPC_WALKER);
+                    const walker = ents.Create(GWClassName.NPC_WALKER);
                     if (IsValid(walker)) {
                         walker.SetPos(sp.GetPos());
                         walker.Spawn();
@@ -236,7 +240,7 @@ export class GWGamerules extends Entity {
                 }
             }
         });
-        this.WalkerCount += spawnedWalkers;
+        this.walkerCount += spawnedWalkers;
         return spawnedWalkers;
     }
 }
