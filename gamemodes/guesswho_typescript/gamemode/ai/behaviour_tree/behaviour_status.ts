@@ -1,4 +1,4 @@
-export enum BehaviourStatus {
+enum BehaviourStatus {
     Success,
     Running,
     Failure,

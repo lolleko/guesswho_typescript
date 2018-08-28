@@ -1,26 +1,11 @@
-import { GWGamerules } from "../entities/entities/gw_gamerules";
-
-import { GWConfigManager, GWConfigData } from "./configmanager"
-import { GWClassName } from "./classname";
-import { GWTeam } from "./team";
-
 AddCSLuaFile();
 
 /** !Extension GM */
-export class GWGamemode extends Gamemode {
+class GWGamemode extends Gamemode {
     private gamerules: GWGamerules;
-    private configManager: GWConfigManager;
 
     public get Gamerules(): GWGamerules {
         return this.gamerules;
-    }
-
-    public get ConfigManager(): GWConfigManager {
-        return this.configManager;
-    }
-
-    public get ConfigData(): GWConfigData {
-        return this.configManager.Data;
     }
 
     public CreateTeams(): void {
@@ -50,10 +35,9 @@ export class GWGamemode extends Gamemode {
         print("Creating gamerules");
         if (SERVER) {
             this.gamerules = ents.Create(GWClassName.ENT_GAMERULES) as GWGamerules;
+            GWConfigManager.Setup();
         } else {
             this.gamerules = ents.FindByClass(GWClassName.ENT_GAMERULES)[0] as GWGamerules;
         }
-
-        this.configManager = new GWConfigManager();
     }
 }

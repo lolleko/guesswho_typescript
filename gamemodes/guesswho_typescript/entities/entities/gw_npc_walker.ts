@@ -1,13 +1,10 @@
-import { GWGamemode } from "../../gamemode/gamemode";
-
 AddCSLuaFile();
 
-const eyeGlow = new IMaterial( "sprites/redglow1" )
-const white = Color( 255, 255, 255, 255 )
+const eyeGlow = new IMaterial( "sprites/redglow1" );
+const white = Color( 255, 255, 255, 255 );
 
 /** !Extension ENT */
-export class GWNPCWalker extends NextBot {
-    public Base: string = "base_nextbot";
+class GWNPCWalker extends NextBot {
 
     public get LastAct(): ACT {
         return this.GetDTInt(0);
@@ -32,6 +29,7 @@ export class GWNPCWalker extends NextBot {
     public set WalkerModelIndex(index: number) {
         this.SetDTInt(2, index);
     }
+    public Base: string = "base_nextbot";
 
     private walkerColor: Vector;
 
@@ -53,6 +51,48 @@ export class GWNPCWalker extends NextBot {
 
     private stuckPos: Vector;
 
+    public MoveSomeWhere(distance: number = 1000): void {
+        this.loco.SetDesiredSpeed( 100 );
+        const navs = navmesh.Find(this.GetPos(), distance, 120, 120);
+        const nav = navs[math.random(navs.length) - 1];
+
+        if (!IsValid(nav)) {
+            return;
+        }
+        if (nav.IsUnderwater()) {
+            return;
+        }
+        const pos = nav.GetRandomPoint();
+        const maxAge = math.Clamp(pos.Distance(this.GetPos()) / 120, 0.1, 10);
+        this.MoveToPos( pos, { tolerance: 30, maxage: maxAge, lookahead: 10, repath: 2 });
+    }
+
+    public MoveToSpot(type: string): void {
+        const pos = this.FindSpot( "random", { type, radius: 5000 } );
+        if ( pos ) {
+            const nav = navmesh.GetNavArea(pos, 20);
+            if (!IsValid(nav)) {
+                return;
+            }
+            if (!nav.IsUnderwater()) {
+                this.loco.SetDesiredSpeed( 200 );
+                this.MoveToPos( pos, { tolerance: 30, lookahead: 10, repath: 2 } );
+            }
+        }
+    }
+
+    public Sit(): void {
+        // self:PlaySequenceAndWait( "idle_to_sit_ground" ) //broken for clients so removed
+        this.SetSequence( "sit_zen" );
+        this.isSitting = true;
+        this.SetCollisionBounds( new Vector(-8, -8, 0), new Vector(8, 8, 36) );
+        coroutine.wait( math.Rand(10, 60) );
+        this.SetCollisionBounds( new Vector(-8, -8, 0), new Vector(8, 8, 70) );
+        this.isSitting = false;
+        // self:PlaySequenceAndWait( "sit_ground_to_idle" )
+        // coroutine.wait( math.Rand(0,1.5) )
+    }
+
     protected SetupDataTables(): void {
         this.DTVar("Int", 0, "LastAct");
         this.DTVar("Int", 1, "WalkerColorIndex");
@@ -60,15 +100,16 @@ export class GWNPCWalker extends NextBot {
     }
 
     protected Initialize(): void {
-        const models = (GM as GWGamemode).ConfigData.HiderModels;
+        const models = GWConfigManager.GetInstance().Data.HiderModels;
 
         if (SERVER) {
+            PrintTable(models);
             this.WalkerModelIndex = math.random(models.length) - 1;
         }
 
         this.SetModel(models[this.WalkerModelIndex]);
 
-        const walkerColors = (GM as GWGamemode).ConfigData.WalkerColors;
+        const walkerColors = GWConfigManager.GetInstance().Data.WalkerColors;
 
         if (SERVER) {
             this.WalkerColorIndex = math.random(walkerColors.length) - 1;
@@ -101,17 +142,17 @@ export class GWNPCWalker extends NextBot {
             rightEye = this.GetAttachment(this.LookupAttachment("right_eye"));
         }
 
-        let leftEyePos: Vector;
-        let rightEyePos: Vector;
+        let leftEyePos: Vector | undefined;
+        let rightEyePos: Vector | undefined;
 
         if (leftEye && rightEye) {
             leftEyePos = leftEye.Pos as any + this.GetForward();
             rightEyePos = rightEye.Pos as any + this.GetForward();
         } else {
-            let eyes = this.GetAttachment(this.LookupAttachment("eyes"));
+            const eyes = this.GetAttachment(this.LookupAttachment("eyes"));
             if (eyes) {
-                leftEyePos = (this.GetRight() as any) * -1.5 + (this.GetForward() as any) * 0.5 as any
-                rightEyePos = (this.GetRight() as any) * 1.5 + (this.GetForward() as any) * 0.5 as any
+                leftEyePos = (this.GetRight() as any) * -1.5 + (this.GetForward() as any) * 0.5 as any;
+                rightEyePos = (this.GetRight() as any) * 1.5 + (this.GetForward() as any) * 0.5 as any;
             }
         }
 
@@ -124,18 +165,20 @@ export class GWNPCWalker extends NextBot {
 
     protected Think(): boolean {
         if (SERVER) {
-            let doors = ents.FindInSphere(this.GetPos(), 60);
+            const doors = ents.FindInSphere(this.GetPos(), 60);
             for (const door of doors) {
                 const doorClass = door.GetClass();
-                if (doorClass === "func_{or" || doorClass === "func_{or_rotating" || doorClass === "prop_{or_rotating") {
+                if (doorClass === "func_door"
+                    || doorClass === "func_door_rotating"
+                    || doorClass === "prop_door_rotating") {
                     door.Fire("Unlock", "", 0);
-                    door.Fire("Open", "", 0.01)
+                    door.Fire("Open", "", 0.01);
                     door.SetCollisionGroup(COLLISION_GROUP.COLLISION_GROUP_DEBRIS);
                 }
             }
             if (this.isStuck && CurTime() > this.stuckTime + 20 && this.stuckPos.DistToSqr(this.GetPos()) < 25) {
-                const spawnPoints = (GM as GWGamemode).Gamerules.SpawnPoints
-                const spawnPoint = spawnPoints[math.random(spawnPoints.length)-1].GetPos();
+                const spawnPoints = (GAMEMODE as GWGamemode).Gamerules.SpawnPoints;
+                const spawnPoint = spawnPoints[math.random(spawnPoints.length) - 1].GetPos();
                 this.SetPos(spawnPoint);
                 this.isStuck = false;
                 MsgN(`Nextbot [${tostring(this.EntIndex())}][${this.GetClass()}]` +
@@ -148,7 +191,7 @@ export class GWNPCWalker extends NextBot {
             if (!this.isJumping && this.GetSolidMask() === MASK.MASK_NPCSOLID_BRUSHONLY) {
                 const entsInBox = ents.FindInBox(this.GetPos() as any + new Vector( -16, -16, 0 ),
                                                  this.GetPos() as any + new Vector( 16, 16, 70 ));
-                const occupied = entsInBox.some(ent => ent.GetClass() == "npc_walker" && ent != this);
+                const occupied = entsInBox.some(ent => ent.GetClass() === "npc_walker" && ent !== this);
                 if (!occupied) {
                     this.SetSolidMask(MASK.MASK_NPCSOLID);
                 }
@@ -160,65 +203,21 @@ export class GWNPCWalker extends NextBot {
     protected RunBehaviour(): void {
         while (true) {
             // Scatter them after spawn
-            this.MoveSomeWhere(10000)
+            this.MoveSomeWhere(10000);
             while ( true ) {
-                let rand = math.random(1,100)
+                const rand = math.random(1, 100);
                 if (rand > 0 && rand < 10) {
-                    this.MoveToSpot( "hiding" )
-                    coroutine.wait(math.random(1,10))
+                    this.MoveToSpot( "hiding" );
+                    coroutine.wait(math.random(1, 10));
                 } else if (rand > 10 && rand < 15) {
-                    this.Sit()
-                    coroutine.wait(1)
+                    this.Sit();
+                    coroutine.wait(1);
                 } else {
-                    this.MoveSomeWhere()
-                    coroutine.wait(1)
+                    this.MoveSomeWhere();
+                    coroutine.wait(1);
                 }
             }
         }
     }
 
-    public MoveSomeWhere(distance: number = 1000) {
-        this.loco.SetDesiredSpeed( 100 );
-        const navs = navmesh.Find(this.GetPos(), distance, 120, 120);
-        let nav = navs[math.random(0, navs.length) - 1];
-        if (!IsValid(nav)) {
-            return;
-        }
-        if (nav.IsUnderwater()){
-            return;
-        }
-        const pos = nav.GetRandomPoint();
-        const maxAge = math.Clamp(pos.Distance(this.GetPos()) / 120, 0.1,10);
-        this.MoveToPos( pos, { tolerance: 30, maxage: maxAge, lookahead: 10, repath: 2 })
-    }
-
-    public MoveToSpot(type: string): void {
-        let pos = this.FindSpot( "random", { type: type, radius: 5000 } )
-        if ( pos ) {
-            const nav = navmesh.GetNavArea(pos, 20)
-            if (!IsValid(nav)) {
-                return;
-            }
-            if (!nav.IsUnderwater()) {
-                this.loco.SetDesiredSpeed( 200 )
-                this.MoveToPos( pos, { tolerance: 30, lookahead: 10, repath: 2 } )
-            }
-        }
-    }
-
-    public Sit(): void {
-        //self:PlaySequenceAndWait( "idle_to_sit_ground" ) //broken for clients so removed
-        this.SetSequence( "sit_zen" )
-        this.isSitting = true
-        this.SetCollisionBounds( new Vector(-8,-8,0), new Vector(8,8,36) )
-        coroutine.wait( math.Rand(10,60) )
-        this.SetCollisionBounds( new Vector(-8,-8,0), new Vector(8,8,70) )
-        this.isSitting = false
-        //self:PlaySequenceAndWait( "sit_ground_to_idle" )
-        //coroutine.wait( math.Rand(0,1.5) )
-    }
-
-    public name() {
-        
-    }
 }

@@ -1,6 +1,7 @@
 interface table {
 [key: string]: any;
 }
+
 type thread = any;
 type pixelvis_handle_t = any;
 type sensor = any;
@@ -15,6 +16,7 @@ declare var GAMEMODE: Gamemode;
  * Enumerations used by {{ClassFunction|Entity|SetUseType}}. Affects when {{HookFunction|ENTITY|Use}} is triggered.
  * 
  * Not to be confused with {{Enum|USE}} used for {{HookFunction|ENTITY|Use}} and others. 
+ * !CompileMembersOnly
  */
 declare enum _USE {
     /**
@@ -48,6 +50,7 @@ declare enum _USE {
  * 
  * **Bug [#3075](https://github.com/Facepunch/garrysmod-issues/issues/3075):**
  * >Category=No 
+ * !CompileMembersOnly
  */
 declare enum ACT {
     /**
@@ -6373,6 +6376,7 @@ declare enum ACT {
  * 
  * **Note:**
  * >These enumerations do not exist in game and are listed here only for reference! 
+ * !CompileMembersOnly
  */
 declare enum AMMO {
     /**
@@ -6392,6 +6396,7 @@ declare enum AMMO {
  * For more information refer to OpenGL's glBlendFunc page here: https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml  
  * 
  * Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum BLEND {
     /**
@@ -6441,6 +6446,7 @@ declare enum BLEND {
 
 /**
  * Used by {{LibraryFunction|render|OverrideBlend}}. 
+ * !CompileMembersOnly
  */
 declare enum BLENDFUNC {
     /**
@@ -6458,6 +6464,7 @@ declare enum BLENDFUNC {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|GetBloodColor}} and {{ClassFunction|Entity|SetBloodColor}}. 
+ * !CompileMembersOnly
  */
 declare enum BLOOD_COLOR {
     /**
@@ -6503,6 +6510,7 @@ declare enum BLOOD_COLOR {
 
 /**
  * Used by {{ClassFunction|Entity|BoneHasFlag}}. 
+ * !CompileMembersOnly
  */
 declare enum BONE {
     /**
@@ -6592,6 +6600,7 @@ declare enum BONE {
 
 /**
  * Enumerations used by {{LibraryFunction|render|SetModelLighting}}. 
+ * !CompileMembersOnly
  */
 declare enum BOX {
     /**
@@ -6633,6 +6642,7 @@ declare enum BOX {
  * * {{LibraryFunction|input|GetKeyCode}}
  * * {{HookFunction|GM|PlayerButtonDown}}
  * * {{HookFunction|GM|PlayerButtonUp}} 
+ * !CompileMembersOnly
  */
 declare enum BUTTON_CODE {
     /**
@@ -6654,6 +6664,7 @@ declare enum BUTTON_CODE {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|CapabilitiesAdd}}, {{HookFunction|WEAPON|GetCapabilities}} and {{ClassFunction|NPC|CapabilitiesGet}}. Serverside only. 
+ * !CompileMembersOnly
  */
 declare enum CAP {
     /**
@@ -6795,6 +6806,7 @@ declare enum CAP {
 
 /**
  * Enumerations used by {{GlobalFunction|EmitSound}} and {{LibraryFunction|sound|Add}}. 
+ * !CompileMembersOnly
  */
 declare enum CHAN {
     /**
@@ -6854,6 +6866,7 @@ declare enum CHAN {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|Classify}}. 
+ * !CompileMembersOnly
  */
 declare enum CLASS {
     /**
@@ -7041,6 +7054,7 @@ declare enum CLASS {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetCollisionGroup}} and {{ClassFunction|Entity|GetCollisionGroup}}. 
+ * !CompileMembersOnly
  */
 declare enum COLLISION_GROUP {
     /**
@@ -7154,6 +7168,7 @@ declare enum COLLISION_GROUP {
  * >There are more conditions than listed here after '''COND_NO_CUSTOM_INTERRUPTS'''(70) but the name depends on what's returned by {{ClassFunction|NPC|ConditionName}}
  * 
  * {{Warning|These enumerations do not exist in game, but are listed here anyway for reference}} 
+ * !CompileMembersOnly
  */
 declare enum COND {
     /**
@@ -7445,6 +7460,7 @@ declare enum COND {
 
 /**
  * Enumerations used by {{LibraryFunction|util|PointContents}} and as tracer masks. 
+ * !CompileMembersOnly
  */
 declare enum CONTENTS {
     /**
@@ -7599,6 +7615,7 @@ declare enum CONTENTS {
 
 /**
  * Enumerations used by {{GlobalFunction|GetRenderTargetEx}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum CREATERENDERTARGETFLAGS {
     /**
@@ -7616,6 +7633,7 @@ declare enum CREATERENDERTARGETFLAGS {
 
 /**
  * Citizen type, a KeyValue for npc_citizen( citizentype ), serverside only. 
+ * !CompileMembersOnly
  */
 declare enum CT {
     /**
@@ -7645,6 +7663,7 @@ declare enum CT {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|Disposition}} and {{HookFunction|ENTITY|GetRelationship}}. 
+ * !CompileMembersOnly
  */
 declare enum D {
     /**
@@ -7675,6 +7694,7 @@ declare enum D {
 
 /**
  * Enumerations used by {{ClassFunction|CTakeDamageInfo|GetDamageType}}, {{ClassFunction|CTakeDamageInfo|SetDamageType}} and {{ClassFunction|CTakeDamageInfo|IsDamageType}} 
+ * !CompileMembersOnly
  */
 declare enum DMG {
     /**
@@ -7849,6 +7869,7 @@ declare enum DMG {
 
 /**
  * Enumerations used by {{ClassFunction|Panel|Dock}}. 
+ * !CompileMembersOnly
  */
 declare enum DOCK {
     /**
@@ -7884,6 +7905,7 @@ declare enum DOCK {
 
 /**
  * Internal globals for SimpleDoF. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum DOF {
     /**
@@ -7897,6 +7919,7 @@ declare enum DOF {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|AddEffects}},  {{ClassFunction|Entity|RemoveEffects}} and  {{ClassFunction|Entity|IsEffectActive}}. 
+ * !CompileMembersOnly
  */
 declare enum EF {
     /**
@@ -7957,6 +7980,7 @@ declare enum EF {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|AddEFlags}}, {{ClassFunction|Entity|RemoveEFlags}} and {{ClassFunction|Entity|IsEFlagSet}}. 
+ * !CompileMembersOnly
  */
 declare enum EFL {
     /**
@@ -8116,6 +8140,7 @@ declare enum EFL {
 
 /**
  * Enumerations used by {{LibraryFunction|concommand|Add}}, {{GlobalFunction|CreateClientConVar}} and {{GlobalFunction|CreateConVar}}. 
+ * !CompileMembersOnly
  */
 declare enum FCVAR {
     /**
@@ -8274,6 +8299,7 @@ declare enum FCVAR {
 
 /**
  * Enumerations used by {{ClassFunction|IGModAudioChannel|FFT}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum FFT {
     /**
@@ -8319,6 +8345,7 @@ declare enum FFT {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|AddFlags}}, {{ClassFunction|Entity|RemoveFlags}} and {{ClassFunction|Entity|IsFlagSet}}. 
+ * !CompileMembersOnly
  */
 declare enum FL {
     /**
@@ -8484,6 +8511,7 @@ declare enum FL {
 
 /**
  * Enumerations used by {{GlobalFunction|AccessorFunc}}. 
+ * !CompileMembersOnly
  */
 declare enum FORCE {
     /**
@@ -8504,6 +8532,7 @@ declare enum FORCE {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetSolidFlags}} and {{ClassFunction|Entity|GetSolidFlags}}. 
+ * !CompileMembersOnly
  */
 declare enum FSOLID {
     /**
@@ -8553,6 +8582,7 @@ declare enum FSOLID {
 
 /**
  * Enumerations used by {{ClassFunction|PhysObj|AddGameFlag}}, {{ClassFunction|PhysObj|HasGameFlag}} and {{ClassFunction|PhysObj|ClearGameFlag}}. 
+ * !CompileMembersOnly
  */
 declare enum FVPHYSICS {
     /**
@@ -8623,6 +8653,7 @@ declare enum FVPHYSICS {
 
 /**
  * Enumerations used by {{ClassFunction|Player|AnimResetGestureSlot}} and {{ClassFunction|Player|AnimRestartGesture}}. 
+ * !CompileMembersOnly
  */
 declare enum GESTURE_SLOT {
     /**
@@ -8663,6 +8694,7 @@ declare enum GESTURE_SLOT {
  * Enumerations used by {{LibraryFunction|game|SetGlobalState}} and {{LibraryFunction|game|GetGlobalState}}.
  * 
  * Serverside only. 
+ * !CompileMembersOnly
  */
 declare enum GLOBAL {
     /**
@@ -8683,6 +8715,7 @@ declare enum GLOBAL {
 
 /**
  * Enumerations used by {{ClassFunction|IGModAudioChannel|GetState}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum GMOD_CHANNEL {
     /**
@@ -8708,6 +8741,7 @@ declare enum GMOD_CHANNEL {
 
 /**
  * Enumerations used by {{HookFunction|GM|ScalePlayerDamage}} and {{HookFunction|GM|ScaleNPCDamage}} and returned by {{ClassFunction|Player|LastHitGroup}}. 
+ * !CompileMembersOnly
  */
 declare enum HITGROUP {
     /**
@@ -8760,6 +8794,7 @@ declare enum HITGROUP {
 
 /**
  * Enumerations used by {{ClassFunction|Player|PrintMessage}} and {{GlobalFunction|PrintMessage}}. 
+ * !CompileMembersOnly
  */
 declare enum HUD {
     /**
@@ -8785,6 +8820,7 @@ declare enum HUD {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|SetHullType}} and  {{ClassFunction|NPC|GetHullType}}. Serverside only. 
+ * !CompileMembersOnly
  */
 declare enum HULL {
     /**
@@ -8830,6 +8866,7 @@ declare enum HULL {
 
 /**
  * Enumerations used by {{GlobalFunction|GetRenderTargetEx}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum IMAGE_FORMAT {
     /**
@@ -8898,6 +8935,7 @@ declare enum IMAGE_FORMAT {
  * * {{ClassFunction|CUserCmd|SetButtons}}
  * * {{HookFunction|GM|KeyPress}}
  * * {{HookFunction|GM|KeyRelease}} 
+ * !CompileMembersOnly
  */
 declare enum IN {
     /**
@@ -9027,6 +9065,7 @@ declare enum IN {
  * Enumerations used by {{LibraryFunction|input|IsButtonDown}}.
  * 
  * It's also part of the {{Enum|BUTTON_CODE}}. 
+ * !CompileMembersOnly
  */
 declare enum JOYSTICK {
     /**
@@ -9080,6 +9119,7 @@ declare enum JOYSTICK {
  * * {{HookFunction|PANEL|OnKeyCodePressed}}
  * 
  * It's also part of the {{Enum|BUTTON_CODE}}. 
+ * !CompileMembersOnly
  */
 declare enum KEY {
     /**
@@ -9652,6 +9692,7 @@ declare enum KEY {
  * Used by {{ClassFunction|Entity|SetRenderFX}} and returned by {{ClassFunction|Entity|GetRenderFX}}.
  * 
  * Most of these require alpha value of entitys color to be less than 255 to have any visible effect. 
+ * !CompileMembersOnly
  */
 declare enum kRenderFx {
     /**
@@ -9778,6 +9819,7 @@ declare enum kRenderFx {
 
 /**
  * Enumerations used as trace masks in {{Struct|Trace}} and {{Struct|HullTrace}}. These enumerations are simply combinations of {{Enum|CONTENTS}}. 
+ * !CompileMembersOnly
  */
 declare enum MASK {
     /**
@@ -9888,6 +9930,7 @@ declare enum MASK {
 
 /**
  * Enumerations used in {{Struct|TraceResult}} and by {{ClassFunction|Entity|GetMaterialType}}. 
+ * !CompileMembersOnly
  */
 declare enum MAT {
     /**
@@ -10008,6 +10051,7 @@ declare enum MAT {
 
 /**
  * Enumerations used by {{LibraryFunction|mesh|Begin}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum MATERIAL {
     /**
@@ -10045,6 +10089,7 @@ declare enum MATERIAL {
 
 /**
  * Enumerations used by {{LibraryFunction|render|CullMode}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum MATERIAL_CULLMODE {
     /**
@@ -10060,6 +10105,7 @@ declare enum MATERIAL_CULLMODE {
 
 /**
  * Enumerations used by {{LibraryFunction|render|GetFogMode}} and {{LibraryFunction|render|FogMode}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum MATERIAL_FOG {
     /**
@@ -10080,6 +10126,7 @@ declare enum MATERIAL_FOG {
 
 /**
  * Enumerations used by {{LibraryFunction|render|SetLocalModelLights}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum MATERIAL_LIGHT {
     /**
@@ -10105,6 +10152,7 @@ declare enum MATERIAL_LIGHT {
 
 /**
  * Enumerations used by {{GlobalFunction|GetRenderTargetEx}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum MATERIAL_RT_DEPTH {
     /**
@@ -10143,6 +10191,7 @@ declare enum MATERIAL_RT_DEPTH {
  * * {{LibraryFunction|input|WasMouseDoublePressed}}
  * 
  * It's also part of the {{Enum|BUTTON_CODE}}. 
+ * !CompileMembersOnly
  */
 declare enum MOUSE {
     /**
@@ -10198,6 +10247,7 @@ declare enum MOUSE {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetMoveCollide}} and {{ClassFunction|Entity|GetMoveCollide}}. 
+ * !CompileMembersOnly
  */
 declare enum MOVECOLLIDE {
     /**
@@ -10228,6 +10278,7 @@ declare enum MOVECOLLIDE {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetMoveType}} and {{ClassFunction|Entity|GetMoveType}}. 
+ * !CompileMembersOnly
  */
 declare enum MOVETYPE {
     /**
@@ -10293,6 +10344,7 @@ declare enum MOVETYPE {
 
 /**
  * Enumerations used by {{ClassFunction|CNavArea|GetAttributes}} and {{ClassFunction|CNavArea|HasAttributes}}. 
+ * !CompileMembersOnly
  */
 declare enum NAV_MESH {
     /**
@@ -10401,6 +10453,7 @@ declare enum NAV_MESH {
  * 
  * **Note:**
  * >These enumerations do not exist in game and are listed here only for reference! 
+ * !CompileMembersOnly
  */
 declare enum NavCorner {
     /**
@@ -10435,6 +10488,7 @@ declare enum NavCorner {
  * 
  * **Note:**
  * >These enumerations do not exist in game and are listed here only for reference! 
+ * !CompileMembersOnly
  */
 declare enum NavDir {
     /**
@@ -10463,6 +10517,7 @@ declare enum NavDir {
  * 
  * **Note:**
  * >These enumerations do not exist in game and are listed here only for reference! 
+ * !CompileMembersOnly
  */
 declare enum NavTraverseType {
     /**
@@ -10504,6 +10559,7 @@ declare enum NavTraverseType {
 
 /**
  * Enumerations used by {{LibraryFunction|notification|AddLegacy}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum NOTIFY {
     /**
@@ -10534,6 +10590,7 @@ declare enum NOTIFY {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|SetNPCState}}. Serverside only. 
+ * !CompileMembersOnly
  */
 declare enum NPC_STATE {
     /**
@@ -10587,6 +10644,7 @@ declare enum NPC_STATE {
  * >These only exist serverside.
  * 
  * Various count enums. 
+ * !CompileMembersOnly
  */
 declare enum NUM {
     /**
@@ -10602,6 +10660,7 @@ declare enum NUM {
 
 /**
  * Enumerations used by {{ClassFunction|Player|SetObserverMode}}, {{ClassFunction|Player|GetObserverMode}} and {{ClassFunction|Player|Spectate}}. 
+ * !CompileMembersOnly
  */
 declare enum OBS_MODE {
     /**
@@ -10641,6 +10700,7 @@ declare enum OBS_MODE {
 
 /**
  * Enumerations used by {{GlobalFunction|ParticleEffectAttach}}. 
+ * !CompileMembersOnly
  */
 declare enum PATTACH {
     /**
@@ -10676,6 +10736,7 @@ declare enum PATTACH {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetAnimation}} 
+ * !CompileMembersOnly
  */
 declare enum PLAYER_ANIM {
     /**
@@ -10723,6 +10784,7 @@ declare enum PLAYER_ANIM {
 
 /**
  * Used by {{HookFunction|GM|DoAnimationEvent}} and {{ClassFunction|Player|DoCustomAnimEvent}}. 
+ * !CompileMembersOnly
  */
 declare enum PLAYERANIMEVENT {
     /**
@@ -10839,6 +10901,7 @@ declare enum PLAYERANIMEVENT {
 
 /**
  * Enumerations used by {{GlobalFunction|ClientsideModel}}, ENT.RenderGroup in {{Struct|ENT}} and {{ClassFunction|Entity|GetRenderGroup}}. 
+ * !CompileMembersOnly
  */
 declare enum RENDERGROUP {
     /**
@@ -10900,6 +10963,7 @@ declare enum RENDERGROUP {
 
 /**
  * Enumerations used by {{ClassFunction|Entity|SetRenderMode}} and {{ClassFunction|Entity|GetRenderMode}}. 
+ * !CompileMembersOnly
  */
 declare enum RENDERMODE {
     /**
@@ -10951,6 +11015,7 @@ declare enum RENDERMODE {
 
 /**
  * Enumerations used by {{GlobalFunction|GetRenderTargetEx}}. Clientside only. 
+ * !CompileMembersOnly
  */
 declare enum RT_SIZE {
     /**
@@ -10991,6 +11056,7 @@ declare enum RT_SIZE {
 
 /**
  * Enumerations for NPC schedules, used by {{HookFunction|ENTITY|StartEngineSchedule}} and {{ClassFunction|NPC|SetSchedule}}. Serverside only. 
+ * !CompileMembersOnly
  */
 declare enum SCHED {
     /**
@@ -11526,6 +11592,7 @@ declare enum SENSORBONE {
  * 
  * **Note:**
  * >This is not a full list of available spawnflags, there are ''a lot'' more, each unique to each entity, you can find out more on the Valve Developer Community website for the entities in question. 
+ * !CompileMembersOnly
  */
 declare enum SF {
     /**
@@ -11669,6 +11736,7 @@ declare enum SF {
 
 /**
  * Enumerations used by {{HookFunction|ENTITY|PhysicsSimulate}}. 
+ * !CompileMembersOnly
  */
 declare enum SIM {
     /**
@@ -11699,6 +11767,7 @@ declare enum SIM {
 
 /**
  * Sound flags used by {{GlobalFunction|EmitSound}} and {{ClassFunction|Entity|EmitSound}}. 
+ * !CompileMembersOnly
  */
 declare enum SND {
     /**
@@ -11763,6 +11832,7 @@ declare enum SND {
  * The engine starts running into trouble below 60dB.
  * 
  * {{Warning|These enumerations do not exist in the game and are listed here purely for reference purposes only.}} 
+ * !CompileMembersOnly
  */
 declare enum SNDLVL {
     /**
@@ -11893,6 +11963,7 @@ declare enum SNDLVL {
 
 /**
  * For use with {{ClassFunction|Entity|PhysicsInit}}, {{ClassFunction|Entity|SetSolid}} and {{ClassFunction|Entity|GetSolid}}. 
+ * !CompileMembersOnly
  */
 declare enum SOLID {
     /**
@@ -11948,6 +12019,7 @@ declare enum SOLID {
  * These enumerations are mirrors of {{Enum|STENCILCOMPARISONFUNCTION}}.</includeonly>
  * 
  * Also see this corresponding MSDN entry: http://msdn.microsoft.com/en-us/library/windows/desktop/ff476101%28v=vs.85%29.aspx. 
+ * !CompileMembersOnly
  */
 declare enum STENCILCOMPARISONFUNCTION {
     /**
@@ -12000,6 +12072,7 @@ declare enum STENCILCOMPARISONFUNCTION {
  * These enumerations are mirrors of {{Enum|STENCILOPERATION}}.</includeonly>
  * 
  * Also see this corresponding MSDN entry: http://msdn.microsoft.com/en-us/library/windows/desktop/ff476219%28v=vs.85%29.aspx. 
+ * !CompileMembersOnly
  */
 declare enum STENCILOPERATION {
     /**
@@ -12045,6 +12118,7 @@ declare enum STENCILOPERATION {
 
 /**
  * Enumerations used in {{HookFunction|GM|PlayerStepSoundTime}} hook. 
+ * !CompileMembersOnly
  */
 declare enum STEPSOUNDTIME {
     /**
@@ -12070,6 +12144,7 @@ declare enum STEPSOUNDTIME {
 
 /**
  * Used by {{HookFunction|ENTITY|Draw}} and {{HookFunction|ENTITY|DrawTranslucent}}. 
+ * !CompileMembersOnly
  */
 declare enum STUDIO {
     /**
@@ -12131,6 +12206,7 @@ declare enum STUDIO {
 
 /**
  * Surface flags, currently unused, these would've been returned by the {{Struct|TraceResult}}. 
+ * !CompileMembersOnly
  */
 declare enum SURF {
     /**
@@ -12211,6 +12287,7 @@ declare enum SURF {
 
 /**
  * Default defined teams in Garry's Mod. This does not include any custom teams created in custom gamemodes. Enumerations to use with {{ClassFunction|Player|Team}} 
+ * !CompileMembersOnly
  */
 declare enum TEAM {
     /**
@@ -12254,6 +12331,7 @@ declare enum TEXFILTER {
 
 /**
  * Enumerations used by {{LibraryFunction|draw|SimpleText}}, {{LibraryFunction|draw|DrawText}} and in {{Struct|TextData}}. 
+ * !CompileMembersOnly
  */
 declare enum TEXT_ALIGN {
     /**
@@ -12286,6 +12364,7 @@ declare enum TEXT_ALIGN {
  * Bit flags used by {{GlobalFunction|GetRenderTargetEx}}. Clientside only. Information taken from [https://developer.valvesoftware.com/wiki/Valve_Texture_Format#Image_flags here]
  * 
  * {{Warning|These enumerations do not exist in the game and are listed here purely for reference purposes only.}} 
+ * !CompileMembersOnly
  */
 declare enum TEXTUREFLAGS {
     /**
@@ -12446,6 +12525,7 @@ declare enum TEXTUREFLAGS {
 
 /**
  * Enumerations used by {{Struct|AmmoData}}. 
+ * !CompileMembersOnly
  */
 declare enum TRACER {
     /**
@@ -12476,6 +12556,7 @@ declare enum TRACER {
 
 /**
  * Enumerations used in {{HookFunction|ENTITY|UpdateTransmitState}} hook. 
+ * !CompileMembersOnly
  */
 declare enum TRANSMIT {
     /**
@@ -12496,6 +12577,7 @@ declare enum TRANSMIT {
 
 /**
  * Enumerations used by {{LibraryFunction|net|ReadType}} and returned by {{GlobalFunction|TypeID}} 
+ * !CompileMembersOnly
  */
 declare enum TYPE {
     /**
@@ -12747,6 +12829,7 @@ declare enum TYPE {
  * Enumerations used by {{HookFunction|ENTITY|Use}}.
  * 
  * Not to be confused with {{Enum|_USE}} used by {{ClassFunction|Entity|SetUseType}}. 
+ * !CompileMembersOnly
  */
 declare enum USE {
     /**
@@ -12768,6 +12851,7 @@ declare enum USE {
 
 /**
  * Enumerations used by {{ClassFunction|NPC|SetCurrentWeaponProficiency}} and  {{ClassFunction|NPC|GetCurrentWeaponProficiency}}. 
+ * !CompileMembersOnly
  */
 declare enum WEAPON_PROFICIENCY {
     /**
@@ -13618,6 +13702,115 @@ interface EmitSoundInfo {
  * 
  * While some of the fields may be serverside or clientside only, it is recommended to provide them on both so addons could use their values. 
  */
+interface ENT {
+    /**
+     * The base entity to derive from. This '''must''' be a valid Lua entity 
+     */
+    Base?: string;
+    
+    /**
+     * Type of the entity. This '''must be one of these:'''
+     * * '''anim'''
+     * * '''brush'''
+     * * '''point'''
+     * * '''ai'''
+     * * '''nextbot'''
+     * * '''filter'''
+     * 
+     * See [[Scripted Entities]] for a more detailed explanation of what each one is.
+     * 
+     * **Bug:**
+     * >2745||1521||No 
+     */
+    Type?: string;
+    
+    /**
+     * Entity class name of the ENT (File or folder name of your ENT).
+     * '''This is set automatically ''after'' the entity file is loaded.''' 
+     */
+    ClassName: string;
+    
+    /**
+     * The folder from where the entity was loaded. This should always be "entity/ent_myentity", regardless whether your ENT is stored as a file, or multiple files in a folder. '''This is set automatically ''before'' the entity file is loaded.''' 
+     */
+    Folder: string;
+    
+    /**
+     * (Clientside) Set this to true if your entity has animations. 
+     */
+    AutomaticFrameAdvance?: boolean;
+    
+    /**
+     * (Clientside) Category the ENT is in 
+     */
+    Category?: string;
+    
+    /**
+     * Whether this ENT should be displayed in the Q menu 
+     */
+    Spawnable?: boolean;
+    
+    /**
+     * Whether the entity supports Editing. See [[Editable Entities]] for more info. 
+     */
+    Editable?: boolean;
+    
+    /**
+     * Whether or not only admins can spawn the ENT from their Q menu 
+     */
+    AdminOnly?: boolean;
+    
+    /**
+     * (Clientside) Nice name of the ENT 
+     */
+    PrintName?: string;
+    
+    /**
+     * (Clientside) The author of the ENT 
+     */
+    Author?: string;
+    
+    /**
+     * (Clientside) The contacts of the ENT creator 
+     */
+    Contact?: string;
+    
+    /**
+     * (Clientside) The purpose of the ENT creation 
+     */
+    Purpose?: string;
+    
+    /**
+     * (Clientside) How to use your entity 
+     */
+    Instructions?: string;
+    
+    /**
+     * (Clientside) The SENT's render group, see {{Enum|RENDERGROUP}}. 
+     */
+    RenderGroup?: RENDERGROUP;
+    
+    /**
+     * (Serverside) Disable the ability for players to duplicate this SENT. 
+     */
+    DisableDuplicator?: boolean;
+    
+    /**
+     * (Clientside) Sets the spawnmenu content icon type for the entity, used by spawnmenu in the Sandbox-derived gamemodes.
+     * See {{LibraryFunction|spawnmenu|AddContentType}} for more information. 
+     */
+    ScriptedEntityType?: string;
+}
+
+/**
+ * Information about the ENT structure.
+ * 
+ * To learn more about scripted entities, [[Scripted_Entities|see this page]].
+ * 
+ * For list of callbacks, see [[:Category:ENTITY_Hooks|ENT Hooks]].
+ * 
+ * While some of the fields may be serverside or clientside only, it is recommended to provide them on both so addons could use their values. 
+ */
 interface Entity {
     /**
      * The base entity to derive from. This '''must''' be a valid Lua entity 
@@ -13854,7 +14047,12 @@ interface FontData {
     
     /**
      * The strength of the font blurring
-     * Must be > 0 to work 
+     * 
+     * **Bug:**
+     * >2699||||No
+     * 
+     * **Bug:**
+     * >3579||||No 
      */
     blursize?: number;
     
@@ -15604,7 +15802,7 @@ interface VehicleParams {
     /**
      * A table of {{Struct|VehicleParamsAxle}} tables. 
      */
-    axles: VehicleParamsAxle;
+    axles: VehicleParamsAxle[];
     
     /**
      * See {{Struct|VehicleParamsBody}} 
@@ -18246,6 +18444,7 @@ declare namespace chat {
      * print( chat.GetChatBoxPos() )
      * 
      * // Prints the x and y coordinates of the chatbox. 
+     * !TupleReturn
      */
     function GetChatBoxPos(): [number, number];
     
@@ -18257,6 +18456,7 @@ declare namespace chat {
      * print( chat.GetChatBoxSize() )
      * 
      * // Prints the width and the height of the chatbox. 
+     * !TupleReturn
      */
     function GetChatBoxSize(): [number, number];
     
@@ -18644,6 +18844,7 @@ declare class CLuaParticle {
     /**
      * Returns the color of the particle. 
      * @returns [Red part of the color, Green part of the color, Blue part of the color] 
+     * !TupleReturn
      */
     public GetColor(): [number, number, number];
     
@@ -19295,7 +19496,7 @@ declare class CNavArea {
      * @returns A table of all {{Type|CNavArea}} that have a ( one and two way ) connection '''from''' this {{Type|CNavArea}}. 
      * Returns an empty table if this area has no outgoing connections to any other areas. 
      */
-    public GetAdjacentAreas(): table;
+    public GetAdjacentAreas(): CNavArea[];
     
     /**
      * Returns a table of all the {{Type|CNavArea}}s that have a ( one and two way ) connection '''from''' this {{Type|CNavArea}} in given direction.
@@ -19307,7 +19508,7 @@ declare class CNavArea {
      * @returns A table of all {{Type|CNavArea}} that have a ( one and two way ) connection '''from''' this {{Type|CNavArea}} in given direction.
      * Returns an empty table if this area has no outgoing connections to any other areas in given direction. 
      */
-    public GetAdjacentAreasAtSide(navDir: NavDir): table;
+    public GetAdjacentAreasAtSide(navDir: NavDir): CNavArea[];
     
     /**
      * Returns the amount of {{Type|CNavArea}}s that have a connection ( one and two way ) '''from''' this {{Type|CNavArea}}.
@@ -19369,7 +19570,7 @@ declare class CNavArea {
      * Returns a table of very bad hiding spots in this area 
      * @returns A table of {{Type|Vector}}s 
      */
-    public GetExposedSpots(): table;
+    public GetExposedSpots(): Vector[];
     
     /**
      * @returns Returns a table containing the following keys:
@@ -19385,7 +19586,7 @@ declare class CNavArea {
      * Returns a table of good hiding spots in this area 
      * @returns A table of {{Type|Vector}}s 
      */
-    public GetHidingSpots(): table;
+    public GetHidingSpots(): Vector[];
     
     /**
      * Returns this {{Type|CNavArea}}s unique ID. 
@@ -19402,7 +19603,7 @@ declare class CNavArea {
      * @returns A table of all {{Type|CNavArea}}s with one-way connection '''to''' this {{Type|CNavArea}}.
      * Returns an empty table if there are no one-way incoming connections '''to''' this {{Type|CNavArea}}. 
      */
-    public GetIncomingConnections(): table;
+    public GetIncomingConnections(): CNavArea[];
     
     /**
      * Returns a table of all the {{Type|CNavArea}}s that have a one-way connection '''to''' this {{Type|CNavArea}} from given direction.
@@ -19414,7 +19615,7 @@ declare class CNavArea {
      * @returns A table of all {{Type|CNavArea}}s with one-way connection '''to''' this {{Type|CNavArea}} from given direction.
      * Returns an empty table if there are no one-way incoming connections '''to''' this {{Type|CNavArea}} from given direction. 
      */
-    public GetIncomingConnectionsAtSide(navDir: NavDir): table;
+    public GetIncomingConnectionsAtSide(navDir: NavDir): CNavArea[];
     
     /**
      * Returns all {{Type|CNavLadder}}s that have a ( one or two way ) connection '''from''' this {{Type|CNavArea}}.
@@ -19609,6 +19810,7 @@ declare class CNavArea {
      * Returns whether we can be seen from the given position. 
      * @param pos  The position to check. 
      * @returns [Whether we can be seen or not., If we can be seen, this is returned with either the center or one of the corners of the Nav Area.] 
+     * !TupleReturn
      */
     public IsVisible(pos: Vector): [boolean, Vector];
     
@@ -20080,6 +20282,7 @@ declare namespace concommand {
     /**
      * Returns the tables of all console command callbacks, and autocomplete functions, that were added to the game with {{LibraryFunction|concommand|Add}}. 
      * @returns [Table of command callback functions., Table of command autocomplete functions.] 
+     * !TupleReturn
      */
     function GetTable(): [table, table];
     
@@ -20234,6 +20437,7 @@ declare namespace constraint {
      * Creates an invisible, non-moveable anchor point in the world to which things can be attached. 
      * @param pos  The position to spawn the anchor at 
      * @returns [anchor, physicsObject,, bone, LPos] 
+     * !TupleReturn
      */
     function CreateStaticAnchorPoint(pos: Vector): [Entity, PhysObj, number, Vector];
     
@@ -20252,6 +20456,7 @@ declare namespace constraint {
      * @param width  Width of rope. 
      * @param stretchonly 
      * @returns [Constraint. Will return false if the constraint could not be created., rope.  Will return nil if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Elastic(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, constant: number, damping: number, rdamping: number, material: string, width: number, stretchonly: boolean): [Entity, Entity];
     
@@ -20348,6 +20553,7 @@ declare namespace constraint {
      * @param speed 
      * @param material  The material of the rope. 
      * @returns [Constraint. Will return false if the constraint could not be created., rope. Will return nil if the constraint could not be created., controller. Can return nil depending on how the constraint was created. Will return nil if the constraint could not be created., slider. Can return nil depending on how the constraint was created. Will return nil if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Hydraulic(pl: Player, Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, Length1: number, Length2: number, width: number, key: KEY, fixed: number, speed: number, material: string): [Entity, Entity, Entity, Entity];
     
@@ -20389,6 +20595,7 @@ declare namespace constraint {
      * @param direction 
      * @param LocalAxis 
      * @returns [Constraint. Will return false if the constraint could not be created., axis. Will return nil if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Motor(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, friction: number, torque: number, forcetime: number, nocollide: number, toggle: number, pl: Player, forcelimit: number, numpadkey_fwd: KEY, numpadkey_bwd: KEY, direction: number, LocalAxis: Vector): [Entity, Entity];
     
@@ -20411,6 +20618,7 @@ declare namespace constraint {
      * @param starton 
      * @param material  Material of the rope. 
      * @returns [Constraint. Will return false if the constraint could not be created., rope. Will return nil if the constraint could not be created., controller. Will return nil if the constraint could not be created., slider. Will return nil if the fixed argument is not 1 or if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Muscle(pl: Player, Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, Length1: number, Length2: number, width: number, key: KEY, fixed: number, period: number, amplitude: number, starton: boolean, material: string): [Entity, Entity, Entity, Entity];
     
@@ -20455,6 +20663,7 @@ declare namespace constraint {
      * end
      * 
      * // From stools/remover.lua 
+     * !TupleReturn
      */
     function RemoveAll(ent: Entity): [boolean, number];
     
@@ -20472,6 +20681,7 @@ declare namespace constraint {
      * end
      * 
      * // From stools/axis.lua 
+     * !TupleReturn
      */
     function RemoveConstraints(ent: Entity, type: string): [boolean, number];
     
@@ -20490,6 +20700,7 @@ declare namespace constraint {
      * @param material  Material of the rope. 
      * @param rigid  Whether the constraint is rigid. 
      * @returns [Constraint. Will be a keyframe_rope if you roping to the same bone on the same entity. Will return false if the constraint could not be created., rope. Will return nil if "Constraint" is a keyframe_rope or if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Rope(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, length: number, addlength: number, forcelimit: number, width: number, material: string, rigid: boolean): [Entity, Entity];
     
@@ -20504,6 +20715,7 @@ declare namespace constraint {
      * @param width  The width of the rope. 
      * @param material  The material of the rope. 
      * @returns [Constraint. Will return false if the constraint could not be created., rope. Will return nil if the constraint could not be created.] 
+     * !TupleReturn
      */
     function Slider(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, width: number, material: string): [Entity, Entity];
     
@@ -20549,6 +20761,7 @@ declare namespace constraint {
      * @param material  The material of the rope. 
      * @param toggle  Whether the winch should be on toggle. 
      * @returns [Constraint. Can return nil. Will return false if the constraint could not be created., rope. Will return nil if the constraint could not be created., controller. Can return nil.] 
+     * !TupleReturn
      */
     function Winch(pl: Player, Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, width: number, fwd_bind: KEY, bwd_bind: KEY, fwd_speed: number, bwd_speed: number, material: string, toggle: boolean): [Entity, Entity, Entity];
 }
@@ -21073,6 +21286,7 @@ declare namespace coroutine {
      * @param coroutine  Coroutine to resume. 
      * @param args  Arguments to be returned by {{LibraryFunction|coroutine|yield}}. 
      * @returns [If the executed thread code had no errors occur within it., If an error occured, this will be a string containing the error message. Otherwise, this will be arguments that were yielded.] 
+     * !TupleReturn
      */
     function resume(coroutine: thread, ...args: (any)[]): [boolean, any];
     
@@ -22890,7 +23104,7 @@ declare class DCollapsibleCategory extends Panel {
     
     /**
      * Returns whether or not the background should be painted. 
-     * @returns 
+     * @returns If the background is painted or not 
      */
     public GetPaintBackground(): boolean;
     
@@ -23370,6 +23584,7 @@ declare class DColorCube extends DSlider {
      * print("Color( "..new_color.r..", "..new_color.g..", "..new_color.b..", "..new_color.a.." )")
      * 
      * // Creates a green color cube and prints out the color at the (0.2, 0.4) position. 
+     * !TupleReturn
      */
     public TranslateValues(x: number, y: number): [number, number];
     
@@ -23378,6 +23593,7 @@ declare class DColorCube extends DSlider {
      * @param x 
      * @param y 
      * @returns [x, y] 
+     * !TupleReturn
      */
     public TranslateValues(x: number, y: number): [number, number];
     
@@ -24101,6 +24317,7 @@ declare class DComboBox extends DButton {
     /**
      * Returns the currently selected option's text and data 
      * @returns [The option's text value., The option's stored data.] 
+     * !TupleReturn
      */
     public GetSelected(): [string, any];
     
@@ -24423,6 +24640,7 @@ declare namespace debug {
      * Returns the current hook settings of the passed thread. The thread argument can be omitted. This is unrelated to [[:Category:GM Hooks|gamemode hooks]]. More information on hooks can be found at http://www.lua.org/pil/23.2.html 
      * @param thread [=nil] Which thread to retrieve its hook from 
      * @returns [Hook function, Hook mask, Hook count] 
+     * !TupleReturn
      */
     function gethook(thread?: thread): [Function, string, number];
     
@@ -24509,6 +24727,7 @@ declare namespace debug {
      * PrintFunctionParameters(hook.Add)
      * 
      * // Prints the parameter names for {{LibraryFunction|hook|Add}} 
+     * !TupleReturn
      */
     function getlocal(thread?: thread, level?: number, index?: number): [string, any];
     
@@ -24585,6 +24804,7 @@ declare namespace debug {
      * PrintTable( GetUpvalues( DoSomethingWithBarAndTest ) )
      * 
      * // Prints the upvalues of some local functions. 
+     * !TupleReturn
      */
     function getupvalue(func: Function, index: number): [string, any];
     
@@ -25449,6 +25669,7 @@ declare class DForm extends DCollapsibleCategory {
      * combobox:AddChoice( "1000", 100 ) // 100 will be used as convar value
      * 
      * // 
+     * !TupleReturn
      */
     public ComboBox(title: string, convar: string): [DComboBox, DLabel];
     
@@ -25470,6 +25691,7 @@ declare class DForm extends DCollapsibleCategory {
      * Adds a {{Type|DListBox}} onto the {{Type|DForm}} 
      * @param label  The label to set on the DListBox 
      * @returns [The created {{Type|DListBox}}, The created {{Type|DLabel}}] 
+     * !TupleReturn
      */
     public ListBox(label: string): [DListBox, DLabel];
     
@@ -25481,6 +25703,7 @@ declare class DForm extends DCollapsibleCategory {
      * @param max  The maximum value of the slider 
      * @param decimals [=nil] The number of decimals to allow in the slider (Optional) 
      * @returns [The created {{Type|DNumberWang}}, The created {{Type|DLabel}}] 
+     * !TupleReturn
      */
     public NumberWang(label: string, convar: string, min: number, max: number, decimals?: number): [DNumberWang, DLabel];
     
@@ -25525,6 +25748,7 @@ declare class DForm extends DCollapsibleCategory {
      * @param label  The label to be next to the text entry 
      * @param convar  The console variable to be changed when the text entry is changed 
      * @returns [The created {{Type|DTextEntry}}, The created {{Type|DLabel}}] 
+     * !TupleReturn
      */
     public TextEntry(label: string, convar: string): [DTextEntry, DLabel];
 }
@@ -25765,9 +25989,9 @@ declare class DGrid extends Panel {
     
     /**
      * Returns a list of panels in the grid. 
-     * @returns A list of panels 
+     * @returns A list of {{Type|Panel}}s. 
      */
-    public GetItems(): table;
+    public GetItems(): Panel[];
     
     /**
      * Returns the height of each row of the {{Type|DGrid}}, which is set by {{ClassFunction|DGrid|SetRowHeight}}. 
@@ -26287,7 +26511,7 @@ declare class DHTMLControls extends Panel {
     
     /**
      * Sets the {{Type|DHTML}} element to control with these {{Type|DHTMLControls}}. 
-     * @param dhtml 
+     * @param dhtml  The HTML panel 
      */
     public SetHTML(dhtml: Panel): void;
     
@@ -28055,7 +28279,7 @@ declare class DListView extends DPanel {
      * Gets all of the lines that are currently selected. 
      * @returns A table of {{Type|DListView_Line}}s. 
      */
-    public GetSelected(): table;
+    public GetSelected(): DListView_Line[];
     
     /**
      * Gets the currently selected DListViewLine.
@@ -28464,6 +28688,7 @@ declare class DMenu extends DScrollPanel {
      * parentMenu:Open()
      * 
      * // Creates a menu with one option "Do you want to die?", which has two sub-options "Yes" and "No". 
+     * !TupleReturn
      */
     public AddSubMenu(Name: string, func?: Function): [Panel, Label];
     
@@ -29694,9 +29919,9 @@ declare class DNotify extends Panel {
     
     /**
      * Returns all the items added with {{ClassFunction|DNotify|AddItem}}. 
-     * @returns A table of panels. 
+     * @returns A table of {{Type|Panel}}s. 
      */
-    public GetItems(): table;
+    public GetItems(): Panel[];
     
     /**
      * Returns the display time in seconds of the DNotify. This is set with 
@@ -30424,6 +30649,7 @@ declare class DNumSlider extends Panel {
      * @param x 
      * @param y 
      * @returns [, The second passed argument.] 
+     * !TupleReturn
      */
     public TranslateSliderValues(x: number, y: number): [number, number];
     
@@ -31349,6 +31575,7 @@ declare namespace draw {
      * @param xAlign [=TEXT_ALIGN_LEFT] The alignment of the X coordinate using {{Enum|TEXT_ALIGN}}. 
      * @param yAlign [=TEXT_ALIGN_TOP] The alignment of the Y coordinate using {{Enum|TEXT_ALIGN}}. 
      * @returns [The width of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}., The height of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}.] 
+     * !TupleReturn
      */
     function SimpleText(text: string, font?: string, x?: number, y?: number, color?: Color, xAlign?: TEXT_ALIGN, yAlign?: TEXT_ALIGN): [number, number];
     
@@ -31366,6 +31593,7 @@ declare namespace draw {
      * @param outlinewidth [=] Width of the outline. 
      * @param outlinecolor [=Color( 255, 255, 255, 255 )] Color of the outline. Uses the {{Struct|Color}}. 
      * @returns [The width of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}., The height of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}.] 
+     * !TupleReturn
      */
     function SimpleTextOutlined(Text: string, font?: string, x?: number, y?: number, color?: Color, xAlign?: TEXT_ALIGN, yAlign?: TEXT_ALIGN, outlinewidth?: number, outlinecolor?: Color): [number, number];
     
@@ -31376,6 +31604,7 @@ declare namespace draw {
      * @param Text  The text to draw. 
      * @param outlinewidth  Width of the outline. 
      * @returns [The width of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}., The height of the text. Same value as if you were calling {{LibraryFunction|surface|GetTextSize}}.] 
+     * !TupleReturn
      */
     function SimpleTextOutlined(Text: string, outlinewidth: number): [number, number];
     
@@ -31395,6 +31624,7 @@ declare namespace draw {
      * end )
      * 
      * // Example usage 
+     * !TupleReturn
      */
     function Text(textdata: TextData): [number, number];
     
@@ -31441,6 +31671,7 @@ declare namespace draw {
      * @param boxcolor  The box color. Uses the {{Struct|Color}}. 
      * @param textcolor  The text color. Uses the {{Struct|Color}}. 
      * @returns [The width of the word box., The height of the word box.] 
+     * !TupleReturn
      */
     function WordBox(bordersize: number, x: number, y: number, text: string, font: string, boxcolor: Color, textcolor: Color): [number, number];
 }
@@ -31539,6 +31770,7 @@ declare class DRGBPicker extends DPanel {
      * @param x  The X coordinate on the texture to get the color from 
      * @param y  The Y coordinate on the texture to get the color from 
      * @returns [{{Struct|Color}}, The X-coordinate clamped to the texture's width., The Y-coordinate clamped to the texture's height.] 
+     * !TupleReturn
      */
     public GetPosColor(x: number, y: number): [Color, number, number];
     
@@ -32289,6 +32521,7 @@ declare class DSlider extends DPanel {
      * @param x 
      * @param y 
      * @returns [x, y] 
+     * !TupleReturn
      */
     public TranslateValues(x: number, y: number): [number, number];
 }
@@ -32675,6 +32908,7 @@ declare class DTileLayout extends DDragBase {
      * @param w  The needed width. 
      * @param h  The needed height. 
      * @returns [The x coordinate of the found available space., The y coordinate of the found available space.] 
+     * !TupleReturn
      */
     public FindFreeTile(x: number, y: number, w: number, h: number): [number, number];
     
@@ -33903,6 +34137,7 @@ declare namespace duplicator {
      * @param entStorageTable  The table the entities will be inserted into 
      * @param constraintStorageTable  The table the constraints will be inserted into 
      * @returns [entStorageTable, constraintStorageTable] 
+     * !TupleReturn
      */
     function GetAllConstrainedEntitiesAndConstraints(ent: Entity, entStorageTable: table, constraintStorageTable: table): [table, table];
     
@@ -33942,6 +34177,7 @@ declare namespace duplicator {
      * end
      * 
      * // Code used for a TOOL to copy duplication data on right click and paste it with its original info on left click. 
+     * !TupleReturn
      */
     function Paste(Player: Player, EntityList: table, ConstraintList: table): [table, table];
     
@@ -34481,7 +34717,7 @@ declare namespace engine {
      * Returns an array of tables corresponding to all games from which Garry's Mod supports mounting content.
      * 
      * The "mounted" and "installed" values currently do not work correctly serverside on dedicated servers. Some games will always report true while others will always report false. 
-     * @returns A table containing all mountable games 
+     * @returns A table of tables containing all mountable games 
      * @example
      * 
      * PrintTable( engine.GetGames() )
@@ -34535,6 +34771,7 @@ declare namespace engine {
      * print("Server Tick: "..(1/engine.ServerFrameTime()))
      * 
      * // Get the servers tickrate. Can be used to indicate lag 
+     * !TupleReturn
      */
     function ServerFrameTime(): [number, number];
     
@@ -34834,6 +35071,7 @@ declare class Entity {
      * @param pos  The entity's actual position. May differ from {{ClassFunction|Entity|GetPos}} 
      * @param ang  The entity's actual angles. May differ from {{ClassFunction|Entity|GetAngles}} 
      * @returns [New position, New angles] 
+     * !TupleReturn
      */
     protected CalcAbsolutePosition(pos: Vector, ang: Angle): [Vector, Angle];
     
@@ -34898,7 +35136,7 @@ declare class Entity {
      * This only affects the control points of the particle effects and will do nothing if the effect doesn't use control points. 
      * @returns The created particle system. 
      */
-    public CreateParticleEffect(particle: string, attachment: number, options?: table): CNewParticleEffect;
+    public CreateParticleEffect(particle: string, attachment: number, options?: table[]): CNewParticleEffect;
     
     /**
      * Draws the shadow of an entity. 
@@ -35277,6 +35515,7 @@ declare class Entity {
      * Returns the position of an Player/NPC's view, or two vectors for ragdolls (one for each eye) 
      * @returns [View position of the entity.
      * This will be be position of the first eye for ragdoll., For a ragdoll, this is the position of the second eye.] 
+     * !TupleReturn
      */
     public EyePos(): [Vector, Vector];
     
@@ -35553,9 +35792,9 @@ declare class Entity {
     
     /**
      * Returns a list of all attachments of the entity. 
-     * @returns List of bodygroups as a table of tables if the entity can have bodygroups. See {{Struct|BodyGroupData}} 
+     * @returns Bodygroups as a table of {{Struct|BodyGroupData}}s if the entity can have bodygroups. 
      */
-    public GetBodyGroups(): table[];
+    public GetBodyGroups(): BodyGroupData[];
     
     /**
      * Returns the value of the bone controller with the specified ID.
@@ -35634,6 +35873,7 @@ declare class Entity {
      * >This can return garbage serverside or {{GlobalFunction|Vector}}(0,0,0) for v49 models. 
      * @param boneIndex  The bone index of the bone to get the position of. See {{ClassFunction|Entity|LookupBone}}. 
      * @returns [The bone's position relative to the world., The bone's angle relative to the world.] 
+     * !TupleReturn
      */
     public GetBonePosition(boneIndex: number): [Vector, Angle];
     
@@ -35645,6 +35885,7 @@ declare class Entity {
      * This will be either the first vertex's position (if available) or the plane's normal multiplied by the plane's distance., The normal of the plane., The "distance" of the plane.
      * 
      * The distance is the dot product of the plane's normal and the point it was initialized with.] 
+     * !TupleReturn
      */
     public GetBrushPlane(id: number): [Vector, Vector, number];
     
@@ -35706,6 +35947,7 @@ declare class Entity {
      * **Bug [#223](https://github.com/Facepunch/garrysmod-issues/issues/223):**
      * >This can be out-of-sync between the client and server for weapons. 
      * @returns [The minimum vector of the collision bounds, The maximum vector of the collision bounds] 
+     * !TupleReturn
      */
     public GetCollisionBounds(): [Vector, Vector];
     
@@ -35740,6 +35982,7 @@ declare class Entity {
      * end
      * 
      * // From gmsave/constraints.lua 
+     * !TupleReturn
      */
     public GetConstrainedEntities(): [Entity, Entity];
     
@@ -35761,6 +36004,7 @@ declare class Entity {
      * end
      * 
      * // From gmsave/constraints.lua 
+     * !TupleReturn
      */
     public GetConstrainedPhysObjects(): [PhysObj, PhysObj];
     
@@ -35913,6 +36157,7 @@ declare class Entity {
      * Returns acceptable value range for the flex. 
      * @param flex  The ID of the flex to look up bounds of 
      * @returns [The minimum value for this flex, The maximum value for this flex] 
+     * !TupleReturn
      */
     public GetFlexBounds(flex: number): [number, number];
     
@@ -36021,6 +36266,7 @@ declare class Entity {
      * print(mins, maxs)
      * 
      * // Displays the mins and maxs for the client's first hitbox in the first group, which is generally the head 
+     * !TupleReturn
      */
     public GetHitBoxBounds(hitbox: number, group: number): [Vector, Vector];
     
@@ -36056,6 +36302,7 @@ declare class Entity {
     /**
      * Returns entity's current hit box set 
      * @returns [The current hit box set id, or no value if the entity doesn't have hit boxes, The current hit box set name, or no value if the entity doesn't have hit boxes] 
+     * !TupleReturn
      */
     public GetHitboxSet(): [number, string];
     
@@ -36249,6 +36496,7 @@ declare class Entity {
     /**
      * Returns the entity's model bounds. This is different than the collision bounds/hull. This is not scaled with {{ClassFunction|Entity|SetModelScale}}, and will return the model's original, unmodified mins and maxs. 
      * @returns [The minimum vector of the bounds, The maximum vector of the bounds] 
+     * !TupleReturn
      */
     public GetModelBounds(): [Vector, Vector];
     
@@ -36273,6 +36521,7 @@ declare class Entity {
      * {{Validate}}
      * Returns the entity's model render bounds. By default this will return the same bounds as {{ClassFunction|Entity|GetModelBounds}}. 
      * @returns [The minimum vector of the bounds, The maximum vector of the bounds] 
+     * !TupleReturn
      */
     public GetModelRenderBounds(): [Vector, Vector];
     
@@ -36708,6 +36957,7 @@ declare class Entity {
      * Returns pose parameter range 
      * @param id  Pose parameter ID to look up 
      * @returns [The minimum value, The maximum value] 
+     * !TupleReturn
      */
     public GetPoseParameterRange(id: number): [number, number];
     
@@ -36752,6 +37002,7 @@ declare class Entity {
      * 
      * If the render bounds are not inside players view, the entity will not be drawn! 
      * @returns [The minimum vector of the bounds, The maximum vector of the bounds.] 
+     * !TupleReturn
      */
     public GetRenderBounds(): [Vector, Vector];
     
@@ -36935,6 +37186,7 @@ declare class Entity {
      * local pos = ( ent:GetPos() + ( a + b ) / 2 )
      * 
      * // The entity's AABB center (regardless of model origin) is stored in 'pos'. 
+     * !TupleReturn
      */
     public GetRotatedAABB(min: Vector, max: Vector): [Vector, Vector];
     
@@ -37166,6 +37418,7 @@ declare class Entity {
      * @param startCycle  The sequence start cycle. 0 is the start of the animation, 1 is the end. 
      * @param endCyclnde  The sequence end cycle. 0 is the start of the animation, 1 is the end. Values like 2, etc are allowed. 
      * @returns [Whether the operation was successful, The delta vector of the animation, how much the model's origin point moved., The delta angle of the animation.] 
+     * !TupleReturn
      */
     public GetSequenceMovement(sequenceId: number, startCycle: number, endCyclnde: number): [boolean, Vector, Angle];
     
@@ -37948,6 +38201,7 @@ declare class Entity {
      * @param name  Sequence name 
      * @returns [Sequence ID for that name. This '''will''' differ for models with same sequence names. Will be -1 whether the sequence is invalid., The sequence duration
      * * 0 if the sequence is invalid] 
+     * !TupleReturn
      */
     public LookupSequence(name: string): [number, number];
     
@@ -38484,7 +38738,7 @@ declare class Entity {
      * 
      * // Creates a "box" physics mesh for the entity. 
      */
-    public PhysicsInitConvex(points: table): boolean;
+    public PhysicsInitConvex(points: Vector[]): boolean;
     
     /**
      * An advanced version of {{ClassFunction|Entity|PhysicsInitConvex}} which initializes a physics object from multiple convex meshes. This should be used for physics objects with a custom shape which cannot be represented by a single convex mesh.
@@ -38612,6 +38866,7 @@ declare class Entity {
      * @param phys  The physics object of the entity. 
      * @param deltaTime  Time since the last call. 
      * @returns [Angular force, Linear force, One of the {{Enum|SIM}}.] 
+     * !TupleReturn
      */
     protected PhysicsSimulate(phys: PhysObj, deltaTime: number): [Vector, Vector, SIM];
     
@@ -41192,6 +41447,7 @@ declare class Entity {
      * print(max)
      * 
      * // Prints Entity(1)'s maximum bounding box vector. 
+     * !TupleReturn
      */
     public WorldSpaceAABB(): [Vector, Vector];
     
@@ -41369,7 +41625,7 @@ declare namespace ents {
      * @param angle_cos  The [[math/cos|cosine]] of the angle between the center of the cone to its edges, which is half the overall angle of the cone.
      * 
      * 1 makes a 0° cone, 0.707 makes approximately 90°, 0 makes 180°, and so on. 
-     * @returns A table of all found entities. 
+     * @returns A table of all found {{Type|Entity}}s. 
      * @example
      * 
      * local mat = Material( "models/shiny" )
@@ -41407,7 +41663,7 @@ declare namespace ents {
      * **Note:**
      * >The function won't take in to account {{GlobalFunction|AddOriginToPVS}} and the like. 
      * @param viewPoint  {{Type|Entity}} or {{Type|Vector}} to find entities within the PVS of. If a player is given, this function will use the player's view entity. 
-     * @returns The found entities. 
+     * @returns The found {{Type|Entity}}s. 
      */
     function FindInPVS(viewPoint: Entity | Vector): table;
     
@@ -41418,7 +41674,7 @@ declare namespace ents {
      * >Clientside entities will not be returned by this function. 
      * @param origin  Center of the sphere. 
      * @param radius  Radius of the sphere. 
-     * @returns A table of all found entities. Has a limit of 1024 entities. 
+     * @returns A table of all found {{Type|Entity}}s. Has a limit of 1024 entities. 
      */
     function FindInSphere(origin: Vector, radius: number): Entity[];
     
@@ -41434,7 +41690,7 @@ declare namespace ents {
     
     /**
      * Returns a table of all existing entities. 
-     * @returns Table of all existing entities. 
+     * @returns Table of all existing {{Type|Entity}}s. 
      */
     function GetAll(): Entity[];
     
@@ -41443,7 +41699,7 @@ declare namespace ents {
      * @param entIdx  The index of the entity. 
      * @returns The entity if it exists. 
      */
-    function GetByIndex(entIdx: number): Entity[];
+    function GetByIndex(entIdx: number): Entity;
     
     /**
      * Gives you the amount of currently existing entities.
@@ -41558,6 +41814,7 @@ declare namespace file {
      * print( "File: " .. files[1], "Folder: " .. directories[1] )
      * 
      * // Prints the first file and the first directory in the ''data'' folder. 
+     * !TupleReturn
      */
     function Find(name: string, path: string, sorting?: string): [table, table];
     
@@ -42249,6 +42506,7 @@ declare namespace game {
      * end)
      * 
      * // Downloads the Playable Piano addon and mounts the content. 
+     * !TupleReturn
      */
     function MountGMA(path: string): [boolean, table];
     
@@ -42554,6 +42812,7 @@ declare class Gamemode {
      * @param ply  The player to apply the animation. 
      * @param vel  The velocity of the player. 
      * @returns [{{Enum|ACT}} for the activity the player should use. A nil return will be treated as ACT_INVALID., Sequence for the player to use. This takes precedence over the activity (the activity is still used for layering). Return -1 or nil to let the activity determine the sequence.] 
+     * !TupleReturn
      */
     public CalcMainActivity(ply: Player, vel: Vector): [ACT, number];
     
@@ -42604,6 +42863,7 @@ declare class Gamemode {
      * @param pos  Current position 
      * @param ang  Current angle 
      * @returns [New position, New angle] 
+     * !TupleReturn
      */
     public CalcViewModelView(wep: Weapon, vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle): [Vector, Angle];
     
@@ -42746,6 +43006,7 @@ declare class Gamemode {
      * Available pre-defined messages can be found in ''../sourceengine/resource/gameui_english.txt'' files.
      * 
      * Suggested messages are ''#GameUI_ConnectionFailed'' and ''#GameUI_ServerRejectLANRestrict'' 
+     * !TupleReturn
      */
     public CheckPassword(steamID64: string, ipAddress: string, svPassword: string, clPassword: string, name: string): [boolean, string];
     
@@ -43162,6 +43423,7 @@ declare class Gamemode {
      * hook.Add( "GetMotionBlurValues", "GetNewMotionBlurValues", GetNewMotionBlurValues )
      * 
      * // Makes your forward/radial blur pulse. 
+     * !TupleReturn
      */
     public GetMotionBlurValues(horizontal: number, vertical: number, forward: number, rotational: number): [number, number, number, number];
     
@@ -44159,6 +44421,7 @@ declare class Gamemode {
      * end)
      * 
      * // Players can only hear each other if they are within 500 units. 
+     * !TupleReturn
      */
     public PlayerCanHearPlayersVoice(listener: Player, talker: Player): [boolean, boolean];
     
@@ -45708,6 +45971,3305 @@ declare class Gamemode {
 /**
  * This is the list of global functions. 
  */
+/**
+ * Adds simple Get/Set accessor functions on the specified table.
+ * 
+ * Can also force the value to be set to a number, bool or string. 
+ * @param tab  The table to add the accessor functions too. 
+ * @param key  The key of the table to be get/set. 
+ * @param name  The name of the functions (will be prefixed with Get and Set). 
+ * @param force [=nil] The type the setter should force to (uses {{Enum|FORCE}}). 
+ * @example
+ * 
+ * local meta = FindMetaTable("Player")
+ * AccessorFunc(meta, "foo_bar", "FooBar", FORCE_BOOL)
+ * 
+ * local ply = player.GetByID(1)
+ * ply:SetFooBar(true)
+ * 
+ * print(not ply:GetFooBar())
+ * 
+ * // Adds the GetFooBar and SetFooBar functions to the Player metatable and then uses them. 
+ */
+declare function AccessorFunc(tab: table, key: any, name: string, force?: FORCE): void;
+
+/**
+ * Defines a global entity class variable with an automatic value in order to prevent collisions with other {{Enum|CLASS}}. You should prefix your variable with CLASS_ for consistency. 
+ * @param name  The name of the new enum/global variable. 
+ * @example
+ * 
+ * Add_NPC_Class( "CLASS_TESTER" )
+ * print( CLASS_TESTER )
+ * 
+ * // Creates a global variable named CLASS_TESTER and prints its value. 
+ */
+declare function Add_NPC_Class(name: string): void;
+
+/**
+ * Adds the specified image path to the main menu background pool. Image can be png or jpeg. 
+ * @param path  Path to the image. 
+ */
+declare function AddBackgroundImage(path: string): void;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Tells the engine to register a console command. If the command was ran, the engine calls {{LibraryFunction|concommand|Run}}. 
+ * @param name  The name of the console command to add. 
+ * @param helpText  The help text. 
+ * @param flags  Concommand flags using {{Enum|FCVAR}} 
+ */
+declare function AddConsoleCommand(name: string, helpText: string, flags: FCVAR): void;
+
+/**
+ * Marks a Lua file to be sent to clients when they join the server. Doesn't do anything on the client - this means you can use it in a shared file without problems.
+ * 
+ * {{Warning|If the file trying to be added is empty, an error will occur, and the file will not be sent to the client.}}
+ * 
+ * **Note:**
+ * >This function is not needed for scripts located in '''lua/autorun/''' and '''lua/autorun/client/''': they are automatically sent to clients. 
+ * @param file [=current file] The name/path to the Lua file that should be sent, relative to the garrysmod/lua folder. If no parameter is specified, it sends the current file.
+ * 
+ * The file path can be relative to the script it is ran from. For example, if your script is in lua/myfolder/stuff.lua, calling {{GlobalFunction|AddCSLuaFile}}("otherstuff.lua") and {{GlobalFunction|AddCSLuaFile}}("myfolder/otherstuff.lua") is the same thing. 
+ * @example
+ * 
+ * AddCSLuaFile( "cl_init.lua" )
+ * 
+ * // Adds the cl_init.lua file in the "lua" folder to be downloaded by connecting clients. This is required, and is normally done in init.lua.@example
+ * 
+ * AddCSLuaFile()
+ * 
+ * // Adds the current file to the list of files to be downloaded by clients. This is usually done at the top of a shared file. 
+ */
+declare function AddCSLuaFile(file?: string): void;
+
+/**
+ * Loads the specified image from the /cache folder, used in combination {{LibraryFunction|steamworks|Download}}.
+ * 
+ * Most addons will provide a 512x512 png image. 
+ * @param name  The name of the file. 
+ * @returns The material, returns nil if the cached file is not an image. 
+ */
+declare function AddonMaterial(name: string): IMaterial;
+
+/**
+ * Adds the specified vector to the PVS which is currently building. This allows all objects in visleafs visible from that vector to be drawn. 
+ * @param position  The origin to add. 
+ * @example
+ * 
+ * hook.Add("SetupPlayerVisibility", "AddRTCamera", function(pPlayer, pViewEntity)
+ * 	// Adds any view entity
+ * 	if (pViewEntity:IsValid()) then
+ * 		AddOriginToPVS(pViewEntity:GetPos())
+ * 	end
+ * end)
+ * 
+ * // Adds an RTCamera's current position to all player's PVS, causing props near it to always render on an rtscreen 
+ */
+declare function AddOriginToPVS(position: Vector): void;
+
+/**
+ * This function creates a World Tip, similar to the one shown when aiming at a Thruster where it shows you its force.
+ * 
+ * This function will make a World Tip that will only last 50 milliseconds (1/20th of a second), so you must call it continuously as long as you want the World Tip to be shown. It is common to call it inside a Think hook.
+ * 
+ * Contrary to what the function's name implies, it is impossible to create more than one World Tip at the same time. A new World Tip will overwrite the old one, so only use this function when you know nothing else will also be using it.
+ * 
+ * See {{HookFunction|SANDBOX|PaintWorldTips}} for more information.
+ * 
+ * **Note:**
+ * >This function is only available in Sandbox and its derivatives 
+ * @param entindex [=nil] '''This argument is no longer used'''; it has no effect on anything. You can use nil in this argument. 
+ * @param text [=] The text for the world tip to display. 
+ * @param dieTime [=SysTime() + 0.05] '''This argument is no longer used'''; when you add a World Tip it will always last only 0.05 seconds. You can use nil in this argument. 
+ * @param pos [=ent:GetPos()] Where in the world you want the World Tip to be drawn. If you add a valid Entity in the next argument, this argument will have no effect on the actual World Tip. 
+ * @param ent [=nil] Which entity you want to associate with the World Tip. This argument is optional. If set to a valid entity, this will override the position set in ''pos'' with the Entity's position. 
+ * @example
+ * 
+ * hook.Add( "Think", "draw World Tip", function()
+ * 	local ply = Entity( 1 )
+ * 	local tr = ply:GetEyeTrace()
+ * 	
+ * 	local pos = tr.HitPos // will be unused if ent is valid
+ * 	local ent = tr.Entity
+ * 	
+ * 	AddWorldTip( nil, "Hello world!", nil, pos, ent )
+ * end )
+ * 
+ * // Creates a World Tip where the player is looking. If the player is looking at an entity, the World Tip is positioned on the entity. 
+ */
+declare function AddWorldTip(entindex?: number, text?: string, dieTime?: number, pos?: Vector, ent?: Entity): void;
+
+/**
+ * Returns an angle with a randomized pitch, yaw and roll. The pitch is between -90 and 90 degrees, while yaw and roll are between -180 and 180 degrees. 
+ * @returns The randomly generated angle. 
+ * @example
+ * 
+ * print( AngleRand() )
+ * 
+ * // Prints out a random angle. 
+ */
+declare function AngleRand(): Angle;
+
+/**
+ * If the result of the first argument is false or nil, an error is thrown with the second argument as the message. 
+ * @param expression  The expression to assert. 
+ * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. 
+ * @returns If successful, returns the result of the first argument. 
+ * @example
+ * 
+ * local ABC = assert(print)
+ * print(ABC)
+ * 
+ * // The assertion is successful, and the result of the first argument is returned.@example
+ * 
+ * assert(print == 1, "print is not equal to 1!")
+ * 
+ * // Since the first argument evaluates to false, an error is thrown. 
+ */
+declare function assert(expression: any, errorMessage?: string): any;
+
+/**
+ * Sends the specified Lua code to all connected clients and executes it. 
+ * @param code  The code to be executed. Capped at length of 254 characters. 
+ * @example
+ * 
+ * BroadcastLua( [[print( "Hello World!" )]] )
+ * 
+ * // Print "Hello World!" in the clients' console 
+ */
+declare function BroadcastLua(code: string): void;
+
+/**
+ * Dumps the networked variables of all entities into one table and returns it. 
+ * @returns Format:
+ * * key = {{Type|Entity}} for NWVars or {{Type|number}} (always 0) for global vars
+ * * value = {{Type|table}} formatted as:
+ * ** key = {{Type|string}} var name
+ * ** value = any type var value 
+ */
+declare function BuildNetworkedVarsTable(): table;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Used internally to check if the current server the player is on can be added to favorites or not. Does not check if the server is ALREADY in the favorites. 
+ * @returns 
+ */
+declare function CanAddServerToFavorites(): boolean;
+
+/**
+ * Aborts joining of the server you are currently joining. 
+ */
+declare function CancelLoading(): void;
+
+/**
+ * Sets the active main menu background image to a random entry from the background images pool. Images are added with {{GlobalFunction|AddBackgroundImage}}. 
+ * @param currentgm  Apparently does nothing. 
+ */
+declare function ChangeBackground(currentgm: string): void;
+
+/**
+ * Automatically called by the engine when a panel is hovered over with the mouse 
+ * @param panel  Panel that has been hovered over 
+ */
+declare function ChangeTooltip(panel: Panel): void;
+
+/**
+ * Empties the pool of main menu background images. 
+ */
+declare function ClearBackgroundImages(): void;
+
+/**
+ * Creates a non physical entity that only exists on the client. See also {{LibraryFunction|ents|CreateClientProp}}.
+ * 
+ * **Bug [#861](https://github.com/Facepunch/garrysmod-issues/issues/861):**
+ * >Parented clientside models will become detached if the parent entity leaves the PVS.
+ * 
+ * **Bug [#1387](https://github.com/Facepunch/garrysmod-issues/issues/1387):**
+ * >Clientside entities are not garbage-collected, thus you must store a reference to the object and call {{ClassFunction|CSEnt|Remove}} manually.
+ * 
+ * **Bug [#3184](https://github.com/Facepunch/garrysmod-issues/issues/3184):**
+ * >Clientside models will occasionally delete themselves during high server lag. 
+ * @param model  The file path to the model.
+ * 
+ * {{Warning|Model must be precached with {{LibraryFunction|util|PrecacheModel}} on the server before usage.}} 
+ * @param renderGroup [=RENDERGROUP_OTHER] The rendergroup of the entity, see {{Enum|RENDERGROUP}}. 
+ * @returns Created client-side model. ( C_BaseFlex ) 
+ */
+declare function ClientsideModel(model: string, renderGroup?: RENDERGROUP): CSEnt;
+
+/**
+ * Creates a fully clientside ragdoll.
+ * 
+ * **Note:**
+ * >The ragdoll initially starts as hidden and with shadows disabled, see the example for how to enable it.
+ * There's no need to call {{ClassFunction|Entity|Spawn}} on this entity.
+ * The physics won't initialize at all if the model hasn't been precached serverside first.
+ * 
+ * **Bug [#1387](https://github.com/Facepunch/garrysmod-issues/issues/1387):**
+ * >Clientside entities are not garbage-collected, thus you must store a reference to the object and call {{ClassFunction|CSEnt|Remove}} manually. 
+ * @param model  The file path to the model.
+ * 
+ * {{Warning|Model must be precached with {{LibraryFunction|util|PrecacheModel}} on the server before usage.}} 
+ * @param renderGroup [=RENDER_GROUP_OPAQUE] The {{Enum|RENDERGROUP}} to assign. 
+ * @returns The newly created client-side ragdoll. ( C_ClientRagdoll ) 
+ * @example
+ * 
+ * local ragdoll = ClientsideRagdoll( "models/player/breen.mdl" )
+ * ragdoll:SetNoDraw( false )
+ * ragdoll:DrawShadow( true )
+ * 
+ * // Creates a new ragdoll with the player model of breen and enables rendering and shadows. 
+ */
+declare function ClientsideRagdoll(model: string, renderGroup?: RENDERGROUP): CSEnt;
+
+/**
+ * Creates a scene entity based on the scene name and the entity. 
+ * @param name  The name of the scene. 
+ * @param targetEnt  The entity to play the scene on. 
+ * @returns C_SceneEntity 
+ * @example
+ * 
+ * ClientsideScene( "scenes/eli_lab/mo_gowithalyx01.vcd", LocalPlayer() )
+ * 
+ * // Plays "I guess you should go with Alyx" line from HL2. 
+ */
+declare function ClientsideScene(name: string, targetEnt: Entity): CSEnt;
+
+/**
+ * Closes all Derma menus that have been passed to {{GlobalFunction|RegisterDermaMenuForClose}} and calls {{HookFunction|GM|CloseDermaMenus}} 
+ */
+declare function CloseDermaMenus(): void;
+
+/**
+ * Executes the specified action on the garbage collector. 
+ * @param action [="collect"] The action to run.
+ * 
+ * Valid actions are "collect", "stop", "restart", "count", "step", "setpause" and "setstepmul". 
+ * @param arg [=] The argument of the specified action, only applicable for "step", "setpause" and "setstepmul". 
+ * @returns If the action is count this is the number of kilobytes of memory used by Lua.
+ * If the action is step this is true if a garbage collection cycle was finished.
+ * 
+ * If the action is setpause this is the previous value for the GC's pause.
+ * If the action is setstepmul this is the previous value for the GC's step. 
+ * @example
+ * 
+ * print( collectgarbage( "count" ) )
+ * 
+ * // The current floored dynamic memory usage of Lua, in kilobytes. 
+ */
+declare function collectgarbage(action?: string, arg?: number): any;
+
+/**
+ * Creates a {{Struct|Color}}. 
+ * @param r  An integer from 0-255 describing the red value of the color. 
+ * @param g  An integer from 0-255 describing the green value of the color. 
+ * @param b  An integer from 0-255 describing the blue value of the color. 
+ * @param a [=255] An integer from 0-255 describing the alpha (transparency) of the color. 
+ * @returns The created {{Struct|Color}}. 
+ * @example
+ * 
+ * PrintTable(Color(1, 2, 3, 4))
+ * 
+ * // Creates a color and prints the components to the console.@example
+ * 
+ * local col = Color( 0, 255, 0, 255)
+ * 
+ * col.r = 255
+ * 
+ * PrintTable(col)
+ * 
+ * // Color variables can have individual channels set using the arguments@example
+ * 
+ * local str = tostring( Color( 255, 0, 0 ) )
+ * print( str )
+ * 
+ * // Transforms a color object to a string, then prints it.@example
+ * 
+ * if Color( 255, 0, 0 ) == Color( 255, 0, 0 ) then
+ * 	print( "equal" )
+ * else
+ * 	print( "unequal" )
+ * end
+ * 
+ * // Prints "equal" if both colors are equal, otherwise "unequal" will be printed. 
+ */
+declare function Color(r: number, g: number, b: number, a?: number): Color;
+
+/**
+ * Returns a new {{Struct|Color}} with the RGB components of the given {{Struct|Color}} and the alpha value specified. 
+ * @param color  The {{Struct|Color}} from which to take RGB values. This color will not be modified. 
+ * @param alpha  The new alpha value, a number between 0 and 255. Values above 255 will be clamped. 
+ * @returns The new {{Struct|Color}} with the modified alpha value 
+ * @example
+ * 
+ * local red = Color( 255, 0, 0, 255 )
+ * local red2 = ColorAlpha( red, 125 )
+ * print( red.r, red.g, red.b, red.a )
+ * print( red2.r, red2.g, red2.b, red2.a )
+ * 
+ * // 
+ */
+declare function ColorAlpha(color: Color, alpha: number): Color;
+
+/**
+ * Creates a {{Struct|Color}} with randomized red, green, and blue components. If the alpha argument is true, alpha will also be randomized. 
+ * @param a [=false] Should alpha be randomized. 
+ * @returns The created {{Struct|Color}}. 
+ */
+declare function ColorRand(a?: boolean): Color;
+
+/**
+ * Converts a {{Struct|Color}} into HSV color space. 
+ * @param color  The {{Struct|Color}}. 
+ * @returns [The hue in degrees., The saturation in the range 0-1., The value in the range 0-1.] 
+ * @example
+ * 
+ * print(ColorToHSV(Color(255, 255, 0)))
+ * 
+ * // Creates a color and prints the HSV values to the console. 
+ * !TupleReturn
+ */
+declare function ColorToHSV(color: Color): [number, number, number];
+
+/**
+ * Attempts to compile the given file. If successful, returns a function that can be called to perform the actual execution of the script. 
+ * @param path  Path to the file, relative to the garrysmod/lua/ directory. 
+ * @returns The function which executes the script. 
+ * @example
+ * 
+ * local example = CompileFile("example.lua")
+ * example()
+ * 
+ * // Assuming our file is named example.lua and located in the garrysmod/lua/ directory, the following code would execute the script. 
+ */
+declare function CompileFile(path: string): Function;
+
+/**
+ * This function will compile the code argument as lua code and return a function that will execute that code. 
+ * 
+ * Please note that this function will not automatically execute the given code after compiling it. 
+ * @param code  The code to compile. 
+ * @param identifier  An identifier in case an error is thrown. (The same identifier can be used multiple times) 
+ * @param HandleError [=true] If false this function will return an error string instead of throwing an error. 
+ * @returns [A function that, when called, will execute the given code. Returns nil if there was an error., The error string. Will be nil if there were no errors or the function handles errors (third argument is true).] 
+ * @example
+ * 
+ * local code = "MsgN('Hi)"
+ * local func = CompileString(code, "TestCode", false)
+ * MsgN(func)
+ * 
+ * // Code that will not compile, with ErrorHandling set to false.@example
+ * 
+ * local code = "MsgN('Hi')"
+ * local func = CompileString(code, "TestCode")
+ * 
+ * if func then // Compile String returns nil if 3rd argument is true and code has errors.
+ *    func()
+ * end
+ * 
+ * // Code that will compile. 
+ * !TupleReturn
+ */
+declare function CompileString(code: string, identifier: string, HandleError?: boolean): [Function, string];
+
+/**
+ * Returns a table of console command names beginning with the given text. 
+ * @param text  Text that the console commands must begin with. 
+ * @returns Table of console command names. 
+ */
+declare function ConsoleAutoComplete(text: string): table;
+
+/**
+ * Returns whether a {{Type|ConVar}} with the given name exists or not 
+ * @param name  Name of the {{Type|ConVar}}. 
+ * @returns True if the {{Type|ConVar}} exists, false otherwise. 
+ */
+declare function ConVarExists(name: string): ConVar;
+
+/**
+ * Makes a clientside-only console variable
+ * 
+ * **Note:**
+ * >This function is a wrapper of {{GlobalFunction|CreateConVar}}, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when '''shouldsave''' and '''userdata''' are true, respectively.
+ * 
+ * Although this function is shared, it should only be used clientside. 
+ * @param name  Name of the ConVar to be created and able to be accessed.
+ * 
+ * This cannot be a name of existing console command or console variable. It will silently fail if it is. 
+ * @param defaultVal  Default value of the ConVar. 
+ * @param shouldsave [=true] Should the ConVar be saved across sessions 
+ * @param userdata [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using {{ClassFunction|Player|GetInfoNum}} and similar functions. 
+ * @param helptext [=""] Help text to display in the console. 
+ * @returns Created convar. 
+ * @example
+ * 
+ * CreateClientConVar("superspeed_enabled", "0", true, false)
+ * 
+ * // Creates a ConVar that does nothing and saves. 
+ */
+declare function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userdata?: boolean, helptext?: string): ConVar;
+
+/**
+ * Creates a console variable ({{Type|ConVar}}), in general these are for things like gamemode/server settings. 
+ * @param name  Name of the convar.
+ * 
+ * This cannot be a name of an engine console command or console variable. It will silently fail if it is. If it is the same name as another lua ConVar, it will return that ConVar object. 
+ * @param value  Default value of the convar. Can also be a number. 
+ * @param flags [=FCVAR_NONE] Flags of the convar, see {{Enum|FCVAR}}, either as bitflag or as table. 
+ * @param helptext [=""] The help text to show in the console. 
+ * @returns The convar created. 
+ */
+declare function CreateConVar(name: string, value: string, flags?: FCVAR, helptext?: string): ConVar;
+
+/**
+ * Creates a new material with the specified name and shader.
+ * 
+ * **Note:**
+ * >Materials created with this function can be used in {{ClassFunction|Entity|SetMaterial}} and {{ClassFunction|Entity|SetSubMaterial}} by prepending a "!" to their material name argument.
+ * 
+ * **Bug [#1531](https://github.com/Facepunch/garrysmod-issues/issues/1531):**
+ * >.pngs must be loaded with {{GlobalFunction|Material}} before being used with this function.
+ * 
+ * **Bug [#2511](https://github.com/Facepunch/garrysmod-issues/issues/2511):**
+ * >This does not work with [https://developer.valvesoftware.com/wiki/Patch patch materials].
+ * 
+ * **Bug [#3103](https://github.com/Facepunch/garrysmod-issues/issues/3103):**
+ * >This will not create a new material if another material object with the same name already exists. 
+ * @param name  The material name. Must be unique. 
+ * @param shaderName  The shader name. See [[:Category: Shaders]]. 
+ * @param materialData  Key-value table that contains shader parameters and proxies.
+ * 
+ * *See: [https://developer.valvesoftware.com/wiki/Category:List_of_Shader_Parameters List of Shader Parameters on Valve Developers Wiki] and each shader's page from [[:Category: Shaders]].
+ * 
+ * **Note:**
+ * >Unlike {{ClassFunction|IMaterial|SetTexture}}, this table will not accept {{Type|ITexture}} values. Instead, use the texture's name (see {{ClassFunction|ITexture|GetName}}). 
+ * @returns Created material 
+ * @example
+ * 
+ * CreateMaterial( "colortexshp", "VertexLitGeneric", {
+ *   ["$basetexture"] = "color/white",
+ *   ["$model"] = 1,
+ *   ["$translucent"] = 1,
+ *   ["$vertexalpha"] = 1,
+ *   ["$vertexcolor"] = 1
+ * } )
+ * 
+ * // Alternative to {{LibraryFunction|render|SetColorMaterial}}, mainly for use with {{ClassFunction|Entity|SetMaterial}} 
+ */
+declare function CreateMaterial(name: string, shaderName: string, materialData: ITexture[]): IMaterial;
+
+/**
+ * Creates {{Type|PhysCollide}} objects for every physics object the model has. The model must be precached with {{LibraryFunction|util|PrecacheModel}} before being used with this function. 
+ * @param modelName  Model path to get the collision objects of. 
+ * @returns Table of {{Type|PhysCollide}} objects. The number of entries will match the model's physics object count. See also {{ClassFunction|Entity|GetPhysicsObjectCount}}. Returns no value if the model doesn't exist, or has not been precached. 
+ */
+declare function CreatePhysCollidesFromModel(modelName: string): PhysCollide[];
+
+/**
+ * Returns the uptime of the server in seconds (to at least 4 decimal places)
+ * 
+ * This is a synchronised value and affected by various factors such as host_timescale (or {{LibraryFunction|game|GetTimeScale}}) and the server being paused - either by sv_pausable or all players disconnecting.
+ * 
+ * You should use this function for timing in-game events but not for real-world events.
+ * 
+ * See also: {{GlobalFunction|RealTime}}, {{GlobalFunction|SysTime}}
+ * 
+ * **Note:**
+ * >This is internally defined as a float, and as such it will be affected by precision loss if your server uptime is more than 6 hours, which will cause jittery movement of players and props and inaccuracy of timers, it is highly encouraged to refresh or change the map when that happens (a server restart is not necessary).
+ * 
+ * This is '''NOT''' easy as it sounds to fix in the engine, so please refrain from posting issues about this
+ * 
+ * **Bug [#3026](https://github.com/Facepunch/garrysmod-issues/issues/3026):**
+ * >This returns 0 in {{HookFunction|GM|PlayerAuthed}}. 
+ * @returns Time synced with the game server. 
+ * @example
+ * 
+ * local delay = 0
+ * hook.Add( "Think", "CurTimeDelay", function()
+ *  if CurTime() < delay then return end
+ * 	print( "This message will repeat every 5 seconds." )
+ * 	 delay = CurTime() + 5
+ *  end)
+ * 
+ * // Simple delay timer. 
+ */
+declare function CurTime(): number;
+
+/**
+ * Returns an {{Type|CTakeDamageInfo}} object.
+ * 
+ * **Bug [#2771](https://github.com/Facepunch/garrysmod-issues/issues/2771):**
+ * >This does not create a unique object, but instead returns a shared reference. That means you cannot use two or more of these objects at once. 
+ * @returns The {{Type|CTakeDamageInfo}} object. 
+ */
+declare function DamageInfo(): CTakeDamageInfo;
+
+/**
+ * Writes text to the right hand side of the screen, like the old error system. Messages disappear after a couple of seconds. 
+ * @param slot  The location on the right hand screen to write the debug info to. Starts at 0, no upper limit 
+ * @param info  The debugging information to be written to the screen 
+ */
+declare function DebugInfo(slot: number, info: string): void;
+
+/**
+ * Gets the base class of an an object.
+ * 
+ * This is used not just by entities, but also by widgets, panels, drive modes, weapons and gamemodes (with "gamemode_" prefix).
+ * 
+ * The keyword '''DEFINE_BASECLASS''' translates into a call to this function. In the engine, it is replaced with:
+ * ```local BaseClass = baseclass.Get``` 
+ * @param name  The child class. 
+ * @returns The base class's meta table. 
+ * @example
+ * 
+ * AddCSLuaFile()
+ * DEFINE_BASECLASS( "weapon_csbasegun" ) //this is equivalent to local BaseClass = baseclass.Get( "weapon_csbasegun" )
+ * 
+ * //omitted generic swep definitions
+ * 
+ * function SWEP:Initialize()
+ * 	BaseClass.Initialize( self ) //calls SWEP:Initialize() from weapon_csbasegun
+ * 	self:SetHoldType( "pistol" )
+ * end
+ * 
+ * function SWEP:Deploy()
+ * 	self:SetAccuracy( 0.9 )
+ * 	return BaseClass.Deploy( self ) //calls SWEP:Deploy() from weapon_csbasegun and returns its result
+ * end
+ * 
+ * function SWEP:SetupDataTables()
+ * 	BaseClass.SetupDataTables( self ) //calls SWEP:SetupDataTables() from weapon_csbasegun and inits its dtvars
+ * end
+ * 
+ * // Inherits the weapon from weapon_csbasegun and calls its base functions 
+ */
+declare function DEFINE_BASECLASS(name: string): table;
+
+/**
+ * Retrieves data from a gamemode to use in yours. This also sets a BaseClass field on your GM table to the gamemode you are deriving from. It appears that this function works by running the init and cl_init Lua files of the target gamemode, then overriding functions that appear in both the target and your gamemode with your gamemode's functions. 
+ * @param base  Gamemode name to derive from. 
+ * @example
+ * 
+ * DeriveGamemode("sandbox")
+ * 
+ * // Retrieves data from sandbox. 
+ */
+declare function DeriveGamemode(base: string): void;
+
+/**
+ * Creates a new derma animation. 
+ * @param name  Name of the animation to create 
+ * @param panel  Panel to run the animation on 
+ * @param func  Function to call to process the animation
+ * 
+ * Arguments:
+ * * {{FuncArg|Panel|pnl|the panel passed to Derma_Anim}}
+ * * {{FuncArg|table|anim|the anim table}}
+ * * {{FuncArg|number|delta|the fraction of the progress through the animation}}
+ * * {{FuncArg|any|data|optional data passed to the run metatable method}} 
+ * @returns A lua metatable containing four methods:
+ * * Run() - Should be called each frame you want the animation to be ran.
+ * * Active() - Returns if the animation is currently active (has not finished and stop has not been called)
+ * * Stop() - Halts the animation at its current progress.
+ * * Start( Length, Data ) - Prepares the animation to be ran for Length seconds. Must be called once before calling Run(). The data parameter will be passed to the func function. 
+ * @example
+ * 
+ * local function inQuad(fraction, beginning, change)
+ * 	return change * (fraction ^ 2) + beginning
+ * end
+ * 
+ * local main = vgui.Create("DFrame")
+ * main:SetTitle("Derma_Anim Example")
+ * main:SetSize(250, 200)
+ * main:SetPos(200)
+ * main:MakePopup()
+ * local anim = Derma_Anim("EaseInQuad", main, function(pnl, anim, delta, data)
+ * 	pnl:SetPos(inQuad(delta, 200, 600), 300) // Change the X coordinate from 200 to 200+600
+ * end)
+ * anim:Start(2) // Animate for two seconds
+ * main.Think = function(self)
+ * 	if anim:Active() then
+ * 		anim:Run()
+ * 	end
+ * end
+ * 
+ * // Applies an [http://easings.net/#easeInQuad easeInQuad] easing to the panel to make it glide naturally across the screen. 
+ */
+declare function Derma_Anim(name: string, panel: Panel, func: Function): table;
+
+/**
+ * Draws background blur around the given panel. 
+ * @param panel  Panel to draw the background blur around 
+ * @param startTime  Time that the blur began being painted 
+ * @example
+ * 
+ * function PANEL:Init()
+ *     self.startTime = SysTime()
+ * end
+ * 
+ * function PANEL:Paint()
+ *     Derma_DrawBackgroundBlur(self, self.startTime)
+ * end
+ * 
+ * // Blur being drawn around a panel 
+ */
+declare function Derma_DrawBackgroundBlur(panel: Panel, startTime: number): void;
+
+/**
+ * Creates panel method that calls the supplied Derma skin hook via {{LibraryFunction|derma|SkinHook}} 
+ * @param panel  Panel to add the hook to 
+ * @param functionName  Name of panel function to create 
+ * @param hookName  Name of Derma skin hook to call within the function 
+ * @param typeName  Type of element to call Derma skin hook for 
+ * @example
+ * 
+ * Derma_Hook( PANEL, "Paint", "Paint", "Panel" )
+ * 
+ * // Creates PANEL.Paint function to call Derma skin hook 'Paint' with type 'Panel' 
+ */
+declare function Derma_Hook(panel: Panel, functionName: string, hookName: string, typeName: string): void;
+
+/**
+ * Makes the panel (usually an input of sorts) respond to changes in console variables by adding next functions to the panel:
+ * * {{ClassFunction|Panel|SetConVar}}
+ * * {{ClassFunction|Panel|ConVarChanged}}
+ * * {{ClassFunction|Panel|ConVarStringThink}}
+ * * {{ClassFunction|Panel|ConVarNumberThink}}
+ * 
+ * The console variable value is saved in the ''m_strConVar'' property of the panel.
+ * 
+ * The panel should call
+ * {{ClassFunction|Panel|ConVarStringThink}} or 
+ * {{ClassFunction|Panel|ConVarNumberThink}} 
+ * in its {{HookFunction|PANEL|Think}} hook and should call {{ClassFunction|Panel|ConVarChanged}} when the panel's value has changed. 
+ * @param target  The panel the functions should be added to. 
+ * @example
+ * 
+ * local PANEL = {}
+ * 
+ * Derma_Install_Convar_Functions( PANEL )
+ * 
+ * function PANEL:Init()
+ * 	// Init function here
+ * end
+ * function PANEL:Think()
+ * 	self:ConVarStringThink()
+ * end
+ * 
+ * // Adds the functions to a panel (snippet of vgui/dcheckbox.lua) 
+ */
+declare function Derma_Install_Convar_Functions(target: Panel): void;
+
+/**
+ * Creates a derma window to display information 
+ * @param Text  The text within the created panel. 
+ * @param Title  The title of the created panel. 
+ * @param Button  The text of the button to close the panel. 
+ */
+declare function Derma_Message(Text: string, Title: string, Button: string): void;
+
+/**
+ * Shows a message box in the middle of the screen, with up to 4 buttons they can press. 
+ * @param btn1text  The text to display on the first button. 
+ * @returns The Panel object of the created window. 
+ */
+declare function Derma_Query(btn1text: string): Panel;
+
+/**
+ * Shows a message box in the middle of the screen, with up to 4 buttons they can press. 
+ * @param text [="Message Text (Second Parameter)"] The message to display. 
+ * @param title [="Message Title (First Parameter)"] The title to give the message box. 
+ * @param btn1text [=] The text to display on the first button. 
+ * @param btn1func [=nil] The function to run if the user clicks the first button. 
+ * @param btn2text [=nil] The text to display on the second button. 
+ * @param btn2func [=nil] The function to run if the user clicks the second button. 
+ * @param btn3text [=nil] The text to display on the third button 
+ * @param btn3func [=nil] The function to run if the user clicks the third button. 
+ * @param btn4text [=nil] The text to display on the third button 
+ * @param btn4func [=nil] The function to run if the user clicks the fourth button. 
+ * @returns The Panel object of the created window. 
+ */
+declare function Derma_Query(text?: string, title?: string, btn1text?: string, btn1func?: Function, btn2text?: string, btn2func?: Function, btn3text?: string, btn3func?: Function, btn4text?: string, btn4func?: Function): Panel;
+
+/**
+ * Creates a derma window asking players to input a string. 
+ * @param title  The title of the created panel. 
+ * @param subtitle  The text above the input box 
+ * @param defaultVal  The default text for the input box. 
+ * @param confirm  The function to be called once the user has confirmed their input. 
+ * @param cancel [=nil] The function to be called once the user has cancelled their input 
+ * @param confirmText [="OK"] Allows you to override text of the "OK" button 
+ * @param cancelText [="Cancel"] Allows you to override text of the "Cancel" button 
+ * @returns The created {{Type|DFrame}} 
+ * @example
+ * 
+ * Derma_StringRequest(
+ * 	"Console Print", 
+ * 	"Input the string to print to console",
+ * 	"",
+ * 	function(text) print(text) end,
+ * 	function(text) print("Cancelled input") end
+ * )
+ * 
+ * // Asks the user to input a string which is then printed to their console 
+ */
+declare function Derma_StringRequest(title: string, subtitle: string, defaultVal: string, confirm: Function, cancel?: Function, confirmText?: string, cancelText?: string): DFrame;
+
+/**
+ * Creates a {{Type|DMenu}} and closes any current menus. 
+ * @param parent  The panel to parent the created menu to. 
+ * @returns The created {{Type|DMenu}} 
+ * @example
+ * 
+ * local menu = DermaMenu() 
+ * menu:AddOption("Die", function() RunConsoleCommand("kill") end)
+ * menu:AddOption("Close", function() print("Close pressed") end) // The menu will remove itself, we don't have to do anything.
+ * menu:Open()
+ * 
+ * // Creates a DMenu with buttons to commit suicide or close it. 
+ */
+declare function DermaMenu(parent: Panel): DMenu;
+
+/**
+ * Sets whether rendering should be limited to being inside a panel or not.
+ * 
+ * See also {{LibraryFunction|surface|DisableClipping}} and {{ClassFunction|Panel|NoClipping}}. 
+ * @param disable  Whether or not clipping should be disabled 
+ * @example
+ * 
+ * function PANEL:Paint()
+ *     DisableClipping(true)
+ *     draw.RoundedBox(0, -50, -50, 25, 25, color_white)
+ *     DisableClipping(false)
+ * end
+ * 
+ * // Renders a white box outside of the panel 
+ */
+declare function DisableClipping(disable: boolean): void;
+
+/**
+ * Cancels current DOF post-process effect started with {{GlobalFunction|DOF_Start}} 
+ */
+declare function DOF_Kill(): void;
+
+/**
+ * Cancels any existing DOF post-process effects.
+ * Begins the DOF post-process effect. 
+ */
+declare function DOF_Start(): void;
+
+/**
+ * A hacky method used to fix some bugs regarding DoF.
+ * 
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * {{Stub}} 
+ * @param enable  Enables or disables depth-of-field mode 
+ */
+declare function DOFModeHack(enable: boolean): void;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ *  Draws the currently active main menu background image and handles transitioning between background images.
+ * 
+ * This is called by default in the menu panel's Paint hook. 
+ */
+declare function DrawBackground(): void;
+
+/**
+ * Draws the bloom shader, which creates a glowing effect from bright objects. 
+ * @param Darken  Determines how much to darken the effect. A lower number will make the glow come from lower light levels. A value of 1 will make the bloom effect unnoticeable. Negative values will make even pitch black areas glow. 
+ * @param Multiply  Will affect how bright the glowing spots are. A value of 0 will make the bloom effect unnoticeable. 
+ * @param SizeX  The size of the bloom effect along the horizontal axis. 
+ * @param SizeY  The size of the bloom effect along the vertical axis. 
+ * @param Passes  Determines how much to exaggerate the effect. 
+ * @param ColorMultiply  Will multiply the colors of the glowing spots, making them more vivid. 
+ * @param Red  How much red to multiply with the glowing color. Should be between 0 and 1 
+ * @param Green  How much green to multiply with the glowing color. Should be between 0 and 1 
+ * @param Blue  How much blue to multiply with the glowing color. Should be between 0 and 1 
+ * @example
+ * 
+ * function GM:RenderScreenspaceEffects()
+ * 	DrawBloom( 0.65, 2, 9, 9, 1, 1, 1, 1, 1 )
+ * end
+ * 
+ * // Draws bloom effect with default settings. 
+ */
+declare function DrawBloom(Darken: number, Multiply: number, SizeX: number, SizeY: number, Passes: number, ColorMultiply: number, Red: number, Green: number, Blue: number): void;
+
+/**
+ * Draws the Color Modify shader, which can be used to adjust colors on screen. 
+ * @param modifyParameters  Color modification parameters. See {{ShaderLink|g_colourmodify}} and the example below. Note that if you leave out a field, it will retain its last value which may have changed if another caller uses this function. 
+ * @example
+ * 
+ * local tab = {
+ * 	[ "$pp_colour_addr" ] = 0.02,
+ * 	[ "$pp_colour_addg" ] = 0.02,
+ * 	[ "$pp_colour_addb" ] = 0,
+ * 	[ "$pp_colour_brightness" ] = 0,
+ * 	[ "$pp_colour_contrast" ] = 1,
+ * 	[ "$pp_colour_colour" ] = 3,
+ * 	[ "$pp_colour_mulr" ] = 0,
+ * 	[ "$pp_colour_mulg" ] = 0.02,
+ * 	[ "$pp_colour_mulb" ] = 0
+ * }
+ * 
+ * function GM:RenderScreenspaceEffects()
+ * 
+ * 	DrawColorModify( tab )
+ * 
+ * end
+ * 
+ * // Draws color modify with bright yellow and green colors. 
+ */
+declare function DrawColorModify(modifyParameters: table): void;
+
+/**
+ * Draws a material overlay on the screen. 
+ * @param Material  This will be the material that is drawn onto the screen. 
+ * @param RefractAmount  This will adjust how much the material will refract your screen. 
+ * @example
+ * 
+ * function GM:RenderScreenspaceEffects()
+ * 
+ * 	DrawMaterialOverlay("models/props_c17/fisheyelens", -0.06)
+ * 
+ * end
+ * 
+ * // Creates a fisheye effect on your screen. 
+ */
+declare function DrawMaterialOverlay(Material: string, RefractAmount: number): void;
+
+/**
+ * Creates a motion blur effect by drawing your screen multiple times. 
+ * @param AddAlpha  How much alpha to change per frame. 
+ * @param DrawAlpha  How much alpha the frames will have. A value of 0 will not render the motion blur effect. 
+ * @param Delay  Determines the amount of time between frames to capture. 
+ * @example
+ * 
+ * function GM:RenderScreenspaceEffects()
+ * 
+ *  DrawMotionBlur(0.4, 0.8, 0.01)
+ * 
+ * end
+ * 
+ * // Creates a motion blur effect. 
+ */
+declare function DrawMotionBlur(AddAlpha: number, DrawAlpha: number, Delay: number): void;
+
+/**
+ * Draws the sharpen shader, which creates more contrast. 
+ * @param Contrast  How much contrast to create. 
+ * @param Distance  How large the contrast effect will be. 
+ */
+declare function DrawSharpen(Contrast: number, Distance: number): void;
+
+/**
+ * Draws the sobel shader, which detects edges and draws a black border. 
+ * @param Threshold  Determines the threshold of edges. A value of 0 will make your screen completely black. 
+ */
+declare function DrawSobel(Threshold: number): void;
+
+/**
+ * Renders the post-processing effect of beams of light originating from the map's sun. Utilises the "pp/sunbeams" material 
+ * @param darken  $darken property for sunbeams material 
+ * @param multiplier  $multiply property for sunbeams material 
+ * @param sunSize  $sunsize property for sunbeams material 
+ * @param sunX  $sunx property for sunbeams material 
+ * @param sunY  $suny property for sunbeams material 
+ */
+declare function DrawSunbeams(darken: number, multiplier: number, sunSize: number, sunX: number, sunY: number): void;
+
+/**
+ * Draws the texturize shader, which replaces each pixel on your screen with a different part of the texture depending on its brightness. See [[Shaders/g_texturize|g_texturize]] for information on making the texture. 
+ * @param Scale  Scale of the texture. A smaller number creates a larger texture. 
+ * @param BaseTexture  This will be the texture to use in the effect. Make sure you use {{GlobalFunction|Material}} to get the texture number 
+ */
+declare function DrawTexturize(Scale: number, BaseTexture: number): void;
+
+/**
+ * Draws the toy town shader, which blurs the top and bottom of your screen. This can make very large objects look like toys, hence the name. 
+ * @param Passes  An integer determining how many times to draw the effect. A higher number creates more blur. 
+ * @param Height  The amount of screen which should be blurred on the top and bottom. 
+ * @example
+ * 
+ * function GM:RenderScreenspaceEffects()
+ * 
+ *  DrawToyTown(2, ScrH()/2)
+ * 
+ * end
+ * 
+ * // Draws toy town effect. 
+ */
+declare function DrawToyTown(Passes: number, Height: number): void;
+
+/**
+ * Drops the specified entity if it is being held by any player with Gravity Gun or +use pickup. 
+ * @param ent  The entity to drop. 
+ */
+declare function DropEntityIfHeld(ent: Entity): void;
+
+/**
+ * Creates or replaces a dynamic light with the given id. 
+ * @param index  Usually an entity index is used here. 
+ * @returns A DynamicLight structured table. See {{Struct|DynamicLight}} 
+ * @example
+ * 
+ * hook.Add( "Think", "Think_Lights!", function()
+ * 	local dlight = DynamicLight( LocalPlayer():EntIndex() )
+ * 	if ( dlight ) then
+ * 		dlight.pos = LocalPlayer():GetShootPos()
+ * 		dlight.r = 255
+ * 		dlight.g = 255
+ * 		dlight.b = 255
+ * 		dlight.brightness = 2
+ * 		dlight.Decay = 1000
+ * 		dlight.Size = 256
+ * 		dlight.DieTime = CurTime() + 1
+ * 	end
+ * end )
+ * 
+ * // Emits a bright white light from local players eyes. 
+ */
+declare function DynamicLight(index: number): DynamicLight;
+
+/**
+ * Returns a {{Type|CEffectData}} object to be used with {{LibraryFunction|util|Effect}}.
+ * 
+ * **Bug [#2771](https://github.com/Facepunch/garrysmod-issues/issues/2771):**
+ * >This does not create a unique object, but instead returns a shared reference. That means you cannot use two or more of these objects at once. 
+ * @returns The {{Type|CEffectData}} object. 
+ */
+declare function EffectData(): CEffectData;
+
+/**
+ * An 'if then else'. This is ''almost'' equivalent to (''condition'' and ''truevar'' or ''falsevar'') in Lua. The difference is that if ''truevar'' evaluates to false, the plain Lua method stated would return ''falsevar'' regardless of ''condition'' whilst this function would take ''condition'' into account. 
+ * @param condition  The condition to check if true or false. 
+ * @param truevar  If the condition isn't nil/false, returns this value. 
+ * @param falsevar  If the condition is nil/false, returns this value. 
+ * @returns The result. 
+ * @example
+ * 
+ * local ply = Entity( 1 )
+ * print( "Player " .. Either( ply:IsAdmin(), "is", "is not" ) .. " an admin" )
+ * 
+ * print( "Player " .. ( ply:IsAdmin() and "is" or "is not" ) .. " an admin" )
+ * 
+ * // The following two ''print'' statements have identical results.@example
+ * 
+ * print("You are: "..( LocalPlayer():Alive() and "alive" or "dead" ))
+ * 
+ * // conditional:
+ * 
+ * print( "Halflife? "..( (LocalPlayer():Health()==50) and "halflife" or "not halflife") )
+ * 
+ * // Plain Lua alias version. 
+ */
+declare function Either(condition: any, truevar: any, falsevar: any): any;
+
+/**
+ * Plays a sentence from scripts/sentences.txt
+ * 
+ * Seems to work only on serverside. 
+ * @param soundName  The sound to play 
+ * @param position  The position to play at 
+ * @param entity  The entity to emit the sound from. Must be {{ClassFunction|Entity|EntIndex}} 
+ * @param channel [=CHAN_AUTO] The sound channel, see {{Enum|CHAN}}. 
+ * @param volume [=1] The volume of the sound, from 0 to 1 
+ * @param soundLevel [=75] The sound level of the sound, see {{Enum|SNDLVL}} 
+ * @param soundFlags [=0] The flags of the sound, see {{Enum|SND}} 
+ * @param pitch [=100] The pitch of the sound, 0-255 
+ * @example
+ * 
+ * EmitSentence( "COMBINE_DIE" .. math.random( 0, 3 ), Entity(1):GetPos(), 1, CHAN_AUTO, 1, 75, 0, 100 )
+ * 
+ * // Plays random combine death sound on first player. 
+ */
+declare function EmitSentence(soundName: string, position: Vector, entity: number, channel?: CHAN, volume?: number, soundLevel?: SNDLVL, soundFlags?: SND, pitch?: number): void;
+
+/**
+ * Emits the specified sound at the specified position.
+ * 
+ * **Bug:**
+ * >This only works clientside.
+ * 
+ * **Bug:**
+ * >This does not work with soundscripts. 
+ * @param soundName  The sound to play 
+ * @param position  The position to play at 
+ * @param entity  The entity to emit the sound from. Must be {{ClassFunction|Entity|EntIndex}} 
+ * @param channel [=CHAN_AUTO] The sound channel, see {{Enum|CHAN}}. 
+ * @param volume [=1] The volume of the sound, from 0 to 1 
+ * @param soundLevel [=75] The sound level of the sound, see {{Enum|SNDLVL}} 
+ * @param soundFlags [=0] The flags of the sound, see {{Enum|SND}} 
+ * @param pitch [=100] The pitch of the sound, 0-255 
+ * @example
+ * 
+ * EmitSound( Sound("garrysmod/save_load1.wav"), Entity(1):GetPos(), 1, CHAN_AUTO, 1, 75, 0, 100 )
+ * 
+ * // Plays magical sound on first player. 
+ */
+declare function EmitSound(soundName: string, position: Vector, entity: number, channel?: CHAN, volume?: number, soundLevel?: SNDLVL, soundFlags?: SND, pitch?: number): void;
+
+/**
+ * Removes the currently active tool tip from the screen. 
+ * @param panel  This is the panel that has a tool tip. 
+ */
+declare function EndTooltip(panel: Panel): void;
+
+/**
+ * Throws a Lua error and breaks out of the current call stack. 
+ * @param message  The error message to throw. 
+ * @param errorLevel [=1] The level to throw the error at. 
+ * @example
+ * 
+ * error("garry")
+ * 
+ * // 
+ */
+declare function error(message: string, errorLevel?: number): void;
+
+/**
+ * Throws a Lua error but does not break out of the current call stack.
+ * 
+ * **Bug [#1810](https://github.com/Facepunch/garrysmod-issues/issues/1810):**
+ * >Using this function in the menu state exits the menu.
+ * 
+ * **Bug [#2247](https://github.com/Facepunch/garrysmod-issues/issues/2247):**
+ * >This function has a character limit of 511. 
+ * @param arguments  Converts all arguments to strings and prints them with no spacing. 
+ * @example
+ * 
+ * local num = 11
+ * if ( num <= 10 and num >= 0 ) then
+ * 	print( "The number is", num )
+ * else
+ * 	ErrorNoHalt( "Number out of range!\n" )
+ * 	print("This line will be printed")
+ * end
+ * 
+ * // An example of the use of this function 
+ */
+declare function ErrorNoHalt(...arguments: (any)[]): void;
+
+/**
+ * Returns the angles of the current render context as calculated by {{HookFunction|GM|CalcView}}.
+ * 
+ * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
+ * >This function is only reliable inside rendering hooks. 
+ * @returns The angle of the currently rendered scene. 
+ * @example
+ * 
+ * print(EyeAngles())
+ * 
+ * // Print the view angles@example
+ * 
+ * print(EyeAngles():Forward())
+ * 
+ * // Identical to {{GlobalFunction|EyeVector}} 
+ */
+declare function EyeAngles(): Angle;
+
+/**
+ * Returns the origin of the current render context as calculated by {{HookFunction|GM|CalcView}}.
+ * 
+ * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
+ * >This function is only reliable inside rendering hooks. 
+ * @returns Camera position. 
+ * @example
+ * 
+ * print(EyePos())
+ * 
+ * // Print the view position@example
+ * 
+ * hook.Add("PreDrawTranslucentRenderables", "FixEyePos", function() EyePos() end)
+ * hook.Add( "Think", "Use Eyepos outside of render function", function()
+ * 	local start = EyePos()
+ * 	local dir = gui.ScreenToVector(gui.MousePos())
+ * 	local trace = util.TraceLine{
+ * 		start = start,
+ * 		endpos = start + ( dir * 10000 ),
+ * 		filter = { ply },
+ * 	}
+ * 	debugoverlay.Box( trace.HitPos, Vector( -5, -5, -5 ), Vector( 5, 5, 5 ) )
+ * end )
+ * 
+ * // Ensuring EyePos returns the correct value outside of render hooks. 
+ */
+declare function EyePos(): Vector;
+
+/**
+ * Returns the normal vector of the current render context as calculated by {{HookFunction|GM|CalcView}}, similar to {{GlobalFunction|EyeAngles}}.
+ * 
+ * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
+ * >This function is only reliable inside rendering hooks. 
+ * @returns View direction of the currently rendered scene. 
+ * @example
+ * 
+ * print( EyeVector() )
+ * 
+ * // Print the view angles 
+ */
+declare function EyeVector(): Vector;
+
+/**
+ * Returns the meta table for the class with the matching name.
+ * 
+ * Internally returns {{LibraryFunction|debug|getregistry}}()[metaName]
+ * 
+ * You can learn more about meta tables on the [[Meta Tables]] page.
+ * 
+ * You can find a list of meta tables that can be retrieved with this function on {{Enum|TYPE}}. The name in the description is the string to use with this function. 
+ * @param metaName  The object type to retrieve the meta table of. 
+ * @returns The corresponding meta table. 
+ * @example
+ * 
+ * local meta = FindMetaTable("Player")
+ * 
+ * function meta:IsSick()
+ * 	return true
+ * end
+ * 
+ * // Sometime later...
+ * local ply = Entity(1)
+ * if ( ply:IsSick() ) then
+ * 	ply:ChatPrint( "Get well soon, " .. ply:Nick() .. "!" )
+ * 	ply:ChatPrint( "I just don't understand how you're always sick..." )
+ * end
+ * 
+ * // Adds a very simple function for checking if a player is sick to the player metatable. 
+ */
+declare function FindMetaTable(metaName: string): table;
+
+/**
+ * Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself 
+ * @param panel  Panel to find tool-tip of 
+ * @returns [tool-tip text, tool-tip panel, panel that the function was called with] 
+ * !TupleReturn
+ */
+declare function FindTooltip(panel: Panel): [string, Panel, Panel];
+
+/**
+ * Formats the specified values into the string given. Same as {{LibraryFunction|string|format}}. 
+ * @param format  The string to be formatted.
+ * 
+ * Follows this format: http://www.cplusplus.com/reference/cstdio/printf/ 
+ * @param formatParameters  Values to be formatted into the string. 
+ * @returns The formatted string 
+ */
+declare function Format(format: string, ...formatParameters: (any)[]): string;
+
+/**
+ * Returns the number of frames rendered since the game was launched. 
+ */
+declare function FrameNumber(): void;
+
+/**
+ * Returns the {{GlobalFunction|CurTime}}-based time in seconds it took to render the last frame.
+ * 
+ * This should be used for frame/tick based timing, such as movement prediction or animations.
+ * 
+ * For real-time-based frame time that isn't affected by host_timescale, use {{GlobalFunction|RealFrameTime}}. RealFrameTime is more suited for things like GUIs or HUDs. 
+ * @returns time (in seconds) 
+ * @example
+ * 
+ * print(FrameTime())
+ * 
+ * // Print the frame time@example
+ * 
+ * print("Tick: "..(1/FrameTime()))
+ * 
+ * // Get the servers/clients tickrate/fps 
+ */
+declare function FrameTime(): number;
+
+/**
+ * Callback function for when the client has joined a server. This function shows the server's loading URL by default. 
+ * @param servername  Server's name. 
+ * @param serverurl  Server's loading screen URL, or "" if the URL is not set. 
+ * @param mapname  Server's current map's name. 
+ * @param maxplayers  Max player count of server. 
+ * @param steamid  The local player's {{ClassFunction|Player|SteamID64}}. 
+ * @param gamemode  Server's current gamemode's folder name. 
+ * @example
+ * 
+ * local OldGameDetails = GameDetails
+ * function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
+ * 	print( 1, servername )
+ * 	print( 2, serverurl )
+ * 	print( 3, mapname )
+ * 	print( 4, maxplayers )
+ * 	print( 5, steamid )
+ * 	print( 6, gamemode )
+ * 	OldGameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
+ * end
+ * 
+ * // Prints GameDetails of the server you join to console, and preserves default behavior. 
+ */
+declare function GameDetails(servername: string, serverurl: string, mapname: string, maxplayers: number, steamid: string, gamemode: string): void;
+
+/**
+ * **Deprecated:**
+ * >This function was deprecated in Lua 5.1 and is removed in Lua 5.2. Use {{GlobalFunction|collectgarbage}}( "count" ) instead.
+ * 
+ *  Returns the current floored dynamic memory usage of Lua in kilobytes. 
+ * @returns The current floored dynamic memory usage of Lua, in kilobytes. 
+ */
+declare function gcinfo(): number;
+
+/**
+ * Gets the ConVar with the specified name. This function caches the ConVar object internally. 
+ * @param name  Name of the ConVar to get 
+ * @returns The ConVar object 
+ */
+declare function GetConVar(name: string): ConVar;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Gets the ConVar with the specified name. This function doesn't cache the convar. 
+ * @param name  Name of the ConVar to get 
+ * @returns The ConVar object 
+ */
+declare function GetConVar_Internal(name: string): ConVar;
+
+/**
+ * **Deprecated:**
+ * >Store the {{Type|ConVar}} object retrieved with {{GlobalFunction|GetConVar}} and call {{ClassFunction|ConVar|GetInt}} or {{ClassFunction|ConVar|GetFloat}} on it.
+ * 
+ * Gets the numeric value ConVar with the specified name. 
+ * @param name  Name of the ConVar to get. 
+ * @returns The ConVar's value. 
+ */
+declare function GetConVarNumber(name: string): number;
+
+/**
+ * **Deprecated:**
+ * >Store the {{Type|ConVar}} object retrieved with {{GlobalFunction|GetConVar}} and call {{ClassFunction|ConVar|GetString}} on it.
+ * 
+ * Gets the string value ConVar with the specified name. 
+ * @param name  Name of the ConVar to get. 
+ * @returns The ConVar's value. 
+ */
+declare function GetConVarString(name: string): string;
+
+/**
+ * Returns the default loading screen URL (asset://garrysmod/html/loading.html) 
+ * @returns Default loading url (asset://garrysmod/html/loading.html) 
+ */
+declare function GetDefaultLoadingHTML(): string;
+
+/**
+ * Retrieves data about the demo with the specified filename. Similar to {{GlobalFunction|GetSaveFileDetails}}. 
+ * @param filename  The file name of the demo. 
+ * @returns Demo data. 
+ */
+declare function GetDemoFileDetails(filename: string): table;
+
+/**
+ * Returns a table with the names of files needed from the server you are currently joining. 
+ * @returns table of file names 
+ * @example
+ * 
+ * PrintTable( GetDownloadables() )
+ * 
+ * // Returns a table with the file names. 
+ */
+declare function GetDownloadables(): table;
+
+/**
+ * Returns the environment table of either the stack level or the function specified. 
+ * @param location [=1] The object to get the enviroment from. Can also be a number that specifies the function at that stack level: Level 1 is the function calling getfenv. 
+ * @returns The environment. 
+ */
+declare function getfenv(location?: Function): table;
+
+/**
+ * Returns an angle that is shared between the server and all clients. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=Angle( 0, 0, 0 )] The value to return if the global value is not set. 
+ * @returns The global value, or default if the global is not set. 
+ */
+declare function GetGlobalAngle(index: string, defaultVal?: Angle): Angle;
+
+/**
+ * Returns a boolean that is shared between the server and all clients. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=false] The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ */
+declare function GetGlobalBool(index: string, defaultVal?: boolean): boolean;
+
+/**
+ * Returns an entity that is shared between the server and all clients. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=NULL] The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ */
+declare function GetGlobalEntity(index: string, defaultVal?: Entity): Entity;
+
+/**
+ * Returns a float that is shared between the server and all clients. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=0] The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ */
+declare function GetGlobalFloat(index: string, defaultVal?: number): number;
+
+/**
+ * Returns an integer that is shared between the server and all clients.
+ * 
+ * **Bug [#3374](https://github.com/Facepunch/garrysmod-issues/issues/3374):**
+ * >This function will not round decimal values as it actually networks a float internally. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=0] The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ * @example
+ * 
+ * print(GetGlobalInt("RoundNumber", 0))
+ * 
+ * // Prints the current round number if set, otherwise 0. 
+ */
+declare function GetGlobalInt(index: string, defaultVal?: number): number;
+
+/**
+ * Returns a string that is shared between the server and all clients. 
+ * @param index  The unique index to identify the global value with. 
+ * @param defaultVal [=""] The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ * @example
+ * 
+ * print( GetGlobalString("ServerName", "Garry's Mod 13") )
+ * 
+ * // Prints the current server name if set, otherwise "Garry's Mod 13". 
+ */
+declare function GetGlobalString(index: string, defaultVal?: string): string;
+
+/**
+ * Returns a vector that is shared between the server and all clients. 
+ * @param Index  The unique index to identify the global value with. 
+ * @param Default  The value to return if the global value is not set. 
+ * @returns The global value, or the default if the global value is not set. 
+ */
+declare function GetGlobalVector(Index: string, Default: Vector): Vector;
+
+/**
+ * Returns the name of the current server. 
+ */
+declare function GetHostName(): void;
+
+/**
+ * Returns the panel that is used as a wrapper for the HUD.
+ * 
+ * See also {{LibraryFunction|vgui|GetWorldPanel}} 
+ * @returns The HUD panel 
+ */
+declare function GetHUDPanel(): Panel;
+
+/**
+ * Returns the loading screen panel and creates it if it doesn't exist. 
+ * @returns The loading screen panel 
+ */
+declare function GetLoadPanel(): Panel;
+
+/**
+ * Returns the current status of the server join progress. 
+ * @returns The current status 
+ */
+declare function GetLoadStatus(): string;
+
+/**
+ * Returns a table with the names of all maps and categories that you have on your client. 
+ * @returns table of map names and categories 
+ */
+declare function GetMapList(): table;
+
+/**
+ * Returns the metatable of an object. This function obeys the metatable's __metatable field, and will return that field if the metatable has it set.
+ * 
+ * Use {{LibraryFunction|debug|getmetatable}} if you want the true metatable of the object. 
+ * @param object  The value to return the metatable of. 
+ * @returns The metatable of the value. This is not always a table. 
+ * @example
+ * 
+ * print(getmetatable(Pupil).__index.GetName(Pupil))
+ * // getmetatable(Pupil) will return Pupil_meta.
+ * // Same as print(Pupil:GetName())
+ * // This is what the Lua interpreter basically does. (When __index is a table.)
+ * 
+ * getmetatable(Pupil).SetName = function(self, newName)
+ *  self.name = newName
+ * end
+ * // We're adding a new method to Pupil's metatable
+ * 
+ * print(getmetatable(Pupil).GetName(Pupil))
+ * // Still the same, because Pupil_meta.__index is Pupil_meta.
+ * 
+ * // Use a table's metatable and alter it. 
+ */
+declare function getmetatable(object: any): any;
+
+/**
+ * Returns the menu overlay panel, a container for panels like the error panel created in {{HookFunction|GM|OnLuaError}}. 
+ * @returns The overlay panel 
+ */
+declare function GetOverlayPanel(): Panel;
+
+/**
+ * Creates or gets the rendertarget with the given name.
+ * 
+ * See {{GlobalFunction|GetRenderTargetEx}} for an advanced version of this function with more options.
+ * 
+ * **Bug [#2885](https://github.com/Facepunch/garrysmod-issues/issues/2885):**
+ * >This crashes when used on a cubemap texture. 
+ * @param name  The internal name of the render target. 
+ * @param width  The width of the render target, must be power of 2. If not set to PO2, the size will be automatically converted to the nearest PO2 size. 
+ * @param height  The height of the render target, must be power of 2. If not set to PO2, the size will be automatically converted to the nearest PO2 size. 
+ * @param additive [=false] Sets whenever the rt should be additive. 
+ * @returns The render target 
+ */
+declare function GetRenderTarget(name: string, width: number, height: number, additive?: boolean): ITexture;
+
+/**
+ * Creates (or gets if it already exsits) the rendertarget with the given name, this function allows to adjust the creation of a rendertarget more than {{GlobalFunction|GetRenderTarget}}.
+ * 
+ * See also {{LibraryFunction|render|PushRenderTarget}} and {{LibraryFunction|render|SetRenderTarget}}. 
+ * @param name  The internal name of the render target.
+ * 
+ * {{Warning|The name is treated like a path and gets its extension discarded.
+ * "name.1" and "name.2" are considered the same name and will result in the same render target being reused.}} 
+ * @param width  The width of the render target, must be power of 2. 
+ * @param height  The height of the render target, must be power of 2. 
+ * @param sizeMode  Bitflag that influences the sizing of the render target, see {{Enum|RT_SIZE}}. 
+ * @param depthMode  Bitflag that determines the depth buffer usage of the render target {{Enum|MATERIAL_RT_DEPTH}}. 
+ * @param textureFlags  Bitflag that configurates the texture, see {{Enum|TEXTUREFLAGS}}.
+ * 
+ * List of flags can also be found on the Valve's Developer Wiki:
+ * https://developer.valvesoftware.com/wiki/Valve_Texture_Format 
+ * @param rtFlags  Flags that controll the HDR behaviour of the render target, see {{Enum|CREATERENDERTARGETFLAGS}}. 
+ * @param imageFormat  Image format, see {{Enum|IMAGE_FORMAT}}. 
+ * @returns The new render target. 
+ */
+declare function GetRenderTargetEx(name: string, width: number, height: number, sizeMode: RT_SIZE, depthMode: MATERIAL_RT_DEPTH, textureFlags: TEXTUREFLAGS, rtFlags: CREATERENDERTARGETFLAGS, imageFormat: IMAGE_FORMAT): ITexture;
+
+/**
+ * Retrieves data about the save with the specified filename. Similar to {{GlobalFunction|GetDemoFileDetails}}. 
+ * @param filename  The file name of the save. 
+ * @returns Save data. 
+ */
+declare function GetSaveFileDetails(filename: string): table;
+
+/**
+ * Returns the entity the client is using to see from (such as the player itself, the camera, or another entity). 
+ * @returns The view entity. 
+ */
+declare function GetViewEntity(): Entity;
+
+/**
+ * Converts a color from HSV color space into RGB color space and returns a {{Struct|Color}}.
+ * 
+ * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+ * >The returned color will not have the color metatable. 
+ * @param hue  Hue in degrees. 
+ * @param saturation  Saturation from 0 - 1. 
+ * @param value  Value from 0 - 1. 
+ * @returns The {{Struct|Color}} created from the HSV color space. 
+ * @example
+ * 
+ * local function DrawRainbowText( frequency, str, font, x, y )
+ * 	
+ * 	surface.SetFont( font )
+ * 	
+ * 	for i = 1, #str do
+ * 		surface.SetTextColor( HSVToColor( i * frequency % 360, 1, 1 ) )
+ * 		local w = surface.GetTextSize( string.sub( str, 1, i - 1 ) )
+ * 		surface.SetTextPos( x + w, y )
+ * 		surface.DrawText( string.sub( str, i, i ) )
+ * 	end
+ * 	
+ * end
+ * 
+ * // A helper function for drawing rainbow text.@example
+ * 
+ * local function ChatPrintRainbow( frequency, str )
+ * 	
+ * 	local text = {}
+ * 	
+ * 	for i = 1, #str do
+ * 		table.insert( text, HSVToColor( i * frequency % 360, 1, 1 ) )
+ * 		table.insert( text, string.sub( str, i, i ) )
+ * 	end
+ * 
+ * 	chat.AddText( unpack( text ) )
+ * 	
+ * end
+ * 
+ * // A helper function for printing rainbow text in the chat.@example
+ * 
+ * local function ConsolePrintRainbow( frequency, str )
+ * 	
+ * 	local text = {}
+ * 	
+ * 	for i = 1, #str do
+ * 		table.insert( text, HSVToColor( i * frequency % 360, 1, 1 ) )
+ * 		table.insert( text, string.sub( str, i, i ) )
+ * 	end
+ * 	
+ * 	table.insert( text, "\n" )
+ * 	
+ * 	MsgC( unpack( text ) )
+ * 	
+ * end
+ * 
+ * // A helper function for printing rainbow text in the console. 
+ */
+declare function HSVToColor(hue: number, saturation: number, value: number): Color;
+
+/**
+ * Launches an asynchronous http request with the given parameters.
+ * 
+ * **Bug [#2232](https://github.com/Facepunch/garrysmod-issues/issues/2232):**
+ * >This cannot send or receive multiple headers at once.
+ * 
+ * **Bug [#3190](https://github.com/Facepunch/garrysmod-issues/issues/3190):**
+ * >This can crash on Linux. 
+ * @param parameters  The request parameters. See {{Struct|HTTPRequest}}. 
+ * @returns true if we made a request, nil if we failed. 
+ */
+declare function HTTP(parameters: HTTPRequest): boolean;
+
+/**
+ * Executes a Lua script either relative to the current file, or absolute(relative to the /lua/ folder).
+ * 
+ * **Note:**
+ * >Addon files (.gma files) do not support relative parent folders (''..'' notation).
+ * 
+ * {{Warning|Files over a certain size may fail to be included.}}
+ * 
+ * {{Warning|The file you are attempting to include MUST NOT be empty or the include will fail.}}
+ * 
+ * {{Warning|If the file you are including is clientside or shared, it '''must''' be {{GlobalFunction|AddCSLuaFile}}'d or this function will error saying the file doesn't exist.}}
+ * 
+ * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
+ * >{{GlobalFunction|pcall}}ing this function will break autorefresh. 
+ * @param fileName  The name of the script to be executed. 
+ * @returns Anything that the executed Lua script returns. 
+ */
+declare function include(fileName: string): any;
+
+/**
+ * **Deprecated:**
+ * >To send the target file to the client simply call AddCSLuaFile() in the target file itself.
+ * 
+ * This function works exactly the same as {{GlobalFunction|include}} both clientside and serverside.
+ * 
+ * The only difference is that on the serverside it also calls {{GlobalFunction|AddCSLuaFile}} on the filename, so that it gets sent to the client. 
+ * @param filename  The filename of the Lua file you want to include. 
+ */
+declare function IncludeCS(filename: string): void;
+
+/**
+ * Returns an iterator function for a for loop, to return ordered key-value pairs from a table.
+ * 
+ * This will only iterate though '''numerical''' keys, and these must also be '''sequential'''; starting at 1 with no gaps.
+ * 
+ * For unordered pairs, see {{GlobalFunction|pairs}}.
+ * 
+ * For pairs sorted by key in alphabetical order, see {{GlobalFunction|SortedPairs}}. 
+ * @param tab  The table to iterate over. 
+ * @returns [The iterator function., The table being iterated over, The origin index '''=0'''] 
+ * @example
+ * 
+ * local tbl = { two = 2, one = 1, "alpha", "bravo", [3] = "charlie", [5] = "echo", [6] = "foxtrot" }
+ * 
+ * print( "pairs:" )
+ * for k, v in pairs( tbl ) do
+ * 	print( k, v )
+ * end
+ * print( "\nipairs:" )
+ * for k, v in ipairs( tbl ) do
+ * 	print( k, v )
+ * end
+ * 
+ * // Demonstrates how this differs from {{GlobalFunction|pairs}}.@example
+ * 
+ * local NUM = 32
+ * local Count = 0
+ * for k, v in ipairs( ClientUndos ) do
+ * 	local Item = ComboBox:AddItem( tostring( v.Name ) )
+ * 	Item.DoClick = function() RunConsoleCommand( "gmod_undonum", tostring( v.Key ) ) end
+ * 
+ * 	Count = Count + 1
+ * 	if ( Count > NUM ) then break end
+ * end
+ * 
+ * // From ''UpdateUI'' in [https://github.com/garrynewman/garrysmod/blob/master/garrysmod/lua/includes/modules/undo.lua#L43 undo.lua], this adds the first 32 undo entries to the ''Undo'' panel in the spawnmenu. 
+ * !TupleReturn
+ */
+declare function ipairs(tab: table): [Function, table, number];
+
+/**
+ * Returns if the passed object is an {{Type|Angle}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is an {{Type|Angle}}. 
+ */
+declare function isangle(variable: any): Angle;
+
+/**
+ * Returns if the passed object is a {{Type|boolean}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|boolean}}. 
+ */
+declare function isbool(variable: any): boolean;
+
+/**
+ * Returns whether the given object does or doesn't have a ''metatable'' of a color.
+ * 
+ * '''Important:''' Engine functions (i.e. those not written in plain Lua) that return color objects do not currently set the color metatable and this function will return false if you use it on them. 
+ * @param Object  The object to be tested 
+ * @returns Whether the given object is a color or not 
+ */
+declare function IsColor(Object: any): boolean;
+
+/**
+ * Returns if the given NPC class name is an enemy.
+ * 
+ * Returns true if the entity name is one of the following:
+ * * "npc_combine_s"
+ * * "npc_cscanner"
+ * * "npc_manhack"
+ * * "npc_hunter"
+ * * "npc_antlion"
+ * * "npc_antlionguard"
+ * * "npc_antlion_worker"
+ * * "npc_fastzombie_torso"
+ * * "npc_fastzombie"
+ * * "npc_headcrab"
+ * * "npc_headcrab_fast"
+ * * "npc_poisonzombie"
+ * * "npc_headcrab_poison"
+ * * "npc_zombie"
+ * * "npc_zombie_torso"
+ * * "npc_zombine"
+ * * "npc_gman"
+ * * "npc_breen" 
+ * @param className  Class name of the entity to check 
+ * @returns Is an enemy 
+ */
+declare function IsEnemyEntityName(className: string): boolean;
+
+/**
+ * Returns if the passed object is an {{Type|Entity}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is an {{Type|Entity}}. 
+ */
+declare function isentity(variable: any): Entity;
+
+/**
+ * Returns if the passed object is an {{Type|Entity}}. Alias of {{GlobalFunction|isentity}}. 
+ * @param variable  The variable to check. 
+ * @returns True if the variable is an {{Type|Entity}}. 
+ */
+declare function IsEntity(variable: any): Entity;
+
+/**
+ * Returns if this is the first time this hook was predicted.
+ * 
+ * This is useful for one-time logic in your SWEPs PrimaryAttack, SecondaryAttack and Reload and other [[:Category:Predicted_Hooks|predicted hooks]] (to prevent those hooks from being called rapidly in succession). It's also useful in a Move hook for when the client predicts movement.
+ * 
+ * Visit [[Prediction]] for more information about this behavior.
+ * 
+ * **Note:**
+ * >This is already used internally for {{ClassFunction|Entity|EmitSound}}, {{ClassFunction|Weapon|SendWeaponAnim}} and {{ClassFunction|Entity|FireBullets}}, but NOT in  {{LibraryFunction|util|Effect}}. 
+ * @returns Whether or not this is the first time being predicted. 
+ * @example
+ * 
+ * // Note that for some reason KeyPress and KeyRelease are called multiple times
+ * // for the same key event in multiplayer.
+ * function GM:KeyPress(ply, key)
+ *    if not IsFirstTimePredicted() then return end
+ *    if not IsValid(ply) or ply != LocalPlayer() then return end
+ * 
+ *    if key == IN_SPEED and ply:IsActiveTraitor() then
+ *       timer.Simple(0.05, function() RunConsoleCommand("+voicerecord") end)
+ *    end
+ * end
+ * 
+ * // An override for {{HookFunction|GM|KeyPress}} in the gamemode Trouble in Terrorist Town, to work around the hook being called multiple times. 
+ */
+declare function IsFirstTimePredicted(): boolean;
+
+/**
+ * Returns if the given NPC class name is a friend.
+ * 
+ * Returns true if the entity name is one of the following:
+ * * "npc_monk"
+ * * "npc_alyx"
+ * * "npc_barney"
+ * * "npc_citizen"
+ * * "npc_kleiner"
+ * * "npc_magnusson"
+ * * "npc_eli"
+ * * "npc_mossman"
+ * * "npc_vortigaunt" 
+ * @param className  Class name of the entity to check 
+ * @returns Is a friend 
+ */
+declare function IsFriendEntityName(className: string): boolean;
+
+/**
+ * Returns if the passed object is a {{Type|function}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|function}}. 
+ */
+declare function isfunction(variable: any): Function;
+
+/**
+ * Returns true if the client is currently playing either a singleplayer or multiplayer game. 
+ * @returns True if we are in a game. 
+ */
+declare function IsInGame(): boolean;
+
+/**
+ * Returns whether the passed object is a {{Type|VMatrix}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|VMatrix}}. 
+ */
+declare function ismatrix(variable: any): VMatrix;
+
+/**
+ * Checks whether or not a game is currently mounted. Uses data given by {{LibraryFunction|engine|GetGames}}. Currently does not work correctly serverside on dedicated servers. 
+ * @param game  The game string/app ID to check. 
+ * @returns True if the game is mounted. 
+ * @example
+ * 
+ * IsMounted('cstrike')
+ * 
+ * // Check if Counter-Strike: Source is mounted. 
+ */
+declare function IsMounted(game: string): boolean;
+
+/**
+ * Returns if the passed object is a {{Type|number}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|number}}. 
+ */
+declare function isnumber(variable: any): number;
+
+/**
+ * Returns if the passed object is a {{Type|Panel}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|Panel}}. 
+ */
+declare function ispanel(variable: any): Panel;
+
+/**
+ * Returns if the passed object is a {{Type|string}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|string}}. 
+ */
+declare function isstring(variable: any): string;
+
+/**
+ * Returns if the passed object is a {{Type|table}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|table}}. 
+ */
+declare function istable(variable: any): table;
+
+/**
+ * Returns whether or not every element within a table is a valid entity 
+ * @param table  Table containing entities to check 
+ * @returns All entities valid 
+ */
+declare function IsTableOfEntitiesValid(table: table): boolean;
+
+/**
+ * Returns whether or not a model is useless by checking that the file path is that of a proper model.
+ * 
+ * If the string ".mdl" is not found in the model name, the function will return true.
+ * 
+ * The function will also return true if any of the following strings are found in the given model name:
+ * * "_gesture"
+ * * "_anim"
+ * * "_gst"
+ * * "_pst"
+ * * "_shd"
+ * * "_ss"
+ * * "_posture"
+ * * "_anm"
+ * * "ghostanim"
+ * * "_paths"
+ * * "_shared"
+ * * "anim_"
+ * * "gestures_"
+ * * "shared_ragdoll_" 
+ * @param modelName  The model name to be checked 
+ * @returns Whether or not the model is useless 
+ */
+declare function IsUselessModel(modelName: string): boolean;
+
+/**
+ * Returns whether an object is valid or not. (Such as {{Type|Entity}}s, {{Type|Panel}}s, custom {{Type|table}} objects and more)
+ * Checks that an object is not nil, has an IsValid method and if this method returns true.
+ * 
+ * **Note:**
+ * >Due to vehicles being technically valid the moment they're spawned, also use {{ClassFunction|Vehicle|IsValidVehicle}} to make sure they're fully initialized 
+ * @param toBeValidated  The table or object to be validated. 
+ * @returns True if the object is valid. 
+ */
+declare function IsValid(toBeValidated: any): boolean;
+
+/**
+ * Returns if the passed object is a {{Type|Vector}}. 
+ * @param variable  The variable to perform the type check for. 
+ * @returns True if the variable is a {{Type|Vector}}. 
+ */
+declare function isvector(variable: any): Vector;
+
+/**
+ * Joins the server with the specified IP. 
+ * @param IP  The IP of the server to join 
+ */
+declare function JoinServer(IP: string): void;
+
+/**
+ * Adds javascript function 'language.Update' to an HTML panel as a method to call Lua's {{LibraryFunction|language|GetPhrase}} function. 
+ * @param htmlPanel  Panel to add javascript function 'language.Update' to. 
+ */
+declare function JS_Language(htmlPanel: Panel): void;
+
+/**
+ * Adds javascript function 'util.MotionSensorAvailable' to an HTML panel as a method to call Lua's {{LibraryFunction|motionsensor|IsAvailable}} function. 
+ * @param htmlPanel  Panel to add javascript function 'util.MotionSensorAvailable' to. 
+ */
+declare function JS_Utility(htmlPanel: Panel): void;
+
+/**
+ * Adds workshop related javascript functions to an HTML panel, used by the "Dupes" and "Saves" tabs in the spawnmenu. 
+ * @param htmlPanel  Panel to add javascript functions to. 
+ */
+declare function JS_Workshop(htmlPanel: Panel): void;
+
+/**
+ * Callback function for when the client's language changes. Called by the engine. 
+ * @param lang  The new language code. 
+ * @example
+ * 
+ * local OldLanguageChanged = LanguageChanged
+ * function LanguageChanged( lang )
+ * 	print( "New language: " .. lang )
+ * 	OldLanguageChanged( lang )
+ * end
+ * 
+ * // Prints the new language code whenever the language changes. 
+ */
+declare function LanguageChanged(lang: string): void;
+
+/**
+ * Performs a linear interpolation from the start number to the end number.
+ * 
+ * This function provides a very efficient and easy way to smooth out movements. 
+ * @param t  The fraction for finding the result. This number is clamped between 0 and 1. 
+ * @param from  The starting number. The result will be equal to this if delta is 0. 
+ * @param to  The ending number. The result will be equal to this if delta is 1. 
+ * @returns The result of the linear interpolation, (1 - t) * from + t * to. 
+ */
+declare function Lerp(t: number, from: number, to: number): number;
+
+/**
+ * Returns point between first and second angle using given fraction and linear interpolation 
+ * @param ratio  Ratio of progress through values 
+ * @param angleStart  Angle to begin from 
+ * @param angleEnd  Angle to end at 
+ * @returns angle 
+ * @example
+ * 
+ * local startAngle = Angle(0, 0, 0)
+ * local endAngle = Angle(0, 180, 0)
+ * local ratio = 0
+ * 
+ * timer.Create("Turn", 0.1, 10, function()
+ *     ratio = ratio + 0.1
+ *     entity:SetAngles(Lerp(ratio, startAngle, endAngle))
+ * end)
+ * 
+ * // Turns an entity 180 degrees uses lerp over ten seconds 
+ */
+declare function LerpAngle(ratio: number, angleStart: Angle, angleEnd: Angle): Angle;
+
+/**
+ * Linear interpolation between two vectors. It is commonly used to smooth movement between two vectors. 
+ * @param fraction  Fraction ranging from 0 to 1 
+ * @param from  The initial Vector 
+ * @param to  The desired Vector 
+ * @returns The lerped vector. 
+ * @example
+ * 
+ * local output = LerpVector( 0.5, Vector( 0, 0, 100 ), Vector( 0, 0, 200 ) )
+ * 
+ * // Get the middle point (50%) between two vectors. 
+ */
+declare function LerpVector(fraction: number, from: Vector, to: Vector): Vector;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * This function is used to get the last map and category to which the map belongs from the cookie saved with {{GlobalFunction|SaveLastMap}}. 
+ */
+declare function LoadLastMap(): void;
+
+/**
+ * Loads all preset settings for the {{Lib|presets}} and returns them in a table 
+ * @returns Preset data 
+ * @example
+ * 
+ * PrintTable(LoadPresets())
+ * 
+ * // Prints all of the presets in to the console 
+ */
+declare function LoadPresets(): table;
+
+/**
+ * Returns a localisation for the given token, if none is found it will return the default(second) parameter. 
+ * @param localisationToken  The token to find a translation for. 
+ * @param defaultVal  The default value to be returned if no translation was found. 
+ */
+declare function Localize(localisationToken: string, defaultVal: string): void;
+
+/**
+ * Returns the player object of the current client.
+ * 
+ * LocalPlayer() will return NULL until all entities have been initialized. See {{HookFunction|GM|InitPostEntity}}. 
+ * @returns The player object representing the client. 
+ * @example
+ * 
+ * print( LocalPlayer() )
+ * 
+ * // Demonstrates the use of this function. 
+ */
+declare function LocalPlayer(): Player;
+
+/**
+ * Translates the specified position and angle from the specified local coordinate system into worldspace coordinates.
+ * 
+ * If you're working with an entity's local vectors, use {{ClassFunction|Entity|LocalToWorld}} and/or {{ClassFunction|Entity|LocalToWorldAngles}} instead.
+ * 
+ * See also: {{GlobalFunction|WorldToLocal}}, the reverse of this function. 
+ * @param localPos  The position vector in the source coordinate system, that should be translated to world coordinates 
+ * @param localAng  The angle in the source coordinate system, that should be converted to a world angle. If you don't need to convert an angle, you can supply an arbitrary valid angle (e.g. <kbd>{{GlobalFunction|Angle}}()</kbd>). 
+ * @param originPos  The origin point of the source coordinate system, in world coordinates 
+ * @param originAngle  The angles of the source coordinate system, as a world angle 
+ * @returns [The world position of the supplied local position., The world angles of the supplied local angle.] 
+ * !TupleReturn
+ */
+declare function LocalToWorld(localPos: Vector, localAng: Angle, originPos: Vector, originAngle: Angle): [Vector, Angle];
+
+/**
+ * Runs {{LibraryFunction|util|PrecacheModel}} and returns the string 
+ * @param model  The model to precache 
+ * @returns The same string entered as an argument 
+ * @example
+ * 
+ * local CAMERA_MODEL = Model( "models/dav0r/camera.mdl" )
+ * function ENT:Initialize()
+ *  self:SetModel( CAMERA_MODEL )
+ *  ...
+ * 
+ * // From entities/gmod_cameraprop.lua 
+ */
+declare function Model(model: string): string;
+
+/**
+ * Creates a table with the specified module name and sets the function environment for said table.
+ * 
+ * Any passed loaders are called with the table as an argument. An example of this is {{LibraryFunction|package|seeall}}. 
+ * @param name  The name of the module. This will be used to access the module table in the runtime environment. 
+ * @param loaders  Calls each function passed with the new table as an argument. 
+ */
+declare function module(name: string, ...loaders: (any)[]): void;
+
+/**
+ * Writes every given argument to the console.
+ * 
+ * Automatically attempts to convert each argument to a string. (See {{GlobalFunction|tostring}})
+ * 
+ * Unlike {{GlobalFunction|print}}, arguments are not separated by anything. They are simply concatenated.
+ * 
+ * Additionally, a newline isn't added automatically to the end, so subsequent Msg or print operations will continue the same line of text in the console. See {{GlobalFunction|MsgN}} for a version that does add a newline.
+ * 
+ * The text is blue on the server, orange on the client, and green on the menu: [[File:msg server client colors.png]] 
+ * @param args  List of values to print. 
+ * @example
+ * 
+ * Msg("Hello", " World!")
+ * 
+ * // Prints "Hello World!" to the console. 
+ */
+declare function Msg(...args: (any)[]): void;
+
+/**
+ * Works exactly like {{GlobalFunction|Msg}} except that, if called on the server, will print to all players consoles plus the server console. 
+ * @param args  List of values to print. 
+ */
+declare function MsgAll(...args: (any)[]): void;
+
+/**
+ * Just like {{GlobalFunction|Msg}}, except it can also print colored text, just like {{LibraryFunction|chat|AddText}}. 
+ * @param args  Values to print. If you put in a color, all text after that color will be printed in that color. 
+ * @example
+ * 
+ * MsgC( Color( 255, 0, 0 ), "Hello World!" )
+ * 
+ * // Prints "Hello World!" in red to the console.@example
+ * 
+ * MsgC( Color( 137, 222, 255 ), "Default server color" )
+ * MsgC( Color( 255, 222, 102 ), "Default client color" )
+ * 
+ * // Shows the built in colors for server and client 
+ */
+declare function MsgC(...args: (any)[]): void;
+
+/**
+ * Same as {{GlobalFunction|print}}, except it concatinates the arguments without inserting any whitespace in between them.
+ * 
+ * See also {{GlobalFunction|Msg}}, which doesn't add a newline (''"\n"'') at the end. 
+ * @param args  List of values to print. They can be of any type and will be converted to strings with {{GlobalFunction|tostring}}. 
+ * @example
+ * 
+ * MsgN("Hello,")
+ * MsgN("World!")
+ * 
+ * // Prints "Hello, World!" in two lines to the console. 
+ */
+declare function MsgN(...args: (any)[]): void;
+
+/**
+ * Returns named color defined in resource/ClientScheme.res. 
+ * @param name  Name of color 
+ * @returns A {{Struct|Color}} or nil 
+ */
+declare function NamedColor(name: string): Color;
+
+/**
+ * Returns a new userdata object. 
+ * @param addMetatable [=false] If true, the userdata will get its own metatable automatically. 
+ * @returns The newly created userdata. 
+ */
+declare function newproxy(addMetatable?: boolean): userdata;
+
+/**
+ * Returns the next key and value pair in a table.
+ * 
+ * **Note:**
+ * >Table keys in Lua have no specific order, and will be returned in whatever order they exist in memory. This may not always be in ascending order or alphabetical order. If you need to iterate over an array in order, use {{GlobalFunction|ipairs}}. 
+ * @param tab  The table 
+ * @param prevKey [=nil] The previous key in the table. 
+ * @returns [The next key for the table. If the previous key was nil, this will be the first key in the table. If the previous key was the last key in the table, this will be nil., The value associated with that key. If the previous key was the last key in the table, this will be nil.] 
+ * @example
+ * 
+ * local function IsEmptyTable( t )
+ * 	return next( t ) == nil
+ * end
+ * 
+ * local mytable = {}
+ * print( "mytable is empty:", IsEmptyTable( mytable ) )
+ * mytable["hello"]=true
+ * print( "mytable is empty:", IsEmptyTable( mytable ) )
+ * 
+ * // Returns whether the table is empty or not 
+ * !TupleReturn
+ */
+declare function next(tab: table, prevKey?: any): [any, any];
+
+/**
+ * Returns the number of files needed from the server you are currently joining. 
+ * @returns The number of downloadables 
+ */
+declare function NumDownloadables(): number;
+
+/**
+ * Returns the amount of skins the specified model has 
+ * @param modelName  Model to return amount of skins of 
+ * @returns Amount of skins 
+ */
+declare function NumModelSkins(modelName: string): number;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ *  Called by the engine when a model has been loaded. Caches model information with the {{Lib|sql}}. 
+ * @param modelName  Name of the model. 
+ * @param numPostParams  Number of pose parameters the model has. 
+ * @param numSeq  Number of sequences the model has. 
+ * @param numAttachments  Number of attachments the model has. 
+ * @param numBoneControllers  Number of bone controllers the model has. 
+ * @param numSkins  Number of skins that the model has. 
+ * @param size  Size of the model. 
+ */
+declare function OnModelLoaded(modelName: string, numPostParams: number, numSeq: number, numAttachments: number, numBoneControllers: number, numSkins: number, size: number): void;
+
+/**
+ * Opens a folder with the given name in the garrysmod folder using the operating system's file browser. Currently broken on OS X and Linux. 
+ * @param folder  The subdirectory to open in the garrysmod folder. 
+ * @example
+ * 
+ * OpenFolder( "saves" )
+ * 
+ * // Opens the "saves" folder. 
+ */
+declare function OpenFolder(folder: string): void;
+
+/**
+ * Modifies the given vectors so that all of vector2's axis are larger than vector1's by switching them around. Also known as ordering vectors.
+ * 
+ * **Note:**
+ * >This function will irreversibly modify the given vectors 
+ * @param vector1  Bounding box min resultant 
+ * @param vector2  Bounding box max resultant 
+ */
+declare function OrderVectors(vector1: Vector, vector2: Vector): void;
+
+/**
+ * Returns an iterator function({{GlobalFunction|next}}) for a for loop that will return the values of the specified table in an arbitrary order.
+ * 
+ * For alphabetical '''key''' order use {{GlobalFunction|SortedPairs}}.
+ * 
+ * For alphabetical '''value''' order use {{GlobalFunction|SortedPairsByValue}}. 
+ * @param tab  The table to iterate over 
+ * @returns [The iterator ({{GlobalFunction|next}}), The table being iterated over, '''nil''' (for the constructor)] 
+ * @example
+ * 
+ * for k, v in pairs( player.GetAll() ) do
+ * 	print( v:Nick() )
+ * end
+ * 
+ * // Iterates through all players on the server and prints their names. 
+ * !TupleReturn
+ */
+declare function pairs(tab: table): [Function, table, any];
+
+/**
+ * Calls {{LibraryFunction|game|AddParticles}} and returns given string. 
+ * @param file  The particle file. 
+ * @returns The particle file. 
+ */
+declare function Particle(file: string): string;
+
+/**
+ * Creates a particle effect.
+ * 
+ * **Note:**
+ * >The particle effect must be precached with {{GlobalFunction|PrecacheParticleSystem}} and the file its from must be added via {{LibraryFunction|game|AddParticles}} before it can be used! 
+ * @param particleName  The name of the particle effect. 
+ * @param position  The start position of the effect. 
+ * @param angles  The orientation of the effect. 
+ * @param parent [=NULL] If set, the particle will be parented to the entity. 
+ */
+declare function ParticleEffect(particleName: string, position: Vector, angles: Angle, parent?: Entity): void;
+
+/**
+ * Creates a particle effect with specialized parameters.
+ * 
+ * **Note:**
+ * >The particle effect must be precached with {{GlobalFunction|PrecacheParticleSystem}} and the file its from must be added via {{LibraryFunction|game|AddParticles}} before it can be used! 
+ * @param particleName  The name of the particle effect. 
+ * @param attachType  Attachment type using {{Enum|PATTACH}}. 
+ * @param entity  The entity to be used in the way specified by the attachType. 
+ * @param attachmentID  The id of the attachment to be used in the way specified by the attachType. 
+ */
+declare function ParticleEffectAttach(particleName: string, attachType: PATTACH, entity: Entity, attachmentID: number): void;
+
+/**
+ * Creates a new {{Type|CLuaEmitter}}.
+ * 
+ * **Note:**
+ * >Do not forget to delete the emitter with {{ClassFunction|CLuaEmitter|Finish}} once you are done with it 
+ * @param position  The start position of the emitter.
+ * 
+ * This is only used to determine particle drawing order for translucent particles. 
+ * @param use3D  Whenever to render the particles in 2D or 3D mode. 
+ * @returns The new particle emitter. 
+ * @example
+ * 
+ * local tr =  LocalPlayer():GetEyeTrace()
+ * local pos = tr.HitPos + tr.HitNormal * 100 // The origin position of the effect
+ * 
+ * local emitter = ParticleEmitter( pos ) // Particle emitter in this position
+ * 
+ * for i = 0, 100 do // Do 100 particles
+ * 	local part = emitter:Add( "effects/spark", pos ) // Create a new particle at pos
+ * 	if ( part ) then
+ * 		part:SetDieTime( 1 ) // How long the particle should "live"
+ * 
+ * 		part:SetStartAlpha( 255 ) // Starting alpha of the particle
+ * 		part:SetEndAlpha( 0 ) // Particle size at the end if its lifetime
+ * 
+ * 		part:SetStartSize( 5 ) // Starting size
+ * 		part:SetEndSize( 0 ) // Size when removed
+ * 
+ * 		part:SetGravity( Vector( 0, 0, -250 ) ) // Gravity of the particle
+ * 		part:SetVelocity( VectorRand() * 50 ) // Initial velocity of the particle
+ * 	end
+ * end
+ * 
+ * emitter:Finish()
+ * 
+ * // Creates a simple spark particle effect 100 units above where the local player is looking at. 
+ */
+declare function ParticleEmitter(position: Vector, use3D: boolean): CLuaEmitter;
+
+/**
+ * Creates a path for the bot to follow 
+ * @param type  The name of the path to create.
+ * This is going to be "Follow" or "Chase" right now. 
+ * @returns The path 
+ */
+declare function Path(type: string): PathFollower;
+
+/**
+ * Calls a function and catches an error that can be thrown while the execution of the call.
+ * 
+ * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
+ * >Using this function with {{GlobalFunction|include}} will break autorefresh.
+ * 
+ * **Bug [#2498](https://github.com/Facepunch/garrysmod-issues/issues/2498):**
+ * >This does not stop {{GlobalFunction|Error}} and {{GlobalFunction|ErrorNoHalt}} from sending error messages to the server (if called clientside) or calling the {{HookFunction|GM|OnLuaError}} hook. The success boolean returned will always return true and thus you will not get the error message returned. {{GlobalFunction|error}} does not exhibit these behaviours.
+ * 
+ * **Bug [#3112](https://github.com/Facepunch/garrysmod-issues/issues/3112):**
+ * >This does not stop errors incurred by {{GlobalFunction|include}}. 
+ * @param func  Function to be executed and of which the errors should be caught of 
+ * @param arguments  Arguments to call the function with. 
+ * @returns [If the function had no errors occur within it., If an error occurred, this will be a string containing the error message. Otherwise, this will be the return values of the function passed in.] 
+ * @example
+ * 
+ * local succ, err = pcall(function() aisj() end)
+ * print(succ, err)
+ * 
+ * // Catch an error. 
+ * !TupleReturn
+ */
+declare function pcall(func: Function, ...arguments: (any)[]): [boolean, any];
+
+/**
+ * Moves the given model to the given position and returns view information based on its properties 
+ * @param model  Model that is being rendered to the spawn icon 
+ * @param position  Position that the model is being rendered at 
+ * @returns Table of information of the view which can be used for rendering 
+ */
+declare function PositionSpawnIcon(model: Entity, position: Vector): table;
+
+/**
+ * Precaches the particle with the specified name. 
+ * @param particleSystemName  The name of the particle system. 
+ */
+declare function PrecacheParticleSystem(particleSystemName: string): void;
+
+/**
+ * Precaches a scene file. 
+ * @param scene  Path to the scene file to precache. 
+ */
+declare function PrecacheScene(scene: string): void;
+
+/**
+ * Load and precache a custom sentence file. 
+ * @param filename  The path to the custom sentences.txt. 
+ * @example
+ * 
+ * PrecacheSentenceFile( "data/customsentences.txt" )
+ * 
+ * // Precache a file named "customsentences.txt" in the data directory. 
+ */
+declare function PrecacheSentenceFile(filename: string): void;
+
+/**
+ * Precache a sentence group in a sentences.txt definition file. 
+ * @param group  The group to precache. 
+ * @example
+ * 
+ * PrecacheSentenceGroup( "METROPOLICE" )
+ * 
+ * // Precache all metropolice sentences. 
+ */
+declare function PrecacheSentenceGroup(group: string): void;
+
+/**
+ * Writes every given argument to the console.
+ * 
+ * Automatically attempts to convert each argument to a string. (See {{GlobalFunction|tostring}})
+ * 
+ * Separates arguments with a tab character (''"\t"''). 
+ * @param args  List of values to print. 
+ * @example
+ * 
+ * print("Hello World!", "Yay!")
+ * 
+ * // Prints "Hello World! Yay!" to the console. 
+ */
+declare function print(...args: (any)[]): void;
+
+/**
+ * Displays a message in the chat, console, or center of screen of every player.
+ * 
+ * This uses the archaic user message system ({{Lib|umsg}}) and hence is limited to &asymp;250 characters. 
+ * @param type  Which type of message should be sent to the players (see {{Enum|HUD}}) 
+ * @param message  Message to be sent to the players 
+ * @example
+ * 
+ * PrintMessage(HUD_PRINTTALK, "I'm new here.")
+ * 
+ * // Prints into the every player's chat: "I'm new here." 
+ */
+declare function PrintMessage(type: HUD, message: string): void;
+
+/**
+ * Recursively prints the contents of a table to the console. 
+ * @param tableToPrint  The table to be printed 
+ * @param indent [=0] Number of tabs to start indenting at. Increases by 2 when entering another table. 
+ * @param done [={}] Internal argument, you shouldn't normally change this. Used to check if a nested table has already been printed so it doesn't get caught in a loop. 
+ * @example
+ * 
+ * local tbl = {
+ *  "test",
+ *  3829.4,
+ *  {"foo", "baah", 20/5},
+ *  true
+ * }
+ * PrintTable(tbl)
+ * 
+ * // Prints the table we created. 
+ */
+declare function PrintTable(tableToPrint: table, indent?: number, done?: table): void;
+
+/**
+ * Runs a function without stopping the whole script on error.
+ * 
+ * This function is similar to {{GlobalFunction|pcall}} and {{GlobalFunction|xpcall}} except the errors are still printed and sent to the error handler (i.e. sent to server console if clientside and {{HookFunction|GM|OnLuaError}} called). 
+ * @param func  Function to run 
+ * @returns Were there any errors or not 
+ */
+declare function ProtectedCall(func: Function): boolean;
+
+/**
+ * Returns an iterator function that can be used to loop through a table in random order 
+ * @param table  Table to create iterator for 
+ * @param descending  Whether the iterator should iterate descending or not 
+ * @returns Iterator function 
+ * @example
+ * 
+ * local tab = {"a", "b", "c", "d", "e", "f"}
+ * 
+ * for k, v in RandomPairs(tab) do
+ *     print(v)
+ * end
+ * 
+ * // Creates a table and prints its contents in random order 
+ */
+declare function RandomPairs(table: table, descending: boolean): Function;
+
+/**
+ * Compares the two values without calling their __eq operator. 
+ * @param value1  The first value to compare. 
+ * @param value2  The second value to compare. 
+ * @returns Whether or not the two values are equal. 
+ */
+declare function rawequal(value1: any, value2: any): boolean;
+
+/**
+ * Gets the value with the specified key from the table without calling the __index method. 
+ * @param table  Table to get the value from. 
+ * @param index  The index to get the value from. 
+ * @returns The value. 
+ */
+declare function rawget(table: table, index: any): any;
+
+/**
+ * Sets the value with the specified key from the table without calling the __newindex method. 
+ * @param table  Table to get the value from. 
+ * @param index  The index to get the value from. 
+ * @param value  The value to set for the specified key. 
+ */
+declare function rawset(table: table, index: any, value: any): void;
+
+/**
+ * Returns the real frame-time which is unaffected by host_timescale. To be used for GUI effects (for example) 
+ * @returns Real frame time 
+ */
+declare function RealFrameTime(): number;
+
+/**
+ * Returns the uptime of the game/server in seconds (to at least 4 decimal places)
+ * 
+ * **Note:**
+ * >This is '''not''' synchronised or affected by the game.
+ * 
+ * You should use this function (or SysTime) for timing real-world events such as user interaction, but not for timing game events such as animations.
+ * 
+ * See also: {{GlobalFunction|CurTime}}, {{GlobalFunction|SysTime}} 
+ * @returns Uptime of the server. 
+ */
+declare function RealTime(): number;
+
+/**
+ * Creates a new {{Type|CRecipientFilter}}. 
+ * @returns The new created recipient filter. 
+ * @example
+ * 
+ * local rf = RecipientFilter()
+ * rf:AddAllPlayers()
+ * print( rf:GetCount() )
+ * PrintTable( rf:GetPlayers() )
+ * 
+ * // Example usage of the function 
+ */
+declare function RecipientFilter(): CRecipientFilter;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Adds a frame to the currently recording demo. 
+ */
+declare function RecordDemoFrame(): void;
+
+/**
+ * Registers a Derma element to be closed the next time {{GlobalFunction|CloseDermaMenus}} is called 
+ * @param menu  Menu to be registered for closure 
+ */
+declare function RegisterDermaMenuForClose(menu: Panel): void;
+
+/**
+ * Saves position of your cursor on screen. You can restore it by using {{GlobalFunction|RestoreCursorPosition}}.
+ * 
+ * Despite this function being available on server, it will not do anything on server. 
+ */
+declare function RememberCursorPosition(): void;
+
+/**
+ * Does the removing of the tooltip panel. Called by {{GlobalFunction|EndTooltip}}. 
+ */
+declare function RemoveTooltip(): void;
+
+/**
+ * Returns the angle that the clients view is being rendered at 
+ * @returns Render Angles 
+ */
+declare function RenderAngles(): Angle;
+
+/**
+ * Renders a Depth of Field effect 
+ * @param origin  Origin to render the effect at 
+ * @param angle  Angle to render the effect at 
+ * @param usableFocusPoint  Point to focus the effect at 
+ * @param angleSize  Angle size of the effect 
+ * @param radialSteps  Amount of radial steps to render the effect with 
+ * @param passes  Amount of render passes 
+ * @param spin  Whether to cycle the frame or not 
+ * @param inView  Table of view data 
+ * @param fov  FOV to render the effect with 
+ */
+declare function RenderDoF(origin: Vector, angle: Angle, usableFocusPoint: Vector, angleSize: number, radialSteps: number, passes: number, spin: boolean, inView: table, fov: number): void;
+
+/**
+ * Renders the stereoscopic post-process effect 
+ * @param viewOrigin  Origin to render the effect at 
+ * @param viewAngles  Angles to render the effect at 
+ */
+declare function RenderStereoscopy(viewOrigin: Vector, viewAngles: Angle): void;
+
+/**
+ * Renders the Super Depth of Field post-process effect 
+ * @param viewOrigin  Origin to render the effect at 
+ * @param viewAngles  Angles to render the effect at 
+ * @param viewFOV  Field of View to render the effect at 
+ */
+declare function RenderSuperDoF(viewOrigin: Vector, viewAngles: Angle, viewFOV: number): void;
+
+/**
+ * First tries to load a binary module with the given name, if unsuccessful, it tries to load a Lua module with the given name.
+ * 
+ * **Bug [#1041](https://github.com/Facepunch/garrysmod-issues/issues/1041):**
+ * >Request=813 
+ * @param name  The name of the module to be loaded. 
+ */
+declare function require(name: string): void;
+
+/**
+ * Restores position of your cursor on screen. You can save it by using {{GlobalFunction|RememberCursorPosition}}.
+ * 
+ * Despite this function being available on server, it will not do anything on server. 
+ */
+declare function RestoreCursorPosition(): void;
+
+/**
+ * Executes the given console command with the parameters.
+ * 
+ * **Note:**
+ * >Some commands/convars are blocked from being ran/changed using this function, usually to prevent harm/annoyance to clients. For a list of blocked commands, see [[Blocked ConCommands]]. 
+ * @param command  The command to be executed. 
+ * @param arguments  The arguments. Note, that unlike {{ClassFunction|Player|ConCommand}}, you must pass each argument as a new string, not separating them with a space. 
+ * @example
+ * 
+ * RunConsoleCommand("sv_gravity", "400")
+ * 
+ * // Changes the gravity to 400 (default 600). 
+ */
+declare function RunConsoleCommand(command: string, ...arguments: (any)[]): void;
+
+/**
+ * Runs a menu command. Equivalent to {{GlobalFunction|RunConsoleCommand}}( "gamemenucommand", command ) unless the command starts with the "engine" keyword in which case it is equivalent to {{GlobalFunction|RunConsoleCommand}}( command ). 
+ * @param command  The menu command to run
+ * 
+ * Should be one of the following:
+ * * Disconnect - Disconnects from the current server.
+ * * OpenBenchmarkDialog - Opens the "Video Hardware Stress Test" dialog.
+ * * OpenChangeGameDialog - Does not work in GMod.
+ * * OpenCreateMultiplayerGameDialog - Opens the Source dialog for creating a listen server.
+ * * OpenCustomMapsDialog - Does nothing.
+ * * OpenFriendsDialog - Does nothing.
+ * * OpenGameMenu - Does not work in GMod.
+ * * OpenLoadCommentaryDialog - Opens the "Developer Commentary" selection dialog. Useless in GMod.
+ * * OpenLoadDemoDialog - Does nothing.
+ * * OpenLoadGameDialog - Opens the Source "Load Game" dialog.
+ * * OpenNewGameDialog - Opens the "New Game" dialog. Useless in GMod.
+ * * OpenOptionsDialog - Opens the options dialog.
+ * * OpenPlayerListDialog - Opens the "Mute Players" dialog that shows all players connected to the server and allows to mute them.
+ * * OpenSaveGameDialog - Opens the Source "Save Game" dialog.
+ * * OpenServerBrowser - Opens the legacy server browser.
+ * * Quit - Quits the game ''without'' confirmation (unlike other Source games).
+ * * QuitNoConfirm - Quits the game without confirmation (like other Source games).
+ * * ResumeGame - Closes the menu and returns to the game.
+ * * engine <concommand> - Runs a console command. Equivalent to {{GlobalFunction|RunConsoleCommand}}( <concommand> ). 
+ * @example
+ * 
+ * RunGameUICommand( "OpenOptionsDialog" )
+ * 
+ * // Opens the options dialog.@example
+ * 
+ * RunGameUICommand( "engine gameui_hide" )
+ * 
+ * // Hides the game UI (menu). Equivalent to {{GlobalFunction|RunConsoleCommand}}( "gameui_hide" ) 
+ */
+declare function RunGameUICommand(command: string): void;
+
+/**
+ * Evaluates and executes the given code, will throw an error on failure.
+ * **Note:**
+ * >Local variables are not passed to the given code. 
+ * @param code  The code to execute. 
+ * @param identifier [="RunString"] The name that should appear in any error messages caused by this code. 
+ * @param handleError [=true] If false, this function will return a string containing any error messages instead of throwing an error. 
+ * @returns If handleError is false, the error message (if any). 
+ */
+declare function RunString(code: string, identifier?: string, handleError?: boolean): string;
+
+/**
+ * Alias of {{GlobalFunction|RunString}}.
+ * 
+ * **Deprecated:**
+ * >Use {{GlobalFunction|RunString}} instead. 
+ */
+declare function RunStringEx(): void;
+
+/**
+ * Removes the given entity unless it is a player or the world entity 
+ * @param ent  Entity to safely remove. 
+ */
+declare function SafeRemoveEntity(ent: Entity): void;
+
+/**
+ * Removes entity after delay using {{GlobalFunction|SafeRemoveEntity}} 
+ * @param entity  Entity to be removed 
+ * @param delay  Delay for entity removal in seconds 
+ */
+declare function SafeRemoveEntityDelayed(entity: Entity, delay: number): void;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * This function is used to save the last map and category to which the map belongs as a [[:Category:cookie|cookie]]. 
+ * @param map  The name of the map. 
+ * @param category  The name of the category to which this map belongs. 
+ */
+declare function SaveLastMap(map: string, category: string): void;
+
+/**
+ * Overwrites all presets with the supplied table. Used by the {{Lib|presets}} for preset saving 
+ * @param presets  Presets to be saved 
+ */
+declare function SavePresets(presets: table): void;
+
+/**
+ * Returns a number based on the Size argument and your screen's width. The screen's width is always equal to size 640. This function is primarily used for scaling font sizes. 
+ * @param Size  The number you want to scale. 
+ * @example
+ * 
+ * print( ScreenScale(96) )
+ * print( ScreenScale(400) )
+ * print( ScreenScale(640) )
+ * 
+ * // Prints a scaled number based on the number 96, 400 and 640. 
+ */
+declare function ScreenScale(Size: number): void;
+
+/**
+ * Gets the height of the game's window (in pixels). 
+ * @returns The height of the game's window in pixels 
+ * @example
+ * 
+ * print(ScrH())
+ * 
+ * // Prints the Height of the window.@example
+ * 
+ * hook.Add("HUDPaint", "WhiteBox", function()
+ *     surface.SetDrawColor(Color(255,255,255,255))
+ *     surface.DrawRect(0, 0, ScrW() / 2, ScrH() / 2)
+ * end)
+ * 
+ * // Draws a white box on the top left corner of your screen 
+ */
+declare function ScrH(): number;
+
+/**
+ * Gets the width of the game's window (in pixels). 
+ * @returns The width of the game's window in pixels 
+ * @example
+ * 
+ * print( ScrW() )
+ * 
+ * // Prints the width of the screen 
+ */
+declare function ScrW(): number;
+
+/**
+ * Used to select single values from a vararg or get the count of values in it. 
+ * @param parameter  Can be a {{Type|number}} or {{Type|string}}.
+ * * If it's a string and starts with "#", the function will return the amount of values in the vararg (ignoring the rest of the string).
+ * * If it's a positive number, the function will return all values starting from the given index.
+ * * If the number is negative, it will return the amount specified from the end instead of the beginning. 
+ * @param vararg  The vararg. These are the values from which you want to select. 
+ * @returns Returns a {{Type|number}} or {{Type|vararg}}, depending on the select method. 
+ * @example
+ * 
+ * print( select( '#', 'a', true, false, {}, 1 ) )
+ * 
+ * // This code shows how it works with the "#" modifier:@example
+ * 
+ * print( select( 2, 1, 2, 3, 4, 5 ) )
+ * 
+ * // This prints from the 2nd vararg passed to the last@example
+ * 
+ * print( select( -2, 1, 2, 3, 4, 5 ) )
+ * 
+ * // This prints the last 2 arguments passed 
+ */
+declare function select(parameter: number | string, ...vararg: (any)[]): number | any;
+
+/**
+ * Send a usermessage 
+ * @param name  The name of the usermessage 
+ * @param recipients  Can be a {{Type|CRecipientFilter}}, {{Type|table}} or {{Type|Player}} object. 
+ * @param args  Data to send in the usermessage 
+ */
+declare function SendUserMessage(name: string, recipients: CRecipientFilter | table | Player, ...args: (any)[]): void;
+
+/**
+ * Prints "ServerLog: PARAM" without a newline, to the server log and console. 
+ * @param parameter  The value to be printed to console. 
+ */
+declare function ServerLog(parameter: string): void;
+
+/**
+ * Adds the given string to the computers clipboard, which can then be pasted in or outside of GMod with Ctrl + V. 
+ * @param text  The text to add to the clipboard. 
+ */
+declare function SetClipboardText(text: string): void;
+
+/**
+ * Sets the enviroment for a function or a stack level, if a function is passed, the return value will be the function, otherwise nil. 
+ * @param location  The function to set the enviroment for or a number representing stack level. 
+ * @param enviroment  Table to be used as enviroment. 
+ */
+declare function setfenv(location: Function, enviroment: table): void;
+
+/**
+ * Defines an angle to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global angle with 
+ * @param angle  Angle to be networked 
+ */
+declare function SetGlobalAngle(index: any, angle: Angle): void;
+
+/**
+ * Defined a boolean to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global boolean with 
+ * @param bool  Boolean to be networked 
+ */
+declare function SetGlobalBool(index: any, bool: boolean): void;
+
+/**
+ * Defines an entity to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global entity with 
+ * @param ent  Entity to be networked 
+ */
+declare function SetGlobalEntity(index: any, ent: Entity): void;
+
+/**
+ * Defines a floating point number to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global float with 
+ * @param float  Float to be networked 
+ */
+declare function SetGlobalFloat(index: any, float: number): void;
+
+/**
+ * Sets an integer that is shared between the server and all clients.
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on!
+ * 
+ * **Bug [#3374](https://github.com/Facepunch/garrysmod-issues/issues/3374):**
+ * >This function will not round decimal values as it actually networks a float internally. 
+ * @param index  The unique index to identify the global value with. 
+ * @param value  The value to set the global value to 
+ * @example
+ * 
+ * SetGlobalInt("RoundNumber", 4)
+ * 
+ * // Sets the current round number. 
+ */
+declare function SetGlobalInt(index: string, value: number): void;
+
+/**
+ * Defines a string with a maximum of 199 characters to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global string with 
+ * @param str  String to be networked 
+ */
+declare function SetGlobalString(index: any, str: string): void;
+
+/**
+ * Defines a vector to be automatically networked to clients
+ * 
+ * **Note:**
+ * >Running this function clientside will only set it clientside for the client it is called on! 
+ * @param index  Index to identify the global vector with 
+ * @param vec  Vector to be networked 
+ */
+declare function SetGlobalVector(index: any, vec: Vector): void;
+
+/**
+ * Sets, changes or removes a table's metatable. Returns Tab (the first argument). 
+ * @param Tab  The table who's metatable to change. 
+ * @param Metatable  The metatable to assign.
+ * If it's nil, the metatable will be removed. 
+ * @returns The first argument. 
+ * @example
+ * 
+ * local Pupil_meta = {
+ * 	GetName = function(self)
+ * 		return self.name
+ * 	end
+ * }
+ * Pupil_meta.__index = Pupil_meta
+ * // If a key cannot be found in an object, it will look in it's metatable's __index metamethod.
+ * 
+ * local Pupil = {
+ * 	name = "John Doe"
+ * }
+ * 
+ * setmetatable(Pupil, Pupil_meta)
+ * 
+ * print( Pupil:GetName() )
+ * // This will look for the "GetName" key in Pupil, but it doesn't have one. So it will look in it's metatable (Pupil_meta) __index key instead.
+ * 
+ * // Creates a metatable and assigns it to a table. 
+ */
+declare function setmetatable(Tab: table, Metatable: table): table;
+
+/**
+ * Called by the engine to set which constraint system [https://developer.valvesoftware.com/wiki/Phys_constraintsystem] the next created constraints should use 
+ * @param constraintSystem  Constraint system to use 
+ */
+declare function SetPhysConstraintSystem(constraintSystem: Entity): void;
+
+/**
+ * This function can be used in a for loop instead of {{GlobalFunction|pairs}}. It sorts all '''keys''' alphabetically.
+ * 
+ * For sorting by specific '''value member''', use {{GlobalFunction|SortedPairsByMemberValue}}.
+ * 
+ * For sorting by '''value''', use {{GlobalFunction|SortedPairsByValue}}. 
+ * @param table  The table to sort 
+ * @param desc [=false] Reverse the sorting order 
+ * @returns [Iterator function, The table being iterated over] 
+ * @example
+ * 
+ * for id, text in SortedPairs( { "e", "b", "d", "c", "a" } ) do
+ *     print(id, text)
+ * end
+ * 
+ * print( "//-" )
+ * 
+ * for id, text in SortedPairs( { e = 1, b = 2, d = 3, c = 4, a = 5 } ) do
+ *     print(id, text)
+ * end
+ * 
+ * // Example of usage. 
+ * !TupleReturn
+ */
+declare function SortedPairs(table: table, desc?: boolean): [Function, table];
+
+/**
+ * Returns an iterator function that can be used to loop through a table in order of member values, when the values of the table are also tables and contain that member.
+ * 
+ * To sort by '''value''', use {{GlobalFunction|SortedPairsByValue}}.
+ * 
+ * To sort by '''keys''', use {{GlobalFunction|SortedPairs}}. 
+ * @param table  Table to create iterator for. 
+ * @param memberKey  Key of the value member to sort by. 
+ * @param descending [=false] Whether the iterator should iterate in descending order or not. 
+ * @returns [Iterator function, The table the iterator was created for.] 
+ * @example
+ * 
+ * local tab = {
+ * 	{
+ * 		Name = "Adam",
+ * 		Age = 16
+ * 	},
+ * 	{
+ * 		Name = "Charles",
+ * 		Age = 18
+ * 	}
+ * }
+ * 
+ * for k, v in SortedPairsByMemberValue(tab, "Age", true) do
+ * 	print(v.Name)
+ * end
+ * 
+ * // Creates a table and prints its contents in order of the age member descending 
+ * !TupleReturn
+ */
+declare function SortedPairsByMemberValue(table: table, memberKey: any, descending?: boolean): [Function, table];
+
+/**
+ * Returns an iterator function that can be used to loop through a table in order of its '''values'''.
+ * 
+ * To sort by specific '''value member''', use {{GlobalFunction|SortedPairsByMemberValue}}.
+ * 
+ * To sort by '''keys''', use {{GlobalFunction|SortedPairs}}. 
+ * @param table  Table to create iterator for 
+ * @param descending [=false] Whether the iterator should iterate in descending order or not 
+ * @returns [Iterator function, The table which will be iterated over] 
+ * !TupleReturn
+ */
+declare function SortedPairsByValue(table: table, descending?: boolean): [Function, table];
+
+/**
+ * Runs {{LibraryFunction|util|PrecacheSound}} and returns the string 
+ * @param soundPath  The soundpath to precache 
+ * @returns The string passed as the first argument 
+ * @example
+ * 
+ * local BounceSound = Sound( "garrysmod/balloon_pop_cute.wav" )
+ * function ENT:PhysicsCollide( data, physobj )
+ *  // Play sound on bounce
+ *  if ( data.Speed > 60 && data.DeltaTime > 0.2 ) then
+ *  sound.Play( BounceSound, self:GetPos(), 75, math.random( 90, 120 ), math.Clamp( data.Speed / 150, 0, 1 ) )
+ *  ...
+ * 
+ * // From entities/sent_ball.lua 
+ */
+declare function Sound(soundPath: string): string;
+
+/**
+ * Returns the duration of the sound specified in seconds.
+ * 
+ * **Bug [#936](https://github.com/Facepunch/garrysmod-issues/issues/936):**
+ * >This only works properly for .wav files serverside. 
+ * @param soundName  The sound file path. 
+ * @returns Sound duration in seconds. 
+ */
+declare function SoundDuration(soundName: string): number;
+
+/**
+ * Returns the input value in an escaped form so that it can safely be used inside of queries. The returned value is surrounded by quotes unless noQuotes is true. Alias of {{LibraryFunction|sql|SQLStr}} 
+ * @param input  String to be escaped 
+ * @param noQuotes [=false] Whether the returned value should be surrounded in quotes or not 
+ * @returns Escaped input 
+ */
+declare function SQLStr(input: string, noQuotes?: boolean): string;
+
+/**
+ * **Deprecated:**
+ * >You should be using {{GlobalFunction|ScreenScale}} instead.
+ * 
+ * Returns a number based on the Size argument and your screen's width. Alias of {{GlobalFunction|ScreenScale}}. 
+ * @param Size  The number you want to scale. 
+ * @example
+ * 
+ * print( SScale(40) )
+ * 
+ * // Prints a scaled number based on the number 40. 
+ */
+declare function SScale(Size: number): void;
+
+/**
+ * Returns the ordinal suffix of a given number. 
+ * @param number  The number to find the ordinal suffix of. 
+ * @returns suffix 
+ * @example
+ * 
+ * print( 72 .. STNDRD(72) )
+ * 
+ * // Returns the ordinal suffix of 72. 
+ */
+declare function STNDRD(number: number): string;
+
+/**
+ * Suppress any networking from the server to the specified player. This is automatically called by the engine before/after a player fires their weapon, reloads, or causes any other similar shared-predicted event to occur. 
+ * @param suppressPlayer  The player to suppress any networking to. 
+ */
+declare function SuppressHostEvents(suppressPlayer: Player): void;
+
+/**
+ * Returns a highly accurate time in seconds since the start up, ideal for benchmarking. 
+ * @returns Uptime of the server. 
+ * @example
+ * 
+ * print(SysTime())
+ * 
+ * // Prints the runtime@example
+ * 
+ * local SysTime = SysTime
+ * local Distance = FindMetaTable("Vector").Distance
+ * 
+ * local vec1 = Vector(1, 2, 3)
+ * local vec2 = Vector(13, 26, -10)
+ * 
+ * local count = 10000
+ * 
+ * local StartTime = SysTime()
+ * 
+ * for i = 1, count do
+ * 	// Repeat an action 10,000 times to check how long it takes on average
+ * 	// Example action:
+ * 	Distance(vec1 , vec2)
+ * end
+ * 
+ * local EndTime = SysTime()
+ * local TotalTime = EndTime - StartTime
+ * local AverageTime = TotalTime / count
+ * 
+ * print("Total: " .. TotalTime .. " seconds. Average: " .. AverageTime .. " seconds.")
+ * 
+ * // Typical usage of this function for benchmarking 
+ */
+declare function SysTime(): number;
+
+/**
+ * Returns a TauntCamera object 
+ * @returns TauntCamera 
+ */
+declare function TauntCamera(): table;
+
+/**
+ * Clears focus from any text entries player may have focused. 
+ */
+declare function TextEntryLoseFocus(): void;
+
+/**
+ * Returns a cosine value that fluctuates based on the current time 
+ * @param frequency  The frequency of fluctuation 
+ * @param min  Minimum value 
+ * @param max  Maxmimum value 
+ * @param offset  Offset variable that doesn't affect the rate of change, but causes the returned value to be offset by time 
+ * @returns Cosine value 
+ */
+declare function TimedCos(frequency: number, min: number, max: number, offset: number): number;
+
+/**
+ * Returns a sine value that fluctuates based on {{GlobalFunction|CurTime}}. The value returned will be between the start value plus/minus the range value.
+ * 
+ * Due to a bug, the range arguments don't work as intended. The existing (bugged) behavior is documented below. 
+ * @param frequency  The frequency of fluctuation, in [[wikipedia:hertz|hertz]] 
+ * @param origin  The center value of the sine wave. 
+ * @param max  This argument's distance from origin defines the size of the full range of the sine wave. For example, if origin is 3 and max is 5, then the full range of the sine wave is 5-3 = 2. 3 is the center point of the sine wave, so the sine wave will range between 2 and 4. 
+ * @param offset  Offset variable that doesn't affect the rate of change, but causes the returned value to be offset by time 
+ * @returns Sine value 
+ */
+declare function TimedSin(frequency: number, origin: number, max: number, offset: number): number;
+
+/**
+ * Attempts to return an appropriate boolean for the given value 
+ * @param val  The object to be converted to a boolean 
+ * @returns '''false''' for the boolean false.
+ * '''false''' for "false".
+ * '''false''' for "0".
+ * '''false''' for numeric 0.
+ * '''false''' for nil.
+ * 
+ * '''true''' otherwise. 
+ * @example
+ * 
+ * print("boolean true:", tobool(true))
+ * print("boolean false:", tobool(false))
+ * print("string true:", tobool("true"))
+ * print("string false:", tobool("false"))
+ * print("numeric 0:", tobool(0))
+ * print("string 0:", tobool("0"))
+ * print("string 1:", tobool("1"))
+ * print("nil:", tobool(nil))
+ * print("text string:", tobool("not a boolean"))
+ * print("empty string:", tobool(""))
+ * 
+ * // Demonstrate the output of this function with various values. 
+ */
+declare function tobool(val: any): boolean;
+
+/**
+ * Toggles whether or not the named map is favorited in the new game list. 
+ * @param map  Map to toggle favorite. 
+ */
+declare function ToggleFavourite(map: string): void;
+
+/**
+ * Attempts to convert the value to a number.
+ * 
+ * Returns nil on failure. 
+ * @param value  The value to convert. Can be a number or string. 
+ * @param base [=10] The [[wikipedia:Radix|numeric base]] used in the string. Can be any integer between 2 and 36, inclusive. 
+ * @returns The numeric representation of the value with the given base, or nil if the conversion failed. 
+ */
+declare function tonumber(value: any, base?: number): number;
+
+/**
+ * Attempts to convert the value to a string. If the value is an object and its metatable has defined the __tostring metamethod, this will call that function.
+ * 
+ * {{GlobalFunction|print}} also uses this functionality. 
+ * @param value  The object to be converted to a string. 
+ * @returns The string representation of the value. 
+ * @example
+ * 
+ * print(tostring(0x16))
+ * 
+ * // Convert a number to a string. 
+ */
+declare function tostring(value: any): string;
+
+/**
+ * **Deprecated!**
+ * 
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
+ * @param filename  File name to test 
+ * @returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
+ */
+declare function TranslateDownloadableName(filename: string): string;
+
+/**
+ * Returns a string representing the name of the type of the passed object. 
+ * @param variable  The object to get the type of. 
+ * @returns The name of the object's type. 
+ * @example
+ * 
+ * print( type(2) )
+ * print( type("hai") )
+ * print( type({}) )
+ * 
+ * // Print the name of a few types.@example
+ * 
+ * print( type() )
+ * 
+ * // Returns "no value" if called with 0 arguments/parameters. 
+ */
+declare function type(variable: any): string;
+
+/**
+ * Gets the associated type ID of the variable.
+ * 
+ * **Bug [#1120](https://github.com/Facepunch/garrysmod-issues/issues/1120):**
+ * >This does not work properly with _LOADLIB objects. 
+ * @param variable  The variable to get the type ID of. 
+ * @returns The type ID of the variable. See the {{Enum|TYPE}}. 
+ */
+declare function TypeID(variable: any): TYPE;
+
+/**
+ * This function takes a numeric indexed table and return all the members as a vararg. If specified, it will start at the given index and end at end index. 
+ * @param tbl  The table to generate the vararg from. 
+ * @param startIndex [=1] Which index to start from. Optional. 
+ * @param endIndex [=#tbl] Which index to end at. Optional, even if you set StartIndex. 
+ * @returns Output values 
+ * @example
+ * 
+ * print( unpack{"a", "b", "c"} )
+ * 
+ * // Prints a vararg 
+ */
+declare function unpack(tbl: table, startIndex?: number, endIndex?: number): any;
+
+/**
+ * Returns the current asynchronous in-game time. 
+ * @returns The asynchronous in-game time. 
+ */
+declare function UnPredictedCurTime(): number;
+
+/**
+ * Runs JavaScript on the loading screen panel ({{GlobalFunction|GetLoadPanel}}). 
+ * @param javascript  JavaScript to run on the loading panel. 
+ */
+declare function UpdateLoadPanel(javascript: string): void;
+
+/**
+ * **Deprecated:**
+ * >You should use {{GlobalFunction|IsUselessModel}} instead.
+ * 
+ * Returns whether or not a model is useless by checking that the file path is that of a proper model.
+ * 
+ * If the string ".mdl" is not found in the model name, the function will return true.
+ * 
+ * The function will also return true if any of the following strings are found in the given model name:
+ * * "_gesture"
+ * * "_anim"
+ * * "_gst"
+ * * "_pst"
+ * * "_shd"
+ * * "_ss"
+ * * "_posture"
+ * * "_anm"
+ * * "ghostanim"
+ * * "_paths"
+ * * "_shared"
+ * * "anim_"
+ * * "gestures_"
+ * * "shared_ragdoll_" 
+ * @param modelName  The model name to be checked 
+ * @returns Whether or not the model is useless 
+ */
+declare function UTIL_IsUselessModel(modelName: string): boolean;
+
+/**
+ * **Deprecated:**
+ * >You should use {{GlobalFunction|IsValid}} instead
+ * 
+ * Returns if a panel is safe to use. 
+ * @param panel  The panel to validate. 
+ */
+declare function ValidPanel(panel: Panel): void;
+
+/**
+ * Returns a random vector whose components are each between -1 and 1 
+ * @returns The random direction vector 
+ */
+declare function VectorRand(): Vector;
+
+/**
+ * Returns the time in seconds it took to render the VGUI. 
+ */
+declare function VGUIFrameTime(): void;
+
+/**
+ * Creates and returns a {{Type|DShape}} rectangle GUI element with the given dimensions. 
+ * @param x  X position of the created element 
+ * @param y  Y position of the created element 
+ * @param w  Width of the created element 
+ * @param h  Height of the created element 
+ * @returns {{Type|DShape}} element 
+ */
+declare function VGUIRect(x: number, y: number, w: number, h: number): DShape;
+
+/**
+ * Briefly displays layout details of the given panel on-screen 
+ * @param panel  Panel to display layout details of 
+ */
+declare function VisualizeLayout(panel: Panel): void;
+
+/**
+ * **This is an internal function or feature.**
+ * >This means you will be able to use it, but you really shouldn't.
+ * 
+ * Returns a new WorkshopFileBase element 
+ * @param namespace  Namespace for the file base 
+ * @param requiredTags  Tags required for a Workshop submission to be interacted with by the filebase 
+ * @returns WorkshopFileBase element 
+ */
+declare function WorkshopFileBase(namespace: string, requiredTags: table): table;
+
+/**
+ * Translates the specified position and angle into the specified coordinate system. 
+ * @param position  The position that should be translated from the current to the new system. 
+ * @param angle  The angles that should be translated from the current to the new system. 
+ * @param newSystemOrigin  The origin of the system to translate to. 
+ * @param newSystemAngles  The angles of the system to translate to. 
+ * @returns [Local position, Local angles] 
+ * !TupleReturn
+ */
+declare function WorldToLocal(position: Vector, angle: Angle, newSystemOrigin: Vector, newSystemAngles: Angle): [Vector, Angle];
+
+/**
+ * Attempts to call the first function. If the execution succeeds, this returns ''true'' followed by the returns of the function. If execution fails, this returns ''false'' and the second function is called with the error message. 
+ * 
+ * Unlike in {{GlobalFunction|pcall}}, the stack is not unwound and can therefore be used for stack analyses with the {{Lib|debug}}.
+ * 
+ * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
+ * >Using this function with {{GlobalFunction|include}} will break autorefresh.
+ * 
+ * **Bug [#2498](https://github.com/Facepunch/garrysmod-issues/issues/2498):**
+ * >This does not stop {{GlobalFunction|Error}} and {{GlobalFunction|ErrorNoHalt}} from sending error messages to the server (if called clientside) or calling the {{HookFunction|GM|OnLuaError}} hook. The success boolean returned will always return true and thus you will not get the error message returned. {{GlobalFunction|error}} does not exhibit these behaviours.
+ * 
+ * **Bug [#3112](https://github.com/Facepunch/garrysmod-issues/issues/3112):**
+ * >This does not stop errors incurred by {{GlobalFunction|include}}. 
+ * @param func  The function to call initially. 
+ * @param errorCallback  The function to be called if execution of the first fails; the error message is passed as a string.
+ * 
+ * You cannot throw an {{GlobalFunction|error}}() from this callback: it will have no effect (not even stopping the callback). 
+ * @param arguments  Arguments to pass to the initial function. 
+ * @returns [Status of the execution; ''true'' for success, ''false'' for failure., The returns of the first function if execution succeeded, otherwise the '''first''' return value of the error callback.] 
+ * @example
+ * 
+ * local function test()
+ * 	aisj()
+ * end
+ * 
+ * local function catch( err )
+ * 	print( "ERROR: ", err )
+ * end
+ * 
+ * print( "Output: ", xpcall( test, catch ) )
+ * 
+ * // Using xpcall to catch an error. 
+ * !TupleReturn
+ */
+declare function xpcall(func: Function, errorCallback: Function, ...arguments: (any)[]): [boolean, any];
+
+/**
+ * This is the list of global functions. 
+ */
 declare namespace Global {
     /**
      * Adds simple Get/Set accessor functions on the specified table.
@@ -46094,6 +49656,7 @@ declare namespace Global {
      * print(ColorToHSV(Color(255, 255, 0)))
      * 
      * // Creates a color and prints the HSV values to the console. 
+     * !TupleReturn
      */
     function ColorToHSV(color: Color): [number, number, number];
     
@@ -46134,6 +49697,7 @@ declare namespace Global {
      * end
      * 
      * // Code that will compile. 
+     * !TupleReturn
      */
     function CompileString(code: string, identifier: string, HandleError?: boolean): [Function, string];
     
@@ -46221,7 +49785,7 @@ declare namespace Global {
      * 
      * // Alternative to {{LibraryFunction|render|SetColorMaterial}}, mainly for use with {{ClassFunction|Entity|SetMaterial}} 
      */
-    function CreateMaterial(name: string, shaderName: string, materialData: table): IMaterial;
+    function CreateMaterial(name: string, shaderName: string, materialData: ITexture[]): IMaterial;
     
     /**
      * Creates a new particle system.
@@ -46238,10 +49802,13 @@ declare namespace Global {
     function CreateParticleSystem(ent: Entity, effect: string, partAttachment: PATTACH, entAttachment?: number, offset?: Vector): CNewParticleEffect;
     
     /**
-     * Creates a new PhysCollide from the given bounds. 
-     * @param mins 
-     * @param maxs 
-     * @returns The new PhysCollide. It will be invalid if you give it bad vectors. 
+     * Creates a new {{Type|PhysCollide}} from the given bounds.
+     * 
+     * **Bug [#3568](https://github.com/Facepunch/garrysmod-issues/issues/3568):**
+     * >This fails to create planes or points - no components of the mins or maxs can be the same. 
+     * @param mins  Min corner of the box. This is not automatically ordered with the maxs and must contain the smallest vector components. See {{GlobalFunction|OrderVectors}}. 
+     * @param maxs  Max corner of the box. This is not automatically ordered with the mins and must contain the largest vector components. 
+     * @returns The new PhysCollide. This will be a NULL PhysCollide ({{ClassFunction|PhysCollide|IsValid}} returns false) if given bad vectors or no more PhysCollides can be created in the physics engine. 
      * @example
      * 
      * AddCSLuaFile()
@@ -46310,7 +49877,7 @@ declare namespace Global {
      * @param modelName  Model path to get the collision objects of. 
      * @returns Table of {{Type|PhysCollide}} objects. The number of entries will match the model's physics object count. See also {{ClassFunction|Entity|GetPhysicsObjectCount}}. Returns no value if the model doesn't exist, or has not been precached. 
      */
-    function CreatePhysCollidesFromModel(modelName: string): table;
+    function CreatePhysCollidesFromModel(modelName: string): PhysCollide[];
     
     /**
      * Returns a sound parented to the specified entity.
@@ -47069,6 +50636,7 @@ declare namespace Global {
      * Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself 
      * @param panel  Panel to find tool-tip of 
      * @returns [tool-tip text, tool-tip panel, panel that the function was called with] 
+     * !TupleReturn
      */
     function FindTooltip(panel: Panel): [string, Panel, Panel];
     
@@ -47528,6 +51096,7 @@ declare namespace Global {
      * end
      * 
      * // From ''UpdateUI'' in [https://github.com/garrynewman/garrysmod/blob/master/garrysmod/lua/includes/modules/undo.lua#L43 undo.lua], this adds the first 32 undo entries to the ''Undo'' panel in the spawnmenu. 
+     * !TupleReturn
      */
     function ipairs(tab: table): [Function, table, number];
     
@@ -47903,6 +51472,7 @@ declare namespace Global {
      * @param originPos  The origin point of the source coordinate system, in world coordinates 
      * @param originAngle  The angles of the source coordinate system, as a world angle 
      * @returns [The world position of the supplied local position., The world angles of the supplied local angle.] 
+     * !TupleReturn
      */
     function LocalToWorld(localPos: Vector, localAng: Angle, originPos: Vector, originAngle: Angle): [Vector, Angle];
     
@@ -47951,6 +51521,7 @@ declare namespace Global {
      * end )
      * 
      * // Acquires and uses one of the [[Post-Processing Materials]] to make the screen darker and more saturated 
+     * !TupleReturn
      */
     function Material(materialName: string, pngParameters?: string): [IMaterial, number];
     
@@ -48116,6 +51687,7 @@ declare namespace Global {
      * print( "mytable is empty:", IsEmptyTable( mytable ) )
      * 
      * // Returns whether the table is empty or not 
+     * !TupleReturn
      */
     function next(tab: table, prevKey?: any): [any, any];
     
@@ -48183,6 +51755,7 @@ declare namespace Global {
      * end
      * 
      * // Iterates through all players on the server and prints their names. 
+     * !TupleReturn
      */
     function pairs(tab: table): [Function, table, any];
     
@@ -48284,6 +51857,7 @@ declare namespace Global {
      * print(succ, err)
      * 
      * // Catch an error. 
+     * !TupleReturn
      */
     function pcall(func: Function, ...arguments: (any)[]): [boolean, any];
     
@@ -48915,6 +52489,7 @@ declare namespace Global {
      * end
      * 
      * // Example of usage. 
+     * !TupleReturn
      */
     function SortedPairs(table: table, desc?: boolean): [Function, table];
     
@@ -48946,6 +52521,7 @@ declare namespace Global {
      * end
      * 
      * // Creates a table and prints its contents in order of the age member descending 
+     * !TupleReturn
      */
     function SortedPairsByMemberValue(table: table, memberKey: any, descending?: boolean): [Function, table];
     
@@ -48958,6 +52534,7 @@ declare namespace Global {
      * @param table  Table to create iterator for 
      * @param descending [=false] Whether the iterator should iterate in descending order or not 
      * @returns [Iterator function, The table which will be iterated over] 
+     * !TupleReturn
      */
     function SortedPairsByValue(table: table, descending?: boolean): [Function, table];
     
@@ -49326,6 +52903,7 @@ declare namespace Global {
      * @param newSystemOrigin  The origin of the system to translate to. 
      * @param newSystemAngles  The angles of the system to translate to. 
      * @returns [Local position, Local angles] 
+     * !TupleReturn
      */
     function WorldToLocal(position: Vector, angle: Angle, newSystemOrigin: Vector, newSystemAngles: Angle): [Vector, Angle];
     
@@ -49361,3295 +52939,10 @@ declare namespace Global {
      * print( "Output: ", xpcall( test, catch ) )
      * 
      * // Using xpcall to catch an error. 
+     * !TupleReturn
      */
     function xpcall(func: Function, errorCallback: Function, ...arguments: (any)[]): [boolean, any];
 }
-
-/**
- * This is the list of global functions. 
- */
-/**
- * Adds simple Get/Set accessor functions on the specified table.
- * 
- * Can also force the value to be set to a number, bool or string. 
- * @param tab  The table to add the accessor functions too. 
- * @param key  The key of the table to be get/set. 
- * @param name  The name of the functions (will be prefixed with Get and Set). 
- * @param force [=nil] The type the setter should force to (uses {{Enum|FORCE}}). 
- * @example
- * 
- * local meta = FindMetaTable("Player")
- * AccessorFunc(meta, "foo_bar", "FooBar", FORCE_BOOL)
- * 
- * local ply = player.GetByID(1)
- * ply:SetFooBar(true)
- * 
- * print(not ply:GetFooBar())
- * 
- * // Adds the GetFooBar and SetFooBar functions to the Player metatable and then uses them. 
- */
-declare function AccessorFunc(tab: table, key: any, name: string, force?: FORCE): void;
-
-/**
- * Defines a global entity class variable with an automatic value in order to prevent collisions with other {{Enum|CLASS}}. You should prefix your variable with CLASS_ for consistency. 
- * @param name  The name of the new enum/global variable. 
- * @example
- * 
- * Add_NPC_Class( "CLASS_TESTER" )
- * print( CLASS_TESTER )
- * 
- * // Creates a global variable named CLASS_TESTER and prints its value. 
- */
-declare function Add_NPC_Class(name: string): void;
-
-/**
- * Adds the specified image path to the main menu background pool. Image can be png or jpeg. 
- * @param path  Path to the image. 
- */
-declare function AddBackgroundImage(path: string): void;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Tells the engine to register a console command. If the command was ran, the engine calls {{LibraryFunction|concommand|Run}}. 
- * @param name  The name of the console command to add. 
- * @param helpText  The help text. 
- * @param flags  Concommand flags using {{Enum|FCVAR}} 
- */
-declare function AddConsoleCommand(name: string, helpText: string, flags: FCVAR): void;
-
-/**
- * Marks a Lua file to be sent to clients when they join the server. Doesn't do anything on the client - this means you can use it in a shared file without problems.
- * 
- * {{Warning|If the file trying to be added is empty, an error will occur, and the file will not be sent to the client.}}
- * 
- * **Note:**
- * >This function is not needed for scripts located in '''lua/autorun/''' and '''lua/autorun/client/''': they are automatically sent to clients. 
- * @param file [=current file] The name/path to the Lua file that should be sent, relative to the garrysmod/lua folder. If no parameter is specified, it sends the current file.
- * 
- * The file path can be relative to the script it is ran from. For example, if your script is in lua/myfolder/stuff.lua, calling {{GlobalFunction|AddCSLuaFile}}("otherstuff.lua") and {{GlobalFunction|AddCSLuaFile}}("myfolder/otherstuff.lua") is the same thing. 
- * @example
- * 
- * AddCSLuaFile( "cl_init.lua" )
- * 
- * // Adds the cl_init.lua file in the "lua" folder to be downloaded by connecting clients. This is required, and is normally done in init.lua.@example
- * 
- * AddCSLuaFile()
- * 
- * // Adds the current file to the list of files to be downloaded by clients. This is usually done at the top of a shared file. 
- */
-declare function AddCSLuaFile(file?: string): void;
-
-/**
- * Loads the specified image from the /cache folder, used in combination {{LibraryFunction|steamworks|Download}}.
- * 
- * Most addons will provide a 512x512 png image. 
- * @param name  The name of the file. 
- * @returns The material, returns nil if the cached file is not an image. 
- */
-declare function AddonMaterial(name: string): IMaterial;
-
-/**
- * Adds the specified vector to the PVS which is currently building. This allows all objects in visleafs visible from that vector to be drawn. 
- * @param position  The origin to add. 
- * @example
- * 
- * hook.Add("SetupPlayerVisibility", "AddRTCamera", function(pPlayer, pViewEntity)
- * 	// Adds any view entity
- * 	if (pViewEntity:IsValid()) then
- * 		AddOriginToPVS(pViewEntity:GetPos())
- * 	end
- * end)
- * 
- * // Adds an RTCamera's current position to all player's PVS, causing props near it to always render on an rtscreen 
- */
-declare function AddOriginToPVS(position: Vector): void;
-
-/**
- * This function creates a World Tip, similar to the one shown when aiming at a Thruster where it shows you its force.
- * 
- * This function will make a World Tip that will only last 50 milliseconds (1/20th of a second), so you must call it continuously as long as you want the World Tip to be shown. It is common to call it inside a Think hook.
- * 
- * Contrary to what the function's name implies, it is impossible to create more than one World Tip at the same time. A new World Tip will overwrite the old one, so only use this function when you know nothing else will also be using it.
- * 
- * See {{HookFunction|SANDBOX|PaintWorldTips}} for more information.
- * 
- * **Note:**
- * >This function is only available in Sandbox and its derivatives 
- * @param entindex [=nil] '''This argument is no longer used'''; it has no effect on anything. You can use nil in this argument. 
- * @param text [=] The text for the world tip to display. 
- * @param dieTime [=SysTime() + 0.05] '''This argument is no longer used'''; when you add a World Tip it will always last only 0.05 seconds. You can use nil in this argument. 
- * @param pos [=ent:GetPos()] Where in the world you want the World Tip to be drawn. If you add a valid Entity in the next argument, this argument will have no effect on the actual World Tip. 
- * @param ent [=nil] Which entity you want to associate with the World Tip. This argument is optional. If set to a valid entity, this will override the position set in ''pos'' with the Entity's position. 
- * @example
- * 
- * hook.Add( "Think", "draw World Tip", function()
- * 	local ply = Entity( 1 )
- * 	local tr = ply:GetEyeTrace()
- * 	
- * 	local pos = tr.HitPos // will be unused if ent is valid
- * 	local ent = tr.Entity
- * 	
- * 	AddWorldTip( nil, "Hello world!", nil, pos, ent )
- * end )
- * 
- * // Creates a World Tip where the player is looking. If the player is looking at an entity, the World Tip is positioned on the entity. 
- */
-declare function AddWorldTip(entindex?: number, text?: string, dieTime?: number, pos?: Vector, ent?: Entity): void;
-
-/**
- * Returns an angle with a randomized pitch, yaw and roll. The pitch is between -90 and 90 degrees, while yaw and roll are between -180 and 180 degrees. 
- * @returns The randomly generated angle. 
- * @example
- * 
- * print( AngleRand() )
- * 
- * // Prints out a random angle. 
- */
-declare function AngleRand(): Angle;
-
-/**
- * If the result of the first argument is false or nil, an error is thrown with the second argument as the message. 
- * @param expression  The expression to assert. 
- * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. 
- * @returns If successful, returns the result of the first argument. 
- * @example
- * 
- * local ABC = assert(print)
- * print(ABC)
- * 
- * // The assertion is successful, and the result of the first argument is returned.@example
- * 
- * assert(print == 1, "print is not equal to 1!")
- * 
- * // Since the first argument evaluates to false, an error is thrown. 
- */
-declare function assert(expression: any, errorMessage?: string): any;
-
-/**
- * Sends the specified Lua code to all connected clients and executes it. 
- * @param code  The code to be executed. Capped at length of 254 characters. 
- * @example
- * 
- * BroadcastLua( [[print( "Hello World!" )]] )
- * 
- * // Print "Hello World!" in the clients' console 
- */
-declare function BroadcastLua(code: string): void;
-
-/**
- * Dumps the networked variables of all entities into one table and returns it. 
- * @returns Format:
- * * key = {{Type|Entity}} for NWVars or {{Type|number}} (always 0) for global vars
- * * value = {{Type|table}} formatted as:
- * ** key = {{Type|string}} var name
- * ** value = any type var value 
- */
-declare function BuildNetworkedVarsTable(): table;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Used internally to check if the current server the player is on can be added to favorites or not. Does not check if the server is ALREADY in the favorites. 
- * @returns 
- */
-declare function CanAddServerToFavorites(): boolean;
-
-/**
- * Aborts joining of the server you are currently joining. 
- */
-declare function CancelLoading(): void;
-
-/**
- * Sets the active main menu background image to a random entry from the background images pool. Images are added with {{GlobalFunction|AddBackgroundImage}}. 
- * @param currentgm  Apparently does nothing. 
- */
-declare function ChangeBackground(currentgm: string): void;
-
-/**
- * Automatically called by the engine when a panel is hovered over with the mouse 
- * @param panel  Panel that has been hovered over 
- */
-declare function ChangeTooltip(panel: Panel): void;
-
-/**
- * Empties the pool of main menu background images. 
- */
-declare function ClearBackgroundImages(): void;
-
-/**
- * Creates a non physical entity that only exists on the client. See also {{LibraryFunction|ents|CreateClientProp}}.
- * 
- * **Bug [#861](https://github.com/Facepunch/garrysmod-issues/issues/861):**
- * >Parented clientside models will become detached if the parent entity leaves the PVS.
- * 
- * **Bug [#1387](https://github.com/Facepunch/garrysmod-issues/issues/1387):**
- * >Clientside entities are not garbage-collected, thus you must store a reference to the object and call {{ClassFunction|CSEnt|Remove}} manually.
- * 
- * **Bug [#3184](https://github.com/Facepunch/garrysmod-issues/issues/3184):**
- * >Clientside models will occasionally delete themselves during high server lag. 
- * @param model  The file path to the model.
- * 
- * {{Warning|Model must be precached with {{LibraryFunction|util|PrecacheModel}} on the server before usage.}} 
- * @param renderGroup [=RENDERGROUP_OTHER] The rendergroup of the entity, see {{Enum|RENDERGROUP}}. 
- * @returns Created client-side model. ( C_BaseFlex ) 
- */
-declare function ClientsideModel(model: string, renderGroup?: RENDERGROUP): CSEnt;
-
-/**
- * Creates a fully clientside ragdoll.
- * 
- * **Note:**
- * >The ragdoll initially starts as hidden and with shadows disabled, see the example for how to enable it.
- * There's no need to call {{ClassFunction|Entity|Spawn}} on this entity.
- * The physics won't initialize at all if the model hasn't been precached serverside first.
- * 
- * **Bug [#1387](https://github.com/Facepunch/garrysmod-issues/issues/1387):**
- * >Clientside entities are not garbage-collected, thus you must store a reference to the object and call {{ClassFunction|CSEnt|Remove}} manually. 
- * @param model  The file path to the model.
- * 
- * {{Warning|Model must be precached with {{LibraryFunction|util|PrecacheModel}} on the server before usage.}} 
- * @param renderGroup [=RENDER_GROUP_OPAQUE] The {{Enum|RENDERGROUP}} to assign. 
- * @returns The newly created client-side ragdoll. ( C_ClientRagdoll ) 
- * @example
- * 
- * local ragdoll = ClientsideRagdoll( "models/player/breen.mdl" )
- * ragdoll:SetNoDraw( false )
- * ragdoll:DrawShadow( true )
- * 
- * // Creates a new ragdoll with the player model of breen and enables rendering and shadows. 
- */
-declare function ClientsideRagdoll(model: string, renderGroup?: RENDERGROUP): CSEnt;
-
-/**
- * Creates a scene entity based on the scene name and the entity. 
- * @param name  The name of the scene. 
- * @param targetEnt  The entity to play the scene on. 
- * @returns C_SceneEntity 
- * @example
- * 
- * ClientsideScene( "scenes/eli_lab/mo_gowithalyx01.vcd", LocalPlayer() )
- * 
- * // Plays "I guess you should go with Alyx" line from HL2. 
- */
-declare function ClientsideScene(name: string, targetEnt: Entity): CSEnt;
-
-/**
- * Closes all Derma menus that have been passed to {{GlobalFunction|RegisterDermaMenuForClose}} and calls {{HookFunction|GM|CloseDermaMenus}} 
- */
-declare function CloseDermaMenus(): void;
-
-/**
- * Executes the specified action on the garbage collector. 
- * @param action [="collect"] The action to run.
- * 
- * Valid actions are "collect", "stop", "restart", "count", "step", "setpause" and "setstepmul". 
- * @param arg [=] The argument of the specified action, only applicable for "step", "setpause" and "setstepmul". 
- * @returns If the action is count this is the number of kilobytes of memory used by Lua.
- * If the action is step this is true if a garbage collection cycle was finished.
- * 
- * If the action is setpause this is the previous value for the GC's pause.
- * If the action is setstepmul this is the previous value for the GC's step. 
- * @example
- * 
- * print( collectgarbage( "count" ) )
- * 
- * // The current floored dynamic memory usage of Lua, in kilobytes. 
- */
-declare function collectgarbage(action?: string, arg?: number): any;
-
-/**
- * Creates a {{Struct|Color}}. 
- * @param r  An integer from 0-255 describing the red value of the color. 
- * @param g  An integer from 0-255 describing the green value of the color. 
- * @param b  An integer from 0-255 describing the blue value of the color. 
- * @param a [=255] An integer from 0-255 describing the alpha (transparency) of the color. 
- * @returns The created {{Struct|Color}}. 
- * @example
- * 
- * PrintTable(Color(1, 2, 3, 4))
- * 
- * // Creates a color and prints the components to the console.@example
- * 
- * local col = Color( 0, 255, 0, 255)
- * 
- * col.r = 255
- * 
- * PrintTable(col)
- * 
- * // Color variables can have individual channels set using the arguments@example
- * 
- * local str = tostring( Color( 255, 0, 0 ) )
- * print( str )
- * 
- * // Transforms a color object to a string, then prints it.@example
- * 
- * if Color( 255, 0, 0 ) == Color( 255, 0, 0 ) then
- * 	print( "equal" )
- * else
- * 	print( "unequal" )
- * end
- * 
- * // Prints "equal" if both colors are equal, otherwise "unequal" will be printed. 
- */
-declare function Color(r: number, g: number, b: number, a?: number): Color;
-
-/**
- * Returns a new {{Struct|Color}} with the RGB components of the given {{Struct|Color}} and the alpha value specified. 
- * @param color  The {{Struct|Color}} from which to take RGB values. This color will not be modified. 
- * @param alpha  The new alpha value, a number between 0 and 255. Values above 255 will be clamped. 
- * @returns The new {{Struct|Color}} with the modified alpha value 
- * @example
- * 
- * local red = Color( 255, 0, 0, 255 )
- * local red2 = ColorAlpha( red, 125 )
- * print( red.r, red.g, red.b, red.a )
- * print( red2.r, red2.g, red2.b, red2.a )
- * 
- * // 
- */
-declare function ColorAlpha(color: Color, alpha: number): Color;
-
-/**
- * Creates a {{Struct|Color}} with randomized red, green, and blue components. If the alpha argument is true, alpha will also be randomized. 
- * @param a [=false] Should alpha be randomized. 
- * @returns The created {{Struct|Color}}. 
- */
-declare function ColorRand(a?: boolean): Color;
-
-/**
- * Converts a {{Struct|Color}} into HSV color space. 
- * @param color  The {{Struct|Color}}. 
- * @returns [The hue in degrees., The saturation in the range 0-1., The value in the range 0-1.] 
- * @example
- * 
- * print(ColorToHSV(Color(255, 255, 0)))
- * 
- * // Creates a color and prints the HSV values to the console. 
- */
-declare function ColorToHSV(color: Color): [number, number, number];
-
-/**
- * Attempts to compile the given file. If successful, returns a function that can be called to perform the actual execution of the script. 
- * @param path  Path to the file, relative to the garrysmod/lua/ directory. 
- * @returns The function which executes the script. 
- * @example
- * 
- * local example = CompileFile("example.lua")
- * example()
- * 
- * // Assuming our file is named example.lua and located in the garrysmod/lua/ directory, the following code would execute the script. 
- */
-declare function CompileFile(path: string): Function;
-
-/**
- * This function will compile the code argument as lua code and return a function that will execute that code. 
- * 
- * Please note that this function will not automatically execute the given code after compiling it. 
- * @param code  The code to compile. 
- * @param identifier  An identifier in case an error is thrown. (The same identifier can be used multiple times) 
- * @param HandleError [=true] If false this function will return an error string instead of throwing an error. 
- * @returns [A function that, when called, will execute the given code. Returns nil if there was an error., The error string. Will be nil if there were no errors or the function handles errors (third argument is true).] 
- * @example
- * 
- * local code = "MsgN('Hi)"
- * local func = CompileString(code, "TestCode", false)
- * MsgN(func)
- * 
- * // Code that will not compile, with ErrorHandling set to false.@example
- * 
- * local code = "MsgN('Hi')"
- * local func = CompileString(code, "TestCode")
- * 
- * if func then // Compile String returns nil if 3rd argument is true and code has errors.
- *    func()
- * end
- * 
- * // Code that will compile. 
- */
-declare function CompileString(code: string, identifier: string, HandleError?: boolean): [Function, string];
-
-/**
- * Returns a table of console command names beginning with the given text. 
- * @param text  Text that the console commands must begin with. 
- * @returns Table of console command names. 
- */
-declare function ConsoleAutoComplete(text: string): table;
-
-/**
- * Returns whether a {{Type|ConVar}} with the given name exists or not 
- * @param name  Name of the {{Type|ConVar}}. 
- * @returns True if the {{Type|ConVar}} exists, false otherwise. 
- */
-declare function ConVarExists(name: string): ConVar;
-
-/**
- * Makes a clientside-only console variable
- * 
- * **Note:**
- * >This function is a wrapper of {{GlobalFunction|CreateConVar}}, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when '''shouldsave''' and '''userdata''' are true, respectively.
- * 
- * Although this function is shared, it should only be used clientside. 
- * @param name  Name of the ConVar to be created and able to be accessed.
- * 
- * This cannot be a name of existing console command or console variable. It will silently fail if it is. 
- * @param defaultVal  Default value of the ConVar. 
- * @param shouldsave [=true] Should the ConVar be saved across sessions 
- * @param userdata [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using {{ClassFunction|Player|GetInfoNum}} and similar functions. 
- * @param helptext [=""] Help text to display in the console. 
- * @returns Created convar. 
- * @example
- * 
- * CreateClientConVar("superspeed_enabled", "0", true, false)
- * 
- * // Creates a ConVar that does nothing and saves. 
- */
-declare function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userdata?: boolean, helptext?: string): ConVar;
-
-/**
- * Creates a console variable ({{Type|ConVar}}), in general these are for things like gamemode/server settings. 
- * @param name  Name of the convar.
- * 
- * This cannot be a name of an engine console command or console variable. It will silently fail if it is. If it is the same name as another lua ConVar, it will return that ConVar object. 
- * @param value  Default value of the convar. Can also be a number. 
- * @param flags [=FCVAR_NONE] Flags of the convar, see {{Enum|FCVAR}}, either as bitflag or as table. 
- * @param helptext [=""] The help text to show in the console. 
- * @returns The convar created. 
- */
-declare function CreateConVar(name: string, value: string, flags?: FCVAR, helptext?: string): ConVar;
-
-/**
- * Creates a new material with the specified name and shader.
- * 
- * **Note:**
- * >Materials created with this function can be used in {{ClassFunction|Entity|SetMaterial}} and {{ClassFunction|Entity|SetSubMaterial}} by prepending a "!" to their material name argument.
- * 
- * **Bug [#1531](https://github.com/Facepunch/garrysmod-issues/issues/1531):**
- * >.pngs must be loaded with {{GlobalFunction|Material}} before being used with this function.
- * 
- * **Bug [#2511](https://github.com/Facepunch/garrysmod-issues/issues/2511):**
- * >This does not work with [https://developer.valvesoftware.com/wiki/Patch patch materials].
- * 
- * **Bug [#3103](https://github.com/Facepunch/garrysmod-issues/issues/3103):**
- * >This will not create a new material if another material object with the same name already exists. 
- * @param name  The material name. Must be unique. 
- * @param shaderName  The shader name. See [[:Category: Shaders]]. 
- * @param materialData  Key-value table that contains shader parameters and proxies.
- * 
- * *See: [https://developer.valvesoftware.com/wiki/Category:List_of_Shader_Parameters List of Shader Parameters on Valve Developers Wiki] and each shader's page from [[:Category: Shaders]].
- * 
- * **Note:**
- * >Unlike {{ClassFunction|IMaterial|SetTexture}}, this table will not accept {{Type|ITexture}} values. Instead, use the texture's name (see {{ClassFunction|ITexture|GetName}}). 
- * @returns Created material 
- * @example
- * 
- * CreateMaterial( "colortexshp", "VertexLitGeneric", {
- *   ["$basetexture"] = "color/white",
- *   ["$model"] = 1,
- *   ["$translucent"] = 1,
- *   ["$vertexalpha"] = 1,
- *   ["$vertexcolor"] = 1
- * } )
- * 
- * // Alternative to {{LibraryFunction|render|SetColorMaterial}}, mainly for use with {{ClassFunction|Entity|SetMaterial}} 
- */
-declare function CreateMaterial(name: string, shaderName: string, materialData: table): IMaterial;
-
-/**
- * Creates {{Type|PhysCollide}} objects for every physics object the model has. The model must be precached with {{LibraryFunction|util|PrecacheModel}} before being used with this function. 
- * @param modelName  Model path to get the collision objects of. 
- * @returns Table of {{Type|PhysCollide}} objects. The number of entries will match the model's physics object count. See also {{ClassFunction|Entity|GetPhysicsObjectCount}}. Returns no value if the model doesn't exist, or has not been precached. 
- */
-declare function CreatePhysCollidesFromModel(modelName: string): table;
-
-/**
- * Returns the uptime of the server in seconds (to at least 4 decimal places)
- * 
- * This is a synchronised value and affected by various factors such as host_timescale (or {{LibraryFunction|game|GetTimeScale}}) and the server being paused - either by sv_pausable or all players disconnecting.
- * 
- * You should use this function for timing in-game events but not for real-world events.
- * 
- * See also: {{GlobalFunction|RealTime}}, {{GlobalFunction|SysTime}}
- * 
- * **Note:**
- * >This is internally defined as a float, and as such it will be affected by precision loss if your server uptime is more than 6 hours, which will cause jittery movement of players and props and inaccuracy of timers, it is highly encouraged to refresh or change the map when that happens (a server restart is not necessary).
- * 
- * This is '''NOT''' easy as it sounds to fix in the engine, so please refrain from posting issues about this
- * 
- * **Bug [#3026](https://github.com/Facepunch/garrysmod-issues/issues/3026):**
- * >This returns 0 in {{HookFunction|GM|PlayerAuthed}}. 
- * @returns Time synced with the game server. 
- * @example
- * 
- * local delay = 0
- * hook.Add( "Think", "CurTimeDelay", function()
- *  if CurTime() < delay then return end
- * 	print( "This message will repeat every 5 seconds." )
- * 	 delay = CurTime() + 5
- *  end)
- * 
- * // Simple delay timer. 
- */
-declare function CurTime(): number;
-
-/**
- * Returns an {{Type|CTakeDamageInfo}} object.
- * 
- * **Bug [#2771](https://github.com/Facepunch/garrysmod-issues/issues/2771):**
- * >This does not create a unique object, but instead returns a shared reference. That means you cannot use two or more of these objects at once. 
- * @returns The {{Type|CTakeDamageInfo}} object. 
- */
-declare function DamageInfo(): CTakeDamageInfo;
-
-/**
- * Writes text to the right hand side of the screen, like the old error system. Messages disappear after a couple of seconds. 
- * @param slot  The location on the right hand screen to write the debug info to. Starts at 0, no upper limit 
- * @param info  The debugging information to be written to the screen 
- */
-declare function DebugInfo(slot: number, info: string): void;
-
-/**
- * Gets the base class of an an object.
- * 
- * This is used not just by entities, but also by widgets, panels, drive modes, weapons and gamemodes (with "gamemode_" prefix).
- * 
- * The keyword '''DEFINE_BASECLASS''' translates into a call to this function. In the engine, it is replaced with:
- * ```local BaseClass = baseclass.Get``` 
- * @param name  The child class. 
- * @returns The base class's meta table. 
- * @example
- * 
- * AddCSLuaFile()
- * DEFINE_BASECLASS( "weapon_csbasegun" ) //this is equivalent to local BaseClass = baseclass.Get( "weapon_csbasegun" )
- * 
- * //omitted generic swep definitions
- * 
- * function SWEP:Initialize()
- * 	BaseClass.Initialize( self ) //calls SWEP:Initialize() from weapon_csbasegun
- * 	self:SetHoldType( "pistol" )
- * end
- * 
- * function SWEP:Deploy()
- * 	self:SetAccuracy( 0.9 )
- * 	return BaseClass.Deploy( self ) //calls SWEP:Deploy() from weapon_csbasegun and returns its result
- * end
- * 
- * function SWEP:SetupDataTables()
- * 	BaseClass.SetupDataTables( self ) //calls SWEP:SetupDataTables() from weapon_csbasegun and inits its dtvars
- * end
- * 
- * // Inherits the weapon from weapon_csbasegun and calls its base functions 
- */
-declare function DEFINE_BASECLASS(name: string): table;
-
-/**
- * Retrieves data from a gamemode to use in yours. This also sets a BaseClass field on your GM table to the gamemode you are deriving from. It appears that this function works by running the init and cl_init Lua files of the target gamemode, then overriding functions that appear in both the target and your gamemode with your gamemode's functions. 
- * @param base  Gamemode name to derive from. 
- * @example
- * 
- * DeriveGamemode("sandbox")
- * 
- * // Retrieves data from sandbox. 
- */
-declare function DeriveGamemode(base: string): void;
-
-/**
- * Creates a new derma animation. 
- * @param name  Name of the animation to create 
- * @param panel  Panel to run the animation on 
- * @param func  Function to call to process the animation
- * 
- * Arguments:
- * * {{FuncArg|Panel|pnl|the panel passed to Derma_Anim}}
- * * {{FuncArg|table|anim|the anim table}}
- * * {{FuncArg|number|delta|the fraction of the progress through the animation}}
- * * {{FuncArg|any|data|optional data passed to the run metatable method}} 
- * @returns A lua metatable containing four methods:
- * * Run() - Should be called each frame you want the animation to be ran.
- * * Active() - Returns if the animation is currently active (has not finished and stop has not been called)
- * * Stop() - Halts the animation at its current progress.
- * * Start( Length, Data ) - Prepares the animation to be ran for Length seconds. Must be called once before calling Run(). The data parameter will be passed to the func function. 
- * @example
- * 
- * local function inQuad(fraction, beginning, change)
- * 	return change * (fraction ^ 2) + beginning
- * end
- * 
- * local main = vgui.Create("DFrame")
- * main:SetTitle("Derma_Anim Example")
- * main:SetSize(250, 200)
- * main:SetPos(200)
- * main:MakePopup()
- * local anim = Derma_Anim("EaseInQuad", main, function(pnl, anim, delta, data)
- * 	pnl:SetPos(inQuad(delta, 200, 600), 300) // Change the X coordinate from 200 to 200+600
- * end)
- * anim:Start(2) // Animate for two seconds
- * main.Think = function(self)
- * 	if anim:Active() then
- * 		anim:Run()
- * 	end
- * end
- * 
- * // Applies an [http://easings.net/#easeInQuad easeInQuad] easing to the panel to make it glide naturally across the screen. 
- */
-declare function Derma_Anim(name: string, panel: Panel, func: Function): table;
-
-/**
- * Draws background blur around the given panel. 
- * @param panel  Panel to draw the background blur around 
- * @param startTime  Time that the blur began being painted 
- * @example
- * 
- * function PANEL:Init()
- *     self.startTime = SysTime()
- * end
- * 
- * function PANEL:Paint()
- *     Derma_DrawBackgroundBlur(self, self.startTime)
- * end
- * 
- * // Blur being drawn around a panel 
- */
-declare function Derma_DrawBackgroundBlur(panel: Panel, startTime: number): void;
-
-/**
- * Creates panel method that calls the supplied Derma skin hook via {{LibraryFunction|derma|SkinHook}} 
- * @param panel  Panel to add the hook to 
- * @param functionName  Name of panel function to create 
- * @param hookName  Name of Derma skin hook to call within the function 
- * @param typeName  Type of element to call Derma skin hook for 
- * @example
- * 
- * Derma_Hook( PANEL, "Paint", "Paint", "Panel" )
- * 
- * // Creates PANEL.Paint function to call Derma skin hook 'Paint' with type 'Panel' 
- */
-declare function Derma_Hook(panel: Panel, functionName: string, hookName: string, typeName: string): void;
-
-/**
- * Makes the panel (usually an input of sorts) respond to changes in console variables by adding next functions to the panel:
- * * {{ClassFunction|Panel|SetConVar}}
- * * {{ClassFunction|Panel|ConVarChanged}}
- * * {{ClassFunction|Panel|ConVarStringThink}}
- * * {{ClassFunction|Panel|ConVarNumberThink}}
- * 
- * The console variable value is saved in the ''m_strConVar'' property of the panel.
- * 
- * The panel should call
- * {{ClassFunction|Panel|ConVarStringThink}} or 
- * {{ClassFunction|Panel|ConVarNumberThink}} 
- * in its {{HookFunction|PANEL|Think}} hook and should call {{ClassFunction|Panel|ConVarChanged}} when the panel's value has changed. 
- * @param target  The panel the functions should be added to. 
- * @example
- * 
- * local PANEL = {}
- * 
- * Derma_Install_Convar_Functions( PANEL )
- * 
- * function PANEL:Init()
- * 	// Init function here
- * end
- * function PANEL:Think()
- * 	self:ConVarStringThink()
- * end
- * 
- * // Adds the functions to a panel (snippet of vgui/dcheckbox.lua) 
- */
-declare function Derma_Install_Convar_Functions(target: Panel): void;
-
-/**
- * Creates a derma window to display information 
- * @param Text  The text within the created panel. 
- * @param Title  The title of the created panel. 
- * @param Button  The text of the button to close the panel. 
- */
-declare function Derma_Message(Text: string, Title: string, Button: string): void;
-
-/**
- * Shows a message box in the middle of the screen, with up to 4 buttons they can press. 
- * @param btn1text  The text to display on the first button. 
- * @returns The Panel object of the created window. 
- */
-declare function Derma_Query(btn1text: string): Panel;
-
-/**
- * Shows a message box in the middle of the screen, with up to 4 buttons they can press. 
- * @param text [="Message Text (Second Parameter)"] The message to display. 
- * @param title [="Message Title (First Parameter)"] The title to give the message box. 
- * @param btn1text [=] The text to display on the first button. 
- * @param btn1func [=nil] The function to run if the user clicks the first button. 
- * @param btn2text [=nil] The text to display on the second button. 
- * @param btn2func [=nil] The function to run if the user clicks the second button. 
- * @param btn3text [=nil] The text to display on the third button 
- * @param btn3func [=nil] The function to run if the user clicks the third button. 
- * @param btn4text [=nil] The text to display on the third button 
- * @param btn4func [=nil] The function to run if the user clicks the fourth button. 
- * @returns The Panel object of the created window. 
- */
-declare function Derma_Query(text?: string, title?: string, btn1text?: string, btn1func?: Function, btn2text?: string, btn2func?: Function, btn3text?: string, btn3func?: Function, btn4text?: string, btn4func?: Function): Panel;
-
-/**
- * Creates a derma window asking players to input a string. 
- * @param title  The title of the created panel. 
- * @param subtitle  The text above the input box 
- * @param defaultVal  The default text for the input box. 
- * @param confirm  The function to be called once the user has confirmed their input. 
- * @param cancel [=nil] The function to be called once the user has cancelled their input 
- * @param confirmText [="OK"] Allows you to override text of the "OK" button 
- * @param cancelText [="Cancel"] Allows you to override text of the "Cancel" button 
- * @returns The created {{Type|DFrame}} 
- * @example
- * 
- * Derma_StringRequest(
- * 	"Console Print", 
- * 	"Input the string to print to console",
- * 	"",
- * 	function(text) print(text) end,
- * 	function(text) print("Cancelled input") end
- * )
- * 
- * // Asks the user to input a string which is then printed to their console 
- */
-declare function Derma_StringRequest(title: string, subtitle: string, defaultVal: string, confirm: Function, cancel?: Function, confirmText?: string, cancelText?: string): DFrame;
-
-/**
- * Creates a {{Type|DMenu}} and closes any current menus. 
- * @param parent  The panel to parent the created menu to. 
- * @returns The created {{Type|DMenu}} 
- * @example
- * 
- * local menu = DermaMenu() 
- * menu:AddOption("Die", function() RunConsoleCommand("kill") end)
- * menu:AddOption("Close", function() print("Close pressed") end) // The menu will remove itself, we don't have to do anything.
- * menu:Open()
- * 
- * // Creates a DMenu with buttons to commit suicide or close it. 
- */
-declare function DermaMenu(parent: Panel): DMenu;
-
-/**
- * Sets whether rendering should be limited to being inside a panel or not.
- * 
- * See also {{LibraryFunction|surface|DisableClipping}} and {{ClassFunction|Panel|NoClipping}}. 
- * @param disable  Whether or not clipping should be disabled 
- * @example
- * 
- * function PANEL:Paint()
- *     DisableClipping(true)
- *     draw.RoundedBox(0, -50, -50, 25, 25, color_white)
- *     DisableClipping(false)
- * end
- * 
- * // Renders a white box outside of the panel 
- */
-declare function DisableClipping(disable: boolean): void;
-
-/**
- * Cancels current DOF post-process effect started with {{GlobalFunction|DOF_Start}} 
- */
-declare function DOF_Kill(): void;
-
-/**
- * Cancels any existing DOF post-process effects.
- * Begins the DOF post-process effect. 
- */
-declare function DOF_Start(): void;
-
-/**
- * A hacky method used to fix some bugs regarding DoF.
- * 
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * {{Stub}} 
- * @param enable  Enables or disables depth-of-field mode 
- */
-declare function DOFModeHack(enable: boolean): void;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- *  Draws the currently active main menu background image and handles transitioning between background images.
- * 
- * This is called by default in the menu panel's Paint hook. 
- */
-declare function DrawBackground(): void;
-
-/**
- * Draws the bloom shader, which creates a glowing effect from bright objects. 
- * @param Darken  Determines how much to darken the effect. A lower number will make the glow come from lower light levels. A value of 1 will make the bloom effect unnoticeable. Negative values will make even pitch black areas glow. 
- * @param Multiply  Will affect how bright the glowing spots are. A value of 0 will make the bloom effect unnoticeable. 
- * @param SizeX  The size of the bloom effect along the horizontal axis. 
- * @param SizeY  The size of the bloom effect along the vertical axis. 
- * @param Passes  Determines how much to exaggerate the effect. 
- * @param ColorMultiply  Will multiply the colors of the glowing spots, making them more vivid. 
- * @param Red  How much red to multiply with the glowing color. Should be between 0 and 1 
- * @param Green  How much green to multiply with the glowing color. Should be between 0 and 1 
- * @param Blue  How much blue to multiply with the glowing color. Should be between 0 and 1 
- * @example
- * 
- * function GM:RenderScreenspaceEffects()
- * 	DrawBloom( 0.65, 2, 9, 9, 1, 1, 1, 1, 1 )
- * end
- * 
- * // Draws bloom effect with default settings. 
- */
-declare function DrawBloom(Darken: number, Multiply: number, SizeX: number, SizeY: number, Passes: number, ColorMultiply: number, Red: number, Green: number, Blue: number): void;
-
-/**
- * Draws the Color Modify shader, which can be used to adjust colors on screen. 
- * @param modifyParameters  Color modification parameters. See {{ShaderLink|g_colourmodify}} and the example below. Note that if you leave out a field, it will retain its last value which may have changed if another caller uses this function. 
- * @example
- * 
- * local tab = {
- * 	[ "$pp_colour_addr" ] = 0.02,
- * 	[ "$pp_colour_addg" ] = 0.02,
- * 	[ "$pp_colour_addb" ] = 0,
- * 	[ "$pp_colour_brightness" ] = 0,
- * 	[ "$pp_colour_contrast" ] = 1,
- * 	[ "$pp_colour_colour" ] = 3,
- * 	[ "$pp_colour_mulr" ] = 0,
- * 	[ "$pp_colour_mulg" ] = 0.02,
- * 	[ "$pp_colour_mulb" ] = 0
- * }
- * 
- * function GM:RenderScreenspaceEffects()
- * 
- * 	DrawColorModify( tab )
- * 
- * end
- * 
- * // Draws color modify with bright yellow and green colors. 
- */
-declare function DrawColorModify(modifyParameters: table): void;
-
-/**
- * Draws a material overlay on the screen. 
- * @param Material  This will be the material that is drawn onto the screen. 
- * @param RefractAmount  This will adjust how much the material will refract your screen. 
- * @example
- * 
- * function GM:RenderScreenspaceEffects()
- * 
- * 	DrawMaterialOverlay("models/props_c17/fisheyelens", -0.06)
- * 
- * end
- * 
- * // Creates a fisheye effect on your screen. 
- */
-declare function DrawMaterialOverlay(Material: string, RefractAmount: number): void;
-
-/**
- * Creates a motion blur effect by drawing your screen multiple times. 
- * @param AddAlpha  How much alpha to change per frame. 
- * @param DrawAlpha  How much alpha the frames will have. A value of 0 will not render the motion blur effect. 
- * @param Delay  Determines the amount of time between frames to capture. 
- * @example
- * 
- * function GM:RenderScreenspaceEffects()
- * 
- *  DrawMotionBlur(0.4, 0.8, 0.01)
- * 
- * end
- * 
- * // Creates a motion blur effect. 
- */
-declare function DrawMotionBlur(AddAlpha: number, DrawAlpha: number, Delay: number): void;
-
-/**
- * Draws the sharpen shader, which creates more contrast. 
- * @param Contrast  How much contrast to create. 
- * @param Distance  How large the contrast effect will be. 
- */
-declare function DrawSharpen(Contrast: number, Distance: number): void;
-
-/**
- * Draws the sobel shader, which detects edges and draws a black border. 
- * @param Threshold  Determines the threshold of edges. A value of 0 will make your screen completely black. 
- */
-declare function DrawSobel(Threshold: number): void;
-
-/**
- * Renders the post-processing effect of beams of light originating from the map's sun. Utilises the "pp/sunbeams" material 
- * @param darken  $darken property for sunbeams material 
- * @param multiplier  $multiply property for sunbeams material 
- * @param sunSize  $sunsize property for sunbeams material 
- * @param sunX  $sunx property for sunbeams material 
- * @param sunY  $suny property for sunbeams material 
- */
-declare function DrawSunbeams(darken: number, multiplier: number, sunSize: number, sunX: number, sunY: number): void;
-
-/**
- * Draws the texturize shader, which replaces each pixel on your screen with a different part of the texture depending on its brightness. See [[Shaders/g_texturize|g_texturize]] for information on making the texture. 
- * @param Scale  Scale of the texture. A smaller number creates a larger texture. 
- * @param BaseTexture  This will be the texture to use in the effect. Make sure you use {{GlobalFunction|Material}} to get the texture number 
- */
-declare function DrawTexturize(Scale: number, BaseTexture: number): void;
-
-/**
- * Draws the toy town shader, which blurs the top and bottom of your screen. This can make very large objects look like toys, hence the name. 
- * @param Passes  An integer determining how many times to draw the effect. A higher number creates more blur. 
- * @param Height  The amount of screen which should be blurred on the top and bottom. 
- * @example
- * 
- * function GM:RenderScreenspaceEffects()
- * 
- *  DrawToyTown(2, ScrH()/2)
- * 
- * end
- * 
- * // Draws toy town effect. 
- */
-declare function DrawToyTown(Passes: number, Height: number): void;
-
-/**
- * Drops the specified entity if it is being held by any player with Gravity Gun or +use pickup. 
- * @param ent  The entity to drop. 
- */
-declare function DropEntityIfHeld(ent: Entity): void;
-
-/**
- * Creates or replaces a dynamic light with the given id. 
- * @param index  Usually an entity index is used here. 
- * @returns A DynamicLight structured table. See {{Struct|DynamicLight}} 
- * @example
- * 
- * hook.Add( "Think", "Think_Lights!", function()
- * 	local dlight = DynamicLight( LocalPlayer():EntIndex() )
- * 	if ( dlight ) then
- * 		dlight.pos = LocalPlayer():GetShootPos()
- * 		dlight.r = 255
- * 		dlight.g = 255
- * 		dlight.b = 255
- * 		dlight.brightness = 2
- * 		dlight.Decay = 1000
- * 		dlight.Size = 256
- * 		dlight.DieTime = CurTime() + 1
- * 	end
- * end )
- * 
- * // Emits a bright white light from local players eyes. 
- */
-declare function DynamicLight(index: number): DynamicLight;
-
-/**
- * Returns a {{Type|CEffectData}} object to be used with {{LibraryFunction|util|Effect}}.
- * 
- * **Bug [#2771](https://github.com/Facepunch/garrysmod-issues/issues/2771):**
- * >This does not create a unique object, but instead returns a shared reference. That means you cannot use two or more of these objects at once. 
- * @returns The {{Type|CEffectData}} object. 
- */
-declare function EffectData(): CEffectData;
-
-/**
- * An 'if then else'. This is ''almost'' equivalent to (''condition'' and ''truevar'' or ''falsevar'') in Lua. The difference is that if ''truevar'' evaluates to false, the plain Lua method stated would return ''falsevar'' regardless of ''condition'' whilst this function would take ''condition'' into account. 
- * @param condition  The condition to check if true or false. 
- * @param truevar  If the condition isn't nil/false, returns this value. 
- * @param falsevar  If the condition is nil/false, returns this value. 
- * @returns The result. 
- * @example
- * 
- * local ply = Entity( 1 )
- * print( "Player " .. Either( ply:IsAdmin(), "is", "is not" ) .. " an admin" )
- * 
- * print( "Player " .. ( ply:IsAdmin() and "is" or "is not" ) .. " an admin" )
- * 
- * // The following two ''print'' statements have identical results.@example
- * 
- * print("You are: "..( LocalPlayer():Alive() and "alive" or "dead" ))
- * 
- * // conditional:
- * 
- * print( "Halflife? "..( (LocalPlayer():Health()==50) and "halflife" or "not halflife") )
- * 
- * // Plain Lua alias version. 
- */
-declare function Either(condition: any, truevar: any, falsevar: any): any;
-
-/**
- * Plays a sentence from scripts/sentences.txt
- * 
- * Seems to work only on serverside. 
- * @param soundName  The sound to play 
- * @param position  The position to play at 
- * @param entity  The entity to emit the sound from. Must be {{ClassFunction|Entity|EntIndex}} 
- * @param channel [=CHAN_AUTO] The sound channel, see {{Enum|CHAN}}. 
- * @param volume [=1] The volume of the sound, from 0 to 1 
- * @param soundLevel [=75] The sound level of the sound, see {{Enum|SNDLVL}} 
- * @param soundFlags [=0] The flags of the sound, see {{Enum|SND}} 
- * @param pitch [=100] The pitch of the sound, 0-255 
- * @example
- * 
- * EmitSentence( "COMBINE_DIE" .. math.random( 0, 3 ), Entity(1):GetPos(), 1, CHAN_AUTO, 1, 75, 0, 100 )
- * 
- * // Plays random combine death sound on first player. 
- */
-declare function EmitSentence(soundName: string, position: Vector, entity: number, channel?: CHAN, volume?: number, soundLevel?: SNDLVL, soundFlags?: SND, pitch?: number): void;
-
-/**
- * Emits the specified sound at the specified position.
- * 
- * **Bug:**
- * >This only works clientside.
- * 
- * **Bug:**
- * >This does not work with soundscripts. 
- * @param soundName  The sound to play 
- * @param position  The position to play at 
- * @param entity  The entity to emit the sound from. Must be {{ClassFunction|Entity|EntIndex}} 
- * @param channel [=CHAN_AUTO] The sound channel, see {{Enum|CHAN}}. 
- * @param volume [=1] The volume of the sound, from 0 to 1 
- * @param soundLevel [=75] The sound level of the sound, see {{Enum|SNDLVL}} 
- * @param soundFlags [=0] The flags of the sound, see {{Enum|SND}} 
- * @param pitch [=100] The pitch of the sound, 0-255 
- * @example
- * 
- * EmitSound( Sound("garrysmod/save_load1.wav"), Entity(1):GetPos(), 1, CHAN_AUTO, 1, 75, 0, 100 )
- * 
- * // Plays magical sound on first player. 
- */
-declare function EmitSound(soundName: string, position: Vector, entity: number, channel?: CHAN, volume?: number, soundLevel?: SNDLVL, soundFlags?: SND, pitch?: number): void;
-
-/**
- * Removes the currently active tool tip from the screen. 
- * @param panel  This is the panel that has a tool tip. 
- */
-declare function EndTooltip(panel: Panel): void;
-
-/**
- * Throws a Lua error and breaks out of the current call stack. 
- * @param message  The error message to throw. 
- * @param errorLevel [=1] The level to throw the error at. 
- * @example
- * 
- * error("garry")
- * 
- * // 
- */
-declare function error(message: string, errorLevel?: number): void;
-
-/**
- * Throws a Lua error but does not break out of the current call stack.
- * 
- * **Bug [#1810](https://github.com/Facepunch/garrysmod-issues/issues/1810):**
- * >Using this function in the menu state exits the menu.
- * 
- * **Bug [#2247](https://github.com/Facepunch/garrysmod-issues/issues/2247):**
- * >This function has a character limit of 511. 
- * @param arguments  Converts all arguments to strings and prints them with no spacing. 
- * @example
- * 
- * local num = 11
- * if ( num <= 10 and num >= 0 ) then
- * 	print( "The number is", num )
- * else
- * 	ErrorNoHalt( "Number out of range!\n" )
- * 	print("This line will be printed")
- * end
- * 
- * // An example of the use of this function 
- */
-declare function ErrorNoHalt(...arguments: (any)[]): void;
-
-/**
- * Returns the angles of the current render context as calculated by {{HookFunction|GM|CalcView}}.
- * 
- * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
- * >This function is only reliable inside rendering hooks. 
- * @returns The angle of the currently rendered scene. 
- * @example
- * 
- * print(EyeAngles())
- * 
- * // Print the view angles@example
- * 
- * print(EyeAngles():Forward())
- * 
- * // Identical to {{GlobalFunction|EyeVector}} 
- */
-declare function EyeAngles(): Angle;
-
-/**
- * Returns the origin of the current render context as calculated by {{HookFunction|GM|CalcView}}.
- * 
- * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
- * >This function is only reliable inside rendering hooks. 
- * @returns Camera position. 
- * @example
- * 
- * print(EyePos())
- * 
- * // Print the view position@example
- * 
- * hook.Add("PreDrawTranslucentRenderables", "FixEyePos", function() EyePos() end)
- * hook.Add( "Think", "Use Eyepos outside of render function", function()
- * 	local start = EyePos()
- * 	local dir = gui.ScreenToVector(gui.MousePos())
- * 	local trace = util.TraceLine{
- * 		start = start,
- * 		endpos = start + ( dir * 10000 ),
- * 		filter = { ply },
- * 	}
- * 	debugoverlay.Box( trace.HitPos, Vector( -5, -5, -5 ), Vector( 5, 5, 5 ) )
- * end )
- * 
- * // Ensuring EyePos returns the correct value outside of render hooks. 
- */
-declare function EyePos(): Vector;
-
-/**
- * Returns the normal vector of the current render context as calculated by {{HookFunction|GM|CalcView}}, similar to {{GlobalFunction|EyeAngles}}.
- * 
- * **Bug [#2516](https://github.com/Facepunch/garrysmod-issues/issues/2516):**
- * >This function is only reliable inside rendering hooks. 
- * @returns View direction of the currently rendered scene. 
- * @example
- * 
- * print( EyeVector() )
- * 
- * // Print the view angles 
- */
-declare function EyeVector(): Vector;
-
-/**
- * Returns the meta table for the class with the matching name.
- * 
- * Internally returns {{LibraryFunction|debug|getregistry}}()[metaName]
- * 
- * You can learn more about meta tables on the [[Meta Tables]] page.
- * 
- * You can find a list of meta tables that can be retrieved with this function on {{Enum|TYPE}}. The name in the description is the string to use with this function. 
- * @param metaName  The object type to retrieve the meta table of. 
- * @returns The corresponding meta table. 
- * @example
- * 
- * local meta = FindMetaTable("Player")
- * 
- * function meta:IsSick()
- * 	return true
- * end
- * 
- * // Sometime later...
- * local ply = Entity(1)
- * if ( ply:IsSick() ) then
- * 	ply:ChatPrint( "Get well soon, " .. ply:Nick() .. "!" )
- * 	ply:ChatPrint( "I just don't understand how you're always sick..." )
- * end
- * 
- * // Adds a very simple function for checking if a player is sick to the player metatable. 
- */
-declare function FindMetaTable(metaName: string): table;
-
-/**
- * Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself 
- * @param panel  Panel to find tool-tip of 
- * @returns [tool-tip text, tool-tip panel, panel that the function was called with] 
- */
-declare function FindTooltip(panel: Panel): [string, Panel, Panel];
-
-/**
- * Formats the specified values into the string given. Same as {{LibraryFunction|string|format}}. 
- * @param format  The string to be formatted.
- * 
- * Follows this format: http://www.cplusplus.com/reference/cstdio/printf/ 
- * @param formatParameters  Values to be formatted into the string. 
- * @returns The formatted string 
- */
-declare function Format(format: string, ...formatParameters: (any)[]): string;
-
-/**
- * Returns the number of frames rendered since the game was launched. 
- */
-declare function FrameNumber(): void;
-
-/**
- * Returns the {{GlobalFunction|CurTime}}-based time in seconds it took to render the last frame.
- * 
- * This should be used for frame/tick based timing, such as movement prediction or animations.
- * 
- * For real-time-based frame time that isn't affected by host_timescale, use {{GlobalFunction|RealFrameTime}}. RealFrameTime is more suited for things like GUIs or HUDs. 
- * @returns time (in seconds) 
- * @example
- * 
- * print(FrameTime())
- * 
- * // Print the frame time@example
- * 
- * print("Tick: "..(1/FrameTime()))
- * 
- * // Get the servers/clients tickrate/fps 
- */
-declare function FrameTime(): number;
-
-/**
- * Callback function for when the client has joined a server. This function shows the server's loading URL by default. 
- * @param servername  Server's name. 
- * @param serverurl  Server's loading screen URL, or "" if the URL is not set. 
- * @param mapname  Server's current map's name. 
- * @param maxplayers  Max player count of server. 
- * @param steamid  The local player's {{ClassFunction|Player|SteamID64}}. 
- * @param gamemode  Server's current gamemode's folder name. 
- * @example
- * 
- * local OldGameDetails = GameDetails
- * function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
- * 	print( 1, servername )
- * 	print( 2, serverurl )
- * 	print( 3, mapname )
- * 	print( 4, maxplayers )
- * 	print( 5, steamid )
- * 	print( 6, gamemode )
- * 	OldGameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode )
- * end
- * 
- * // Prints GameDetails of the server you join to console, and preserves default behavior. 
- */
-declare function GameDetails(servername: string, serverurl: string, mapname: string, maxplayers: number, steamid: string, gamemode: string): void;
-
-/**
- * **Deprecated:**
- * >This function was deprecated in Lua 5.1 and is removed in Lua 5.2. Use {{GlobalFunction|collectgarbage}}( "count" ) instead.
- * 
- *  Returns the current floored dynamic memory usage of Lua in kilobytes. 
- * @returns The current floored dynamic memory usage of Lua, in kilobytes. 
- */
-declare function gcinfo(): number;
-
-/**
- * Gets the ConVar with the specified name. This function caches the ConVar object internally. 
- * @param name  Name of the ConVar to get 
- * @returns The ConVar object 
- */
-declare function GetConVar(name: string): ConVar;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Gets the ConVar with the specified name. This function doesn't cache the convar. 
- * @param name  Name of the ConVar to get 
- * @returns The ConVar object 
- */
-declare function GetConVar_Internal(name: string): ConVar;
-
-/**
- * **Deprecated:**
- * >Store the {{Type|ConVar}} object retrieved with {{GlobalFunction|GetConVar}} and call {{ClassFunction|ConVar|GetInt}} or {{ClassFunction|ConVar|GetFloat}} on it.
- * 
- * Gets the numeric value ConVar with the specified name. 
- * @param name  Name of the ConVar to get. 
- * @returns The ConVar's value. 
- */
-declare function GetConVarNumber(name: string): number;
-
-/**
- * **Deprecated:**
- * >Store the {{Type|ConVar}} object retrieved with {{GlobalFunction|GetConVar}} and call {{ClassFunction|ConVar|GetString}} on it.
- * 
- * Gets the string value ConVar with the specified name. 
- * @param name  Name of the ConVar to get. 
- * @returns The ConVar's value. 
- */
-declare function GetConVarString(name: string): string;
-
-/**
- * Returns the default loading screen URL (asset://garrysmod/html/loading.html) 
- * @returns Default loading url (asset://garrysmod/html/loading.html) 
- */
-declare function GetDefaultLoadingHTML(): string;
-
-/**
- * Retrieves data about the demo with the specified filename. Similar to {{GlobalFunction|GetSaveFileDetails}}. 
- * @param filename  The file name of the demo. 
- * @returns Demo data. 
- */
-declare function GetDemoFileDetails(filename: string): table;
-
-/**
- * Returns a table with the names of files needed from the server you are currently joining. 
- * @returns table of file names 
- * @example
- * 
- * PrintTable( GetDownloadables() )
- * 
- * // Returns a table with the file names. 
- */
-declare function GetDownloadables(): table;
-
-/**
- * Returns the environment table of either the stack level or the function specified. 
- * @param location [=1] The object to get the enviroment from. Can also be a number that specifies the function at that stack level: Level 1 is the function calling getfenv. 
- * @returns The environment. 
- */
-declare function getfenv(location?: Function): table;
-
-/**
- * Returns an angle that is shared between the server and all clients. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=Angle( 0, 0, 0 )] The value to return if the global value is not set. 
- * @returns The global value, or default if the global is not set. 
- */
-declare function GetGlobalAngle(index: string, defaultVal?: Angle): Angle;
-
-/**
- * Returns a boolean that is shared between the server and all clients. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=false] The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- */
-declare function GetGlobalBool(index: string, defaultVal?: boolean): boolean;
-
-/**
- * Returns an entity that is shared between the server and all clients. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=NULL] The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- */
-declare function GetGlobalEntity(index: string, defaultVal?: Entity): Entity;
-
-/**
- * Returns a float that is shared between the server and all clients. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=0] The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- */
-declare function GetGlobalFloat(index: string, defaultVal?: number): number;
-
-/**
- * Returns an integer that is shared between the server and all clients.
- * 
- * **Bug [#3374](https://github.com/Facepunch/garrysmod-issues/issues/3374):**
- * >This function will not round decimal values as it actually networks a float internally. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=0] The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- * @example
- * 
- * print(GetGlobalInt("RoundNumber", 0))
- * 
- * // Prints the current round number if set, otherwise 0. 
- */
-declare function GetGlobalInt(index: string, defaultVal?: number): number;
-
-/**
- * Returns a string that is shared between the server and all clients. 
- * @param index  The unique index to identify the global value with. 
- * @param defaultVal [=""] The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- * @example
- * 
- * print( GetGlobalString("ServerName", "Garry's Mod 13") )
- * 
- * // Prints the current server name if set, otherwise "Garry's Mod 13". 
- */
-declare function GetGlobalString(index: string, defaultVal?: string): string;
-
-/**
- * Returns a vector that is shared between the server and all clients. 
- * @param Index  The unique index to identify the global value with. 
- * @param Default  The value to return if the global value is not set. 
- * @returns The global value, or the default if the global value is not set. 
- */
-declare function GetGlobalVector(Index: string, Default: Vector): Vector;
-
-/**
- * Returns the name of the current server. 
- */
-declare function GetHostName(): void;
-
-/**
- * Returns the panel that is used as a wrapper for the HUD.
- * 
- * See also {{LibraryFunction|vgui|GetWorldPanel}} 
- * @returns The HUD panel 
- */
-declare function GetHUDPanel(): Panel;
-
-/**
- * Returns the loading screen panel and creates it if it doesn't exist. 
- * @returns The loading screen panel 
- */
-declare function GetLoadPanel(): Panel;
-
-/**
- * Returns the current status of the server join progress. 
- * @returns The current status 
- */
-declare function GetLoadStatus(): string;
-
-/**
- * Returns a table with the names of all maps and categories that you have on your client. 
- * @returns table of map names and categories 
- */
-declare function GetMapList(): table;
-
-/**
- * Returns the metatable of an object. This function obeys the metatable's __metatable field, and will return that field if the metatable has it set.
- * 
- * Use {{LibraryFunction|debug|getmetatable}} if you want the true metatable of the object. 
- * @param object  The value to return the metatable of. 
- * @returns The metatable of the value. This is not always a table. 
- * @example
- * 
- * print(getmetatable(Pupil).__index.GetName(Pupil))
- * // getmetatable(Pupil) will return Pupil_meta.
- * // Same as print(Pupil:GetName())
- * // This is what the Lua interpreter basically does. (When __index is a table.)
- * 
- * getmetatable(Pupil).SetName = function(self, newName)
- *  self.name = newName
- * end
- * // We're adding a new method to Pupil's metatable
- * 
- * print(getmetatable(Pupil).GetName(Pupil))
- * // Still the same, because Pupil_meta.__index is Pupil_meta.
- * 
- * // Use a table's metatable and alter it. 
- */
-declare function getmetatable(object: any): any;
-
-/**
- * Returns the menu overlay panel, a container for panels like the error panel created in {{HookFunction|GM|OnLuaError}}. 
- * @returns The overlay panel 
- */
-declare function GetOverlayPanel(): Panel;
-
-/**
- * Creates or gets the rendertarget with the given name.
- * 
- * See {{GlobalFunction|GetRenderTargetEx}} for an advanced version of this function with more options.
- * 
- * **Bug [#2885](https://github.com/Facepunch/garrysmod-issues/issues/2885):**
- * >This crashes when used on a cubemap texture. 
- * @param name  The internal name of the render target. 
- * @param width  The width of the render target, must be power of 2. If not set to PO2, the size will be automatically converted to the nearest PO2 size. 
- * @param height  The height of the render target, must be power of 2. If not set to PO2, the size will be automatically converted to the nearest PO2 size. 
- * @param additive [=false] Sets whenever the rt should be additive. 
- * @returns The render target 
- */
-declare function GetRenderTarget(name: string, width: number, height: number, additive?: boolean): ITexture;
-
-/**
- * Creates (or gets if it already exsits) the rendertarget with the given name, this function allows to adjust the creation of a rendertarget more than {{GlobalFunction|GetRenderTarget}}.
- * 
- * See also {{LibraryFunction|render|PushRenderTarget}} and {{LibraryFunction|render|SetRenderTarget}}. 
- * @param name  The internal name of the render target.
- * 
- * {{Warning|The name is treated like a path and gets its extension discarded.
- * "name.1" and "name.2" are considered the same name and will result in the same render target being reused.}} 
- * @param width  The width of the render target, must be power of 2. 
- * @param height  The height of the render target, must be power of 2. 
- * @param sizeMode  Bitflag that influences the sizing of the render target, see {{Enum|RT_SIZE}}. 
- * @param depthMode  Bitflag that determines the depth buffer usage of the render target {{Enum|MATERIAL_RT_DEPTH}}. 
- * @param textureFlags  Bitflag that configurates the texture, see {{Enum|TEXTUREFLAGS}}.
- * 
- * List of flags can also be found on the Valve's Developer Wiki:
- * https://developer.valvesoftware.com/wiki/Valve_Texture_Format 
- * @param rtFlags  Flags that controll the HDR behaviour of the render target, see {{Enum|CREATERENDERTARGETFLAGS}}. 
- * @param imageFormat  Image format, see {{Enum|IMAGE_FORMAT}}. 
- * @returns The new render target. 
- */
-declare function GetRenderTargetEx(name: string, width: number, height: number, sizeMode: RT_SIZE, depthMode: MATERIAL_RT_DEPTH, textureFlags: TEXTUREFLAGS, rtFlags: CREATERENDERTARGETFLAGS, imageFormat: IMAGE_FORMAT): ITexture;
-
-/**
- * Retrieves data about the save with the specified filename. Similar to {{GlobalFunction|GetDemoFileDetails}}. 
- * @param filename  The file name of the save. 
- * @returns Save data. 
- */
-declare function GetSaveFileDetails(filename: string): table;
-
-/**
- * Returns the entity the client is using to see from (such as the player itself, the camera, or another entity). 
- * @returns The view entity. 
- */
-declare function GetViewEntity(): Entity;
-
-/**
- * Converts a color from HSV color space into RGB color space and returns a {{Struct|Color}}.
- * 
- * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
- * >The returned color will not have the color metatable. 
- * @param hue  Hue in degrees. 
- * @param saturation  Saturation from 0 - 1. 
- * @param value  Value from 0 - 1. 
- * @returns The {{Struct|Color}} created from the HSV color space. 
- * @example
- * 
- * local function DrawRainbowText( frequency, str, font, x, y )
- * 	
- * 	surface.SetFont( font )
- * 	
- * 	for i = 1, #str do
- * 		surface.SetTextColor( HSVToColor( i * frequency % 360, 1, 1 ) )
- * 		local w = surface.GetTextSize( string.sub( str, 1, i - 1 ) )
- * 		surface.SetTextPos( x + w, y )
- * 		surface.DrawText( string.sub( str, i, i ) )
- * 	end
- * 	
- * end
- * 
- * // A helper function for drawing rainbow text.@example
- * 
- * local function ChatPrintRainbow( frequency, str )
- * 	
- * 	local text = {}
- * 	
- * 	for i = 1, #str do
- * 		table.insert( text, HSVToColor( i * frequency % 360, 1, 1 ) )
- * 		table.insert( text, string.sub( str, i, i ) )
- * 	end
- * 
- * 	chat.AddText( unpack( text ) )
- * 	
- * end
- * 
- * // A helper function for printing rainbow text in the chat.@example
- * 
- * local function ConsolePrintRainbow( frequency, str )
- * 	
- * 	local text = {}
- * 	
- * 	for i = 1, #str do
- * 		table.insert( text, HSVToColor( i * frequency % 360, 1, 1 ) )
- * 		table.insert( text, string.sub( str, i, i ) )
- * 	end
- * 	
- * 	table.insert( text, "\n" )
- * 	
- * 	MsgC( unpack( text ) )
- * 	
- * end
- * 
- * // A helper function for printing rainbow text in the console. 
- */
-declare function HSVToColor(hue: number, saturation: number, value: number): Color;
-
-/**
- * Launches an asynchronous http request with the given parameters.
- * 
- * **Bug [#2232](https://github.com/Facepunch/garrysmod-issues/issues/2232):**
- * >This cannot send or receive multiple headers at once.
- * 
- * **Bug [#3190](https://github.com/Facepunch/garrysmod-issues/issues/3190):**
- * >This can crash on Linux. 
- * @param parameters  The request parameters. See {{Struct|HTTPRequest}}. 
- * @returns true if we made a request, nil if we failed. 
- */
-declare function HTTP(parameters: HTTPRequest): boolean;
-
-/**
- * Executes a Lua script either relative to the current file, or absolute(relative to the /lua/ folder).
- * 
- * **Note:**
- * >Addon files (.gma files) do not support relative parent folders (''..'' notation).
- * 
- * {{Warning|Files over a certain size may fail to be included.}}
- * 
- * {{Warning|The file you are attempting to include MUST NOT be empty or the include will fail.}}
- * 
- * {{Warning|If the file you are including is clientside or shared, it '''must''' be {{GlobalFunction|AddCSLuaFile}}'d or this function will error saying the file doesn't exist.}}
- * 
- * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
- * >{{GlobalFunction|pcall}}ing this function will break autorefresh. 
- * @param fileName  The name of the script to be executed. 
- * @returns Anything that the executed Lua script returns. 
- */
-declare function include(fileName: string): any;
-
-/**
- * **Deprecated:**
- * >To send the target file to the client simply call AddCSLuaFile() in the target file itself.
- * 
- * This function works exactly the same as {{GlobalFunction|include}} both clientside and serverside.
- * 
- * The only difference is that on the serverside it also calls {{GlobalFunction|AddCSLuaFile}} on the filename, so that it gets sent to the client. 
- * @param filename  The filename of the Lua file you want to include. 
- */
-declare function IncludeCS(filename: string): void;
-
-/**
- * Returns an iterator function for a for loop, to return ordered key-value pairs from a table.
- * 
- * This will only iterate though '''numerical''' keys, and these must also be '''sequential'''; starting at 1 with no gaps.
- * 
- * For unordered pairs, see {{GlobalFunction|pairs}}.
- * 
- * For pairs sorted by key in alphabetical order, see {{GlobalFunction|SortedPairs}}. 
- * @param tab  The table to iterate over. 
- * @returns [The iterator function., The table being iterated over, The origin index '''=0'''] 
- * @example
- * 
- * local tbl = { two = 2, one = 1, "alpha", "bravo", [3] = "charlie", [5] = "echo", [6] = "foxtrot" }
- * 
- * print( "pairs:" )
- * for k, v in pairs( tbl ) do
- * 	print( k, v )
- * end
- * print( "\nipairs:" )
- * for k, v in ipairs( tbl ) do
- * 	print( k, v )
- * end
- * 
- * // Demonstrates how this differs from {{GlobalFunction|pairs}}.@example
- * 
- * local NUM = 32
- * local Count = 0
- * for k, v in ipairs( ClientUndos ) do
- * 	local Item = ComboBox:AddItem( tostring( v.Name ) )
- * 	Item.DoClick = function() RunConsoleCommand( "gmod_undonum", tostring( v.Key ) ) end
- * 
- * 	Count = Count + 1
- * 	if ( Count > NUM ) then break end
- * end
- * 
- * // From ''UpdateUI'' in [https://github.com/garrynewman/garrysmod/blob/master/garrysmod/lua/includes/modules/undo.lua#L43 undo.lua], this adds the first 32 undo entries to the ''Undo'' panel in the spawnmenu. 
- */
-declare function ipairs(tab: table): [Function, table, number];
-
-/**
- * Returns if the passed object is an {{Type|Angle}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is an {{Type|Angle}}. 
- */
-declare function isangle(variable: any): Angle;
-
-/**
- * Returns if the passed object is a {{Type|boolean}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|boolean}}. 
- */
-declare function isbool(variable: any): boolean;
-
-/**
- * Returns whether the given object does or doesn't have a ''metatable'' of a color.
- * 
- * '''Important:''' Engine functions (i.e. those not written in plain Lua) that return color objects do not currently set the color metatable and this function will return false if you use it on them. 
- * @param Object  The object to be tested 
- * @returns Whether the given object is a color or not 
- */
-declare function IsColor(Object: any): boolean;
-
-/**
- * Returns if the given NPC class name is an enemy.
- * 
- * Returns true if the entity name is one of the following:
- * * "npc_combine_s"
- * * "npc_cscanner"
- * * "npc_manhack"
- * * "npc_hunter"
- * * "npc_antlion"
- * * "npc_antlionguard"
- * * "npc_antlion_worker"
- * * "npc_fastzombie_torso"
- * * "npc_fastzombie"
- * * "npc_headcrab"
- * * "npc_headcrab_fast"
- * * "npc_poisonzombie"
- * * "npc_headcrab_poison"
- * * "npc_zombie"
- * * "npc_zombie_torso"
- * * "npc_zombine"
- * * "npc_gman"
- * * "npc_breen" 
- * @param className  Class name of the entity to check 
- * @returns Is an enemy 
- */
-declare function IsEnemyEntityName(className: string): boolean;
-
-/**
- * Returns if the passed object is an {{Type|Entity}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is an {{Type|Entity}}. 
- */
-declare function isentity(variable: any): Entity;
-
-/**
- * Returns if the passed object is an {{Type|Entity}}. Alias of {{GlobalFunction|isentity}}. 
- * @param variable  The variable to check. 
- * @returns True if the variable is an {{Type|Entity}}. 
- */
-declare function IsEntity(variable: any): Entity;
-
-/**
- * Returns if this is the first time this hook was predicted.
- * 
- * This is useful for one-time logic in your SWEPs PrimaryAttack, SecondaryAttack and Reload and other [[:Category:Predicted_Hooks|predicted hooks]] (to prevent those hooks from being called rapidly in succession). It's also useful in a Move hook for when the client predicts movement.
- * 
- * Visit [[Prediction]] for more information about this behavior.
- * 
- * **Note:**
- * >This is already used internally for {{ClassFunction|Entity|EmitSound}}, {{ClassFunction|Weapon|SendWeaponAnim}} and {{ClassFunction|Entity|FireBullets}}, but NOT in  {{LibraryFunction|util|Effect}}. 
- * @returns Whether or not this is the first time being predicted. 
- * @example
- * 
- * // Note that for some reason KeyPress and KeyRelease are called multiple times
- * // for the same key event in multiplayer.
- * function GM:KeyPress(ply, key)
- *    if not IsFirstTimePredicted() then return end
- *    if not IsValid(ply) or ply != LocalPlayer() then return end
- * 
- *    if key == IN_SPEED and ply:IsActiveTraitor() then
- *       timer.Simple(0.05, function() RunConsoleCommand("+voicerecord") end)
- *    end
- * end
- * 
- * // An override for {{HookFunction|GM|KeyPress}} in the gamemode Trouble in Terrorist Town, to work around the hook being called multiple times. 
- */
-declare function IsFirstTimePredicted(): boolean;
-
-/**
- * Returns if the given NPC class name is a friend.
- * 
- * Returns true if the entity name is one of the following:
- * * "npc_monk"
- * * "npc_alyx"
- * * "npc_barney"
- * * "npc_citizen"
- * * "npc_kleiner"
- * * "npc_magnusson"
- * * "npc_eli"
- * * "npc_mossman"
- * * "npc_vortigaunt" 
- * @param className  Class name of the entity to check 
- * @returns Is a friend 
- */
-declare function IsFriendEntityName(className: string): boolean;
-
-/**
- * Returns if the passed object is a {{Type|function}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|function}}. 
- */
-declare function isfunction(variable: any): Function;
-
-/**
- * Returns true if the client is currently playing either a singleplayer or multiplayer game. 
- * @returns True if we are in a game. 
- */
-declare function IsInGame(): boolean;
-
-/**
- * Returns whether the passed object is a {{Type|VMatrix}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|VMatrix}}. 
- */
-declare function ismatrix(variable: any): VMatrix;
-
-/**
- * Checks whether or not a game is currently mounted. Uses data given by {{LibraryFunction|engine|GetGames}}. Currently does not work correctly serverside on dedicated servers. 
- * @param game  The game string/app ID to check. 
- * @returns True if the game is mounted. 
- * @example
- * 
- * IsMounted('cstrike')
- * 
- * // Check if Counter-Strike: Source is mounted. 
- */
-declare function IsMounted(game: string): boolean;
-
-/**
- * Returns if the passed object is a {{Type|number}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|number}}. 
- */
-declare function isnumber(variable: any): number;
-
-/**
- * Returns if the passed object is a {{Type|Panel}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|Panel}}. 
- */
-declare function ispanel(variable: any): Panel;
-
-/**
- * Returns if the passed object is a {{Type|string}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|string}}. 
- */
-declare function isstring(variable: any): string;
-
-/**
- * Returns if the passed object is a {{Type|table}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|table}}. 
- */
-declare function istable(variable: any): table;
-
-/**
- * Returns whether or not every element within a table is a valid entity 
- * @param table  Table containing entities to check 
- * @returns All entities valid 
- */
-declare function IsTableOfEntitiesValid(table: table): boolean;
-
-/**
- * Returns whether or not a model is useless by checking that the file path is that of a proper model.
- * 
- * If the string ".mdl" is not found in the model name, the function will return true.
- * 
- * The function will also return true if any of the following strings are found in the given model name:
- * * "_gesture"
- * * "_anim"
- * * "_gst"
- * * "_pst"
- * * "_shd"
- * * "_ss"
- * * "_posture"
- * * "_anm"
- * * "ghostanim"
- * * "_paths"
- * * "_shared"
- * * "anim_"
- * * "gestures_"
- * * "shared_ragdoll_" 
- * @param modelName  The model name to be checked 
- * @returns Whether or not the model is useless 
- */
-declare function IsUselessModel(modelName: string): boolean;
-
-/**
- * Returns whether an object is valid or not. (Such as {{Type|Entity}}s, {{Type|Panel}}s, custom {{Type|table}} objects and more)
- * Checks that an object is not nil, has an IsValid method and if this method returns true.
- * 
- * **Note:**
- * >Due to vehicles being technically valid the moment they're spawned, also use {{ClassFunction|Vehicle|IsValidVehicle}} to make sure they're fully initialized 
- * @param toBeValidated  The table or object to be validated. 
- * @returns True if the object is valid. 
- */
-declare function IsValid(toBeValidated: any): boolean;
-
-/**
- * Returns if the passed object is a {{Type|Vector}}. 
- * @param variable  The variable to perform the type check for. 
- * @returns True if the variable is a {{Type|Vector}}. 
- */
-declare function isvector(variable: any): Vector;
-
-/**
- * Joins the server with the specified IP. 
- * @param IP  The IP of the server to join 
- */
-declare function JoinServer(IP: string): void;
-
-/**
- * Adds javascript function 'language.Update' to an HTML panel as a method to call Lua's {{LibraryFunction|language|GetPhrase}} function. 
- * @param htmlPanel  Panel to add javascript function 'language.Update' to. 
- */
-declare function JS_Language(htmlPanel: Panel): void;
-
-/**
- * Adds javascript function 'util.MotionSensorAvailable' to an HTML panel as a method to call Lua's {{LibraryFunction|motionsensor|IsAvailable}} function. 
- * @param htmlPanel  Panel to add javascript function 'util.MotionSensorAvailable' to. 
- */
-declare function JS_Utility(htmlPanel: Panel): void;
-
-/**
- * Adds workshop related javascript functions to an HTML panel, used by the "Dupes" and "Saves" tabs in the spawnmenu. 
- * @param htmlPanel  Panel to add javascript functions to. 
- */
-declare function JS_Workshop(htmlPanel: Panel): void;
-
-/**
- * Callback function for when the client's language changes. Called by the engine. 
- * @param lang  The new language code. 
- * @example
- * 
- * local OldLanguageChanged = LanguageChanged
- * function LanguageChanged( lang )
- * 	print( "New language: " .. lang )
- * 	OldLanguageChanged( lang )
- * end
- * 
- * // Prints the new language code whenever the language changes. 
- */
-declare function LanguageChanged(lang: string): void;
-
-/**
- * Performs a linear interpolation from the start number to the end number.
- * 
- * This function provides a very efficient and easy way to smooth out movements. 
- * @param t  The fraction for finding the result. This number is clamped between 0 and 1. 
- * @param from  The starting number. The result will be equal to this if delta is 0. 
- * @param to  The ending number. The result will be equal to this if delta is 1. 
- * @returns The result of the linear interpolation, (1 - t) * from + t * to. 
- */
-declare function Lerp(t: number, from: number, to: number): number;
-
-/**
- * Returns point between first and second angle using given fraction and linear interpolation 
- * @param ratio  Ratio of progress through values 
- * @param angleStart  Angle to begin from 
- * @param angleEnd  Angle to end at 
- * @returns angle 
- * @example
- * 
- * local startAngle = Angle(0, 0, 0)
- * local endAngle = Angle(0, 180, 0)
- * local ratio = 0
- * 
- * timer.Create("Turn", 0.1, 10, function()
- *     ratio = ratio + 0.1
- *     entity:SetAngles(Lerp(ratio, startAngle, endAngle))
- * end)
- * 
- * // Turns an entity 180 degrees uses lerp over ten seconds 
- */
-declare function LerpAngle(ratio: number, angleStart: Angle, angleEnd: Angle): Angle;
-
-/**
- * Linear interpolation between two vectors. It is commonly used to smooth movement between two vectors. 
- * @param fraction  Fraction ranging from 0 to 1 
- * @param from  The initial Vector 
- * @param to  The desired Vector 
- * @returns The lerped vector. 
- * @example
- * 
- * local output = LerpVector( 0.5, Vector( 0, 0, 100 ), Vector( 0, 0, 200 ) )
- * 
- * // Get the middle point (50%) between two vectors. 
- */
-declare function LerpVector(fraction: number, from: Vector, to: Vector): Vector;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * This function is used to get the last map and category to which the map belongs from the cookie saved with {{GlobalFunction|SaveLastMap}}. 
- */
-declare function LoadLastMap(): void;
-
-/**
- * Loads all preset settings for the {{Lib|presets}} and returns them in a table 
- * @returns Preset data 
- * @example
- * 
- * PrintTable(LoadPresets())
- * 
- * // Prints all of the presets in to the console 
- */
-declare function LoadPresets(): table;
-
-/**
- * Returns a localisation for the given token, if none is found it will return the default(second) parameter. 
- * @param localisationToken  The token to find a translation for. 
- * @param defaultVal  The default value to be returned if no translation was found. 
- */
-declare function Localize(localisationToken: string, defaultVal: string): void;
-
-/**
- * Returns the player object of the current client.
- * 
- * LocalPlayer() will return NULL until all entities have been initialized. See {{HookFunction|GM|InitPostEntity}}. 
- * @returns The player object representing the client. 
- * @example
- * 
- * print( LocalPlayer() )
- * 
- * // Demonstrates the use of this function. 
- */
-declare function LocalPlayer(): Player;
-
-/**
- * Translates the specified position and angle from the specified local coordinate system into worldspace coordinates.
- * 
- * If you're working with an entity's local vectors, use {{ClassFunction|Entity|LocalToWorld}} and/or {{ClassFunction|Entity|LocalToWorldAngles}} instead.
- * 
- * See also: {{GlobalFunction|WorldToLocal}}, the reverse of this function. 
- * @param localPos  The position vector in the source coordinate system, that should be translated to world coordinates 
- * @param localAng  The angle in the source coordinate system, that should be converted to a world angle. If you don't need to convert an angle, you can supply an arbitrary valid angle (e.g. <kbd>{{GlobalFunction|Angle}}()</kbd>). 
- * @param originPos  The origin point of the source coordinate system, in world coordinates 
- * @param originAngle  The angles of the source coordinate system, as a world angle 
- * @returns [The world position of the supplied local position., The world angles of the supplied local angle.] 
- */
-declare function LocalToWorld(localPos: Vector, localAng: Angle, originPos: Vector, originAngle: Angle): [Vector, Angle];
-
-/**
- * Runs {{LibraryFunction|util|PrecacheModel}} and returns the string 
- * @param model  The model to precache 
- * @returns The same string entered as an argument 
- * @example
- * 
- * local CAMERA_MODEL = Model( "models/dav0r/camera.mdl" )
- * function ENT:Initialize()
- *  self:SetModel( CAMERA_MODEL )
- *  ...
- * 
- * // From entities/gmod_cameraprop.lua 
- */
-declare function Model(model: string): string;
-
-/**
- * Creates a table with the specified module name and sets the function environment for said table.
- * 
- * Any passed loaders are called with the table as an argument. An example of this is {{LibraryFunction|package|seeall}}. 
- * @param name  The name of the module. This will be used to access the module table in the runtime environment. 
- * @param loaders  Calls each function passed with the new table as an argument. 
- */
-declare function module(name: string, ...loaders: (any)[]): void;
-
-/**
- * Writes every given argument to the console.
- * 
- * Automatically attempts to convert each argument to a string. (See {{GlobalFunction|tostring}})
- * 
- * Unlike {{GlobalFunction|print}}, arguments are not separated by anything. They are simply concatenated.
- * 
- * Additionally, a newline isn't added automatically to the end, so subsequent Msg or print operations will continue the same line of text in the console. See {{GlobalFunction|MsgN}} for a version that does add a newline.
- * 
- * The text is blue on the server, orange on the client, and green on the menu: [[File:msg server client colors.png]] 
- * @param args  List of values to print. 
- * @example
- * 
- * Msg("Hello", " World!")
- * 
- * // Prints "Hello World!" to the console. 
- */
-declare function Msg(...args: (any)[]): void;
-
-/**
- * Works exactly like {{GlobalFunction|Msg}} except that, if called on the server, will print to all players consoles plus the server console. 
- * @param args  List of values to print. 
- */
-declare function MsgAll(...args: (any)[]): void;
-
-/**
- * Just like {{GlobalFunction|Msg}}, except it can also print colored text, just like {{LibraryFunction|chat|AddText}}. 
- * @param args  Values to print. If you put in a color, all text after that color will be printed in that color. 
- * @example
- * 
- * MsgC( Color( 255, 0, 0 ), "Hello World!" )
- * 
- * // Prints "Hello World!" in red to the console.@example
- * 
- * MsgC( Color( 137, 222, 255 ), "Default server color" )
- * MsgC( Color( 255, 222, 102 ), "Default client color" )
- * 
- * // Shows the built in colors for server and client 
- */
-declare function MsgC(...args: (any)[]): void;
-
-/**
- * Same as {{GlobalFunction|print}}, except it concatinates the arguments without inserting any whitespace in between them.
- * 
- * See also {{GlobalFunction|Msg}}, which doesn't add a newline (''"\n"'') at the end. 
- * @param args  List of values to print. They can be of any type and will be converted to strings with {{GlobalFunction|tostring}}. 
- * @example
- * 
- * MsgN("Hello,")
- * MsgN("World!")
- * 
- * // Prints "Hello, World!" in two lines to the console. 
- */
-declare function MsgN(...args: (any)[]): void;
-
-/**
- * Returns named color defined in resource/ClientScheme.res. 
- * @param name  Name of color 
- * @returns A {{Struct|Color}} or nil 
- */
-declare function NamedColor(name: string): Color;
-
-/**
- * Returns a new userdata object. 
- * @param addMetatable [=false] If true, the userdata will get its own metatable automatically. 
- * @returns The newly created userdata. 
- */
-declare function newproxy(addMetatable?: boolean): userdata;
-
-/**
- * Returns the next key and value pair in a table.
- * 
- * **Note:**
- * >Table keys in Lua have no specific order, and will be returned in whatever order they exist in memory. This may not always be in ascending order or alphabetical order. If you need to iterate over an array in order, use {{GlobalFunction|ipairs}}. 
- * @param tab  The table 
- * @param prevKey [=nil] The previous key in the table. 
- * @returns [The next key for the table. If the previous key was nil, this will be the first key in the table. If the previous key was the last key in the table, this will be nil., The value associated with that key. If the previous key was the last key in the table, this will be nil.] 
- * @example
- * 
- * local function IsEmptyTable( t )
- * 	return next( t ) == nil
- * end
- * 
- * local mytable = {}
- * print( "mytable is empty:", IsEmptyTable( mytable ) )
- * mytable["hello"]=true
- * print( "mytable is empty:", IsEmptyTable( mytable ) )
- * 
- * // Returns whether the table is empty or not 
- */
-declare function next(tab: table, prevKey?: any): [any, any];
-
-/**
- * Returns the number of files needed from the server you are currently joining. 
- * @returns The number of downloadables 
- */
-declare function NumDownloadables(): number;
-
-/**
- * Returns the amount of skins the specified model has 
- * @param modelName  Model to return amount of skins of 
- * @returns Amount of skins 
- */
-declare function NumModelSkins(modelName: string): number;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- *  Called by the engine when a model has been loaded. Caches model information with the {{Lib|sql}}. 
- * @param modelName  Name of the model. 
- * @param numPostParams  Number of pose parameters the model has. 
- * @param numSeq  Number of sequences the model has. 
- * @param numAttachments  Number of attachments the model has. 
- * @param numBoneControllers  Number of bone controllers the model has. 
- * @param numSkins  Number of skins that the model has. 
- * @param size  Size of the model. 
- */
-declare function OnModelLoaded(modelName: string, numPostParams: number, numSeq: number, numAttachments: number, numBoneControllers: number, numSkins: number, size: number): void;
-
-/**
- * Opens a folder with the given name in the garrysmod folder using the operating system's file browser. Currently broken on OS X and Linux. 
- * @param folder  The subdirectory to open in the garrysmod folder. 
- * @example
- * 
- * OpenFolder( "saves" )
- * 
- * // Opens the "saves" folder. 
- */
-declare function OpenFolder(folder: string): void;
-
-/**
- * Modifies the given vectors so that all of vector2's axis are larger than vector1's by switching them around. Also known as ordering vectors.
- * 
- * **Note:**
- * >This function will irreversibly modify the given vectors 
- * @param vector1  Bounding box min resultant 
- * @param vector2  Bounding box max resultant 
- */
-declare function OrderVectors(vector1: Vector, vector2: Vector): void;
-
-/**
- * Returns an iterator function({{GlobalFunction|next}}) for a for loop that will return the values of the specified table in an arbitrary order.
- * 
- * For alphabetical '''key''' order use {{GlobalFunction|SortedPairs}}.
- * 
- * For alphabetical '''value''' order use {{GlobalFunction|SortedPairsByValue}}. 
- * @param tab  The table to iterate over 
- * @returns [The iterator ({{GlobalFunction|next}}), The table being iterated over, '''nil''' (for the constructor)] 
- * @example
- * 
- * for k, v in pairs( player.GetAll() ) do
- * 	print( v:Nick() )
- * end
- * 
- * // Iterates through all players on the server and prints their names. 
- */
-declare function pairs(tab: table): [Function, table, any];
-
-/**
- * Calls {{LibraryFunction|game|AddParticles}} and returns given string. 
- * @param file  The particle file. 
- * @returns The particle file. 
- */
-declare function Particle(file: string): string;
-
-/**
- * Creates a particle effect.
- * 
- * **Note:**
- * >The particle effect must be precached with {{GlobalFunction|PrecacheParticleSystem}} and the file its from must be added via {{LibraryFunction|game|AddParticles}} before it can be used! 
- * @param particleName  The name of the particle effect. 
- * @param position  The start position of the effect. 
- * @param angles  The orientation of the effect. 
- * @param parent [=NULL] If set, the particle will be parented to the entity. 
- */
-declare function ParticleEffect(particleName: string, position: Vector, angles: Angle, parent?: Entity): void;
-
-/**
- * Creates a particle effect with specialized parameters.
- * 
- * **Note:**
- * >The particle effect must be precached with {{GlobalFunction|PrecacheParticleSystem}} and the file its from must be added via {{LibraryFunction|game|AddParticles}} before it can be used! 
- * @param particleName  The name of the particle effect. 
- * @param attachType  Attachment type using {{Enum|PATTACH}}. 
- * @param entity  The entity to be used in the way specified by the attachType. 
- * @param attachmentID  The id of the attachment to be used in the way specified by the attachType. 
- */
-declare function ParticleEffectAttach(particleName: string, attachType: PATTACH, entity: Entity, attachmentID: number): void;
-
-/**
- * Creates a new {{Type|CLuaEmitter}}.
- * 
- * **Note:**
- * >Do not forget to delete the emitter with {{ClassFunction|CLuaEmitter|Finish}} once you are done with it 
- * @param position  The start position of the emitter.
- * 
- * This is only used to determine particle drawing order for translucent particles. 
- * @param use3D  Whenever to render the particles in 2D or 3D mode. 
- * @returns The new particle emitter. 
- * @example
- * 
- * local tr =  LocalPlayer():GetEyeTrace()
- * local pos = tr.HitPos + tr.HitNormal * 100 // The origin position of the effect
- * 
- * local emitter = ParticleEmitter( pos ) // Particle emitter in this position
- * 
- * for i = 0, 100 do // Do 100 particles
- * 	local part = emitter:Add( "effects/spark", pos ) // Create a new particle at pos
- * 	if ( part ) then
- * 		part:SetDieTime( 1 ) // How long the particle should "live"
- * 
- * 		part:SetStartAlpha( 255 ) // Starting alpha of the particle
- * 		part:SetEndAlpha( 0 ) // Particle size at the end if its lifetime
- * 
- * 		part:SetStartSize( 5 ) // Starting size
- * 		part:SetEndSize( 0 ) // Size when removed
- * 
- * 		part:SetGravity( Vector( 0, 0, -250 ) ) // Gravity of the particle
- * 		part:SetVelocity( VectorRand() * 50 ) // Initial velocity of the particle
- * 	end
- * end
- * 
- * emitter:Finish()
- * 
- * // Creates a simple spark particle effect 100 units above where the local player is looking at. 
- */
-declare function ParticleEmitter(position: Vector, use3D: boolean): CLuaEmitter;
-
-/**
- * Creates a path for the bot to follow 
- * @param type  The name of the path to create.
- * This is going to be "Follow" or "Chase" right now. 
- * @returns The path 
- */
-declare function Path(type: string): PathFollower;
-
-/**
- * Calls a function and catches an error that can be thrown while the execution of the call.
- * 
- * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
- * >Using this function with {{GlobalFunction|include}} will break autorefresh.
- * 
- * **Bug [#2498](https://github.com/Facepunch/garrysmod-issues/issues/2498):**
- * >This does not stop {{GlobalFunction|Error}} and {{GlobalFunction|ErrorNoHalt}} from sending error messages to the server (if called clientside) or calling the {{HookFunction|GM|OnLuaError}} hook. The success boolean returned will always return true and thus you will not get the error message returned. {{GlobalFunction|error}} does not exhibit these behaviours.
- * 
- * **Bug [#3112](https://github.com/Facepunch/garrysmod-issues/issues/3112):**
- * >This does not stop errors incurred by {{GlobalFunction|include}}. 
- * @param func  Function to be executed and of which the errors should be caught of 
- * @param arguments  Arguments to call the function with. 
- * @returns [If the function had no errors occur within it., If an error occurred, this will be a string containing the error message. Otherwise, this will be the return values of the function passed in.] 
- * @example
- * 
- * local succ, err = pcall(function() aisj() end)
- * print(succ, err)
- * 
- * // Catch an error. 
- */
-declare function pcall(func: Function, ...arguments: (any)[]): [boolean, any];
-
-/**
- * Moves the given model to the given position and returns view information based on its properties 
- * @param model  Model that is being rendered to the spawn icon 
- * @param position  Position that the model is being rendered at 
- * @returns Table of information of the view which can be used for rendering 
- */
-declare function PositionSpawnIcon(model: Entity, position: Vector): table;
-
-/**
- * Precaches the particle with the specified name. 
- * @param particleSystemName  The name of the particle system. 
- */
-declare function PrecacheParticleSystem(particleSystemName: string): void;
-
-/**
- * Precaches a scene file. 
- * @param scene  Path to the scene file to precache. 
- */
-declare function PrecacheScene(scene: string): void;
-
-/**
- * Load and precache a custom sentence file. 
- * @param filename  The path to the custom sentences.txt. 
- * @example
- * 
- * PrecacheSentenceFile( "data/customsentences.txt" )
- * 
- * // Precache a file named "customsentences.txt" in the data directory. 
- */
-declare function PrecacheSentenceFile(filename: string): void;
-
-/**
- * Precache a sentence group in a sentences.txt definition file. 
- * @param group  The group to precache. 
- * @example
- * 
- * PrecacheSentenceGroup( "METROPOLICE" )
- * 
- * // Precache all metropolice sentences. 
- */
-declare function PrecacheSentenceGroup(group: string): void;
-
-/**
- * Writes every given argument to the console.
- * 
- * Automatically attempts to convert each argument to a string. (See {{GlobalFunction|tostring}})
- * 
- * Separates arguments with a tab character (''"\t"''). 
- * @param args  List of values to print. 
- * @example
- * 
- * print("Hello World!", "Yay!")
- * 
- * // Prints "Hello World! Yay!" to the console. 
- */
-declare function print(...args: (any)[]): void;
-
-/**
- * Displays a message in the chat, console, or center of screen of every player.
- * 
- * This uses the archaic user message system ({{Lib|umsg}}) and hence is limited to &asymp;250 characters. 
- * @param type  Which type of message should be sent to the players (see {{Enum|HUD}}) 
- * @param message  Message to be sent to the players 
- * @example
- * 
- * PrintMessage(HUD_PRINTTALK, "I'm new here.")
- * 
- * // Prints into the every player's chat: "I'm new here." 
- */
-declare function PrintMessage(type: HUD, message: string): void;
-
-/**
- * Recursively prints the contents of a table to the console. 
- * @param tableToPrint  The table to be printed 
- * @param indent [=0] Number of tabs to start indenting at. Increases by 2 when entering another table. 
- * @param done [={}] Internal argument, you shouldn't normally change this. Used to check if a nested table has already been printed so it doesn't get caught in a loop. 
- * @example
- * 
- * local tbl = {
- *  "test",
- *  3829.4,
- *  {"foo", "baah", 20/5},
- *  true
- * }
- * PrintTable(tbl)
- * 
- * // Prints the table we created. 
- */
-declare function PrintTable(tableToPrint: table, indent?: number, done?: table): void;
-
-/**
- * Runs a function without stopping the whole script on error.
- * 
- * This function is similar to {{GlobalFunction|pcall}} and {{GlobalFunction|xpcall}} except the errors are still printed and sent to the error handler (i.e. sent to server console if clientside and {{HookFunction|GM|OnLuaError}} called). 
- * @param func  Function to run 
- * @returns Were there any errors or not 
- */
-declare function ProtectedCall(func: Function): boolean;
-
-/**
- * Returns an iterator function that can be used to loop through a table in random order 
- * @param table  Table to create iterator for 
- * @param descending  Whether the iterator should iterate descending or not 
- * @returns Iterator function 
- * @example
- * 
- * local tab = {"a", "b", "c", "d", "e", "f"}
- * 
- * for k, v in RandomPairs(tab) do
- *     print(v)
- * end
- * 
- * // Creates a table and prints its contents in random order 
- */
-declare function RandomPairs(table: table, descending: boolean): Function;
-
-/**
- * Compares the two values without calling their __eq operator. 
- * @param value1  The first value to compare. 
- * @param value2  The second value to compare. 
- * @returns Whether or not the two values are equal. 
- */
-declare function rawequal(value1: any, value2: any): boolean;
-
-/**
- * Gets the value with the specified key from the table without calling the __index method. 
- * @param table  Table to get the value from. 
- * @param index  The index to get the value from. 
- * @returns The value. 
- */
-declare function rawget(table: table, index: any): any;
-
-/**
- * Sets the value with the specified key from the table without calling the __newindex method. 
- * @param table  Table to get the value from. 
- * @param index  The index to get the value from. 
- * @param value  The value to set for the specified key. 
- */
-declare function rawset(table: table, index: any, value: any): void;
-
-/**
- * Returns the real frame-time which is unaffected by host_timescale. To be used for GUI effects (for example) 
- * @returns Real frame time 
- */
-declare function RealFrameTime(): number;
-
-/**
- * Returns the uptime of the game/server in seconds (to at least 4 decimal places)
- * 
- * **Note:**
- * >This is '''not''' synchronised or affected by the game.
- * 
- * You should use this function (or SysTime) for timing real-world events such as user interaction, but not for timing game events such as animations.
- * 
- * See also: {{GlobalFunction|CurTime}}, {{GlobalFunction|SysTime}} 
- * @returns Uptime of the server. 
- */
-declare function RealTime(): number;
-
-/**
- * Creates a new {{Type|CRecipientFilter}}. 
- * @returns The new created recipient filter. 
- * @example
- * 
- * local rf = RecipientFilter()
- * rf:AddAllPlayers()
- * print( rf:GetCount() )
- * PrintTable( rf:GetPlayers() )
- * 
- * // Example usage of the function 
- */
-declare function RecipientFilter(): CRecipientFilter;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Adds a frame to the currently recording demo. 
- */
-declare function RecordDemoFrame(): void;
-
-/**
- * Registers a Derma element to be closed the next time {{GlobalFunction|CloseDermaMenus}} is called 
- * @param menu  Menu to be registered for closure 
- */
-declare function RegisterDermaMenuForClose(menu: Panel): void;
-
-/**
- * Saves position of your cursor on screen. You can restore it by using {{GlobalFunction|RestoreCursorPosition}}.
- * 
- * Despite this function being available on server, it will not do anything on server. 
- */
-declare function RememberCursorPosition(): void;
-
-/**
- * Does the removing of the tooltip panel. Called by {{GlobalFunction|EndTooltip}}. 
- */
-declare function RemoveTooltip(): void;
-
-/**
- * Returns the angle that the clients view is being rendered at 
- * @returns Render Angles 
- */
-declare function RenderAngles(): Angle;
-
-/**
- * Renders a Depth of Field effect 
- * @param origin  Origin to render the effect at 
- * @param angle  Angle to render the effect at 
- * @param usableFocusPoint  Point to focus the effect at 
- * @param angleSize  Angle size of the effect 
- * @param radialSteps  Amount of radial steps to render the effect with 
- * @param passes  Amount of render passes 
- * @param spin  Whether to cycle the frame or not 
- * @param inView  Table of view data 
- * @param fov  FOV to render the effect with 
- */
-declare function RenderDoF(origin: Vector, angle: Angle, usableFocusPoint: Vector, angleSize: number, radialSteps: number, passes: number, spin: boolean, inView: table, fov: number): void;
-
-/**
- * Renders the stereoscopic post-process effect 
- * @param viewOrigin  Origin to render the effect at 
- * @param viewAngles  Angles to render the effect at 
- */
-declare function RenderStereoscopy(viewOrigin: Vector, viewAngles: Angle): void;
-
-/**
- * Renders the Super Depth of Field post-process effect 
- * @param viewOrigin  Origin to render the effect at 
- * @param viewAngles  Angles to render the effect at 
- * @param viewFOV  Field of View to render the effect at 
- */
-declare function RenderSuperDoF(viewOrigin: Vector, viewAngles: Angle, viewFOV: number): void;
-
-/**
- * First tries to load a binary module with the given name, if unsuccessful, it tries to load a Lua module with the given name.
- * 
- * **Bug [#1041](https://github.com/Facepunch/garrysmod-issues/issues/1041):**
- * >Request=813 
- * @param name  The name of the module to be loaded. 
- */
-declare function require(name: string): void;
-
-/**
- * Restores position of your cursor on screen. You can save it by using {{GlobalFunction|RememberCursorPosition}}.
- * 
- * Despite this function being available on server, it will not do anything on server. 
- */
-declare function RestoreCursorPosition(): void;
-
-/**
- * Executes the given console command with the parameters.
- * 
- * **Note:**
- * >Some commands/convars are blocked from being ran/changed using this function, usually to prevent harm/annoyance to clients. For a list of blocked commands, see [[Blocked ConCommands]]. 
- * @param command  The command to be executed. 
- * @param arguments  The arguments. Note, that unlike {{ClassFunction|Player|ConCommand}}, you must pass each argument as a new string, not separating them with a space. 
- * @example
- * 
- * RunConsoleCommand("sv_gravity", "400")
- * 
- * // Changes the gravity to 400 (default 600). 
- */
-declare function RunConsoleCommand(command: string, ...arguments: (any)[]): void;
-
-/**
- * Runs a menu command. Equivalent to {{GlobalFunction|RunConsoleCommand}}( "gamemenucommand", command ) unless the command starts with the "engine" keyword in which case it is equivalent to {{GlobalFunction|RunConsoleCommand}}( command ). 
- * @param command  The menu command to run
- * 
- * Should be one of the following:
- * * Disconnect - Disconnects from the current server.
- * * OpenBenchmarkDialog - Opens the "Video Hardware Stress Test" dialog.
- * * OpenChangeGameDialog - Does not work in GMod.
- * * OpenCreateMultiplayerGameDialog - Opens the Source dialog for creating a listen server.
- * * OpenCustomMapsDialog - Does nothing.
- * * OpenFriendsDialog - Does nothing.
- * * OpenGameMenu - Does not work in GMod.
- * * OpenLoadCommentaryDialog - Opens the "Developer Commentary" selection dialog. Useless in GMod.
- * * OpenLoadDemoDialog - Does nothing.
- * * OpenLoadGameDialog - Opens the Source "Load Game" dialog.
- * * OpenNewGameDialog - Opens the "New Game" dialog. Useless in GMod.
- * * OpenOptionsDialog - Opens the options dialog.
- * * OpenPlayerListDialog - Opens the "Mute Players" dialog that shows all players connected to the server and allows to mute them.
- * * OpenSaveGameDialog - Opens the Source "Save Game" dialog.
- * * OpenServerBrowser - Opens the legacy server browser.
- * * Quit - Quits the game ''without'' confirmation (unlike other Source games).
- * * QuitNoConfirm - Quits the game without confirmation (like other Source games).
- * * ResumeGame - Closes the menu and returns to the game.
- * * engine <concommand> - Runs a console command. Equivalent to {{GlobalFunction|RunConsoleCommand}}( <concommand> ). 
- * @example
- * 
- * RunGameUICommand( "OpenOptionsDialog" )
- * 
- * // Opens the options dialog.@example
- * 
- * RunGameUICommand( "engine gameui_hide" )
- * 
- * // Hides the game UI (menu). Equivalent to {{GlobalFunction|RunConsoleCommand}}( "gameui_hide" ) 
- */
-declare function RunGameUICommand(command: string): void;
-
-/**
- * Evaluates and executes the given code, will throw an error on failure.
- * **Note:**
- * >Local variables are not passed to the given code. 
- * @param code  The code to execute. 
- * @param identifier [="RunString"] The name that should appear in any error messages caused by this code. 
- * @param handleError [=true] If false, this function will return a string containing any error messages instead of throwing an error. 
- * @returns If handleError is false, the error message (if any). 
- */
-declare function RunString(code: string, identifier?: string, handleError?: boolean): string;
-
-/**
- * Alias of {{GlobalFunction|RunString}}.
- * 
- * **Deprecated:**
- * >Use {{GlobalFunction|RunString}} instead. 
- */
-declare function RunStringEx(): void;
-
-/**
- * Removes the given entity unless it is a player or the world entity 
- * @param ent  Entity to safely remove. 
- */
-declare function SafeRemoveEntity(ent: Entity): void;
-
-/**
- * Removes entity after delay using {{GlobalFunction|SafeRemoveEntity}} 
- * @param entity  Entity to be removed 
- * @param delay  Delay for entity removal in seconds 
- */
-declare function SafeRemoveEntityDelayed(entity: Entity, delay: number): void;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * This function is used to save the last map and category to which the map belongs as a [[:Category:cookie|cookie]]. 
- * @param map  The name of the map. 
- * @param category  The name of the category to which this map belongs. 
- */
-declare function SaveLastMap(map: string, category: string): void;
-
-/**
- * Overwrites all presets with the supplied table. Used by the {{Lib|presets}} for preset saving 
- * @param presets  Presets to be saved 
- */
-declare function SavePresets(presets: table): void;
-
-/**
- * Returns a number based on the Size argument and your screen's width. The screen's width is always equal to size 640. This function is primarily used for scaling font sizes. 
- * @param Size  The number you want to scale. 
- * @example
- * 
- * print( ScreenScale(96) )
- * print( ScreenScale(400) )
- * print( ScreenScale(640) )
- * 
- * // Prints a scaled number based on the number 96, 400 and 640. 
- */
-declare function ScreenScale(Size: number): void;
-
-/**
- * Gets the height of the game's window (in pixels). 
- * @returns The height of the game's window in pixels 
- * @example
- * 
- * print(ScrH())
- * 
- * // Prints the Height of the window.@example
- * 
- * hook.Add("HUDPaint", "WhiteBox", function()
- *     surface.SetDrawColor(Color(255,255,255,255))
- *     surface.DrawRect(0, 0, ScrW() / 2, ScrH() / 2)
- * end)
- * 
- * // Draws a white box on the top left corner of your screen 
- */
-declare function ScrH(): number;
-
-/**
- * Gets the width of the game's window (in pixels). 
- * @returns The width of the game's window in pixels 
- * @example
- * 
- * print( ScrW() )
- * 
- * // Prints the width of the screen 
- */
-declare function ScrW(): number;
-
-/**
- * Used to select single values from a vararg or get the count of values in it. 
- * @param parameter  Can be a {{Type|number}} or {{Type|string}}.
- * * If it's a string and starts with "#", the function will return the amount of values in the vararg (ignoring the rest of the string).
- * * If it's a positive number, the function will return all values starting from the given index.
- * * If the number is negative, it will return the amount specified from the end instead of the beginning. 
- * @param vararg  The vararg. These are the values from which you want to select. 
- * @returns Returns a {{Type|number}} or {{Type|vararg}}, depending on the select method. 
- * @example
- * 
- * print( select( '#', 'a', true, false, {}, 1 ) )
- * 
- * // This code shows how it works with the "#" modifier:@example
- * 
- * print( select( 2, 1, 2, 3, 4, 5 ) )
- * 
- * // This prints from the 2nd vararg passed to the last@example
- * 
- * print( select( -2, 1, 2, 3, 4, 5 ) )
- * 
- * // This prints the last 2 arguments passed 
- */
-declare function select(parameter: number | string, ...vararg: (any)[]): number | any;
-
-/**
- * Send a usermessage 
- * @param name  The name of the usermessage 
- * @param recipients  Can be a {{Type|CRecipientFilter}}, {{Type|table}} or {{Type|Player}} object. 
- * @param args  Data to send in the usermessage 
- */
-declare function SendUserMessage(name: string, recipients: CRecipientFilter | table | Player, ...args: (any)[]): void;
-
-/**
- * Prints "ServerLog: PARAM" without a newline, to the server log and console. 
- * @param parameter  The value to be printed to console. 
- */
-declare function ServerLog(parameter: string): void;
-
-/**
- * Adds the given string to the computers clipboard, which can then be pasted in or outside of GMod with Ctrl + V. 
- * @param text  The text to add to the clipboard. 
- */
-declare function SetClipboardText(text: string): void;
-
-/**
- * Sets the enviroment for a function or a stack level, if a function is passed, the return value will be the function, otherwise nil. 
- * @param location  The function to set the enviroment for or a number representing stack level. 
- * @param enviroment  Table to be used as enviroment. 
- */
-declare function setfenv(location: Function, enviroment: table): void;
-
-/**
- * Defines an angle to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global angle with 
- * @param angle  Angle to be networked 
- */
-declare function SetGlobalAngle(index: any, angle: Angle): void;
-
-/**
- * Defined a boolean to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global boolean with 
- * @param bool  Boolean to be networked 
- */
-declare function SetGlobalBool(index: any, bool: boolean): void;
-
-/**
- * Defines an entity to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global entity with 
- * @param ent  Entity to be networked 
- */
-declare function SetGlobalEntity(index: any, ent: Entity): void;
-
-/**
- * Defines a floating point number to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global float with 
- * @param float  Float to be networked 
- */
-declare function SetGlobalFloat(index: any, float: number): void;
-
-/**
- * Sets an integer that is shared between the server and all clients.
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on!
- * 
- * **Bug [#3374](https://github.com/Facepunch/garrysmod-issues/issues/3374):**
- * >This function will not round decimal values as it actually networks a float internally. 
- * @param index  The unique index to identify the global value with. 
- * @param value  The value to set the global value to 
- * @example
- * 
- * SetGlobalInt("RoundNumber", 4)
- * 
- * // Sets the current round number. 
- */
-declare function SetGlobalInt(index: string, value: number): void;
-
-/**
- * Defines a string with a maximum of 199 characters to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global string with 
- * @param str  String to be networked 
- */
-declare function SetGlobalString(index: any, str: string): void;
-
-/**
- * Defines a vector to be automatically networked to clients
- * 
- * **Note:**
- * >Running this function clientside will only set it clientside for the client it is called on! 
- * @param index  Index to identify the global vector with 
- * @param vec  Vector to be networked 
- */
-declare function SetGlobalVector(index: any, vec: Vector): void;
-
-/**
- * Sets, changes or removes a table's metatable. Returns Tab (the first argument). 
- * @param Tab  The table who's metatable to change. 
- * @param Metatable  The metatable to assign.
- * If it's nil, the metatable will be removed. 
- * @returns The first argument. 
- * @example
- * 
- * local Pupil_meta = {
- * 	GetName = function(self)
- * 		return self.name
- * 	end
- * }
- * Pupil_meta.__index = Pupil_meta
- * // If a key cannot be found in an object, it will look in it's metatable's __index metamethod.
- * 
- * local Pupil = {
- * 	name = "John Doe"
- * }
- * 
- * setmetatable(Pupil, Pupil_meta)
- * 
- * print( Pupil:GetName() )
- * // This will look for the "GetName" key in Pupil, but it doesn't have one. So it will look in it's metatable (Pupil_meta) __index key instead.
- * 
- * // Creates a metatable and assigns it to a table. 
- */
-declare function setmetatable(Tab: table, Metatable: table): table;
-
-/**
- * Called by the engine to set which constraint system [https://developer.valvesoftware.com/wiki/Phys_constraintsystem] the next created constraints should use 
- * @param constraintSystem  Constraint system to use 
- */
-declare function SetPhysConstraintSystem(constraintSystem: Entity): void;
-
-/**
- * This function can be used in a for loop instead of {{GlobalFunction|pairs}}. It sorts all '''keys''' alphabetically.
- * 
- * For sorting by specific '''value member''', use {{GlobalFunction|SortedPairsByMemberValue}}.
- * 
- * For sorting by '''value''', use {{GlobalFunction|SortedPairsByValue}}. 
- * @param table  The table to sort 
- * @param desc [=false] Reverse the sorting order 
- * @returns [Iterator function, The table being iterated over] 
- * @example
- * 
- * for id, text in SortedPairs( { "e", "b", "d", "c", "a" } ) do
- *     print(id, text)
- * end
- * 
- * print( "//-" )
- * 
- * for id, text in SortedPairs( { e = 1, b = 2, d = 3, c = 4, a = 5 } ) do
- *     print(id, text)
- * end
- * 
- * // Example of usage. 
- */
-declare function SortedPairs(table: table, desc?: boolean): [Function, table];
-
-/**
- * Returns an iterator function that can be used to loop through a table in order of member values, when the values of the table are also tables and contain that member.
- * 
- * To sort by '''value''', use {{GlobalFunction|SortedPairsByValue}}.
- * 
- * To sort by '''keys''', use {{GlobalFunction|SortedPairs}}. 
- * @param table  Table to create iterator for. 
- * @param memberKey  Key of the value member to sort by. 
- * @param descending [=false] Whether the iterator should iterate in descending order or not. 
- * @returns [Iterator function, The table the iterator was created for.] 
- * @example
- * 
- * local tab = {
- * 	{
- * 		Name = "Adam",
- * 		Age = 16
- * 	},
- * 	{
- * 		Name = "Charles",
- * 		Age = 18
- * 	}
- * }
- * 
- * for k, v in SortedPairsByMemberValue(tab, "Age", true) do
- * 	print(v.Name)
- * end
- * 
- * // Creates a table and prints its contents in order of the age member descending 
- */
-declare function SortedPairsByMemberValue(table: table, memberKey: any, descending?: boolean): [Function, table];
-
-/**
- * Returns an iterator function that can be used to loop through a table in order of its '''values'''.
- * 
- * To sort by specific '''value member''', use {{GlobalFunction|SortedPairsByMemberValue}}.
- * 
- * To sort by '''keys''', use {{GlobalFunction|SortedPairs}}. 
- * @param table  Table to create iterator for 
- * @param descending [=false] Whether the iterator should iterate in descending order or not 
- * @returns [Iterator function, The table which will be iterated over] 
- */
-declare function SortedPairsByValue(table: table, descending?: boolean): [Function, table];
-
-/**
- * Runs {{LibraryFunction|util|PrecacheSound}} and returns the string 
- * @param soundPath  The soundpath to precache 
- * @returns The string passed as the first argument 
- * @example
- * 
- * local BounceSound = Sound( "garrysmod/balloon_pop_cute.wav" )
- * function ENT:PhysicsCollide( data, physobj )
- *  // Play sound on bounce
- *  if ( data.Speed > 60 && data.DeltaTime > 0.2 ) then
- *  sound.Play( BounceSound, self:GetPos(), 75, math.random( 90, 120 ), math.Clamp( data.Speed / 150, 0, 1 ) )
- *  ...
- * 
- * // From entities/sent_ball.lua 
- */
-declare function Sound(soundPath: string): string;
-
-/**
- * Returns the duration of the sound specified in seconds.
- * 
- * **Bug [#936](https://github.com/Facepunch/garrysmod-issues/issues/936):**
- * >This only works properly for .wav files serverside. 
- * @param soundName  The sound file path. 
- * @returns Sound duration in seconds. 
- */
-declare function SoundDuration(soundName: string): number;
-
-/**
- * Returns the input value in an escaped form so that it can safely be used inside of queries. The returned value is surrounded by quotes unless noQuotes is true. Alias of {{LibraryFunction|sql|SQLStr}} 
- * @param input  String to be escaped 
- * @param noQuotes [=false] Whether the returned value should be surrounded in quotes or not 
- * @returns Escaped input 
- */
-declare function SQLStr(input: string, noQuotes?: boolean): string;
-
-/**
- * **Deprecated:**
- * >You should be using {{GlobalFunction|ScreenScale}} instead.
- * 
- * Returns a number based on the Size argument and your screen's width. Alias of {{GlobalFunction|ScreenScale}}. 
- * @param Size  The number you want to scale. 
- * @example
- * 
- * print( SScale(40) )
- * 
- * // Prints a scaled number based on the number 40. 
- */
-declare function SScale(Size: number): void;
-
-/**
- * Returns the ordinal suffix of a given number. 
- * @param number  The number to find the ordinal suffix of. 
- * @returns suffix 
- * @example
- * 
- * print( 72 .. STNDRD(72) )
- * 
- * // Returns the ordinal suffix of 72. 
- */
-declare function STNDRD(number: number): string;
-
-/**
- * Suppress any networking from the server to the specified player. This is automatically called by the engine before/after a player fires their weapon, reloads, or causes any other similar shared-predicted event to occur. 
- * @param suppressPlayer  The player to suppress any networking to. 
- */
-declare function SuppressHostEvents(suppressPlayer: Player): void;
-
-/**
- * Returns a highly accurate time in seconds since the start up, ideal for benchmarking. 
- * @returns Uptime of the server. 
- * @example
- * 
- * print(SysTime())
- * 
- * // Prints the runtime@example
- * 
- * local SysTime = SysTime
- * local Distance = FindMetaTable("Vector").Distance
- * 
- * local vec1 = Vector(1, 2, 3)
- * local vec2 = Vector(13, 26, -10)
- * 
- * local count = 10000
- * 
- * local StartTime = SysTime()
- * 
- * for i = 1, count do
- * 	// Repeat an action 10,000 times to check how long it takes on average
- * 	// Example action:
- * 	Distance(vec1 , vec2)
- * end
- * 
- * local EndTime = SysTime()
- * local TotalTime = EndTime - StartTime
- * local AverageTime = TotalTime / count
- * 
- * print("Total: " .. TotalTime .. " seconds. Average: " .. AverageTime .. " seconds.")
- * 
- * // Typical usage of this function for benchmarking 
- */
-declare function SysTime(): number;
-
-/**
- * Returns a TauntCamera object 
- * @returns TauntCamera 
- */
-declare function TauntCamera(): table;
-
-/**
- * Clears focus from any text entries player may have focused. 
- */
-declare function TextEntryLoseFocus(): void;
-
-/**
- * Returns a cosine value that fluctuates based on the current time 
- * @param frequency  The frequency of fluctuation 
- * @param min  Minimum value 
- * @param max  Maxmimum value 
- * @param offset  Offset variable that doesn't affect the rate of change, but causes the returned value to be offset by time 
- * @returns Cosine value 
- */
-declare function TimedCos(frequency: number, min: number, max: number, offset: number): number;
-
-/**
- * Returns a sine value that fluctuates based on {{GlobalFunction|CurTime}}. The value returned will be between the start value plus/minus the range value.
- * 
- * Due to a bug, the range arguments don't work as intended. The existing (bugged) behavior is documented below. 
- * @param frequency  The frequency of fluctuation, in [[wikipedia:hertz|hertz]] 
- * @param origin  The center value of the sine wave. 
- * @param max  This argument's distance from origin defines the size of the full range of the sine wave. For example, if origin is 3 and max is 5, then the full range of the sine wave is 5-3 = 2. 3 is the center point of the sine wave, so the sine wave will range between 2 and 4. 
- * @param offset  Offset variable that doesn't affect the rate of change, but causes the returned value to be offset by time 
- * @returns Sine value 
- */
-declare function TimedSin(frequency: number, origin: number, max: number, offset: number): number;
-
-/**
- * Attempts to return an appropriate boolean for the given value 
- * @param val  The object to be converted to a boolean 
- * @returns '''false''' for the boolean false.
- * '''false''' for "false".
- * '''false''' for "0".
- * '''false''' for numeric 0.
- * '''false''' for nil.
- * 
- * '''true''' otherwise. 
- * @example
- * 
- * print("boolean true:", tobool(true))
- * print("boolean false:", tobool(false))
- * print("string true:", tobool("true"))
- * print("string false:", tobool("false"))
- * print("numeric 0:", tobool(0))
- * print("string 0:", tobool("0"))
- * print("string 1:", tobool("1"))
- * print("nil:", tobool(nil))
- * print("text string:", tobool("not a boolean"))
- * print("empty string:", tobool(""))
- * 
- * // Demonstrate the output of this function with various values. 
- */
-declare function tobool(val: any): boolean;
-
-/**
- * Toggles whether or not the named map is favorited in the new game list. 
- * @param map  Map to toggle favorite. 
- */
-declare function ToggleFavourite(map: string): void;
-
-/**
- * Attempts to convert the value to a number.
- * 
- * Returns nil on failure. 
- * @param value  The value to convert. Can be a number or string. 
- * @param base [=10] The [[wikipedia:Radix|numeric base]] used in the string. Can be any integer between 2 and 36, inclusive. 
- * @returns The numeric representation of the value with the given base, or nil if the conversion failed. 
- */
-declare function tonumber(value: any, base?: number): number;
-
-/**
- * Attempts to convert the value to a string. If the value is an object and its metatable has defined the __tostring metamethod, this will call that function.
- * 
- * {{GlobalFunction|print}} also uses this functionality. 
- * @param value  The object to be converted to a string. 
- * @returns The string representation of the value. 
- * @example
- * 
- * print(tostring(0x16))
- * 
- * // Convert a number to a string. 
- */
-declare function tostring(value: any): string;
-
-/**
- * **Deprecated!**
- * 
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
- * @param filename  File name to test 
- * @returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
- */
-declare function TranslateDownloadableName(filename: string): string;
-
-/**
- * Returns a string representing the name of the type of the passed object. 
- * @param variable  The object to get the type of. 
- * @returns The name of the object's type. 
- * @example
- * 
- * print( type(2) )
- * print( type("hai") )
- * print( type({}) )
- * 
- * // Print the name of a few types.@example
- * 
- * print( type() )
- * 
- * // Returns "no value" if called with 0 arguments/parameters. 
- */
-declare function type(variable: any): string;
-
-/**
- * Gets the associated type ID of the variable.
- * 
- * **Bug [#1120](https://github.com/Facepunch/garrysmod-issues/issues/1120):**
- * >This does not work properly with _LOADLIB objects. 
- * @param variable  The variable to get the type ID of. 
- * @returns The type ID of the variable. See the {{Enum|TYPE}}. 
- */
-declare function TypeID(variable: any): TYPE;
-
-/**
- * This function takes a numeric indexed table and return all the members as a vararg. If specified, it will start at the given index and end at end index. 
- * @param tbl  The table to generate the vararg from. 
- * @param startIndex [=1] Which index to start from. Optional. 
- * @param endIndex [=#tbl] Which index to end at. Optional, even if you set StartIndex. 
- * @returns Output values 
- * @example
- * 
- * print( unpack{"a", "b", "c"} )
- * 
- * // Prints a vararg 
- */
-declare function unpack(tbl: table, startIndex?: number, endIndex?: number): any;
-
-/**
- * Returns the current asynchronous in-game time. 
- * @returns The asynchronous in-game time. 
- */
-declare function UnPredictedCurTime(): number;
-
-/**
- * Runs JavaScript on the loading screen panel ({{GlobalFunction|GetLoadPanel}}). 
- * @param javascript  JavaScript to run on the loading panel. 
- */
-declare function UpdateLoadPanel(javascript: string): void;
-
-/**
- * **Deprecated:**
- * >You should use {{GlobalFunction|IsUselessModel}} instead.
- * 
- * Returns whether or not a model is useless by checking that the file path is that of a proper model.
- * 
- * If the string ".mdl" is not found in the model name, the function will return true.
- * 
- * The function will also return true if any of the following strings are found in the given model name:
- * * "_gesture"
- * * "_anim"
- * * "_gst"
- * * "_pst"
- * * "_shd"
- * * "_ss"
- * * "_posture"
- * * "_anm"
- * * "ghostanim"
- * * "_paths"
- * * "_shared"
- * * "anim_"
- * * "gestures_"
- * * "shared_ragdoll_" 
- * @param modelName  The model name to be checked 
- * @returns Whether or not the model is useless 
- */
-declare function UTIL_IsUselessModel(modelName: string): boolean;
-
-/**
- * **Deprecated:**
- * >You should use {{GlobalFunction|IsValid}} instead
- * 
- * Returns if a panel is safe to use. 
- * @param panel  The panel to validate. 
- */
-declare function ValidPanel(panel: Panel): void;
-
-/**
- * Returns a random vector whose components are each between -1 and 1 
- * @returns The random direction vector 
- */
-declare function VectorRand(): Vector;
-
-/**
- * Returns the time in seconds it took to render the VGUI. 
- */
-declare function VGUIFrameTime(): void;
-
-/**
- * Creates and returns a {{Type|DShape}} rectangle GUI element with the given dimensions. 
- * @param x  X position of the created element 
- * @param y  Y position of the created element 
- * @param w  Width of the created element 
- * @param h  Height of the created element 
- * @returns {{Type|DShape}} element 
- */
-declare function VGUIRect(x: number, y: number, w: number, h: number): DShape;
-
-/**
- * Briefly displays layout details of the given panel on-screen 
- * @param panel  Panel to display layout details of 
- */
-declare function VisualizeLayout(panel: Panel): void;
-
-/**
- * **This is an internal function or feature.**
- * >This means you will be able to use it, but you really shouldn't.
- * 
- * Returns a new WorkshopFileBase element 
- * @param namespace  Namespace for the file base 
- * @param requiredTags  Tags required for a Workshop submission to be interacted with by the filebase 
- * @returns WorkshopFileBase element 
- */
-declare function WorkshopFileBase(namespace: string, requiredTags: table): table;
-
-/**
- * Translates the specified position and angle into the specified coordinate system. 
- * @param position  The position that should be translated from the current to the new system. 
- * @param angle  The angles that should be translated from the current to the new system. 
- * @param newSystemOrigin  The origin of the system to translate to. 
- * @param newSystemAngles  The angles of the system to translate to. 
- * @returns [Local position, Local angles] 
- */
-declare function WorldToLocal(position: Vector, angle: Angle, newSystemOrigin: Vector, newSystemAngles: Angle): [Vector, Angle];
-
-/**
- * Attempts to call the first function. If the execution succeeds, this returns ''true'' followed by the returns of the function. If execution fails, this returns ''false'' and the second function is called with the error message. 
- * 
- * Unlike in {{GlobalFunction|pcall}}, the stack is not unwound and can therefore be used for stack analyses with the {{Lib|debug}}.
- * 
- * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
- * >Using this function with {{GlobalFunction|include}} will break autorefresh.
- * 
- * **Bug [#2498](https://github.com/Facepunch/garrysmod-issues/issues/2498):**
- * >This does not stop {{GlobalFunction|Error}} and {{GlobalFunction|ErrorNoHalt}} from sending error messages to the server (if called clientside) or calling the {{HookFunction|GM|OnLuaError}} hook. The success boolean returned will always return true and thus you will not get the error message returned. {{GlobalFunction|error}} does not exhibit these behaviours.
- * 
- * **Bug [#3112](https://github.com/Facepunch/garrysmod-issues/issues/3112):**
- * >This does not stop errors incurred by {{GlobalFunction|include}}. 
- * @param func  The function to call initially. 
- * @param errorCallback  The function to be called if execution of the first fails; the error message is passed as a string.
- * 
- * You cannot throw an {{GlobalFunction|error}}() from this callback: it will have no effect (not even stopping the callback). 
- * @param arguments  Arguments to pass to the initial function. 
- * @returns [Status of the execution; ''true'' for success, ''false'' for failure., The returns of the first function if execution succeeded, otherwise the '''first''' return value of the error callback.] 
- * @example
- * 
- * local function test()
- * 	aisj()
- * end
- * 
- * local function catch( err )
- * 	print( "ERROR: ", err )
- * end
- * 
- * print( "Output: ", xpcall( test, catch ) )
- * 
- * // Using xpcall to catch an error. 
- */
-declare function xpcall(func: Function, errorCallback: Function, ...arguments: (any)[]): [boolean, any];
 
 /**
  * Similar purpose to the {{Lib|game}} and {{Lib|engine}}, allows access to various features of the game's engine. 
@@ -52810,6 +53103,7 @@ declare namespace gui {
     /**
      * Returns the cursor's position on the screen 
      * @returns [mouseX, mouseY] 
+     * !TupleReturn
      */
     function MousePos(): [number, number];
     
@@ -53429,7 +53723,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawViewModel", identifier: string | table | Entity | Panel | number | boolean, func: (viewmodel: Entity, player: Player, weapon: Weapon) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53470,7 +53764,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostGamemodeLoaded", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53511,7 +53805,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostPlayerDeath", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53552,7 +53846,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostPlayerDraw", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53593,7 +53887,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostProcessPermitted", identifier: string | table | Entity | Panel | number | boolean, func: (ppeffect: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53634,7 +53928,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostRender", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53675,7 +53969,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostRenderVGUI", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53716,7 +54010,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreCleanupMap", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53757,7 +54051,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawEffects", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53798,7 +54092,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawHalos", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53839,7 +54133,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawHUD", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53880,7 +54174,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawOpaqueRenderables", identifier: string | table | Entity | Panel | number | boolean, func: (isDrawingDepth: boolean, isDrawSkybox: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53921,7 +54215,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawPlayerHands", identifier: string | table | Entity | Panel | number | boolean, func: (hands: Entity, vm: Entity, ply: Player, weapon: Weapon) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -53962,7 +54256,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawSkyBox", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54003,7 +54297,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawTranslucentRenderables", identifier: string | table | Entity | Panel | number | boolean, func: (isDrawingDepth: boolean, isDrawSkybox: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54044,7 +54338,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreDrawViewModel", identifier: string | table | Entity | Panel | number | boolean, func: (vm: Entity, ply: Player, weapon: Weapon) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54085,7 +54379,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreGamemodeLoaded", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54126,7 +54420,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PrePlayerDraw", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54167,7 +54461,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreRender", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54208,7 +54502,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreventScreenClicks", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54249,7 +54543,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PropBreak", identifier: string | table | Entity | Panel | number | boolean, func: (attacker: Player, prop: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54290,7 +54584,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "RenderScene", identifier: string | table | Entity | Panel | number | boolean, func: (origin: Vector, angles: Angle, fov: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54331,7 +54625,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "RenderScreenspaceEffects", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54372,7 +54666,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Restored", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54413,7 +54707,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Saved", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54454,7 +54748,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ScaleNPCDamage", identifier: string | table | Entity | Panel | number | boolean, func: (npc: NPC, hitgroup: HITGROUP, dmginfo: CTakeDamageInfo) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54495,7 +54789,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ScalePlayerDamage", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, hitgroup: HITGROUP, dmginfo: CTakeDamageInfo) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54536,7 +54830,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ScoreboardHide", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54577,7 +54871,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ScoreboardShow", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54618,7 +54912,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawTranslucentRenderables", identifier: string | table | Entity | Panel | number | boolean, func: (bDrawingDepth: boolean, bDrawingSkybox: boolean) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54659,7 +54953,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawSkyBox", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54700,7 +54994,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawPlayerHands", identifier: string | table | Entity | Panel | number | boolean, func: (hands: Entity, vm: Entity, ply: Player, weapon: Weapon) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54741,7 +55035,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawOpaqueRenderables", identifier: string | table | Entity | Panel | number | boolean, func: (bDrawingDepth: boolean, bDrawingSkybox: boolean) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54782,7 +55076,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerLeaveVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, veh: Vehicle) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54823,7 +55117,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerLoadout", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54864,7 +55158,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerNoClip", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, desiredState: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54905,7 +55199,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerPostThink", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54946,7 +55240,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerRequestTeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, team: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -54987,7 +55281,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSay", identifier: string | table | Entity | Panel | number | boolean, func: (sender: Player, text: string, teamChat: boolean) => void | string): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55028,7 +55322,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSelectSpawn", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void | Entity): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55069,7 +55363,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSelectTeamSpawn", identifier: string | table | Entity | Panel | number | boolean, func: (team: number, ply: Player) => void | Entity): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55110,7 +55404,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSetHandsModel", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55151,7 +55445,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSetModel", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55192,7 +55486,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerShouldTakeDamage", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, attacker: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55233,7 +55527,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerShouldTaunt", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, act: ACT) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55274,7 +55568,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSilentDeath", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55315,7 +55609,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawn", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55356,7 +55650,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SetPlayerSpeed", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, walkSpeed: number, runSpeed: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55397,7 +55691,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnAsSpectator", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55438,7 +55732,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerStartTaunt", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, act: number, length: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55479,7 +55773,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerStartVoice", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55520,7 +55814,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerStepSoundTime", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, type: STEPSOUNDTIME, walking: boolean) => void | number): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55561,7 +55855,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSwitchFlashlight", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, enabled: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55602,7 +55896,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSwitchWeapon", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player, oldWeapon: Weapon, newWeapon: Weapon) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55643,7 +55937,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerTick", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player, mv: CMoveData) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55684,7 +55978,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerTraceAttack", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, dmginfo: CTakeDamageInfo, dir: Vector, trace: TraceResult) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55725,7 +56019,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerUnfrozeObject", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity, physobj: PhysObj) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55766,7 +56060,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerUse", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55807,7 +56101,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PopulateMenuBar", identifier: string | table | Entity | Panel | number | boolean, func: (menubar: DMenuBar) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55848,7 +56142,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostCleanupMap", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55889,7 +56183,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDraw2DSkyBox", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55930,7 +56224,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawEffects", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -55971,7 +56265,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostDrawHUD", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56012,7 +56306,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpray", identifier: string | table | Entity | Panel | number | boolean, func: (sprayer: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56053,7 +56347,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SetupMove", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, mv: CMoveData, cmd: CUserCmd) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56094,7 +56388,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SetupPlayerVisibility", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, viewEntity: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56135,7 +56429,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SetupSkyboxFog", identifier: string | table | Entity | Panel | number | boolean, func: (scale: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56176,7 +56470,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanProperty", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, property: string, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56217,7 +56511,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanTool", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, tr: TraceResult, tool: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56258,7 +56552,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ContentSidebarSelection", identifier: string | table | Entity | Panel | number | boolean, func: (parent: Panel, node: Panel) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56299,7 +56593,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ContextMenuCreated", identifier: string | table | Entity | Panel | number | boolean, func: (g_ContextMenu: Panel) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56340,7 +56634,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ContextMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56381,7 +56675,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PaintNotes", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56422,7 +56716,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PaintWorldTips", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56463,7 +56757,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PersistenceLoad", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56504,7 +56798,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PersistenceSave", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56545,7 +56839,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerGiveSWEP", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, weapon: string, swep: SWEP[]) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56586,7 +56880,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedEffect", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56627,7 +56921,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedNPC", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56668,7 +56962,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedProp", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string, entity: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56709,7 +57003,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedRagdoll", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56750,7 +57044,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanDrive", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56791,7 +57085,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedSENT", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56832,7 +57126,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56873,7 +57167,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnEffect", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56914,7 +57208,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnNPC", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, npc_type: string, weapon: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56955,7 +57249,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnObject", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string, skin: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -56996,7 +57290,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnProp", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57037,7 +57331,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnRagdoll", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57078,7 +57372,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnSENT", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, classRef: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57119,7 +57413,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnSWEP", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, weapon: string, swep: SWEP) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57160,7 +57454,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, model: string, name: string, table: table) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57201,7 +57495,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PopulatePropMenu", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57242,7 +57536,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PopulateSTOOLMenu", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57283,7 +57577,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PopulateToolMenu", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57324,7 +57618,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PostReloadToolsMenu", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57365,7 +57659,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PreReloadToolsMenu", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57406,7 +57700,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerSpawnedSWEP", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57447,7 +57741,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerJoinTeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, team: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57488,7 +57782,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AddToolMenuTabs", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57529,7 +57823,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AddGamemodeToolMenuTabs", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57570,7 +57864,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SetupWorldFog", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57611,7 +57905,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShouldCollide", identifier: string | table | Entity | Panel | number | boolean, func: (ent1: Entity, ent2: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57652,7 +57946,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShouldDrawLocalPlayer", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57693,7 +57987,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShowHelp", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57734,7 +58028,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShowSpare1", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57775,7 +58069,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShowSpare2", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57816,7 +58110,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShowTeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57857,7 +58151,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ShutDown", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57898,7 +58192,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SpawniconGenerated", identifier: string | table | Entity | Panel | number | boolean, func: (lastmodel: string, imagename: string, modelsleft: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57939,7 +58233,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "StartChat", identifier: string | table | Entity | Panel | number | boolean, func: (isTeamChat: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -57980,7 +58274,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "StartCommand", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ucmd: CUserCmd) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58021,7 +58315,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "StartEntityDriving", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58062,7 +58356,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "StartGame", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58103,7 +58397,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Think", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58144,7 +58438,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AddToolMenuCategories", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58185,7 +58479,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Tick", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58226,7 +58520,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "UpdateAnimation", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number, maxSeqGroundSpeed: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58267,7 +58561,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "VariableEdited", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, ply: Player, key: string, val: string, editor: table) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58308,7 +58602,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "VehicleMove", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, veh: Vehicle, mv: CMoveData) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58349,7 +58643,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "VGUIMousePressAllowed", identifier: string | table | Entity | Panel | number | boolean, func: (button: MOUSE) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58390,7 +58684,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "VGUIMousePressed", identifier: string | table | Entity | Panel | number | boolean, func: (pnl: Panel, mouseCode: MOUSE) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58431,7 +58725,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WeaponEquip", identifier: string | table | Entity | Panel | number | boolean, func: (weapon: Weapon, owner: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58472,7 +58766,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopDownloadedFile", identifier: string | table | Entity | Panel | number | boolean, func: (id: number, title: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58513,7 +58807,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopDownloadFile", identifier: string | table | Entity | Panel | number | boolean, func: (id: number, imageID: number, title: string, size: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58554,7 +58848,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopDownloadProgress", identifier: string | table | Entity | Panel | number | boolean, func: (id: number, imageID: number, title: string, downloaded: number, expected: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58595,7 +58889,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopDownloadTotals", identifier: string | table | Entity | Panel | number | boolean, func: (remain: number, total: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58636,7 +58930,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopEnd", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58677,7 +58971,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopStart", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58718,7 +59012,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "WorkshopSubscriptionsProgress", identifier: string | table | Entity | Panel | number | boolean, func: (num: number, max: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58759,7 +59053,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AddGamemodeToolMenuCategories", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58800,7 +59094,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "TranslateActivity", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, act: ACT) => void | number): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58841,7 +59135,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SpawnMenuEnabled", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58882,7 +59176,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerInitialSpawn", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58923,7 +59217,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerFrozeObject", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity, physobj: PhysObj) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -58964,7 +59258,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityRemoved", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59005,7 +59299,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityTakeDamage", identifier: string | table | Entity | Panel | number | boolean, func: (target: Entity, dmg: CTakeDamageInfo) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59046,7 +59340,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "FindUseEntity", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, defaultEnt: Entity) => void | Entity): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59087,7 +59381,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "FinishChat", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59128,7 +59422,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "FinishMove", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, mv: CMoveData) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59169,7 +59463,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ForceDermaSkin", identifier: string | table | Entity | Panel | number | boolean, func: () => void | string): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59210,7 +59504,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GameContentChanged", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59251,7 +59545,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetFallDamage", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, speed: number) => void | number): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59292,7 +59586,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetGameDescription", identifier: string | table | Entity | Panel | number | boolean, func: () => void | string): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59333,7 +59627,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetMotionBlurValues", identifier: string | table | Entity | Panel | number | boolean, func: (horizontal: number, vertical: number, forward: number, rotational: number) => void | number): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59374,7 +59668,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetPreferredCarryAngles", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity) => void | Angle): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59415,7 +59709,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetTeamColor", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity) => void | table): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59456,7 +59750,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GetTeamNumColor", identifier: string | table | Entity | Panel | number | boolean, func: (team: number) => void | table): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59497,7 +59791,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityNetworkedVarChanged", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, name: string, oldval: any, newval: any) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59538,7 +59832,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GrabEarAnimation", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59579,7 +59873,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GravGunOnPickedUp", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59620,7 +59914,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GravGunPickupAllowed", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59661,7 +59955,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GravGunPunt", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59702,7 +59996,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GUIMouseDoublePressed", identifier: string | table | Entity | Panel | number | boolean, func: (mouseCode: MOUSE, aimVector: Vector) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59743,7 +60037,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GUIMousePressed", identifier: string | table | Entity | Panel | number | boolean, func: (mouseCode: MOUSE, aimVector: Vector) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59784,7 +60078,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GUIMouseReleased", identifier: string | table | Entity | Panel | number | boolean, func: (mouseCode: MOUSE, aimVector: Vector) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59825,7 +60119,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerDriving", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59866,7 +60160,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerDucking", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59907,7 +60201,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerJumping", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59948,7 +60242,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerLanding", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number, onGround: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -59989,7 +60283,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerNoClipping", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60030,7 +60324,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerSwimming", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60071,7 +60365,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HandlePlayerVaulting", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60112,7 +60406,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "GravGunOnDropped", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60153,7 +60447,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityKeyValue", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, key: string, value: string) => void | string): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60194,7 +60488,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityFireBullets", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, data: Bullet) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60235,7 +60529,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EntityEmitSound", identifier: string | table | Entity | Panel | number | boolean, func: (data: EmitSoundInfo) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60276,7 +60570,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AcceptInput", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, input: string, activator: Entity, caller: Entity, value: any) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60317,7 +60611,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AddDeathNotice", identifier: string | table | Entity | Panel | number | boolean, func: (attacker: string, attackerTeam: number, inflictor: string, victim: string, victimTeam: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60358,7 +60652,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AdjustMouseSensitivity", identifier: string | table | Entity | Panel | number | boolean, func: (defaultSensitivity: number) => void | number): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60399,7 +60693,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "AllowPlayerPickup", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60440,7 +60734,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CalcMainActivity", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, vel: Vector) => void | ACT): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60481,7 +60775,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CalcVehicleView", identifier: string | table | Entity | Panel | number | boolean, func: (veh: Vehicle, ply: Player, view: CamData) => void | CamData): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60522,7 +60816,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CalcView", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, origin: Vector, angles: Angle, fov: number, znear: number, zfar: number) => void | CamData): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60563,7 +60857,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CalcViewModelView", identifier: string | table | Entity | Panel | number | boolean, func: (wep: Weapon, vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle) => void | Vector): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60604,7 +60898,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanEditVariable", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, ply: Player, key: string, val: string, editor: table) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60645,7 +60939,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanExitVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (veh: Vehicle, ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60686,7 +60980,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanPlayerEnterVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player, vehicle: Vehicle, role: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60727,7 +61021,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanPlayerSuicide", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60768,7 +61062,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CanPlayerUnfreeze", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player, entity: Entity, phys: PhysObj) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60809,7 +61103,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CaptureVideo", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60850,7 +61144,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ChatText", identifier: string | table | Entity | Panel | number | boolean, func: (index: number, name: string, text: string, type: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60891,7 +61185,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "ChatTextChanged", identifier: string | table | Entity | Panel | number | boolean, func: (text: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60932,7 +61226,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CheckPassword", identifier: string | table | Entity | Panel | number | boolean, func: (steamID64: string, ipAddress: string, svPassword: string, clPassword: string, name: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -60973,7 +61267,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CloseDermaMenus", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61014,7 +61308,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CreateClientsideRagdoll", identifier: string | table | Entity | Panel | number | boolean, func: (entity: Entity, ragdoll: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61055,7 +61349,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CreateEntityRagdoll", identifier: string | table | Entity | Panel | number | boolean, func: (owner: Entity, ragdoll: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61096,7 +61390,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CreateMove", identifier: string | table | Entity | Panel | number | boolean, func: (cmd: CUserCmd) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61137,7 +61431,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "CreateTeams", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61178,7 +61472,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DoAnimationEvent", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, event: PLAYERANIMEVENT, data?: ACT) => void | ACT): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61219,7 +61513,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DoPlayerDeath", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, attacker: Entity, dmg: CTakeDamageInfo) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61260,7 +61554,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DrawDeathNotice", identifier: string | table | Entity | Panel | number | boolean, func: (x: number, y: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61301,7 +61595,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DrawMonitors", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61342,7 +61636,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DrawOverlay", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61383,7 +61677,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "DrawPhysgunBeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, physgun: Weapon, enabled: boolean, target: Entity, physBone: number, hitPos: PhysObj) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61424,7 +61718,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "EndEntityDriving", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61465,7 +61759,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerHurt", identifier: string | table | Entity | Panel | number | boolean, func: (victim: Player, attacker: Entity, healthRemaining: number, damageTaken: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61506,7 +61800,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDAmmoPickedUp", identifier: string | table | Entity | Panel | number | boolean, func: (itemName: string, amount: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61547,7 +61841,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HideTeam", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61588,7 +61882,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDDrawScoreBoard", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61629,7 +61923,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDDrawPickupHistory", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61670,7 +61964,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnReloaded", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61711,7 +62005,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnSpawnMenuClose", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61752,7 +62046,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnSpawnMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61793,7 +62087,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnTextEntryGetFocus", identifier: string | table | Entity | Panel | number | boolean, func: (panel: Panel) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61834,7 +62128,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnTextEntryLoseFocus", identifier: string | table | Entity | Panel | number | boolean, func: (panel: Panel) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61875,7 +62169,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnUndo", identifier: string | table | Entity | Panel | number | boolean, func: (name: string, customText: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61916,7 +62210,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnViewModelChanged", identifier: string | table | Entity | Panel | number | boolean, func: (viewmodel: Entity, oldModel: string, newModel: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61957,7 +62251,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PhysgunDrop", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -61998,7 +62292,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PhysgunPickup", identifier: string | table | Entity | Panel | number | boolean, func: (player: Player, entity: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62039,7 +62333,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerAuthed", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, steamid: string, uniqueid: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62080,7 +62374,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerBindPress", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, bind: string, pressed: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62121,7 +62415,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerButtonDown", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, button: BUTTON_CODE) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62162,7 +62456,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerButtonUp", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, button: BUTTON_CODE) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62203,7 +62497,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerCanHearPlayersVoice", identifier: string | table | Entity | Panel | number | boolean, func: (listener: Player, talker: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62244,7 +62538,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerCanJoinTeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, team: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62285,7 +62579,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerCanPickupItem", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, item: Entity) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62326,7 +62620,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerCanPickupWeapon", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, wep: Weapon) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62367,7 +62661,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerCanSeePlayersChat", identifier: string | table | Entity | Panel | number | boolean, func: (text: string, teamOnly: boolean, listener: Player, speaker: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62408,7 +62702,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerConnect", identifier: string | table | Entity | Panel | number | boolean, func: (name: string, ip: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62449,7 +62743,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDeath", identifier: string | table | Entity | Panel | number | boolean, func: (victim: Player, inflictor: Entity, attacker: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62490,7 +62784,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDeathSound", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62531,7 +62825,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDeathThink", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62572,7 +62866,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDisconnected", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62613,7 +62907,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDriveAnimate", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62654,7 +62948,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerDroppedWeapon", identifier: string | table | Entity | Panel | number | boolean, func: (owner: Player, wep: Weapon) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62695,7 +62989,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerEndVoice", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62736,7 +63030,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerEnteredVehicle", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, veh: Vehicle, role: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62777,7 +63071,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "PlayerFootstep", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, pos: Vector, foot: number, sound: string, volume: number, filter: CRecipientFilter) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62818,7 +63112,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnPlayerChat", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, text: string, teamChat: boolean, isDead: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62859,7 +63153,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnPlayerChangedTeam", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, oldTeam: number, newTeam: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62900,7 +63194,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnPlayerHitGround", identifier: string | table | Entity | Panel | number | boolean, func: (player: Entity, inWater: boolean, onFloater: boolean, speed: number) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62941,7 +63235,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnPhysgunFreeze", identifier: string | table | Entity | Panel | number | boolean, func: (weapon: Entity, physobj: PhysObj, ent: Entity, ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -62982,7 +63276,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDDrawTargetID", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63023,7 +63317,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDItemPickedUp", identifier: string | table | Entity | Panel | number | boolean, func: (itemName: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63064,7 +63358,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDPaint", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63105,7 +63399,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDPaintBackground", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63146,7 +63440,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDShouldDraw", identifier: string | table | Entity | Panel | number | boolean, func: (name: string) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63187,7 +63481,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "HUDWeaponPickedUp", identifier: string | table | Entity | Panel | number | boolean, func: (weapon: Weapon) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63228,7 +63522,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Initialize", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63269,7 +63563,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "InitPostEntity", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63310,7 +63604,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "InputMouseApply", identifier: string | table | Entity | Panel | number | boolean, func: (cmd: CUserCmd, x: number, y: number, ang: Angle) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63351,7 +63645,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "IsSpawnpointSuitable", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, spawnpoint: Entity, makeSuitable: boolean) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63392,7 +63686,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "KeyPress", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, key: IN) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63433,7 +63727,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "KeyRelease", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, key: IN) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63474,7 +63768,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnPhysgunReload", identifier: string | table | Entity | Panel | number | boolean, func: (physgun: Weapon, ply: Player) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63515,7 +63809,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "MenuStart", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63556,7 +63850,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "LoadGModSave", identifier: string | table | Entity | Panel | number | boolean, func: (data: string, map: string, timestamp: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63597,7 +63891,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "Move", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, mv: CMoveData) => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63638,7 +63932,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnNPCKilled", identifier: string | table | Entity | Panel | number | boolean, func: (npc: NPC, attacker: Entity, inflictor: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63679,7 +63973,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnLuaError", identifier: string | table | Entity | Panel | number | boolean, func: (error: string, realm: number, name: string, id: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63720,7 +64014,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnGamemodeLoaded", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63761,7 +64055,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnEntityCreated", identifier: string | table | Entity | Panel | number | boolean, func: (entity: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63802,7 +64096,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "MouthMoveAnimation", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63843,7 +64137,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnContextMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63884,7 +64178,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnDamagedByExplosion", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, dmginfo: CTakeDamageInfo) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63925,7 +64219,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnChatTab", identifier: string | table | Entity | Panel | number | boolean, func: (text: string) => void | string): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -63966,7 +64260,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnAchievementAchieved", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, achievement: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64007,7 +64301,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "NotifyShouldTransmit", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity, shouldtransmit: boolean) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64048,7 +64342,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "NetworkIDValidated", identifier: string | table | Entity | Panel | number | boolean, func: (name: string, steamID: string) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64089,7 +64383,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "NetworkEntityCreated", identifier: string | table | Entity | Panel | number | boolean, func: (ent: Entity) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64130,7 +64424,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "NeedsDepthPass", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64171,7 +64465,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "OnContextMenuClose", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -64212,7 +64506,7 @@ declare namespace hook {
      * 
      * // This code demonstrates how you can add a table function with a 'self' argument, without the use of a wrapper function 
      */
-    function Add(eventName: string, identifier: string | table | Entity | Panel | number | boolean, func: Function): void;
+    function Add(eventName: "SpawnMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Calls all hooks associated with the given event until one returns something other than nil, and then returns that data.
@@ -65057,12 +65351,14 @@ declare class IGModAudioChannel {
     /**
      * Returns 3D cone of the sound channel. See {{ClassFunction|IGModAudioChannel|Set3DCone}}. 
      * @returns [The angle of the inside projection cone in degrees., The angle of the outside projection cone in degrees., The delta-volume outside the outer projection cone.] 
+     * !TupleReturn
      */
     public Get3DCone(): [number, number, number];
     
     /**
      * Returns 3D fade distances of a sound channel. 
      * @returns [The minimum distance. The channel's volume is at maximum when the listener is within this distance, The maximum distance. The channel's volume stops decreasing when the listener is beyond this distance] 
+     * !TupleReturn
      */
     public Get3DFadeDistance(): [number, number];
     
@@ -65095,6 +65391,7 @@ declare class IGModAudioChannel {
     /**
      * Returns the right and left levels of sound played by the sound channel. 
      * @returns [The left sound level. The value is between 0 and 1., The right sound level. The value is between 0 and 1.] 
+     * !TupleReturn
      */
     public GetLevel(): [number, number];
     
@@ -65563,6 +65860,7 @@ declare namespace input {
     /**
      * Returns the cursor's position on the screen 
      * @returns [mouseX, mouseY] 
+     * !TupleReturn
      */
     function GetCursorPos(): [number, number];
     
@@ -66074,6 +66372,7 @@ declare namespace jit {
     /**
      * Returns the status of the JIT compiler and the current optimizations enabled. 
      * @returns [Is JIT enabled, Strings for CPU-specific features and enabled optimizations] 
+     * !TupleReturn
      */
     function status(): [boolean, any];
     
@@ -66169,6 +66468,7 @@ declare namespace killicon {
      * Returns the size of a kill icon. 
      * @param name  Classname of the kill icon 
      * @returns [Width of the kill icon, Height of the kill icon] 
+     * !TupleReturn
      */
     function GetSize(name: string): [number, number];
 }
@@ -66225,6 +66525,7 @@ declare class Label extends Panel {
      * txt:SizeToContentsY( 5 ) // These two functions will not have effect on a normal DTextEntry
      * 
      * // Demonstrates how to implement this function in your own panel. 
+     * !TupleReturn
      */
     public GetContentSize(): [number, number];
     
@@ -66262,6 +66563,7 @@ declare class Label extends Panel {
      * txt:SizeToContentsY( 5 ) // These two functions will not have effect on a normal DTextEntry
      * 
      * // Demonstrates how to implement this function in your own panel. 
+     * !TupleReturn
      */
     public GetContentSize(): [number, number];
     
@@ -66270,6 +66572,7 @@ declare class Label extends Panel {
      * 
      * [[Category:Label]] 
      * @returns [The left margin of the text, in pixels., The top margin of the text, in pixels.] 
+     * !TupleReturn
      */
     public GetTextInset(): [number, number];
     
@@ -66278,6 +66581,7 @@ declare class Label extends Panel {
      * 
      * [[Category:Label]] 
      * @returns [The left margin of the text, in pixels., The top margin of the text, in pixels.] 
+     * !TupleReturn
      */
     public GetTextInset(): [number, number];
     
@@ -66289,6 +66593,7 @@ declare class Label extends Panel {
      * 
      * [[Category:Label]] 
      * @returns [The width of the text in the DLabel., The height of the text in the DLabel.] 
+     * !TupleReturn
      */
     public GetTextSize(): [number, number];
     
@@ -66300,6 +66605,7 @@ declare class Label extends Panel {
      * 
      * [[Category:Label]] 
      * @returns [The width of the text in the DLabel., The height of the text in the DLabel.] 
+     * !TupleReturn
      */
     public GetTextSize(): [number, number];
     
@@ -66663,6 +66969,7 @@ declare class MarkupObject {
     /**
      * Gets computed the width and height of the markupobject. 
      * @returns [The computed width., The computed height.] 
+     * !TupleReturn
      */
     public Size(): [number, number];
 }
@@ -66959,7 +67266,7 @@ declare namespace math {
      * 
      * // Example usage of the function, makes a black box moving along the beizer curve made out of 4 points 
      */
-    function BSplinePoint(tDiff: number, tPoints: table, tMax: number): Vector;
+    function BSplinePoint(tDiff: number, tPoints: Vector[], tMax: number): Vector;
     
     /**
      * **This is an internal function or feature.**
@@ -67124,6 +67431,7 @@ declare namespace math {
      * The result is such that x {{eq}} m*2^e. 
      * @param x  The value to get the normalized fraction and the exponent from. 
      * @returns [m, multiplier - between 0.5 and 1, e, exponent - always an integer] 
+     * !TupleReturn
      */
     function frexp(x: number): [number, number];
     
@@ -67240,6 +67548,7 @@ declare namespace math {
      * print(math.modf(5.6))
      * 
      * // Finds the integral and fractional components of 5.6. 
+     * !TupleReturn
      */
     function modf(base: number): [number, number];
     
@@ -67867,6 +68176,7 @@ declare namespace motionsensor {
      * @param player 
      * @param rotation 
      * @returns [Pos, ang, sensor] 
+     * !TupleReturn
      */
     function BuildSkeleton(translator: table, player: Player, rotation: Angle): [Vector, Angle, sensor];
     
@@ -67979,13 +68289,13 @@ declare namespace navmesh {
      * @param stepup  Maximum stepup( jump height ) allowed 
      * @returns A table of {{Type|CNavArea}}s 
      */
-    function Find(pos: Vector, radius: number, stepdown: number, stepup: number): table;
+    function Find(pos: Vector, radius: number, stepdown: number, stepup: number): CNavArea[];
     
     /**
      * Returns an integer indexed table of all {{Type|CNavArea}}s on the current map. If the map doesn't have a navmesh generated then this will return an empty table. 
      * @returns A table of all the {{Type|CNavArea}}s on the current map. 
      */
-    function GetAllNavAreas(): table;
+    function GetAllNavAreas(): CNavArea[];
     
     /**
      * Returns the position of the edit cursor when nav_edit is set to 1. 
@@ -67996,6 +68306,7 @@ declare namespace navmesh {
     /**
      * @param pos 
      * @returns [The height, The normal] 
+     * !TupleReturn
      */
     function GetGroundHeight(pos: Vector): [number, Vector];
     
@@ -70110,6 +70421,7 @@ declare class Panel {
      * // Creates a recursively generated box of panels where the size of each panel is determined by the parent panel's children size + 10x10 pixels.
      * 
      * Also they flash bluish colors, just for good measure. 
+     * !TupleReturn
      */
     public ChildrenSize(): [number, number];
     
@@ -70302,6 +70614,7 @@ declare class Panel {
      * 
      * ie. inaccurate results may be returned if the panel or any of its ancestors have been repositioned outside of {{HookFunction|PANEL|Think}} or {{HookFunction|PANEL|PerformLayout}} within the last frame.}} 
      * @returns [X coordinate of the cursor, relative to the top left of the panel., Y coordinate of the cursor, relative to the top left of the panel.] 
+     * !TupleReturn
      */
     public CursorPos(): [number, number];
     
@@ -70692,6 +71005,7 @@ declare class Panel {
      * 
      * This is equivalent to calling {{ClassFunction|Panel|GetPos}} and {{ClassFunction|Panel|GetSize}} together. 
      * @returns [The x coordinate of the panel, relative to its parent's top left., The y coordinate of the panel, relative to its parent's top left., The width of the panel., The height of the panel.] 
+     * !TupleReturn
      */
     public GetBounds(): [number, number, number, number];
     
@@ -70716,6 +71030,7 @@ declare class Panel {
      * Gets a child object's position relative to this panel object. The number of levels is not relevant; the child may have many parents between itself and the object on which the method is called. 
      * @param pnl  The panel to get the position of. 
      * @returns [The horizontal (x) position of the child relative to this panel object., The vertical (y) position of the child relative to this panel object.] 
+     * !TupleReturn
      */
     public GetChildPosition(pnl: Panel): [number, number];
     
@@ -70746,6 +71061,7 @@ declare class Panel {
      * @param x  The horizontal (x) position of the point. 
      * @param y  The vertical (y) position of the point. 
      * @returns [The child object that was closest to the specified point., The distance that this child was from the point.] 
+     * !TupleReturn
      */
     public GetClosestChild(x: number, y: number): [Panel, number];
     
@@ -70783,6 +71099,7 @@ declare class Panel {
      * txt:SizeToContentsY( 5 ) // These two functions will not have effect on a normal DTextEntry
      * 
      * // Demonstrates how to implement this function in your own panel. 
+     * !TupleReturn
      */
     public GetContentSize(): [number, number];
     
@@ -70821,12 +71138,14 @@ declare class Panel {
     /**
      * Returns the docked margins of the panel. (set by {{ClassFunction|Panel|DockMargin}}) 
      * @returns [Left margin., Top margin., Right margin., Bottom margin.] 
+     * !TupleReturn
      */
     public GetDockMargin(): [number, number, number, number];
     
     /**
      * Returns the docked padding of the panel. (set by {{ClassFunction|Panel|DockPadding}}) 
      * @returns [Left padding., Top padding., Right padding., Bottom padding.] 
+     * !TupleReturn
      */
     public GetDockPadding(): [number, number, number, number];
     
@@ -71038,6 +71357,7 @@ declare class Panel {
      * 
      * If you need the position in screen space, see {{ClassFunction|Panel|LocalToScreen}}. 
      * @returns [X coordinate, relative to this panels parents top left corner., Y coordinate, relative to this panels parents top left corner.] 
+     * !TupleReturn
      */
     public GetPos(): [number, number];
     
@@ -71058,6 +71378,7 @@ declare class Panel {
      * 
      * If you require both the panel's position and size, consider using {{ClassFunction|Panel|GetBounds}} instead. 
      * @returns [width, height] 
+     * !TupleReturn
      */
     public GetSize(): [number, number];
     
@@ -71092,6 +71413,7 @@ declare class Panel {
      * 
      * [[Category:Label]] 
      * @returns [The left margin of the text, in pixels., The top margin of the text, in pixels.] 
+     * !TupleReturn
      */
     public GetTextInset(): [number, number];
     
@@ -71103,12 +71425,14 @@ declare class Panel {
      * 
      * [[Category:Label]] 
      * @returns [The width of the text in the DLabel., The height of the text in the DLabel.] 
+     * !TupleReturn
      */
     public GetTextSize(): [number, number];
     
     /**
      * Gets valid receiver slot of currently dragged panel. 
      * @returns [The panel this was called on if a valid receiver slot exists, otherwise false., The slot table.] 
+     * !TupleReturn
      */
     public GetValidReceiverSlot(): [Panel, table];
     
@@ -71901,6 +72225,7 @@ declare class Panel {
      * end
      * 
      * // Create and center a label panel and update its text with the local cursor position. 
+     * !TupleReturn
      */
     public LocalCursorPos(): [number, number];
     
@@ -71918,6 +72243,7 @@ declare class Panel {
      * @param posX  The X coordinate of the position on the panel to translate. 
      * @param posY  The Y coordinate of the position on the panel to translate. 
      * @returns [The X coordinate relative to the screen., The Y coordinate relative to the screen.] 
+     * !TupleReturn
      */
     public LocalToScreen(posX: number, posY: number): [number, number];
     
@@ -72620,6 +72946,7 @@ declare class Panel {
      * @param screenX  The x coordinate of the screen position to be translated. 
      * @param screenY  The y coordinate of the screed position be to translated. 
      * @returns [Relativeposition X, Relativeposition Y] 
+     * !TupleReturn
      */
     public ScreenToLocal(screenX: number, screenY: number): [number, number];
     
@@ -73909,7 +74236,7 @@ declare class PathFollower {
      * Returns all of the segments of the given path. 
      * @returns A table of tables with {{Struct|PathSegment}}. 
      */
-    public GetAllSegments(): PathSegment[];
+    public GetAllSegments(): table[];
     
     /**
      * The closest position along the path to a position 
@@ -73983,8 +74310,9 @@ declare class PathFollower {
     
     /**
      * Returns true if the path is valid 
+     * @returns Wether the path is valid or not. 
      */
-    public IsValid(): void;
+    public IsValid(): boolean;
     
     /**
      * Returns the last segment of the path. 
@@ -74063,9 +74391,12 @@ declare class PathFollower {
  * !CustomConstructor CreatePhysCollideBox */
 declare class PhysCollide {
     /**
-     * Creates a new PhysCollide from the given bounds. 
-     * @param mins 
-     * @param maxs 
+     * Creates a new {{Type|PhysCollide}} from the given bounds.
+     * 
+     * **Bug [#3568](https://github.com/Facepunch/garrysmod-issues/issues/3568):**
+     * >This fails to create planes or points - no components of the mins or maxs can be the same. 
+     * @param mins  Min corner of the box. This is not automatically ordered with the maxs and must contain the smallest vector components. See {{GlobalFunction|OrderVectors}}. 
+     * @param maxs  Max corner of the box. This is not automatically ordered with the mins and must contain the largest vector components. 
      * @example
      * 
      * AddCSLuaFile()
@@ -74151,6 +74482,7 @@ declare class PhysCollide {
      * @param rayMins  The mins of the trace's bounds 
      * @param rayMaxs  The maxs of the trace's bounds 
      * @returns [Hit position of the trace. This is false if the trace did not hit., Hit normal of the trace, Fraction of the trace. This is calculated from the distance between startPos, hitPos, and endPos.] 
+     * !TupleReturn
      */
     public TraceBox(origin: Vector, angles: Angle, rayStart: Vector, rayEnd: Vector, rayMins: Vector, rayMaxs: Vector): [Vector, Vector, number];
 }
@@ -74321,6 +74653,7 @@ declare class PhysObj {
      * @param force  The initial force 
      * @param pos  The location of the force in world coordinates 
      * @returns [The calculated force on the physics object's center of mass, The calculated torque on the physics object's center of mass] 
+     * !TupleReturn
      */
     public CalculateForceOffset(force: Vector, pos: Vector): [Vector, Vector];
     
@@ -74329,6 +74662,7 @@ declare class PhysObj {
      * @param force  The initial force 
      * @param pos  The location of the force in world coordinates 
      * @returns [The calculated linear velocity from the force on the physics object's center of mass, The calculated angular velocity from the force on the physics object's center of mass] 
+     * !TupleReturn
      */
     public CalculateVelocityOffset(force: Vector, pos: Vector): [Vector, Vector];
     
@@ -74405,6 +74739,7 @@ declare class PhysObj {
     /**
      * Returns the mins and max of the physics object. 
      * @returns [Mins, Maxs] 
+     * !TupleReturn
      */
     public GetAABB(): [Vector, Vector];
     
@@ -74429,6 +74764,7 @@ declare class PhysObj {
     /**
      * Returns the linear and angular damping of the physics object. 
      * @returns [The linear damping, The angular damping] 
+     * !TupleReturn
      */
     public GetDamping(): [number, number];
     
@@ -74484,11 +74820,11 @@ declare class PhysObj {
      * Returns the physics mesh of the object which is used for physobj-on-physobj collision. 
      * @returns Table of {{Struct|MeshVertex}}s where each three vertices represent a triangle. Returns nil if the physics object is a sphere. 
      */
-    public GetMesh(): MeshVertex;
+    public GetMesh(): MeshVertex[];
     
     /**
      * Returns all convex physics meshes of the object. See {{LibraryFunction|Entity|PhysicsInitMultiConvex}} for more information. 
-     * @returns Table of tables of {{Struct|MeshVertex}}s where each table is an independent convex mesh and each three vertices represent a triangle. Returns nil if the physics object is a sphere. 
+     * @returns Table of {{Struct|MeshVertex}}s where each {{Struct|MeshVertex}} is an independent convex mesh and each three vertices represent a triangle. Returns nil if the physics object is a sphere. 
      */
     public GetMeshConvexes(): MeshVertex[];
     
@@ -74879,7 +75215,7 @@ declare namespace player {
      * 
      * **Note:**
      * >This function returns bots as well as human players. See {{LibraryFunction|player|GetBots}} and  {{LibraryFunction|player|GetHumans}}. 
-     * @returns All players currently in the server. 
+     * @returns All {{Type|Player}}s currently in the server. 
      * @example
      * 
      * PrintTable( player.GetAll() )
@@ -74890,7 +75226,7 @@ declare namespace player {
      * 
      * // Prints the number of players in the server. The same output can be achieved more efficiently with {{LibraryFunction|player|GetCount}}. 
      */
-    function GetAll(): Player[];
+    function GetAll(): table;
     
     /**
      * Returns a table of all bots on the server. 
@@ -75668,6 +76004,7 @@ declare class Player extends Entity {
      * end
      * 
      * // Prints bases' size of the hull of all players. 
+     * !TupleReturn
      */
     public GetHull(): [Vector, Vector];
     
@@ -75687,6 +76024,7 @@ declare class Player extends Entity {
      * end
      * 
      * // Prints bases' size of the crouch hull of all players. 
+     * !TupleReturn
      */
     public GetHullDuck(): [Vector, Vector];
     
@@ -77953,6 +78291,7 @@ declare class ProjectedTexture {
     /**
      * Returns the current orthographic settings of the Projected Texture. To set these values, use {{ClassFunction|ProjectedTexture|SetOrthographic}}. 
      * @returns [Whether or not this projected texture is orthographic. When false, nothing else is returned., left, top, right, bottom] 
+     * !TupleReturn
      */
     public GetOrthographic(): [boolean, number, number, number, number];
     
@@ -79071,12 +79410,14 @@ declare namespace render {
     /**
      * Returns the current fog color. 
      * @returns [Red part of the color., Green part of the color, Blue part of the color] 
+     * !TupleReturn
      */
     function GetFogColor(): [number, number, number];
     
     /**
      * Returns the fog start and end distance. 
      * @returns [Fog start distance set by {{LibraryFunction|render|FogStart}}, For end distance set by {{LibraryFunction|render|FogEnd}}, Fog Z distance set by {{LibraryFunction|render|SetFogZ}}] 
+     * !TupleReturn
      */
     function GetFogDistances(): [number, number, number];
     
@@ -79546,6 +79887,7 @@ declare namespace render {
      * @param x  The x coordinate. 
      * @param y  The y coordinate. 
      * @returns [r, g, b] 
+     * !TupleReturn
      */
     function ReadPixel(x: number, y: number): [number, number, number];
     
@@ -81888,7 +82230,7 @@ declare class SANDBOX extends Gamemode {
      * 
      * // Stops non-admins from giving themselves weapons. 
      */
-    public PlayerGiveSWEP(ply: Player, weapon: string, swep: SWEP): boolean;
+    public PlayerGiveSWEP(ply: Player, weapon: string, swep: SWEP[]): boolean;
     
     /**
      * Called after the player spawned an effect. 
@@ -82336,9 +82678,9 @@ declare namespace scripted_ents {
     
     /**
      * Returns a copy of the list of all ENT tables registered 
-     * @returns entTables 
+     * @returns A table of {{Struct|ENT}}s 
      */
-    function GetList(): table[];
+    function GetList(): ENT[];
     
     /**
      * Retrieves a member of entity's table. 
@@ -82350,9 +82692,9 @@ declare namespace scripted_ents {
     
     /**
      * Returns a list of all ENT tables which contain either ENT.Spawnable or ENT.AdminSpawnable 
-     * @returns spawnableClasses 
+     * @returns A table of {{Struct|ENT}}s 
      */
-    function GetSpawnable(): table[];
+    function GetSpawnable(): ENT[];
     
     /**
      * Returns the actual ENT table for a class. Modifying functions/variables in this table will change newly spawned entities 
@@ -83828,6 +84170,7 @@ declare namespace string {
      * end )
      * 
      * // Change the word "heck" to "****" in chat messages 
+     * !TupleReturn
      */
     function find(haystack: string, needle: string, startPos?: number, noPatterns?: boolean): [number, number, string];
     
@@ -83975,6 +84318,7 @@ declare namespace string {
      * string.gsub("hello there!", "hello", "hi")
      * 
      * // Replaces "hello" with "hi" in the string "hello there!" 
+     * !TupleReturn
      */
     function gsub(str: string, pattern: string, replacement: string, maxReplaces?: number): [string, number];
     
@@ -84409,9 +84753,6 @@ declare namespace surface {
      * 
      * {{Warning|Due to the static nature of fonts, do '''NOT''' create the font more than once. You should only be creating them once, it is recommended to create them at the top of your script. '''Do not use this function within '''{{HookFunction|GM|HUDPaint}}'''!'''}}
      * 
-     * **Bug [#2699](https://github.com/Facepunch/garrysmod-issues/issues/2699):**
-     * >This will crash if given a blursize >{{eq}} 100.
-     * 
      * {{Validate}} 
      * @param fontName  The new font name. 
      * @param fontData  The font properties. See the {{Struct|FontData}}. 
@@ -84784,6 +85125,7 @@ declare namespace surface {
      * print(height)
      * 
      * // Get text height very quickly. No tables or spare variables used. 
+     * !TupleReturn
      */
     function GetTextSize(text: string): [number, number];
     
@@ -84801,6 +85143,7 @@ declare namespace surface {
      * Returns the size of the texture with the associated texture ID. 
      * @param textureID  The texture ID, returned by {{LibraryFunction|surface|GetTextureID}}. 
      * @returns [The texture width., The texture height.] 
+     * !TupleReturn
      */
     function GetTextureSize(textureID: number): [number, number];
     
@@ -85534,6 +85877,7 @@ declare namespace table {
      * print("I think the best website ever is " .. websites[math.random(1, #websites)] .. ".")
      * 
      * // Example of using the alternative with sequential tables for performance reasons. 
+     * !TupleReturn
      */
     function Random(haystack: table): [any, any];
     
@@ -85809,7 +86153,7 @@ declare namespace team {
     /**
      * Returns a table with all player of the specified team. 
      * @param teamIndex  The team index. 
-     * @returns players 
+     * @returns A table of {{Type|Player}}s that belong to the requested team. 
      * @example
      * 
      * PrintTable(team.GetPlayers(ply:Team()))
@@ -87252,6 +87596,7 @@ declare namespace utf8 {
      * print( utf8.len( "Мёнём" ) )
      * 
      * // Demonstrates output of this function compared to {{LibraryFunction|string|len}} when given a string that contains Russian text. 
+     * !TupleReturn
      */
     function len(str: string, startPos?: number, endPos?: number): [number, number];
     
@@ -87408,6 +87753,7 @@ declare namespace util {
      * @param lineEnd  End of the line. 
      * @param pointPos  The position of the point. 
      * @returns [Distance from line., Nearest point on line., Distance along line from start.] 
+     * !TupleReturn
      */
     function DistanceToLine(lineStart: Vector, lineEnd: Vector, pointPos: Vector): [number, Vector, number];
     
@@ -87551,6 +87897,7 @@ declare namespace util {
      * @param boxMins  The min position of the box. 
      * @param boxMaxs  The max position of the box. 
      * @returns [Hit position, nil if not hit., Normal/direction vector, nil if not hit., Fraction of trace used, nil if not hit.] 
+     * !TupleReturn
      */
     function IntersectRayWithOBB(rayStart: Vector, rayDelta: Vector, boxOrigin: Vector, boxAngles: Angle, boxMins: Vector, boxMaxs: Vector): [Vector, Vector, number];
     
@@ -88496,6 +88843,7 @@ declare class Vehicle extends Entity {
     /**
      * Returns information about the ammo of the vehicle 
      * @returns [Ammo type of the vehicle ammo, Clip size, Count] 
+     * !TupleReturn
      */
     public GetAmmo(): [number, number, number];
     
@@ -88545,6 +88893,7 @@ declare class Vehicle extends Entity {
      * Returns the seat position and angle of a given passenger seat. 
      * @param role  The passenger role. ( 1 is the driver ) 
      * @returns [The seat position, The seat angle] 
+     * !TupleReturn
      */
     public GetPassengerSeatPoint(role: number): [Vector, Angle];
     
@@ -88608,6 +88957,7 @@ declare class Vehicle extends Entity {
      * Returns the view position and forward angle of a given passenger seat. 
      * @param role  The passenger role. ( 1 is the driver ) 
      * @returns [The view position, The view angles, The field of view] 
+     * !TupleReturn
      */
     public GetVehicleViewPosition(role: number): [Vector, Angle, number];
     
@@ -88629,6 +88979,7 @@ declare class Vehicle extends Entity {
      * Returns the wheel contact point. 
      * @param wheel  The wheel to check 
      * @returns [The contact position, The Surface Properties ID of hit surface., Whether the wheel is on ground or not] 
+     * !TupleReturn
      */
     public GetWheelContactPoint(wheel: number): [Vector, number, boolean];
     
@@ -88948,6 +89299,7 @@ declare namespace video {
      * end
      * 
      * // How to create a basic IVideoWriter, and how to use it 
+     * !TupleReturn
      */
     function Record(config: VideoData): [IVideoWriter, string];
 }
@@ -89276,6 +89628,7 @@ declare class Weapon extends Entity {
      * @param ang  Current angles of players view 
      * @param fov  Current FOV of players view 
      * @returns [New position of players view, New angle of players view, New FOV of players view] 
+     * !TupleReturn
      */
     protected CalcView(ply: Player, pos: Vector, ang: Angle, fov: number): [Vector, Angle, number];
     
@@ -89287,6 +89640,7 @@ declare class Weapon extends Entity {
      * @param pos  Current position 
      * @param ang  Current angle 
      * @returns [New position, New angle] 
+     * !TupleReturn
      */
     protected CalcViewModelView(vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle): [Vector, Angle];
     
@@ -89778,6 +90132,7 @@ declare class Weapon extends Entity {
      * @param pos  Current position 
      * @param ang  Current angle 
      * @returns [New position, New angle] 
+     * !TupleReturn
      */
     protected GetViewModelPosition(pos: Vector, ang: Angle): [Vector, Angle];
     
@@ -90280,9 +90635,11 @@ declare class Weapon extends Entity {
      * **Note:**
      * >Despite being a predicted hook, this hook is called clientside in single player, however it will not be recognized as a predicted hook to {{ClassFunction|Player|GetCurrentCommand}}.
      * 
+     * **Note:**
+     * >This hook will be called before Player movement is processed on the client, and after on the server.
+     * 
      * **Bug [#2855](https://github.com/Facepunch/garrysmod-issues/issues/2855):**
      * >This will not be run during deploy animations after a serverside-only deploy. This usually happens after picking up and dropping an object with +use. 
-     * @returns Return true if you used {{ClassFunction|Entity|NextThink}} to make it work. 
      */
     protected Think(): boolean;
     

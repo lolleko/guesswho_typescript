@@ -4,6 +4,8 @@
             "es2015"
         ],
         "target": "es5",
+        "strict": true,
+        "strictPropertyInitialization": false
     },
     "luaTarget": "glua"
 }

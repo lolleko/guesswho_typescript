@@ -1,13 +1,6 @@
 
 -- Lua Library Imports
-local exports = exports or {}
-local ibehaviour0 = include("./ibehaviour.lua")
-local IBehaviour = ibehaviour0.IBehaviour
-local ibehaviour_composite1 = include("./ibehaviour_composite.lua")
-local IBehaviourComposite = ibehaviour_composite1.IBehaviourComposite
-local behaviour_status2 = include("./behaviour_status.lua")
-local BehaviourStatus = behaviour_status2.BehaviourStatus
-local BehaviourTree = BehaviourTree or {}
+BehaviourTree = BehaviourTree or {}
 BehaviourTree.__index = BehaviourTree
 function BehaviourTree.new(construct, ...)
     local instance = setmetatable({}, BehaviourTree)
@@ -20,13 +13,11 @@ end
 function BehaviourTree.setRoot(self,root)
     self.root = root
 end
-function BehaviourTree.tick(self)
+function BehaviourTree.tick(self,state)
     if self.root then
-        return self.root:tick()
+        return self.root:tick(state)
     else
         print("TICKING EMPTY BEHAVIOR TREE")
         return BehaviourStatus.Failure
     end
 end
-exports.BehaviourTree = BehaviourTree
-return exports

@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-export enum GWGameState {
+enum GWGameState {
   NONE,
   MESH_GENERATION,
   WAITING,

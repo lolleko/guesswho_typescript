@@ -1,20 +1,13 @@
-import {IBehaviour} from "./ibehaviour";
+type BehaviourFunction<T> = (state: T) => BehaviourStatus;
 
-import {BehaviourStatus} from "./behaviour_status";
-
-export type BehaviourFunction<T> = (state: T) => BehaviourStatus;
-
-export class BehaviourAction<T> implements IBehaviour<T>
-{
+class BehaviourAction<T> implements IBehaviour<T> {
     private func: BehaviourFunction<T>;
 
-    constructor(func: BehaviourFunction<T>)
-    {
+    constructor(func: BehaviourFunction<T>) {
         this.func = func;
     }
 
-    public tick(state: T): BehaviourStatus
-    {
+    public tick(state: T): BehaviourStatus {
         return this.func(state);
     }
 }

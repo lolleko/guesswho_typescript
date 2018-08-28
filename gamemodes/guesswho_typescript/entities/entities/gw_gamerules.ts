@@ -1,11 +1,7 @@
-import { GWClassName } from "../../gamemode/classname";
-import { GWGameState } from "../../gamemode/gamestate";
-import { GWTeam } from "../../gamemode/team";
-
 AddCSLuaFile();
 
 /** !Extension ENT */
-export class GWGamerules extends Entity {
+class GWGamerules extends Entity {
     public Type: string = "point";
 
     public get SpawnPoints(): Entity[] {

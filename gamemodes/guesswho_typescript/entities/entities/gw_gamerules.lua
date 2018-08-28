@@ -35,13 +35,6 @@ function __TS__ArrayPush(arr,...)
     return #arr
 end
 
-local exports = exports or {}
-local classname0 = include("../../gamemode/classname.lua")
-local GWClassName = classname0.GWClassName
-local gamestate1 = include("../../gamemode/gamestate.lua")
-local GWGameState = gamestate1.GWGameState
-local team2 = include("../../gamemode/team.lua")
-local GWTeam = team2.GWTeam
 AddCSLuaFile()
 ENT.Type = "point"
 function ENT.get__SpawnPoints(self)
@@ -119,7 +112,7 @@ function ENT.Think(self)
     return false
 end
 function ENT.UpdateTransmitState(self)
-    return TRANSMIT.TRANSMIT_ALWAYS
+    return TRANSMIT_ALWAYS
 end
 function ENT.HandlePlayerDeath(self,victim,inflictor,attacker)
     local playersOnVictimTeam = team.GetPlayers(victim:Team())
@@ -239,4 +232,3 @@ function ENT.SpawnNPCWave(self)
     self.walkerCount = (self.walkerCount+spawnedWalkers)
     return spawnedWalkers
 end
-return exports

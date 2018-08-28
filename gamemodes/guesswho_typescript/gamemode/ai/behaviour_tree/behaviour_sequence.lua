@@ -12,14 +12,7 @@ function __TS__ArrayPush(arr,...)
     return #arr
 end
 
-local exports = exports or {}
-local ibehaviour0 = include("./ibehaviour.lua")
-local IBehaviour = ibehaviour0.IBehaviour
-local ibehaviour_composite1 = include("./ibehaviour_composite.lua")
-local IBehaviourComposite = ibehaviour_composite1.IBehaviourComposite
-local behaviour_status2 = include("./behaviour_status.lua")
-local BehaviourStatus = behaviour_status2.BehaviourStatus
-local BehaviourSequence = BehaviourSequence or {}
+BehaviourSequence = BehaviourSequence or {}
 BehaviourSequence.__index = BehaviourSequence
 function BehaviourSequence.new(construct, ...)
     local instance = setmetatable({}, BehaviourSequence)
@@ -33,12 +26,12 @@ end
 function BehaviourSequence.addChild(self,child)
     __TS__ArrayPush(self.children, child)
 end
-function BehaviourSequence.tick(self)
-    local currentChild = self.children[self.currentChildID+1]
-
+function BehaviourSequence.tick(self,state)
     while true do
         do
-            local status = currentChild:tick()
+            local currentChild = self.children[self.currentChildID+1]
+
+            local status = currentChild:tick(state)
 
             if status==BehaviourStatus.Failure then
                 self.currentChildID = 0
@@ -57,5 +50,3 @@ function BehaviourSequence.tick(self)
         ::__continue0::
     end
 end
-exports.BehaviourSequence = BehaviourSequence
-return exports

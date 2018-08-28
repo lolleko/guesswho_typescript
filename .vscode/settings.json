@@ -25,5 +25,6 @@
         "text",
         "typescriptreact",
         "yml"
-    ]
+    ],
+    "lua.targetVersion": "5.2"
 }

@@ -13,7 +13,6 @@ function __TS__ArraySome(arr,callbackfn)
     return false
 end
 
-local exports = exports or {}
 AddCSLuaFile()
 local eyeGlow = Material("sprites/redglow1")
 
@@ -38,19 +37,62 @@ end
 function ENT.set__WalkerModelIndex(self,index)
     self:SetDTInt(2,index)
 end
+function ENT.MoveSomeWhere(self,distance)
+    if distance==nil then distance=1000 end
+    self.loco:SetDesiredSpeed(100)
+    local navs = navmesh.Find(self:GetPos(),distance,120,120)
+
+    local nav = navs[math.random(#navs)-1+1]
+
+    if (not IsValid(nav)) then
+        return
+    end
+    if nav:IsUnderwater() then
+        return
+    end
+    local pos = nav:GetRandomPoint()
+
+    local maxAge = math.Clamp(pos:Distance(self:GetPos())/120,0.1,10)
+
+    self:MoveToPos(pos,{tolerance = 30,maxage = maxAge,lookahead = 10,repath = 2})
+end
+function ENT.MoveToSpot(self,type)
+    local pos = self:FindSpot("random",{type = type,radius = 5000})
+
+    if pos then
+        local nav = navmesh.GetNavArea(pos,20)
+
+        if (not IsValid(nav)) then
+            return
+        end
+        if (not nav:IsUnderwater()) then
+            self.loco:SetDesiredSpeed(200)
+            self:MoveToPos(pos,{tolerance = 30,lookahead = 10,repath = 2})
+        end
+    end
+end
+function ENT.Sit(self)
+    self:SetSequence("sit_zen")
+    self.isSitting = true
+    self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,36))
+    coroutine.wait(math.Rand(10,60))
+    self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,70))
+    self.isSitting = false
+end
 function ENT.SetupDataTables(self)
     self:DTVar("Int",0,"LastAct")
     self:DTVar("Int",1,"WalkerColorIndex")
     self:DTVar("Int",2,"WalkerModelIndex")
 end
 function ENT.Initialize(self)
-    local models = (GM):get__ConfigData().HiderModels
+    local models = GWConfigManager:GetInstance():get__Data().HiderModels
 
     if SERVER then
+        PrintTable(models)
         self:set__WalkerModelIndex((math.random(#models)-1))
     end
     self:SetModel(models[self:get__WalkerModelIndex()+1])
-    local walkerColors = (GM):get__ConfigData().WalkerColors
+    local walkerColors = GWConfigManager:GetInstance():get__Data().WalkerColors
 
     if SERVER then
         self:set__WalkerColorIndex((math.random(#walkerColors)-1))
@@ -107,16 +149,16 @@ function ENT.Think(self)
             do
                 local doorClass = door:GetClass()
 
-                if ((doorClass=="func_{or") or (doorClass=="func_{or_rotating")) or (doorClass=="prop_{or_rotating") then
+                if ((doorClass=="func_door") or (doorClass=="func_door_rotating")) or (doorClass=="prop_door_rotating") then
                     door:Fire("Unlock","",0)
                     door:Fire("Open","",0.01)
-                    door:SetCollisionGroup(COLLISION_GROUP.COLLISION_GROUP_DEBRIS)
+                    door:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
                 end
             end
             ::__continue0::
         end
         if (self.isStuck and (CurTime()>(self.stuckTime+20))) and (self.stuckPos:DistToSqr(self:GetPos())<25) then
-            local spawnPoints = (GM):get__Gamerules():get__SpawnPoints()
+            local spawnPoints = (GAMEMODE):get__Gamerules():get__SpawnPoints()
 
             local spawnPoint = spawnPoints[math.random(#spawnPoints)-1+1]:GetPos()
 
@@ -127,13 +169,13 @@ function ENT.Think(self)
         if self.isStuck and (self.stuckPos:DistToSqr(self:GetPos())>100) then
             self.isStuck = false
         end
-        if (not self.isJumping) and (self:GetSolidMask()==MASK.MASK_NPCSOLID_BRUSHONLY) then
+        if (not self.isJumping) and (self:GetSolidMask()==MASK_NPCSOLID_BRUSHONLY) then
             local entsInBox = ents.FindInBox(self:GetPos()+Vector(-16,-16,0),self:GetPos()+Vector(16,16,70))
 
             local occupied = __TS__ArraySome(entsInBox, function(ent) return (ent:GetClass()=="npc_walker") and (ent~=self) end)
 
             if (not occupied) then
-                self:SetSolidMask(MASK.MASK_NPCSOLID)
+                self:SetSolidMask(MASK_NPCSOLID)
             end
         end
     end
@@ -166,48 +208,3 @@ function ENT.RunBehaviour(self)
         ::__continue1::
     end
 end
-function ENT.MoveSomeWhere(self,distance)
-    if distance==nil then distance=1000 end
-    self.loco:SetDesiredSpeed(100)
-    local navs = navmesh.Find(self:GetPos(),distance,120,120)
-
-    local nav = navs[math.random(0,navs.length)-1]
-
-    if (not IsValid(nav)) then
-        return
-    end
-    if nav:IsUnderwater() then
-        return
-    end
-    local pos = nav:GetRandomPoint()
-
-    local maxAge = math.Clamp(pos:Distance(self:GetPos())/120,0.1,10)
-
-    self:MoveToPos(pos,{tolerance = 30,maxage = maxAge,lookahead = 10,repath = 2})
-end
-function ENT.MoveToSpot(self,type)
-    local pos = self:FindSpot("random",{type = type,radius = 5000})
-
-    if pos then
-        local nav = navmesh.GetNavArea(pos,20)
-
-        if (not IsValid(nav)) then
-            return
-        end
-        if (not nav:IsUnderwater()) then
-            self.loco:SetDesiredSpeed(200)
-            self:MoveToPos(pos,{tolerance = 30,lookahead = 10,repath = 2})
-        end
-    end
-end
-function ENT.Sit(self)
-    self:SetSequence("sit_zen")
-    self.isSitting = true
-    self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,36))
-    coroutine.wait(math.Rand(10,60))
-    self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,70))
-    self.isSitting = false
-end
-function ENT.name(self)
-end
-return exports

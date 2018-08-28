@@ -12,14 +12,7 @@ function __TS__ArrayPush(arr,...)
     return #arr
 end
 
-local exports = exports or {}
-local ibehaviour0 = include("./ibehaviour.lua")
-local IBehaviour = ibehaviour0.IBehaviour
-local ibehaviour_composite1 = include("./ibehaviour_composite.lua")
-local IBehaviourComposite = ibehaviour_composite1.IBehaviourComposite
-local behaviour_status2 = include("./behaviour_status.lua")
-local BehaviourStatus = behaviour_status2.BehaviourStatus
-local BehaviourParallel = BehaviourParallel or {}
+BehaviourParallel = BehaviourParallel or {}
 BehaviourParallel.__index = BehaviourParallel
 function BehaviourParallel.new(construct, ...)
     local instance = setmetatable({}, BehaviourParallel)
@@ -34,14 +27,14 @@ end
 function BehaviourParallel.addChild(self,child)
     __TS__ArrayPush(self.children, child)
 end
-function BehaviourParallel.tick(self)
+function BehaviourParallel.tick(self,state)
     local successCounter = 0
 
     local failCounter = 0
 
     for _, child in ipairs(self.children) do
         do
-            local result = child:tick()
+            local result = child:tick(state)
 
             if result==BehaviourStatus.Failure then
                 failCounter = (failCounter+1)
@@ -66,5 +59,3 @@ function BehaviourParallel.tick(self)
     end
     return BehaviourStatus.Running
 end
-exports.BehaviourParallel = BehaviourParallel
-return exports

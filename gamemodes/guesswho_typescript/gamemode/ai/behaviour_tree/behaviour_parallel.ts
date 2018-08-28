@@ -1,29 +1,21 @@
-import {IBehaviour} from "./ibehaviour";
-import {IBehaviourComposite} from "./ibehaviour_composite";
+class BehaviourParallel<T> implements IBehaviourComposite<T> {
 
-import {BehaviourStatus} from "./behaviour_status";
-
-export class BehaviourParallel<T> implements IBehaviourComposite<T>
-{
-    private children: IBehaviour<T>[];
+    private children: Array<IBehaviour<T>>;
 
     private requiredToFail: number;
     private requiredToSucceed: number;
 
-    constructor(requiredToFail: number = -1, requiredToSucceed: number = -1)
-    {
+    constructor(requiredToFail: number = -1, requiredToSucceed: number = -1) {
         this.children = [];
         this.requiredToFail = requiredToFail;
         this.requiredToSucceed = requiredToSucceed;
     }
 
-    public addChild(child: IBehaviour<T>)
-    {
+    public addChild(child: IBehaviour<T>): void {
         this.children.push(child);
     }
 
-    public tick(state: T): BehaviourStatus
-    {
+    public tick(state: T): BehaviourStatus {
         let successCounter = 0;
         let failCounter = 0;
         for (const child of this.children) {

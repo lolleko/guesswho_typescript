@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-export enum GWTeam {
+enum GWTeam {
     HIDERS,
     SEEKERS,
 }
