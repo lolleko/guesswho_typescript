@@ -1,6 +1,6 @@
-class BehaviourParallel<T> implements IBehaviourComposite<T> {
+class BehaviourParallel implements IBehaviourComposite {
 
-    private children: Array<IBehaviour<T>>;
+    private children: IBehaviour[];
 
     private requiredToFail: number;
     private requiredToSucceed: number;
@@ -11,15 +11,15 @@ class BehaviourParallel<T> implements IBehaviourComposite<T> {
         this.requiredToSucceed = requiredToSucceed;
     }
 
-    public addChild(child: IBehaviour<T>): void {
+    public addChild(child: IBehaviour): void {
         this.children.push(child);
     }
 
-    public tick(state: T): BehaviourStatus {
+    public tick(): BehaviourStatus {
         let successCounter = 0;
         let failCounter = 0;
         for (const child of this.children) {
-            const result = child.tick(state);
+            const result = child.tick();
             if (result === BehaviourStatus.Failure) {
                 failCounter++;
                 if (failCounter === this.requiredToFail) {

@@ -7,5 +7,5 @@
         "strict": true,
         "strictPropertyInitialization": false
     },
-    "luaTarget": "glua"
+    "luaTarget": "jit"
 }

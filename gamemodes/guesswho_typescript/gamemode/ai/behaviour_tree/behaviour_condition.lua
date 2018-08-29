@@ -18,6 +18,6 @@ end
 function BehaviourCondition.constructor(self,func)
     self.func = func
 end
-function BehaviourCondition.tick(self,state)
-    return __TS__Ternary(self.func(state), function() return BehaviourStatus.Success end, function() return BehaviourStatus.Failure end)
+function BehaviourCondition.tick(self)
+    return __TS__Ternary(self.func(), function() return BehaviourStatus.Success end, function() return BehaviourStatus.Failure end)
 end

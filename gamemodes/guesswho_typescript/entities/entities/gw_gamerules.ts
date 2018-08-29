@@ -86,8 +86,8 @@ class GWGamerules extends Entity {
     protected Think(): boolean {
         if (SERVER) {
             if (this.GameState === GWGameState.WAITING) {
-                if (team.NumPlayers(GWTeam.HIDERS) < this.SettingMinHiders ||
-                    team.NumPlayers(GWTeam.SEEKERS) < this.SettingMinSeekers) {
+                if (team.NumPlayers(TEAM.HIDER) < this.SettingMinHiders ||
+                    team.NumPlayers(TEAM.SEEKER) < this.SettingMinSeekers) {
                     ents.FindByClass(GWClassName.NPC_WALKER).forEach(ent => ent.Remove());
                     this.NextThink(CurTime() + 1);
                     print("Wating");
@@ -148,7 +148,7 @@ class GWGamerules extends Entity {
     private HandleHiding(): void {
         this.GameState = GWGameState.HIDING;
         this.GameTimerEndTime = CurTime() + this.SettingHidingDuration;
-        (team.GetPlayers( GWTeam.HIDERS ) as Player[]).forEach(ply => ply.Spawn());
+        (team.GetPlayers( TEAM.HIDER ) as Player[]).forEach(ply => ply.Spawn());
         timer.Simple(this.SettingHidingDuration, () => this.HandleSeeking());
     }
 
@@ -159,7 +159,7 @@ class GWGamerules extends Entity {
     }
 
     private HandlePostRound(): void {
-        const hiders = team.GetPlayers(GWTeam.HIDERS) as Player[];
+        const hiders = team.GetPlayers(TEAM.HIDER) as Player[];
         const someHidersAlive = hiders.some(ply => ply.Alive());
         if (someHidersAlive) {
             print("Hiders Win");

@@ -1,5 +1,5 @@
-class BehaviourSelector<T> implements IBehaviourComposite<T> {
-    private children: Array<IBehaviour<T>>;
+class BehaviourSelector implements IBehaviourComposite {
+    private children: IBehaviour[];
     private currentChildID: number;
 
     constructor() {
@@ -7,14 +7,14 @@ class BehaviourSelector<T> implements IBehaviourComposite<T> {
         this.currentChildID = 0;
     }
 
-    public addChild(child: IBehaviour<T>): void {
+    public addChild(child: IBehaviour): void {
         this.children.push(child);
     }
 
-    public tick(state: T): BehaviourStatus {
+    public tick(): BehaviourStatus {
         const currentChild = this.children[this.currentChildID];
         while (true) {
-            const status = currentChild.tick(state);
+            const status = currentChild.tick();
 
             if (status === BehaviourStatus.Success) {
                 this.currentChildID = 0;

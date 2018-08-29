@@ -26,12 +26,12 @@ end
 function BehaviourSequence.addChild(self,child)
     __TS__ArrayPush(self.children, child)
 end
-function BehaviourSequence.tick(self,state)
+function BehaviourSequence.tick(self)
     while true do
         do
             local currentChild = self.children[self.currentChildID+1]
 
-            local status = currentChild:tick(state)
+            local status = currentChild:tick()
 
             if status==BehaviourStatus.Failure then
                 self.currentChildID = 0

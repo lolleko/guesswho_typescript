@@ -1,13 +1,13 @@
-class BehaviourTreeBuilder<T> {
-    private parentStack: Array<IBehaviourComposite<T>>;
-    private result: BehaviourTree<T>;
+class BehaviourTreeBuilder {
+    private parentStack: IBehaviourComposite[];
+    private result: BehaviourTree;
 
     constructor() {
         this.parentStack = [];
         this.result = new BehaviourTree();
     }
 
-    public action(func: BehaviourFunction<T>): BehaviourTreeBuilder<T> {
+    public action(func: BehaviourFunction): BehaviourTreeBuilder {
         assert(!this.parentStackEmpty(),
                "Can't create this node without a parent (sequence/selector)");
 
@@ -16,7 +16,7 @@ class BehaviourTreeBuilder<T> {
         return this;
     }
 
-    public condition(func: BehaviourConditionFunction<T>): BehaviourTreeBuilder<T> {
+    public condition(func: BehaviourConditionFunction): BehaviourTreeBuilder {
         assert(!this.parentStackEmpty(),
                "Can't create this node without a parent (sequence/selector)");
 
@@ -25,26 +25,26 @@ class BehaviourTreeBuilder<T> {
         return this;
     }
 
-    public sequence(): BehaviourTreeBuilder<T> {
-        this.pushParent(new BehaviourSequence<T>());
+    public sequence(): BehaviourTreeBuilder {
+        this.pushParent(new BehaviourSequence());
         return this;
     }
 
-    public selector(): BehaviourTreeBuilder<T> {
-        this.pushParent(new BehaviourSelector<T>());
+    public selector(): BehaviourTreeBuilder {
+        this.pushParent(new BehaviourSelector());
         return this;
     }
 
-    public finish(): BehaviourTreeBuilder<T> {
+    public finish(): BehaviourTreeBuilder {
         this.popParent();
         return this;
     }
 
-    public build(): BehaviourTree<T> {
+    public build(): BehaviourTree {
         return this.result;
     }
 
-    public pushParent(parent: IBehaviourComposite<T>): void {
+    public pushParent(parent: IBehaviourComposite): void {
         // if this is our first parent attach to root
         if (this.parentStackEmpty()) {
             this.result.setRoot(parent);
@@ -52,13 +52,13 @@ class BehaviourTreeBuilder<T> {
         this.parentStack[this.parentStack.length] = parent;
     }
 
-    public popParent(): IBehaviourComposite<T>  {
+    public popParent(): IBehaviourComposite  {
         const old = this.peekParent();
         delete this.parentStack[this.parentStack.length - 1];
         return old;
     }
 
-    public peekParent(): IBehaviourComposite<T> {
+    public peekParent(): IBehaviourComposite {
         return this.parentStack[this.parentStack.length - 1];
     }
 

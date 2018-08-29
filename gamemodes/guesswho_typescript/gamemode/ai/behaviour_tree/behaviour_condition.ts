@@ -1,13 +1,13 @@
-type BehaviourConditionFunction<T> = (state: T) => boolean;
+type BehaviourConditionFunction = () => boolean;
 
-class BehaviourCondition<T> implements IBehaviour<T> {
-    private func: BehaviourConditionFunction<T>;
+class BehaviourCondition implements IBehaviour {
+    private func: BehaviourConditionFunction;
 
-    constructor(func: BehaviourConditionFunction<T>) {
+    constructor(func: BehaviourConditionFunction) {
         this.func = func;
     }
 
-    public tick(state: T): BehaviourStatus {
-        return this.func(state) ? BehaviourStatus.Success : BehaviourStatus.Failure;
+    public tick(): BehaviourStatus {
+        return this.func() ? BehaviourStatus.Success : BehaviourStatus.Failure;
     }
 }

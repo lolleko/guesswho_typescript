@@ -26,12 +26,12 @@ end
 function BehaviourSelector.addChild(self,child)
     __TS__ArrayPush(self.children, child)
 end
-function BehaviourSelector.tick(self,state)
+function BehaviourSelector.tick(self)
     local currentChild = self.children[self.currentChildID+1]
 
     while true do
         do
-            local status = currentChild:tick(state)
+            local status = currentChild:tick()
 
             if status==BehaviourStatus.Success then
                 self.currentChildID = 0

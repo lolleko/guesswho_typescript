@@ -1,3 +1,3 @@
-interface IBehaviour<T> {
-    tick(state: T): BehaviourStatus;
+interface IBehaviour {
+    tick(): BehaviourStatus;
 }

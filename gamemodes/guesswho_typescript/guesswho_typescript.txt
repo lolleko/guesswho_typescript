@@ -137,7 +137,7 @@
 		}
 		17
 		{
-			"name"		"gw_changemodel_hiding"
+			"name"		"gw_changemodel_hiders"
 			"text"		"Allow model change"
 			"help"		"Wether hiding can change their model or not."
 			"type"		"CheckBox"
@@ -193,7 +193,7 @@
 		}
 		24
 		{
-			"name"		"gw_hiding_walk_speed"
+			"name"		"gw_hider_walk_speed"
 			"text"		"Hiding Walk Speed"
 			"help"		"Hiding Walk Speed"
 			"type"		"Numeric"
@@ -201,7 +201,7 @@
 		}
 		25
 		{
-			"name"		"gw_hiding_run_speed"
+			"name"		"gw_hider_run_speed"
 			"text"		"Hiding Run Speed"
 			"help"		"Hiding Run Speed"
 			"type"		"Numeric"

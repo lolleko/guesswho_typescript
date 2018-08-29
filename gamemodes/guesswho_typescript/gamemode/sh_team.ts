@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-enum GWTeam {
-    HIDERS,
-    SEEKERS,
+enum TEAM {
+    HIDER = 1,
+    SEEKER = 2,
 }

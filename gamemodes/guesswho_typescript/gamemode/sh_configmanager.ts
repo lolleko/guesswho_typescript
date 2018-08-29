@@ -180,7 +180,7 @@ if (CLIENT) {
         const newData = net.ReadTable() as GWConfigData;
         GWConfigManager.GetInstance().Data = newData;
 
-        team.SetColor(GWTeam.HIDERS, newData.TeamHidingColor);
-        team.SetColor(GWTeam.SEEKERS, newData.TeamSeekingColor);
+        team.SetColor(TEAM.HIDER, newData.TeamHidingColor);
+        team.SetColor(TEAM.SEEKER, newData.TeamSeekingColor);
     });
 }

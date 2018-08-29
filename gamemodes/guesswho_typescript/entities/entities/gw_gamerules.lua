@@ -99,7 +99,7 @@ end
 function ENT.Think(self)
     if SERVER then
         if self:get__GameState()==GWGameState.WAITING then
-            if (team.NumPlayers(GWTeam.HIDERS)<self:get__SettingMinHiders()) or (team.NumPlayers(GWTeam.SEEKERS)<self:get__SettingMinSeekers()) then
+            if (team.NumPlayers(HIDER)<self:get__SettingMinHiders()) or (team.NumPlayers(SEEKER)<self:get__SettingMinSeekers()) then
                 __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(ent) return ent:Remove() end)
                 self:NextThink(CurTime()+1)
                 print("Wating")
@@ -162,7 +162,7 @@ end
 function ENT.HandleHiding(self)
     self:set__GameState(GWGameState.HIDING)
     self:set__GameTimerEndTime((CurTime()+self:get__SettingHidingDuration()))
-    __TS__ArrayForEach((team.GetPlayers(GWTeam.HIDERS)), function(ply) return ply:Spawn() end)
+    __TS__ArrayForEach((team.GetPlayers(HIDER)), function(ply) return ply:Spawn() end)
     timer.Simple(self:get__SettingHidingDuration(),function() return self:HandleSeeking() end)
 end
 function ENT.HandleSeeking(self)
@@ -171,7 +171,7 @@ function ENT.HandleSeeking(self)
     timer.Simple(self:get__SettingHidingDuration(),function() return self:HandlePostRound() end)
 end
 function ENT.HandlePostRound(self)
-    local hiders = team.GetPlayers(GWTeam.HIDERS)
+    local hiders = team.GetPlayers(HIDER)
 
     local someHidersAlive = __TS__ArraySome(hiders, function(ply) return ply:Alive() end)
 
@@ -187,7 +187,7 @@ function ENT.UpdateSpawnpoints(self)
     local spawnPointClasses = {"info_player_start","info_player_deathmatch","info_player_combine","info_player_rebel","info_player_counterterrorist","info_player_terrorist","info_player_axis","info_player_allies","gmod_player_start","info_player_teamspawn","ins_spawnpoint","aoc_spawnpoint","dys_spawn_point","info_player_pirate","info_player_viking","info_player_knight","diprip_start_team_blue","diprip_start_team_red","info_player_red","info_player_blue","info_player_coop","info_player_human","info_player_zombie","info_player_deathmatch","info_player_zombiemaster"}
 
     self.spawnPoints = {}
-    __TS__ArrayForEach(spawnPointClasses, function(sp) return __TS__ArrayPush(self.spawnPoints, unpack(ents.FindByClass(sp))) end)
+    __TS__ArrayForEach(spawnPointClasses, function(sp) return __TS__ArrayPush(self.spawnPoints, table.unpack(ents.FindByClass(sp))) end)
     local rand = math.random
 
     local n = #self.spawnPoints-1

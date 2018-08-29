@@ -1,13 +1,13 @@
-type BehaviourFunction<T> = (state: T) => BehaviourStatus;
+type BehaviourFunction = () => BehaviourStatus;
 
-class BehaviourAction<T> implements IBehaviour<T> {
-    private func: BehaviourFunction<T>;
+class BehaviourAction implements IBehaviour {
+    private func: BehaviourFunction;
 
-    constructor(func: BehaviourFunction<T>) {
+    constructor(func: BehaviourFunction) {
         this.func = func;
     }
 
-    public tick(state: T): BehaviourStatus {
-        return this.func(state);
+    public tick(): BehaviourStatus {
+        return this.func();
     }
 }

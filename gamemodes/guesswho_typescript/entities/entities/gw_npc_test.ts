@@ -4,7 +4,7 @@ AddCSLuaFile();
 class GWNPCTest extends NextBot {
     public Base: string = "base_nextbot";
 
-    private behaviourTree: BehaviourTree<GWNPCTest>;
+    private behaviourTree: BehaviourTree;
 
     private currentPath: PathFollower;
 
@@ -15,34 +15,34 @@ class GWNPCTest extends NextBot {
     private loco: CLuaLocomotion;
 
     protected RunBehaviour(): void {
-        this.behaviourTree = new BehaviourTreeBuilder<GWNPCTest>()
+        this.behaviourTree = new BehaviourTreeBuilder()
             .sequence()
-                .action(ent => {
-                    if (ent.hasPath && ent.currentPath.IsValid()) {
+                .action(() => {
+                    if (this.hasPath && this.currentPath.IsValid()) {
                         return BehaviourStatus.Success;
                     }
 
-                    ent.targetPos = VectorRand() as any * 200 + (ent.GetPos() as any);
-                    ent.currentPath = Path("Follow");
-                    ent.currentPath.SetMinLookAheadDistance(300);
-                    ent.currentPath.SetGoalTolerance(20);
-                    ent.currentPath.Compute(this, ent.targetPos);
+                    this.targetPos = VectorRand() as any * 200 + (this.GetPos() as any);
+                    this.currentPath = Path("Follow");
+                    this.currentPath.SetMinLookAheadDistance(300);
+                    this.currentPath.SetGoalTolerance(20);
+                    this.currentPath.Compute(this, this.targetPos);
 
-                    if (!ent.currentPath.IsValid()) {
+                    if (!this.currentPath.IsValid()) {
                         return BehaviourStatus.Failure;
                     }
 
                     return BehaviourStatus.Success;
                 })
-                .action(ent => {
+                .action(() => {
                     // If the path is no longer valid we have reached our goal
-                    if (!ent.currentPath.IsValid()) {
+                    if (!this.currentPath.IsValid()) {
                         return BehaviourStatus.Success;
                     }
-                    ent.currentPath.Update(this);
+                    this.currentPath.Update(this);
 
                     // Draw the path (only visible on listen servers or single player)
-                    ent.currentPath.Draw();
+                    this.currentPath.Draw();
 
                     // If we're stuck then call the HandleStuck function and abandon
                     if (this.loco.IsStuck()) {
@@ -63,7 +63,7 @@ class GWNPCTest extends NextBot {
             .finish()
         .build();
         while (true) {
-            this.behaviourTree.tick(this);
+            this.behaviourTree.tick();
             coroutine.yield();
         }
     }

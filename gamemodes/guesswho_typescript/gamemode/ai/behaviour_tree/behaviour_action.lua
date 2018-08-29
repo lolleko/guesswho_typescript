@@ -10,6 +10,6 @@ end
 function BehaviourAction.constructor(self,func)
     self.func = func
 end
-function BehaviourAction.tick(self,state)
-    return self.func(state)
+function BehaviourAction.tick(self)
+    return self.func()
 end

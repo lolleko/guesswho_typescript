@@ -27,14 +27,14 @@ end
 function BehaviourParallel.addChild(self,child)
     __TS__ArrayPush(self.children, child)
 end
-function BehaviourParallel.tick(self,state)
+function BehaviourParallel.tick(self)
     local successCounter = 0
 
     local failCounter = 0
 
     for _, child in ipairs(self.children) do
         do
-            local result = child:tick(state)
+            local result = child:tick()
 
             if result==BehaviourStatus.Failure then
                 failCounter = (failCounter+1)

@@ -13,9 +13,9 @@ end
 function BehaviourTree.setRoot(self,root)
     self.root = root
 end
-function BehaviourTree.tick(self,state)
+function BehaviourTree.tick(self)
     if self.root then
-        return self.root:tick(state)
+        return self.root:tick()
     else
         print("TICKING EMPTY BEHAVIOR TREE")
         return BehaviourStatus.Failure

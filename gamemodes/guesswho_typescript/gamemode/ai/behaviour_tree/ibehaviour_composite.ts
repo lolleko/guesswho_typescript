@@ -1,3 +1,3 @@
-interface IBehaviourComposite<T> extends IBehaviour<T> {
-    addChild(child: IBehaviour<T>): void;
+interface IBehaviourComposite extends IBehaviour {
+    addChild(child: IBehaviour): void;
 }

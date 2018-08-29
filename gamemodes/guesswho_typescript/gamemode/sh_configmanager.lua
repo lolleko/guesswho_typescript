@@ -82,8 +82,8 @@ if CLIENT then
         local newData = net.ReadTable()
 
         GWConfigManager:GetInstance():set__Data(newData)
-        team.SetColor(GWTeam.HIDERS,newData.TeamHidingColor)
-        team.SetColor(GWTeam.SEEKERS,newData.TeamSeekingColor)
+        team.SetColor(HIDER,newData.TeamHidingColor)
+        team.SetColor(SEEKER,newData.TeamSeekingColor)
     end
 )
 end
