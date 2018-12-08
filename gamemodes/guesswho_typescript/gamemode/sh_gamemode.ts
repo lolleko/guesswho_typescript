@@ -2,6 +2,8 @@ AddCSLuaFile();
 
 /** !Extension GM */
 class GWGamemode extends Gamemode {
+    public TeamBased = true;
+
     private gamerules: GWGamerules;
 
     public get Gamerules(): GWGamerules {
@@ -35,6 +37,7 @@ class GWGamemode extends Gamemode {
         print("Creating gamerules");
         if (SERVER) {
             this.gamerules = ents.Create(GWClassName.ENT_GAMERULES) as GWGamerules;
+            this.gamerules.Spawn();
             GWConfigManager.Setup();
         } else {
             this.gamerules = ents.FindByClass(GWClassName.ENT_GAMERULES)[0] as GWGamerules;

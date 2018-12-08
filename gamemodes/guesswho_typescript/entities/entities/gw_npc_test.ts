@@ -14,7 +14,7 @@ class GWNPCTest extends NextBot {
 
     private loco: CLuaLocomotion;
 
-    protected RunBehaviour(): void {
+    public RunBehaviour(): void {
         this.behaviourTree = new BehaviourTreeBuilder()
             .sequence()
                 .action(() => {

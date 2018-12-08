@@ -27,7 +27,7 @@ class GWGamerules extends Entity {
         return GetConVar("gw_roundduration").GetInt();
     }
     public get SettingHidingDuration(): number {
-        return GetConVar("gw_hidinguration").GetInt();
+        return GetConVar("gw_hideduration").GetInt();
     }
     public get SettingPostRoundDuration(): number {
         return GetConVar("gw_postroundduration").GetInt();
@@ -62,12 +62,12 @@ class GWGamerules extends Entity {
         this.SetDTInt(0, state);
     }
 
-    protected SetupDataTables(): void {
+    public SetupDataTables(): void {
         this.DTVar("Float", 0, "GameTimerEndTime");
         this.DTVar("Int", 0, "GameState");
     }
 
-    protected Initialize(): void {
+    public Initialize(): void {
         hook.Add(
             "PlayerDeath", "gw_rules_player_death",
             (victim, inflictor, attacker) => {
@@ -78,17 +78,19 @@ class GWGamerules extends Entity {
 
         this.HandleWaiting();
 
+        print("updating spawnpoints");
+
         this.UpdateSpawnpoints();
 
         print("Initializing Gamerules");
     }
 
-    protected Think(): boolean {
+    public Think(): boolean {
         if (SERVER) {
             if (this.GameState === GWGameState.WAITING) {
                 if (team.NumPlayers(TEAM.HIDER) < this.SettingMinHiders ||
                     team.NumPlayers(TEAM.SEEKER) < this.SettingMinSeekers) {
-                    ents.FindByClass(GWClassName.NPC_WALKER).forEach(ent => ent.Remove());
+                    // ents.FindByClass(GWClassName.NPC_WALKER).forEach(ent => ent.Remove());
                     this.NextThink(CurTime() + 1);
                     print("Wating");
                     return true;
@@ -97,18 +99,22 @@ class GWGamerules extends Entity {
                 }
             }
         }
+        DebugInfo(0, "TIME: " + this.GameTime);
+        DebugInfo(1, "STATE: " + this.GameState);
 
         return false;
     }
 
-    protected UpdateTransmitState(): TRANSMIT {
+    public UpdateTransmitState(): TRANSMIT {
         return TRANSMIT.TRANSMIT_ALWAYS;
     }
 
     private HandlePlayerDeath(victim: Player, inflictor: Entity, attacker: Entity): void {
         const playersOnVictimTeam = team.GetPlayers(victim.Team()) as Player[];
-        const someAlive = playersOnVictimTeam.some(ply => ply.Alive());
-        if (!someAlive) {
+        const someAlive = playersOnVictimTeam.some(ply => ply.Alive() && ply !== victim);
+        print("dead ", someAlive);
+        if (!someAlive && this.GameState === GWGameState.SEEKING) {
+            print(this);
             this.HandlePostRound();
         }
     }
@@ -131,17 +137,18 @@ class GWGamerules extends Entity {
             const walkersSpawned = this.SpawnNPCWave();
             MsgN("GW Spawned ", walkersSpawned, " NPCs in 1 wave.");
         } else {
-            const spawnRounds = math.floor(this.maxWalkers / this.spawnPoints.length);
-            this.GameTimerEndTime = CurTime() + spawnRounds * 5;
-            for (let wave = 0; wave <= spawnRounds; wave++) {
-                timer.Simple(wave * 5, () => {
+            const spawnRounds = math.ceil(this.maxWalkers / this.spawnPoints.length);
+            this.GameTimerEndTime = CurTime() + spawnRounds * 7;
+            for (let wave = 0; wave < spawnRounds; wave++) {
+                timer.Simple(wave * 7, () => {
                     const walkersSpawned = this.SpawnNPCWave();
                     MsgN("GW Spawned ", walkersSpawned, " NPCs in wave ", wave + 1, ".");
-                    if (wave === spawnRounds) {
-                        this.HandleHiding();
-                    }
                 });
             }
+
+            timer.Simple(spawnRounds * 7, () => {
+                this.HandleHiding();
+            });
         }
     }
 
@@ -155,10 +162,13 @@ class GWGamerules extends Entity {
     private HandleSeeking(): void {
         this.GameState = GWGameState.SEEKING;
         this.GameTimerEndTime = CurTime() + this.SettingRoundDuration;
-        timer.Simple(this.SettingHidingDuration, () => this.HandlePostRound());
+        timer.Create("GWRoundEndTimer", this.SettingRoundDuration, 1, () => this.HandlePostRound());
     }
 
     private HandlePostRound(): void {
+        if (timer.Exists("GWRoundEndTimer")) {
+            timer.Remove("GWRoundEndTimer");
+        }
         const hiders = team.GetPlayers(TEAM.HIDER) as Player[];
         const someHidersAlive = hiders.some(ply => ply.Alive());
         if (someHidersAlive) {
@@ -166,6 +176,21 @@ class GWGamerules extends Entity {
         } else {
             print("Seekers Win");
         }
+
+        // Cleanup
+        game.CleanUpMap(false, [this.GetClass()]);
+
+        ents.FindByClass(GWClassName.NPC_WALKER).forEach(npc => npc.Remove());
+
+        // TeamSwap
+        (player.GetAll() as Player[]).forEach(ply => {
+            if (ply.Team() === TEAM.HIDER) {
+                ply.SetTeam(TEAM.SEEKER);
+            } else if (ply.Team() === TEAM.SEEKER) {
+                ply.SetTeam(TEAM.HIDER);
+            }
+        });
+
         this.GameTimerEndTime = CurTime() + this.SettingPostRoundDuration;
         timer.Simple(this.SettingPostRoundDuration, () => this.HandleWaiting());
     }
@@ -201,7 +226,9 @@ class GWGamerules extends Entity {
 
         this.spawnPoints = [];
 
-        spawnPointClasses.forEach(sp => this.spawnPoints.push(...ents.FindByClass(sp)));
+        for (const sp of spawnPointClasses) {
+            this.spawnPoints.push(...ents.FindByClass(sp));
+        }
 
         // fast schuffle
         const rand = math.random;
@@ -228,10 +255,10 @@ class GWGamerules extends Entity {
                 if (!occupied) {
                     const walker = ents.Create(GWClassName.NPC_WALKER);
                     if (IsValid(walker)) {
-                        walker.SetPos(sp.GetPos());
-                        walker.Spawn();
-                        walker.Activate();
-                    }
+                            walker.SetPos(sp.GetPos());
+                            walker.Spawn();
+                            walker.Activate();
+                        }
                     spawnedWalkers++;
                 }
             }

@@ -1,6 +1,7 @@
 
 -- Lua Library Imports
 AddCSLuaFile()
+GM.TeamBased = true
 function GM.get__Gamerules(self)
     return self.gamerules
 end
@@ -27,6 +28,7 @@ function GM.InitPostEntity(self)
     print("Creating gamerules")
     if SERVER then
         self.gamerules = ents.Create(GWClassName.ENT_GAMERULES)
+        self.gamerules:Spawn()
         GWConfigManager:Setup()
     else
         self.gamerules = ents.FindByClass(GWClassName.ENT_GAMERULES)[0+1]

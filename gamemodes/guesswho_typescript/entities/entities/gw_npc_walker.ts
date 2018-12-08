@@ -42,9 +42,11 @@ class GWNPCWalker extends NextBot {
 
     private loco: CLuaLocomotion;
 
+    private isJumping: boolean;
+
     private nextPossibleJump: number;
 
-    private isJumping: boolean;
+    private nextPossibleSettingsChange: number;
 
     private shouldCrouch: boolean;
 
@@ -56,6 +58,8 @@ class GWNPCWalker extends NextBot {
 
     private isDancing: boolean;
 
+    private isFirstPath: boolean;
+
     private stuckTime: number;
 
     private stuckPos: Vector;
@@ -66,6 +70,12 @@ class GWNPCWalker extends NextBot {
     private hasPath: boolean;
     private currentPathMaxAge: number;
 
+    private dogeUntil: number;
+    private dogePos: Vector;
+    private isDoging: boolean;
+
+    private boundsSize: number = 10;
+
     private targetPos: Vector;
 
     public Sit(duration: number = math.random(10, 30)): void {
@@ -73,17 +83,40 @@ class GWNPCWalker extends NextBot {
         this.sitUntil = CurTime() + duration;
     }
 
-    protected SetupDataTables(): void {
+    public SetCrouchCollision(state: boolean): void {
+        if (state) {
+            this.SetCollisionBounds(new Vector(-this.boundsSize, -this.boundsSize, 0), new Vector(this.boundsSize, this.boundsSize, 36));
+        } else {
+            this.SetCollisionBounds(new Vector(-this.boundsSize, -this.boundsSize, 0), new Vector(this.boundsSize, this.boundsSize, 70));
+        }
+    }
+
+    public Doge(dogePos: Vector, maxDuration: number = 0.35): void {
+        this.dogePos = dogePos;
+        this.dogeUntil = CurTime() + maxDuration;
+        this.isDoging = true;
+    }
+
+    public Jump(): void {
+        if (this.isJumping || this.nextPossibleJump > CurTime()) {
+            return;
+        }
+
+        this.loco.Jump();
+        this.isJumping = true;
+        this.nextPossibleJump = CurTime() + 2;
+    }
+
+    public SetupDataTables(): void {
         this.DTVar("Int", 0, "LastAct");
         this.DTVar("Int", 1, "WalkerColorIndex");
         this.DTVar("Int", 2, "WalkerModelIndex");
     }
 
-    protected Initialize(): void {
+    public Initialize(): void {
         const models = GWConfigManager.GetInstance().Data.HiderModels;
 
         if (SERVER) {
-            PrintTable(models);
             this.WalkerModelIndex = math.random(models.length) - 1;
         }
 
@@ -104,47 +137,51 @@ class GWNPCWalker extends NextBot {
         this.SetHealth(100);
 
         if (SERVER) {
-            this.SetCollisionBounds(new Vector(-8, -8, 0), new Vector(8, 8, 70));
-            this.loco.SetStepHeight(21);
+            this.SetCollisionBounds(new Vector(-this.boundsSize, -this.boundsSize, 0), new Vector(this.boundsSize, this.boundsSize, 70));
+            this.loco.SetStepHeight(20);
             this.loco.SetJumpHeight(68);
-            this.nextPossibleJump = CurTime() + 5;
+            this.loco.SetDesiredSpeed(100);
+            this.nextPossibleJump = CurTime() + 8;
+            this.nextPossibleSettingsChange = CurTime() + 10;
+            this.dogeUntil = CurTime();
             this.isJumping = false;
             this.shouldCrouch = false;
+            this.isFirstPath = true;
         }
     }
 
-    protected Draw(): void {
-        this.DrawModel();
-        let leftEye = this.GetAttachment(this.LookupAttachment("lefteye"));
-        let rightEye = this.GetAttachment(this.LookupAttachment("righteye"));
+    // public Draw(): void {
+    //     this.DrawModel();
+    //     let leftEye = this.GetAttachment(this.LookupAttachment("lefteye"));
+    //     let rightEye = this.GetAttachment(this.LookupAttachment("righteye"));
 
-        if (!leftEye) {
-            leftEye = this.GetAttachment(this.LookupAttachment("left_eye"));
-            rightEye = this.GetAttachment(this.LookupAttachment("right_eye"));
-        }
+    //     if (!leftEye) {
+    //         leftEye = this.GetAttachment(this.LookupAttachment("left_eye"));
+    //         rightEye = this.GetAttachment(this.LookupAttachment("right_eye"));
+    //     }
 
-        let leftEyePos: Vector | undefined;
-        let rightEyePos: Vector | undefined;
+    //     let leftEyePos: Vector | undefined;
+    //     let rightEyePos: Vector | undefined;
 
-        if (leftEye && rightEye) {
-            leftEyePos = leftEye.Pos as any + this.GetForward();
-            rightEyePos = rightEye.Pos as any + this.GetForward();
-        } else {
-            const eyes = this.GetAttachment(this.LookupAttachment("eyes"));
-            if (eyes) {
-                leftEyePos = (this.GetRight() as any) * -1.5 + (this.GetForward() as any) * 0.5 as any;
-                rightEyePos = (this.GetRight() as any) * 1.5 + (this.GetForward() as any) * 0.5 as any;
-            }
-        }
+    //     if (leftEye && rightEye) {
+    //         leftEyePos = leftEye.Pos as any + this.GetForward();
+    //         rightEyePos = rightEye.Pos as any + this.GetForward();
+    //     } else {
+    //         const eyes = this.GetAttachment(this.LookupAttachment("eyes"));
+    //         if (eyes) {
+    //             leftEyePos = (this.GetRight() as any) * -1.5 + (this.GetForward() as any) * 0.5 as any;
+    //             rightEyePos = (this.GetRight() as any) * 1.5 + (this.GetForward() as any) * 0.5 as any;
+    //         }
+    //     }
 
-        if (leftEyePos && rightEyePos) {
-            render.SetMaterial(eyeGlow);
-            render.DrawSprite(leftEyePos, 4, 4, white);
-            render.DrawSprite(rightEyePos, 4, 4, white);
-        }
-    }
+    //     if (leftEyePos && rightEyePos) {
+    //         render.SetMaterial(eyeGlow);
+    //         render.DrawSprite(leftEyePos, 4, 4, white);
+    //         render.DrawSprite(rightEyePos, 4, 4, white);
+    //     }
+    // }
 
-    protected Think(): boolean {
+    public Think(): boolean {
         if (SERVER) {
             const doors = ents.FindInSphere(this.GetPos(), 60);
             for (const door of doors) {
@@ -157,21 +194,21 @@ class GWNPCWalker extends NextBot {
                     door.SetCollisionGroup(COLLISION_GROUP.COLLISION_GROUP_DEBRIS);
                 }
             }
-            if (this.isStuck && CurTime() > this.stuckTime + 20 && this.stuckPos.DistToSqr(this.GetPos()) < 25) {
+            if (this.isStuck && CurTime() > this.stuckTime + 15 && this.stuckPos.DistToSqr(this.GetPos()) < 25) {
                 const spawnPoints = (GAMEMODE as GWGamemode).Gamerules.SpawnPoints;
                 const spawnPoint = spawnPoints[math.random(spawnPoints.length) - 1].GetPos();
                 this.SetPos(spawnPoint);
                 this.isStuck = false;
                 MsgN(`Nextbot [${tostring(this.EntIndex())}][${this.GetClass()}]` +
-                    "Got Stuck for over 20 seconds and will be repositioned, if this error gets spammed" +
+                    "Got Stuck for over 15 seconds and will be repositioned, if this error gets spammed" +
                     "you might want to consider the following: Edit the navmesh or lower the walker amount.");
             }
             if (this.isStuck && this.stuckPos.DistToSqr(this.GetPos()) > 100) {
                 this.isStuck = false;
             }
             if (this.GetSolidMask() === MASK.MASK_NPCSOLID_BRUSHONLY) {
-                const entsInBox = ents.FindInBox(this.GetPos() as any + new Vector(-16, -16, 0),
-                                                 this.GetPos() as any + new Vector(16, 16, 70));
+                const entsInBox = ents.FindInBox(this.GetPos() as any + new Vector(-this.boundsSize, -this.boundsSize, 0),
+                                                 this.GetPos() as any + new Vector(this.boundsSize, this.boundsSize, 70));
                 const occupied = entsInBox.some(ent => ent.GetClass() === "npc_walker" && ent !== this);
                 if (!occupied) {
                     this.SetSolidMask(MASK.MASK_NPCSOLID);
@@ -181,19 +218,42 @@ class GWNPCWalker extends NextBot {
         return false;
     }
 
-    protected RunBehaviour(): void {
+    public RunBehaviour(): void {
         this.behaviourTree = new BehaviourTreeBuilder()
             .sequence()
+            .action(() => {
+                if (this.nextPossibleSettingsChange > CurTime()) {
+                    return BehaviourStatus.Success;
+                }
+                const rand = math.random(1, 100);
+                if (rand > 0 && rand < 15) {
+                    this.loco.SetDesiredSpeed(200);
+                } else if (rand > 15 && rand < 22) {
+                    const entsAround = ents.FindInSphere(this.GetPos(), 300);
+                    const walkersAround = entsAround.filter(ent => ent.GetClass() === this.GetClass());
+                    const doorsAround = entsAround.filter(
+                        ent => ent.GetClass() === "func_door" || ent.GetClass() === "func_door_rotating" || ent.GetClass() === "prop_door_rotating");
+                    if (walkersAround.length < 3 && doorsAround.length === 0) {
+                        this.Sit(math.random(10, 60));
+                    }
+                } else {
+                    this.loco.SetDesiredSpeed(100);
+                }
+
+                this.nextPossibleSettingsChange = CurTime() + 5;
+                // Always succed we jsut set soem settings here
+                return BehaviourStatus.Success;
+            })
             .action(() => {
                 if (!this.isSitting) {
                     return BehaviourStatus.Success;
                 }
 
                 this.SetSequence("sit_zen");
-                this.SetCollisionBounds(new Vector(-8, -8, 0), new Vector(8, 8, 36));
+                this.SetCrouchCollision(true);
 
                 if (this.sitUntil < CurTime()) {
-                    this.SetCollisionBounds(new Vector(-8, -8, 0), new Vector(8, 8, 70));
+                    this.SetCrouchCollision(false);
                     this.isSitting = false;
                     return BehaviourStatus.Success;
                 }
@@ -205,8 +265,12 @@ class GWNPCWalker extends NextBot {
                     return BehaviourStatus.Success;
                 }
 
-                this.loco.SetDesiredSpeed(100);
-                const navs = navmesh.Find(this.GetPos(), 1000, 120, 120);
+                let radius = 2200;
+                if (this.isFirstPath) {
+                    radius = 8000;
+                }
+
+                const navs = navmesh.Find(this.GetPos(), radius, 200, 200);
                 const nav = navs[math.random(navs.length) - 1];
 
                 if (!IsValid(nav)) {
@@ -220,12 +284,21 @@ class GWNPCWalker extends NextBot {
                 this.currentPath = Path("Follow");
                 this.currentPath.SetMinLookAheadDistance(10);
                 this.currentPath.SetGoalTolerance(10);
-                this.currentPath.Compute(this, this.targetPos, this.PathGenerator());
-                this.currentPathMaxAge = math.Clamp(this.currentPath.GetLength() / 90, 0.1, 15);
+                // dont use custom this.PathGenerator() for now for performance reasons
+                this.currentPath.Compute(this, this.targetPos);
+
+                if (this.isFirstPath) {
+                    this.currentPathMaxAge = 20;
+                } else {
+                    this.currentPathMaxAge = math.Clamp(this.currentPath.GetLength() / 90, 0.1, 12);
+                }
 
                 if (!this.currentPath.IsValid()) {
                     return BehaviourStatus.Failure;
                 }
+
+                this.isFirstPath = false;
+                this.hasPath = true;
 
                 return BehaviourStatus.Success;
             })
@@ -234,17 +307,41 @@ class GWNPCWalker extends NextBot {
                 if (!this.currentPath.IsValid()) {
                     return BehaviourStatus.Success;
                 }
+
+                if (this.isDoging && this.dogeUntil > CurTime() && this.dogePos.DistToSqr(this.GetPos()) > 100) {
+                    // @ts-ignore
+                    const dogeDirection = (this.dogePos - this.GetPos()).GetNormalized();
+                    this.loco.FaceTowards(this.dogePos);
+                    // @ts-ignore
+                    this.loco.SetVelocity(dogeDirection * 80);
+                    // @ts-ignore
+                    this.loco.Approach(this.dogePos, 1);
+                    return BehaviourStatus.Running;
+                } else {
+                    this.isDoging = false;
+                }
+
                 const goal = this.currentPath.GetCurrentGoal();
+                const distToGoal = this.GetPos().Distance(goal.pos);
                 if (goal.type === 3) {
-                    this.loco.JumpAcrossGap(goal.pos, goal.forward);
-                } else if (goal.type === 2 && this.GetPos().Distance(goal.pos) < 30) {
                     this.isJumping = true;
-                    this.loco.Jump();
+                    this.loco.JumpAcrossGap(goal.pos, goal.forward);
+                } else if (!goal.area.HasAttributes(NAV_MESH.NAV_MESH_NO_JUMP | NAV_MESH.NAV_MESH_STAIRS)) {
+                    if (goal.type === 2 && distToGoal  < 30) {
+                        this.Jump();
+                    } else {
+                        const scanDist = 25;
+                        // @ts-ignore
+                        const scanPoint = this.currentPath.GetClosestPosition(this.EyePos()[0] + this.loco.GetGroundMotionVector() * scanDist);
+                        if (math.abs(this.GetPos().z - scanPoint.z) > this.loco.GetStepHeight() && distToGoal  < 300) {
+                            this.Jump();
+                        }
+                    }
                 }
 
                 this.currentPath.Update(this);
 
-                this.currentPath.Draw();
+                // this.currentPath.Draw();
 
                 if (this.loco.IsStuck()) {
                     this.HandleStuck();
@@ -264,7 +361,7 @@ class GWNPCWalker extends NextBot {
         }
     }
 
-    protected BodyUpdate(): void {
+    public BodyUpdate(): void {
         const act = this.GetActivity();
 
         let idealAct = ACT.ACT_HL2MP_IDLE;
@@ -298,27 +395,27 @@ class GWNPCWalker extends NextBot {
         this.FrameAdvance();
     }
 
-    protected OnLandOnGround(ent: Entity): void {
+    public OnLandOnGround(ent: Entity): void {
         this.isJumping = false;
+        this.SetCrouchCollision(false);
     }
 
-    protected OnLeaveGround(ent: Entity): void {
+    public OnLeaveGround(ent: Entity): void {
         this.isJumping = true;
+        this.SetCrouchCollision(true);
     }
 
-    protected OnContact(ent: Entity): void {
+    public OnContact(ent: Entity): void {
         if (ent.GetClass() === this.GetClass() || ent.IsPlayer()) {
-            const calcDogeGoal = (collider: Entity) => {
-                const dogeDirection = new Vector(collider.GetPos());
-                dogeDirection.Add(collider.GetRight() as any * 30 as any);
-                dogeDirection.Add(collider.GetForward() as any * 30 as any);
-                return dogeDirection;
-            };
-
-            this.loco.Approach(calcDogeGoal(this), 1000);
-
-            if (math.abs(this.GetPos().z - ent.GetPos().z) > 30) {
-                this.SetSolidMask( MASK.MASK_NPCSOLID_BRUSHONLY );
+            if (math.abs(this.GetPos().z - ent.GetPos().z) > 20) {
+                this.SetSolidMask(MASK.MASK_NPCSOLID_BRUSHONLY);
+            } else if (!this.isDoging) {
+                // @ts-ignore
+                const dogeDirection: Vector = (ent.GetPos() - this.GetPos()).GetNormalized();
+                dogeDirection.Rotate(new Angle(0, math.random(85, 95), 0));
+                dogeDirection.z = 0;
+                // @ts-ignore
+                this.Doge(this.GetPos() + dogeDirection * 200, math.random(0.2, 0.35));
             }
         }
         if  (ent.GetClass() === "prop_physics_multiplayer"
@@ -330,28 +427,53 @@ class GWNPCWalker extends NextBot {
                 return;
             }
             // @ts-ignore
-            phys.ApplyForceCenter(this.GetPos() - ent.GetPos() * 1.2 );
+            const force: Vector = (ent.GetPos() - this.GetPos()).GetNormalized() * 3 * this.GetVelocity().Length2D();
+            force.z = 0;
+            phys.ApplyForceCenter(force);
             DropEntityIfHeld( ent );
         }
         if (ent.GetClass() === "func_breakable" || ent.GetClass() === "func_breakable_surf") {
             ent.Fire("Shatter");
         }
+        // if we are stuck and our bbox overlaps with this npc nocollide
+        if (this.isStuck && (ent.GetClass() === this.GetClass() || ent.IsPlayer())) {
+
+            const thisMin: Vector = this.OBBMins() as any + this.GetPos();
+            const thisMax: Vector = this.OBBMaxs() as any + this.GetPos();
+
+            const entMin: Vector = ent.OBBMins() as any + ent.GetPos();
+            const entMax: Vector = ent.OBBMaxs() as any + ent.GetPos();
+
+            // 2d box overlap test
+            if (!(thisMax.x < entMin.x || thisMin.x > entMax.x || thisMax.y < entMin.y || thisMin.y > entMax.y)) {
+                this.SetSolidMask(MASK.MASK_NPCSOLID_BRUSHONLY);
+            }
+        }
     }
 
-    protected OnStuck(): void {
-        // debugoverlay.Cross( self:GetPos() + Vector(0,0,70), 10, 20, Color(0,255,255), true )
+    public OnStuck(): void {
         if (!this.isStuck) {
             this.stuckTime = CurTime();
+            this.isStuck = true;
         }
         this.stuckPos = this.GetPos();
+
+        // if our velocity is zero and we are pathing, try to usntuck
+        if (this.hasPath && !this.isDoging && this.loco.GetVelocity().Length2DSqr() < 0.1) {
+            // @ts-ignore
+            const randomDir: Vector = VectorRand() * 100;
+            randomDir.z = 0;
+            // @ts-ignore
+            this.Doge(this.GetPos() + randomDir, 0.4);
+        }
     }
-    protected OnUnStuck(): void {
-        if (this.stuckPos.Distance(this.GetPos()) > 10 || this.isSitting) {
+    public OnUnStuck(): void {
+        if (this.stuckPos.DistToSqr(this.GetPos()) > 100 || this.isSitting) {
             this.isStuck = false;
         }
     }
 
-    protected Use(activator: Entity, caller: Entity, useType: USE, value: number): void {
+    public Use(activator: Entity, caller: Entity, useType: USE, value: number): void {
         if ((caller as GWPlayer).IsHider() && GetConVar( "gw_changemodel_hiding" ).GetBool()) {
             this.SetModel(this.GetModel());
         }

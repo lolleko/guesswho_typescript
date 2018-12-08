@@ -1,3 +1,5 @@
+AddCSLuaFile();
+
 /** !MetaExtension */
 class GWPlayer extends Player {
     public IsHider(): boolean {

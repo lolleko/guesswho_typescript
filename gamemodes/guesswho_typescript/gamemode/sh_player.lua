@@ -1,5 +1,6 @@
 
 -- Lua Library Imports
+AddCSLuaFile()
 local __meta__Player = debug.getregistry()["Player"]
 function __meta__Player.constructor(self)
 end

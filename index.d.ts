@@ -117,7 +117,7 @@ declare enum ACT {
     
     /**
      */
-    ACT_RUN_PROTECTED = 14,
+    ACT_RUN_public = 14,
     
     /**
      */
@@ -4989,7 +4989,7 @@ declare enum ACT {
     
     /**
      */
-    ACT_HL2MP_RUN_PROTECTED = 1624,
+    ACT_HL2MP_RUN_public = 1624,
     
     /**
      */
@@ -8275,7 +8275,7 @@ declare enum FCVAR {
      * 
      * Reported as "prot" by ''cvarlist'' 
      */
-    FCVAR_PROTECTED = 32,
+    FCVAR_public = 32,
     
     /**
      * For serverside `ConVar`s, it will send its value to all clients. The `ConVar` with the same name must also exist on the client!
@@ -16673,7 +16673,8 @@ interface Weapon {
  * Used to show an icon for any of the [http://steamcommunity.com/stats/GarrysMod/achievements Garry's Mod Steam achievements].
  * 
  * If the viewer has not unlocked the achievement on Steam, the icon will be grayed out. 
- */
+ *
+ * !PureAbstract */
 declare class AchievementIcon extends Panel {
     /**
      * Sets the achievement to be displayed by `AchievementIcon`.[[Category:AchievementIcon]] 
@@ -16981,7 +16982,8 @@ declare class Angle {
 
 /**
  * Used to show a player's Steam avatar. You are recommended but not limited to pick one of the following sizes: 16, 32, 64, 84, 128, 184. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Avatar = vgui.Create( "AvatarImage", Panel )
  * Avatar:SetSize( 64, 64 )
@@ -17022,7 +17024,8 @@ declare class AvatarImage extends Panel {
 
 /**
  * Base panel for elements using the [http://www.awesomium.com Awesomium] UI engine. 
- */
+ *
+ * !PureAbstract */
 declare class Awesomium extends Panel {
     /**
      * Returns the panel's HTML material. Only works with `Awesomium`, `HTML` and `DHTML` panels that have been fully loaded.
@@ -17436,7 +17439,8 @@ declare namespace bit {
  * >Only exists for backwards compatibility with `Panel.SetActionFunction`. Use `DButton` instead.
  * 
  * Creates a button that players can click on. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local button = vgui.Create( "Button" )
  * button:SetSize( 150, 30 )
@@ -17893,7 +17897,8 @@ declare namespace chat {
 /**
  * **INTERNAL**
  * Engine checkbox 
- */
+ *
+ * !PureAbstract */
 declare class CheckButton {
 
 }
@@ -20108,7 +20113,8 @@ declare namespace construct {
  * The spawn icon used for SWEPs and other SENTs, commonly featured as part of the spawn menu. Do note that at least one of your ContentIcon's parents must either be an `EditablePanel` or derived from it (like a `DFrame`, for example), else it won't be able to focus and thus be unclickable.
  * 
  * This control only exists in Sandbox derived gamemodes. 
- */
+ *
+ * !PureAbstract */
 declare class ContentIcon extends DButton {
     /**
      * Returns the color set by `ContentIcon.SetColor` 
@@ -20206,7 +20212,8 @@ declare class ContentIcon extends DButton {
 
 /**
  * A base for all context menu panels ( The ones used for tool options in sandbox ) 
- */
+ *
+ * !PureAbstract */
 declare class ContextBase extends Panel {
     /**
      * Called by spawnmenu functions (when creating a context menu) to fill this control with data. 
@@ -20267,7 +20274,8 @@ declare namespace controlpanel {
  * 
  * **Note:**
  * >This panel is only available in Sandbox and Sandbox derived gamemodes! 
- */
+ *
+ * !PureAbstract */
 declare class ControlPanel extends DForm {
     /**
      * **Deprecated:**
@@ -20367,7 +20375,8 @@ declare class ControlPanel extends DForm {
  * A preset manager, found at the top of almost every default tool's C-menu.
  * 
  * This control only exists in Sandbox derived gamemodes. 
- */
+ *
+ * !PureAbstract */
 declare class ControlPresets extends Panel {
     /**
      * Adds a convar to be managed by this control. 
@@ -20984,7 +20993,8 @@ declare class CTakeDamageInfo {
  * A `DComboBox` based dropdown menu with build in easy `ConVar` support.
  * 
  * This control only exists in Sandbox derived gamemodes. 
- */
+ *
+ * !PureAbstract */
 declare class CtrlListBox extends DComboBox {
 
 }
@@ -21266,7 +21276,8 @@ declare namespace cvars {
  * The keyboard keys {{Key|W}} {{Key|S}} {{Key|A}} {{Key|D}} {{Key|Up}} {{Key|Down}} {{Key|Left}} {{Key|Right}} {{Key|Space}} and {{Key|Ctrl}} can be used when the right mouse is held down, with {{Key|Shift}} acting as a speed multiplier. When the left mouse is used, the Shift key holds the current ''y'' angle steady.
  * 
  * This is used by `IconEditor` for modifying spawn icons. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local AdjustableModelPanel = vgui.Create( "DAdjustableModelPanel" )
  * AdjustableModelPanel:SetPos( 10, 10 )
@@ -21306,7 +21317,8 @@ declare class DAdjustableModelPanel extends DModelPanel {
 
 /**
  * A bar to select the opacity (alpha level) of a color. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DAlphaBar = vgui.Create( "DAlphaBar" )
  * DAlphaBar:SetPos( 20, 30 )
@@ -21360,7 +21372,8 @@ declare class DAlphaBar extends DPanel {
 
 /**
  * Input which can bind a command to a key. Used for binding inputs and outputs of TOOLs. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(250,100)
@@ -21426,7 +21439,8 @@ declare class DBinder extends DButton {
 
 /**
  * A transparent gray speech bubble panel made up of a rounded box and point coming from the bottom. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * //Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -21490,7 +21504,8 @@ declare class DBubbleContainer extends DPanel {
  * A standard Derma button.
  * 
  * By default, a `DButton` is 22px tall. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -21714,14 +21729,16 @@ declare class DButton extends DLabel {
  * **INTERNAL**
  * 
  * Used by `DCollapsibleCategory` 
- */
+ *
+ * !PureAbstract */
 declare class DCategoryHeader extends DButton {
 
 }
 
 /**
  * A host for multiple `DCollapsibleCategory` panels. As the name suggests, each one of them can be collapsed or expanded on demand by the user. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -21795,7 +21812,8 @@ declare class DCategoryList extends DScrollPanel {
 
 /**
  * The DCheckBox is a checkbox. It allows you to get a boolean value from the user (true/false - yes/no) 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DermaCheckbox = vgui.Create("DCheckBox")// Create the checkbox
  * DermaCheckbox:SetPos(25, 50)// Set the position
@@ -21849,7 +21867,8 @@ declare class DCheckBox extends DButton {
 
 /**
  * The "DCheckBoxLabel" is a `DCheckBox` with a `DLabel` next to it. It allows you to get a boolean value from the user (true/false - yes/no) 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DermaCheckbox = vgui.Create("DCheckBoxLabel") // Create the checkbox
  * DermaCheckbox:SetParent(DermaPanel)
@@ -21955,7 +21974,8 @@ declare class DCheckBoxLabel extends DPanel {
  * The collapsible category allows you to create numerous sections of controls, and have the ability to contract/expand them.
  * 
  * Consider using `DCategoryList` if you plan on using more than 1 of these. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 300 )
@@ -22136,7 +22156,8 @@ declare class DCollapsibleCategory extends Panel {
 
 /**
  * Colorful buttons. Used internally by `DColorPalette`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -22207,7 +22228,8 @@ declare class DColorButton extends DLabel {
 
 /**
  * The "DColorCombo" allows the user to choose color, without alpha, using `DColorMixer` or `DColorPalette` in a tabbed view. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -22264,7 +22286,8 @@ declare class DColorCombo extends DPropertySheet {
 
 /**
  * The DColorCube allows a user to select saturation and value but not hue. Uses HSV colors 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 300, 300 )
@@ -22427,7 +22450,8 @@ declare class DColorCube extends DSlider {
 
 /**
  * A standard Derma color mixer 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create("DFrame")
  * Frame:SetSize(267,186) //good size for example
@@ -22667,7 +22691,8 @@ declare class DColorMixer extends DPanel {
  * This panel supports saving across sessions via the panel cookie system.
  * 
  * Use `Panel.SetCookieName` to change "save files". 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 170, 200 )
@@ -22897,7 +22922,8 @@ declare class DColorPalette extends DIconLayout {
 
 /**
  * Similar to `DPropertySheet`, but with tabs on the left. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -22950,7 +22976,8 @@ declare class DColumnSheet extends Panel {
 
 /**
  * A field with multiple selectable values. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DComboBox = vgui.Create( "DComboBox" )
  * DComboBox:SetPos( 5, 5 )
@@ -23087,7 +23114,8 @@ declare class DComboBox extends DButton {
  * **INTERNAL**
  * 
  * A VGUI base panel providing drag/drop functionality. Used by `DIconLayout`, `DListLayout` and `DTileLayout`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 500 )
@@ -23203,7 +23231,8 @@ declare class DDragBase extends DPanel {
 
 /**
  * A simple Derma Drawer 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 400, 200 )
@@ -23653,7 +23682,8 @@ declare namespace debugoverlay {
  * **INTERNAL**
  * 
  * A panel used by the [[Editable Entities]] system. 
- */
+ *
+ * !PureAbstract */
 declare class DEntityProperties extends DProperties {
     /**
      * **INTERNAL**
@@ -23788,7 +23818,8 @@ declare namespace derma {
 /**
  * **INTERNAL**
  * The little "+" button used by `DProperties` and `DTree_Node`. 
- */
+ *
+ * !PureAbstract */
 declare class DExpandButton extends DButton {
     /**
      * Returns whether this DExpandButton is expanded or not. 
@@ -23807,7 +23838,8 @@ declare class DExpandButton extends DButton {
  * A tree and list-based file browser.
  * 
  * It allows filtering by folder (directory) name and file extension, and can display models as `SpawnIcon`s. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 250 )
@@ -24079,7 +24111,8 @@ declare class DFileBrowser extends DPanel {
 
 /**
  * An easy form with functions to quickly add form elements 
- */
+ *
+ * !PureAbstract */
 declare class DForm extends DCollapsibleCategory {
     /**
      * Adds one or two items to the DForm.
@@ -24203,7 +24236,8 @@ declare class DForm extends DCollapsibleCategory {
 
 /**
  * The DFrame control is the foundation for any Derma menu. It holds all of your controls. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DermaPanel = vgui.Create( "DFrame" )
  * DermaPanel:SetPos( 100, 100 )
@@ -24394,7 +24428,8 @@ declare class DFrame extends EditablePanel {
  * 
  * **Note:**
  * >This panel will set its size automatically based on set column count. This makes it play badly with `Panel.Dock` and cause a `PANEL.PerformLayout` call every frame. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetPos( 500, 500 )
@@ -24488,7 +24523,8 @@ declare class DGrid extends Panel {
 
 /**
  * Creates an invisible vertical divider between two GUI elements. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 400, 200 )
@@ -24636,7 +24672,8 @@ declare class DHorizontalDivider extends DPanel {
  * A very basic horizontal scrollable panel, similar to `DScrollPanel`.
  * 
  * Used internally in `DPropertySheet`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetTitle( "DHorizontalScroller Example" )
@@ -24737,7 +24774,8 @@ declare class DHorizontalScroller extends Panel {
 
 /**
  * The DHTML control wraps the internal Awesomium framework, supports calling Javascript functions from Lua, as well as running Lua from within the HTML. Running Lua code is disabled by default. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 200 )
@@ -24849,7 +24887,8 @@ declare class DHTML extends Awesomium {
 
 /**
  * An element providing navigation controls for a `DHTML` window. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * <nowiki>local frame = vgui.Create( "DFrame" ) // Create a container for everything
  * frame:SetSize( 800, 600 )
@@ -24917,7 +24956,8 @@ declare class DHTMLControls extends Panel {
 
 /**
  * Simply a [http://wiki.garrysmod.com/page/VGUI/Elements/DIconLayout DIconLayout] which automatically displays all of the [http://wiki.garrysmod.com/page/silkicons Silkicons]. Used as a way to get the user to select an icon. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DermaPanel = vgui.Create( "DFrame" )
  * DermaPanel:SetPos( 100, 100 )
@@ -25005,7 +25045,8 @@ declare class DIconBrowser extends DScrollPanel {
  * DIconLayout is what replaced `DPanelList` in Garry's Mod 13. DPanelList still exists in GMod but is deprecated and does not support the new GWEN skin.
  * 
  * `DIconLayout` is used to make a list of panels. Unlike DPanelList, DIconLayout does not automatically add a scroll bar - the example below shows you how you can do this. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" ) // Create a Frame to contain everything.
  * Frame:SetTitle( "DIconLayout Example" )
@@ -25167,7 +25208,8 @@ declare class DIconLayout extends DDragBase {
  * `DImage` is an advanced, more robust version of the `Material` panel.
  * 
  * See `DImageButton` for a click-able version of this panel. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * // Frame
  * Frame = vgui.Create("DFrame")
@@ -25309,7 +25351,7 @@ declare class DImage extends DPanel {
      * @param strImage  The path of the image to load. When no file extension is supplied the VMT file extension is used. 
      * @param strBackup  The path of the backup image. 
      */
-    public SetImage(strImage: string, strBackup: string): void;
+    public SetImage(strImage: string, strBackup?: string): void;
     
     /**
      * Sets the image's color override. 
@@ -25391,7 +25433,8 @@ declare class DImage extends DPanel {
  * An image button.
  * 
  * This panel inherits all methods of `DButton`, such as `DLabel.DoClick`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -25532,7 +25575,8 @@ declare class DImageButton extends DButton {
 
 /**
  * Uses the {{Lib|killicon}} to persistently draw a killicon. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(200,200)
@@ -25577,7 +25621,8 @@ declare class DKillIcon extends Panel {
 /**
  * A standard Derma text label. A lot of this panels functionality is a base for button elements, such as `DButton` 
  *
- * !CustomConstructor Label * @example
+ * !CustomConstructor Label *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 200, 200 )
@@ -25999,7 +26044,8 @@ declare class DLabel extends Label {
  * An editable `DLabel`, double click on it to edit.
  * 
  * This is used in the spawnmenu spawnlist headers. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local EditLabel = vgui.Create( "DLabelEditable" )
  * EditLabel:SetPos( 40, 40 )
@@ -26023,7 +26069,8 @@ declare class DLabelEditable extends DLabel {
  * Underlined link label without a DoClick function. When a valid URL is set and the label is clicked, it will open a browser window and navigate to the address.
  * 
  * This panel uses `gui.OpenURL` internally and its restrictions apply. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize(400,400)
@@ -26111,14 +26158,16 @@ declare class DLabelURL extends DLabel {
  * >Derived from the deprecated `DPanelList`.
  * 
  *  A simple list box with optional multi-select. As this is deprecated, it is recommended that you use `DListView`, which contains the same functionality with multi-column options. 
- */
+ *
+ * !PureAbstract */
 declare class DListBox extends DPanelList {
 
 }
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListBoxItem extends DLabel {
 
 }
@@ -26129,7 +26178,8 @@ declare class DListBoxItem extends DLabel {
  * Child panels' widths are set to the width of the DListLayout, and it resizes vertically to accommodate the heights of all children. You can place this inside a `DScrollPanel` when adding many panels.
  * 
  * To enable the drag & drop rearrangement functionality, call `DDragBase.MakeDroppable` on the DListLayout with a unique identifier. All panels added following this will be moveable. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(250, 250)
@@ -26159,7 +26209,8 @@ declare class DListLayout extends DDragBase {
 
 /**
  * A data view with rows and columns. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 500, 500 )
@@ -26497,7 +26548,8 @@ declare class DListView extends DPanel {
 /**
  * **INTERNAL**
  * A single column, used by `DListView`. 
- */
+ *
+ * !PureAbstract */
 declare class DListView_Column extends DPanel {
     /**
      * Sets the text alignment for the column 
@@ -26513,14 +26565,16 @@ declare class DListView_Column extends DPanel {
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListView_ColumnPlain extends Panel {
 
 }
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListView_DraggerBar extends DButton {
 
 }
@@ -26528,7 +26582,8 @@ declare class DListView_DraggerBar extends DButton {
 /**
  * **INTERNAL**
  * A panel used by `DListView` 
- */
+ *
+ * !PureAbstract */
 declare class DListView_Line extends Panel {
     /**
      * Gets the string held in the specified column of a `DListView_Line` panel.
@@ -26542,28 +26597,32 @@ declare class DListView_Line extends Panel {
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListViewHeaderLabel extends DLabel {
 
 }
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListViewLabel extends DLabel {
 
 }
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DListViewLine extends Panel {
 
 }
 
 /**
  * A simple DMenu 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Menu = DermaMenu() 		// Is the same as  vgui.Create("DMenu")
  * Menu:AddOption( "Simple option" ) 	// Add a simple option.
@@ -26768,7 +26827,8 @@ declare class DMenu extends DScrollPanel {
 
 /**
  * A simple Derma MenuBar 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 300, 200 )
@@ -26942,21 +27002,24 @@ declare class DMenuBar extends DPanel {
 /**
  * **INTERNAL**
  * Internal subpanel of a `DMenu`. 
- */
+ *
+ * !PureAbstract */
 declare class DMenuOption extends DButton {
 
 }
 
 /**
  * **INTERNAL** 
- */
+ *
+ * !PureAbstract */
 declare class DMenuOptionCVar extends DMenuOption {
 
 }
 
 /**
  * DModelPanel is a VGUI element that projects a 3D model onto a 2D plane. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DPanel" )
  * Panel:SetPos( 10, 10 )
@@ -27187,7 +27250,8 @@ declare class DModelPanel extends DButton {
  * >This is derived from the deprecated `DPanelList`.
  * 
  *  A vertical list of models. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * // Create a table of models
  * local models = {
@@ -27237,14 +27301,16 @@ declare class DModelSelect extends DPanelSelect {
 
 /**
  * A combination of `DModelSelect` and `DPropertySheet`. 
- */
+ *
+ * !PureAbstract */
 declare class DModelSelectMulti extends DPropertySheet {
 
 }
 
 /**
  * A panel that fades its contents in and out once, like a notification. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * //Notification panel
  * NotifyPanel = vgui.Create("DNotify")
@@ -27354,7 +27420,8 @@ declare class DNotify extends Panel {
 
 /**
  * Choose a number from a number line, with zooming for precision. Zoom in by moving your mouse forward and moving back does the opposite. Looks like a blue circle until you click and hold on it 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -27572,7 +27639,8 @@ declare class DNumberScratch extends DImageButton {
 
 /**
  * DNumberWang is a VGUI element that allows you to input a numeric value using up and down arrows or direct entry. 
- */
+ *
+ * !PureAbstract */
 declare class DNumberWang extends DTextEntry {
     /**
      * Returns the amount of decimal places allowed in the number selector, set by `DNumberWang.SetDecimals` 
@@ -27728,14 +27796,16 @@ declare class DNumberWang extends DTextEntry {
  * >You should use `DBinder` instead.
  * 
  * GMod 12 style "number pad" panel used by tools for binding keys to tool actions. Deprecated in favor of `DBinder`. 
- */
+ *
+ * !PureAbstract */
 declare class DNumPad extends DPanel {
 
 }
 
 /**
  * The DNumSlider allows you to create a slider, allowing the user to slide it to set a value, or changing the value in the box. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DermaPanel = vgui.Create( 'DFrame' ) // Create a panel to parent it to
  * DermaPanel:SetSize( 500, 200 ) // Set the size
@@ -27914,7 +27984,8 @@ declare class DNumSlider extends Panel {
 
 /**
  * A simple rectangular box, commonly used for parenting other elements to. Pretty much all elements are based on this. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DPanel = vgui.Create( "DPanel" )
  * DPanel:SetPos( 10, 30 ) // Set the position of the panel
@@ -27993,7 +28064,8 @@ declare class DPanel extends Panel {
  * 
  * Displays elements in a horizontal or vertical list. A scrollbar is automatically shown if necessary.
  * Use is not recommended due to deprecation. 
- */
+ *
+ * !PureAbstract */
 declare class DPanelList extends DPanel {
     /**
      * @param insert  The panel to insert 
@@ -28004,7 +28076,8 @@ declare class DPanelList extends DPanel {
 
 /**
  * Adds curved corners. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetSize( 350, 200 ) // Set the size of the panel
@@ -28079,14 +28152,16 @@ declare class DPanelOverlay extends DPanel {
  * >This is derived from the deprecated `DPanelList`.
  * 
  *  A base panel for things like `DModelSelect`. Basically, a list of panels that can be selected. Selected panel can be retrieved and has visual indication of being selected. 
- */
+ *
+ * !PureAbstract */
 declare class DPanelSelect extends DPanelList {
 
 }
 
 /**
  * A progressbar, works with a fraction between 0 and 1 where 0 is 0% and 1 is 100%. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DProgress = vgui.Create( "DProgress" )
  * DProgress:SetPos( 10, 30 )
@@ -28119,7 +28194,8 @@ declare class DProgress extends Panel {
  * *`DProperty_Combo`
  * *`DProperty_Float`
  * *`DProperty_Int` 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 500, 300 )
@@ -28193,7 +28269,8 @@ declare class DProperties extends Panel {
  * **INTERNAL**
  * 
  * Checkbox control for the `DProperties` panel. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28218,7 +28295,8 @@ declare class DProperty_Boolean extends DProperty_Generic {
 /**
  * **INTERNAL**
  * Combo control for a `DProperties` panel. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28285,14 +28363,16 @@ declare class DProperty_Combo extends DProperty_Generic {
 /**
  * **INTERNAL**
  * Float control for the `DProperties` panel. 
- */
+ *
+ * !PureAbstract */
 declare class DProperty_Float extends DProperty_Generic {
 
 }
 
 /**
  * A base for other controls for `DProperties`. Acts as a generic text input on its own. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28317,7 +28397,8 @@ declare class DProperty_Generic extends Panel {
 /**
  * **INTERNAL**
  * Integer control for the `DProperties` panel. 
- */
+ *
+ * !PureAbstract */
 declare class DProperty_Int extends DProperty_Float {
 
 }
@@ -28326,7 +28407,8 @@ declare class DProperty_Int extends DProperty_Float {
  * Color picker control for a DProperties panel. Opens a `DColorCombo` if the color preview is clicked.
  * 
  * See [[Editable Entities]] for how this is used ingame. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28369,7 +28451,8 @@ declare class DProperty_VectorColor extends DProperty_Generic {
 
 /**
  * A tab oriented control where you can create multiple tabs with items within. Used mainly for organization. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -28766,7 +28849,8 @@ declare namespace draw {
  * See `DColorCube` for a color picker which controls brightness and saturation.
  * 
  * See `DColorMixer` for a color picker that allows control over hue, saturation, and brightness at once. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * // Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -28992,7 +29076,8 @@ declare namespace drive {
  * **INTERNAL**
  * 
  * An internal panel used by `DVScrollBar` as the grip (middle) part of the scrollbar. 
- */
+ *
+ * !PureAbstract */
 declare class DScrollBarGrip extends DPanel {
 
 }
@@ -29006,7 +29091,8 @@ declare class DScrollBarGrip extends DPanel {
  * 
  * **Note:**
  * >`Panel.DockPadding` will not have an effect on children of this panel. Use the function on `DScrollPanel.GetCanvas` instead. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -29082,7 +29168,8 @@ declare class DScrollPanel extends DPanel {
 
 /**
  * Draw a shape on a derma panel. Only one kind of shape, a rectangle, is available for use. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Frame = vgui.Create( "DFrame" ) // Create a frame 
  * Frame:SetTitle( "Test panel" )
@@ -29148,14 +29235,16 @@ declare class DShape extends DPanel {
 
 /**
  * A helper panel that will automatically resize itself to fit all its children using `Panel.SizeToChildren`. 
- */
+ *
+ * !PureAbstract */
 declare class DSizeToContents extends Panel {
 
 }
 
 /**
  * Creates a slider that can be moved along the X and/or Y axis 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -29341,7 +29430,8 @@ declare class DSlider extends DPanel {
  * 
  * A shortcut for this is `CreateSprite`(). 
  *
- * !CustomConstructor CreateSprite * @example
+ * !CustomConstructor CreateSprite *
+ * !PureAbstract * @example
  * 
  * local sprite = vgui.Create("DSprite")
  * sprite:SetMaterial(Material("sprites/sent_ball"))
@@ -29411,7 +29501,8 @@ declare class DSprite extends DPanel {
 /**
  * **INTERNAL**
  * A tab for internal use on the DPropertySheet. 
- */
+ *
+ * !PureAbstract */
 declare class DTab extends DButton {
 
 }
@@ -29421,7 +29512,8 @@ declare class DTab extends DButton {
  * 
  * **Bug [#1588](https://github.com/Facepunch/garrysmod-issues/issues/1588):**
  * >This does not clear out previously-pasted text properly. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 400, 200 )
@@ -29595,7 +29687,8 @@ declare class DTextEntry extends TextEntry {
  * The base size defines the smallest a tile can be, and it will resize vertically to accommodate all child panels. The number of elements in each row is determinded by the base size and width.
  * 
  * It also optionally permits the rearrangement of these tiles. To enable this functionality, call `DDragBase.MakeDroppable` on the DTileLayout with a unique identifier. All panels added following this will be moveable. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(300, 300)
@@ -29778,7 +29871,8 @@ declare class DTileLayout extends DDragBase {
  * **INTERNAL**
  * 
  * The panel used internally for tool tips. See `Panel.SetTooltip`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetPos( 100, 100 )
@@ -29839,7 +29933,8 @@ declare class DTooltip extends DLabel {
  * A tree view element for Derma.
  * 
  * See also `DTree_Node`. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 500 )
@@ -30036,7 +30131,8 @@ declare class DTree extends DScrollPanel {
  * This panel is created whenever you add a node to a `DTree`.
  * 
  * The root node of a `DTree` is also a `DTree_Node` and controls much of its action; it can be accessed with `DTree.Root`. 
- */
+ *
+ * !PureAbstract */
 declare class DTree_Node extends DPanel {
     /**
      * A helper function that adds a new node and calls to `DTree_Node.MakeFolder` on it. 
@@ -30641,7 +30737,8 @@ declare class DTree_Node extends DPanel {
  * **INTERNAL**
  * 
  * Used by `DTree_Node`. 
- */
+ *
+ * !PureAbstract */
 declare class DTree_Node_Button extends DButton {
 
 }
@@ -30929,7 +31026,8 @@ declare namespace duplicator {
 
 /**
  * Vertical version of `DHorizontalDivider`. 
- */
+ *
+ * !PureAbstract */
 declare class DVerticalDivider extends DPanel {
 
 }
@@ -30939,7 +31037,8 @@ declare class DVerticalDivider extends DPanel {
  * A scrollbar used in `DScrollPanel`.
  * 
  * The scrollbar notably contains "DVScrollBar.btnUp, DVScrollBar.btnDown, and DVScrollBar.btnGrip" which are the up button, down button, and grip respectively. Editing the paint functions of these allows custom scrollbar styling. See `DScrollPanel.GetVBar` for an example. 
- */
+ *
+ * !PureAbstract */
 declare class DVScrollBar extends Panel {
     /**
      * Adds specified amount of scroll in pixels. 
@@ -31019,7 +31118,8 @@ declare class DVScrollBar extends Panel {
 
 /**
  * Base panel used by DFrame, this panel is needed so that elements such as the TextEntry can obtain focus. 
- */
+ *
+ * !PureAbstract */
 declare class EditablePanel {
     /**
      * **Deprecated!**
@@ -31452,7 +31552,7 @@ declare class Entity {
      * @param data  The data passed. 
      * @returns Should we suppress the default action for this input? 
      */
-    protected AcceptInput(inputName: string, activator: Entity, called: Entity, data: string): boolean;
+    public AcceptInput(inputName: string, activator: Entity, called: Entity, data: string): boolean;
     
     /**
      * Activates the entity. This needs to be used on some entities (like constraints) after being spawned.
@@ -31638,7 +31738,7 @@ declare class Entity {
      * @param ang  The entity's actual angles. May differ from `Entity.GetAngles` 
      * @returns [New position, New angles] 
      */
-    protected CalcAbsolutePosition(pos: Vector, ang: Angle): [Vector, Angle];
+    public CalcAbsolutePosition(pos: Vector, ang: Angle): [Vector, Angle];
     
     /**
      * Causes a specified function to be run if the entity is removed by any means. This can later be undone by `Entity.RemoveCallOnRemove` if you need it to not run.
@@ -31659,7 +31759,7 @@ declare class Entity {
      * @param property  Class of the property that is tried to use, for example - bonemanipulate 
      * @returns Return false to disallow using that property, return true to allow. 
      */
-    protected CanProperty(ply: Player, property: string): boolean;
+    public CanProperty(ply: Player, property: string): boolean;
     
     /**
      * Resets all pose parameters such as aim_yaw, aim_pitch and rotation. 
@@ -31738,7 +31838,7 @@ declare class Entity {
     /**
      * Called whenever an engine schedule is being ran. 
      */
-    protected DoingEngineSchedule(): void;
+    public DoingEngineSchedule(): void;
     
     /**
      * This removes the argument entity from an ent's list of entities to 'delete on remove' 
@@ -31752,7 +31852,7 @@ declare class Entity {
      * [[Category:ENT_AI_Hooks]] 
      * @param sched  The schedule to run. 
      */
-    protected DoSchedule(sched: table): void;
+    public DoSchedule(sched: table): void;
     
     /**
      * Called if and when the entity should be drawn opaquely, based on the `Entity.GetRenderGroup` of the entity.
@@ -31760,7 +31860,7 @@ declare class Entity {
      * See `ENT` and `RENDERGROUP` for more information. 
      * @param flags  The bit flags from `STUDIO` 
      */
-    protected Draw(flags: STUDIO): void;
+    public Draw(flags: STUDIO): void;
     
     /**
      * Draws the entity or model.
@@ -31792,7 +31892,7 @@ declare class Entity {
      * Called when the entity should be drawn translucently. 
      * @param flags  The bit flags from `STUDIO` 
      */
-    protected DrawTranslucent(flags: STUDIO): void;
+    public DrawTranslucent(flags: STUDIO): void;
     
     /**
      * Move an entity down until it collides with something.
@@ -31877,12 +31977,12 @@ declare class Entity {
      * >This only works for "brush" entities and for entities that have `Entity.SetTrigger` set to true. 
      * @param entity  The entity which was touched. 
      */
-    protected EndTouch(entity: Entity): void;
+    public EndTouch(entity: Entity): void;
     
     /**
      * Called whenever an engine schedule is finished. 
      */
-    protected EngineScheduleFinish(): void;
+    public EngineScheduleFinish(): void;
     
     /**
      * Gets the unique entity index of an entity.
@@ -31899,7 +31999,7 @@ declare class Entity {
      * {{Validate}}Called when an NPC's expression has finished. 
      * @param strExp  The path of the expression. 
      */
-    protected ExpressionFinished(strExp: string): void;
+    public ExpressionFinished(strExp: string): void;
     
     /**
      * Extinguishes the entity if it is on fire.
@@ -31965,7 +32065,7 @@ declare class Entity {
      * @param name  Name of the event 
      * @returns Return true to disable the effect 
      */
-    protected FireAnimationEvent(pos: Vector, ang: Angle, event: number, name: string): boolean;
+    public FireAnimationEvent(pos: Vector, ang: Angle, event: number, name: string): boolean;
     
     /**
      * Fires a bullet.
@@ -32086,7 +32186,7 @@ declare class Entity {
      * @param target  The target the NPC is attacking 
      * @returns The number of degrees of inaccuracy in the NPC's attack. 
      */
-    protected GetAttackSpread(wep: Entity, target: Entity): number;
+    public GetAttackSpread(wep: Entity, target: Entity): number;
     
     /**
      * Returns the entity's base velocity which is their velocity due to forces applied by other entities. This includes entity-on-entity collision or riding a treadmill. 
@@ -33101,7 +33201,7 @@ declare class Entity {
      * @param ent  The entity in question 
      * @returns How our scripter NPC "feels" towards the entity in question. See `D`. 
      */
-    protected GetRelationship(ent: Entity): D;
+    public GetRelationship(ent: Entity): D;
     
     /**
      * Returns the entity's render angles, set by `Entity.SetRenderAngles` in a drawing hook. 
@@ -33138,7 +33238,7 @@ declare class Entity {
      * *`Material: IMaterial` Required
      * *`Matrix: VMatrix` Optional 
      */
-    protected GetRenderMesh(): table;
+    public GetRenderMesh(): table;
     
     /**
      * Returns the render mode of the entity. 
@@ -33486,7 +33586,7 @@ declare class Entity {
      * @param ply  The player aiming at us 
      * @returns Return true to allow the entity to be picked up 
      */
-    protected GravGunPickupAllowed(ply: Player): boolean;
+    public GravGunPickupAllowed(ply: Player): boolean;
     
     /**
      * Called when this entity is about to be punted with the gravity gun (primary fire).
@@ -33495,7 +33595,7 @@ declare class Entity {
      * @param ply  The player pressing left-click with the gravity gun at an entity 
      * @returns Return true or false to enable or disable punting respectively. 
      */
-    protected GravGunPunt(ply: Player): boolean;
+    public GravGunPunt(ply: Player): boolean;
     
     /**
      * Called before firing animation events, such as muzzle flashes or shell ejections.
@@ -33508,7 +33608,7 @@ declare class Entity {
      * @param type  Event type. See [https://github.com/ValveSoftware/source-sdk-2013/blob/master/mp/src/game/shared/eventlist.h#L14-L23 the Source SDK]. 
      * @param options  Name or options of this event. 
      */
-    protected HandleAnimEvent(event: number, eventTime: number, cycle: number, type: number, options: string): void;
+    public HandleAnimEvent(event: number, eventTime: number, cycle: number, type: number, options: string): void;
     
     /**
      * Returns whether or not the bone manipulation functions have ever been called on given  entity.
@@ -33565,7 +33665,7 @@ declare class Entity {
      * Possible arguments are ImpactJeep, AirboatGunImpact, HelicopterImpact, ImpactGunship. 
      * @returns Return true to override the default impact effects. 
      */
-    protected ImpactTrace(traceResult: TraceResult, damageType: DMG, customImpactName?: string): boolean;
+    public ImpactTrace(traceResult: TraceResult, damageType: DMG, customImpactName?: string): boolean;
     
     /**
      * Called when the entity is created. This is called when you `Entity.Spawn` the custom entity.
@@ -33575,7 +33675,7 @@ declare class Entity {
      * **Bug [#2732](https://github.com/Facepunch/garrysmod-issues/issues/2732):**
      * >This is sometimes not called clientside. You can work around this by setting a variable in Initialize and check if it exists in `ENTITY.Think`. See the example below. 
      */
-    protected Initialize(): void;
+    public Initialize(): void;
     
     /**
      * Initializes this entity as being clientside only.
@@ -33797,7 +33897,7 @@ declare class Entity {
      * @param value  The new value. 
      * @returns Return true to suppress this KeyValue or return false or nothing to apply this key value. 
      */
-    protected KeyValue(key: string, value: string): boolean;
+    public KeyValue(key: string, value: string): boolean;
     
     /**
      * Converts a vector local to an entity into a worldspace vector 
@@ -33987,7 +34087,7 @@ declare class Entity {
      * Start the next task in specific schedule. 
      * @param sched  The schedule to start next task in. 
      */
-    protected NextTask(sched: table): void;
+    public NextTask(sched: table): void;
     
     /**
      * In the case of a scripted entity, this will cause the next `ENTITY.Think` event to be run at the given time.
@@ -34035,7 +34135,7 @@ declare class Entity {
      * Called each time the NPC updates its condition. 
      * @param conditionID  The ID of condition. See `NPC.ConditionName`. 
      */
-    protected OnCondition(conditionID: number): void;
+    public OnCondition(conditionID: number): void;
     
     /**
      * Called on any entity after it has been created by the {{Lib|duplicator}} and before any bone/entity modifiers have been applied.
@@ -34043,7 +34143,7 @@ declare class Entity {
      * This hook is called after `ENTITY.Initialize` and before `ENTITY.PostEntityPaste`. 
      * @param entTable  `EntityCopyData` of the source entity. 
      */
-    protected OnDuplicated(entTable: EntityCopyData): void;
+    public OnDuplicated(entTable: EntityCopyData): void;
     
     /**
      * Called after duplicator finishes saving the entity, allowing you to modify the save data.
@@ -34051,7 +34151,7 @@ declare class Entity {
      * This is called after `ENTITY.PostEntityCopy`. 
      * @param data  The save `EntityCopyData` that you can modify. 
      */
-    protected OnEntityCopyTableFinish(data: EntityCopyData): void;
+    public OnEntityCopyTableFinish(data: EntityCopyData): void;
     
     /**
      * Returns true if the entity is on the ground, and false if it isn't.
@@ -34064,7 +34164,7 @@ declare class Entity {
     /**
      * Called when the entity is reloaded by the lua auto-refresh system, i.e. when the developer edits the lua file for the entity while the game is running. 
      */
-    protected OnReloaded(): void;
+    public OnReloaded(): void;
     
     /**
      * Called when the entity is about to be removed.
@@ -34080,26 +34180,26 @@ declare class Entity {
      * 
      * `GM.NotifyShouldTransmit` can be used to circumvent this problem. `ENTITY.Think` can also be used to detect that the entity has reappeared. You may reinitialize any necessary data in these hooks. 
      */
-    protected OnRemove(): void;
+    public OnRemove(): void;
     
     /**
      * Called when the entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).
      * 
      * For the {{Lib|duplicator}} callbacks, see `ENTITY.OnDuplicated`. 
      */
-    protected OnRestore(): void;
+    public OnRestore(): void;
     
     /**
      * Called when the entity is taking damage. 
      * @param damage  The damage to be applied to the entity. 
      */
-    protected OnTakeDamage(damage: CTakeDamageInfo): void;
+    public OnTakeDamage(damage: CTakeDamageInfo): void;
     
     /**
      * Called from the engine when TaskComplete is called.
      * This allows us to move onto the next task - even when TaskComplete was called from an engine side task. 
      */
-    protected OnTaskComplete(): void;
+    public OnTaskComplete(): void;
     
     /**
      * Tests whether the damage passes the entity filter.
@@ -34136,7 +34236,7 @@ declare class Entity {
      * @param ent  The entity that is about to trigger. 
      * @returns Should trigger or not. 
      */
-    protected PassesTriggerFilters(ent: Entity): boolean;
+    public PassesTriggerFilters(ent: Entity): boolean;
     
     /**
      * Called when the entity collides with anything. The move type and solid type must be VPHYSICS for the hook to be called.
@@ -34146,7 +34246,7 @@ declare class Entity {
      * @param colData  Information regarding the collision. See `CollisionData`. 
      * @param collider  The physics object that collided. 
      */
-    protected PhysicsCollide(colData: CollisionData, collider: PhysObj): void;
+    public PhysicsCollide(colData: CollisionData, collider: PhysObj): void;
     
     /**
      * Destroys the current physics object of an entity. 
@@ -34289,7 +34389,7 @@ declare class Entity {
      * @param deltaTime  Time since the last call. 
      * @returns [Angular force, Linear force, One of the `SIM`.] 
      */
-    protected PhysicsSimulate(phys: PhysObj, deltaTime: number): [Vector, Vector, SIM];
+    public PhysicsSimulate(phys: PhysObj, deltaTime: number): [Vector, Vector, SIM];
     
     /**
      * Called whenever the physics of the entity are updated.
@@ -34298,7 +34398,7 @@ declare class Entity {
      * >This hook won't be called if the Entity's `PhysObj` goes asleep 
      * @param phys  The physics object of the entity. 
      */
-    protected PhysicsUpdate(phys: PhysObj): void;
+    public PhysicsUpdate(phys: PhysObj): void;
     
     /**
      * Wakes up the entity's physics object 
@@ -34321,7 +34421,7 @@ declare class Entity {
     /**
      * Called after the duplicator finished copying the entity 
      */
-    protected PostEntityCopy(): void;
+    public PostEntityCopy(): void;
     
     /**
      * Called after the {{Lib|duplicator}} pastes the entity, after the bone/entity modifiers have been applied to the entity.
@@ -34338,7 +34438,7 @@ declare class Entity {
      * @param createdEntities  All entities that are within the placed dupe. **Note:**
      * >The keys of each value in this table are the original entity indexes when the duplication was created. This can be utilized to restore entity references that don't get saved in duplications. 
      */
-    protected PostEntityPaste(ply: Player, ent: Entity, createdEntities: table): void;
+    public PostEntityPaste(ply: Player, ent: Entity, createdEntities: table): void;
     
     /**
      * Precaches gibs for the entity's model.
@@ -34354,7 +34454,7 @@ declare class Entity {
      * 
      * If you are looking for a way to make the duplicator spawn another entity when duplicated. ( For example, you duplicate a "prop_physics", but you want the duplicator to spawn "prop_physics_my" ), you should add prop_physics.ClassOverride = "prop_physics_my". The duplication table should be also stored on that prop_physics, not on prop_physics_my. 
      */
-    protected PreEntityCopy(): void;
+    public PreEntityCopy(): void;
     
     /**
      * Normalizes the ragdoll. This is used alongside Kinect in `Entity.SetRagdollBuildFunction`, for more info see ragdoll_motion entity. 
@@ -34460,7 +34560,7 @@ declare class Entity {
      * **Bug [#3299](https://github.com/Facepunch/garrysmod-issues/issues/3299):**
      * >This is called before PrePlayerDraw for players. If this function exists at all on a player, their worldmodel will always be rendered regardless of PrePlayerDraw's return. 
      */
-    protected RenderOverride(): void;
+    public RenderOverride(): void;
     
     /**
      * Plays an animation on the entity. This may not always work on engine entities.
@@ -34507,7 +34607,7 @@ declare class Entity {
     /**
      * Called from the engine every 0.1 seconds. 
      */
-    protected RunAI(): void;
+    public RunAI(): void;
     
     /**
      * Called when an engine task is ran on the entity.
@@ -34517,25 +34617,25 @@ declare class Entity {
      * @param taskID  The task ID, see [https://github.com/ValveSoftware/source-sdk-2013/blob/55ed12f8d1eb6887d348be03aee5573d44177ffb/mp/src/game/server/ai_task.h#L89-L502 ai_task.h] 
      * @param taskData  The task data. 
      */
-    protected RunEngineTask(taskID: number, taskData: number): void;
+    public RunEngineTask(taskID: number, taskData: number): void;
     
     /**
      * Called every think on running task.
      * The actual task function should tell us when the task is finished. 
      * @param task  The task to run 
      */
-    protected RunTask(task: table): void;
+    public RunTask(task: table): void;
     
     /**
      * Called whenever a schedule is finished. 
      */
-    protected ScheduleFinished(): void;
+    public ScheduleFinished(): void;
     
     /**
      * Set the schedule we should be playing right now. 
      * @param iNPCState 
      */
-    protected SelectSchedule(iNPCState: number): void;
+    public SelectSchedule(iNPCState: number): void;
     
     /**
      * Returns sequence ID corresponding to given activity ID.
@@ -34631,7 +34731,7 @@ declare class Entity {
      * This has the same effect as setting the "ENT.AutomaticFrameAdvance" property. 
      * @param enable  Whether or not to set automatic frame advancing. 
      */
-    protected SetAutomaticFrameAdvance(enable: boolean): void;
+    public SetAutomaticFrameAdvance(enable: boolean): void;
     
     /**
      * Sets the blood color this entity uses. 
@@ -35689,7 +35789,7 @@ declare class Entity {
      * Sets the current task. 
      * @param task  The task to set. 
      */
-    protected SetTask(task: table): void;
+    public SetTask(task: table): void;
     
     /**
      * When this flag is set the entity will only transmit to the player when its parent is transmitted. This is useful for things like viewmodel attachments since without this flag they will transmit to everyone (and cause the viewmodels to transmit to everyone too).
@@ -35727,7 +35827,7 @@ declare class Entity {
      * 
      * This is a much better option than using Set/Get Networked Values. 
      */
-    protected SetupDataTables(): void;
+    public SetupDataTables(): void;
     
     /**
      * Initializes the class names of an entity's phoneme mappings (mouth movement data). This is called by default with argument "phonemes" when a flex-based entity (such as an `NPC`) is created. 
@@ -35806,13 +35906,13 @@ declare class Entity {
      * @param tr  A `TraceResult` from player eyes to their aim position 
      * @param ClassName  The classname of your entity 
      */
-    protected SpawnFunction(ply: Player, tr: TraceResult, ClassName: string): void;
+    public SpawnFunction(ply: Player, tr: TraceResult, ClassName: string): void;
     
     /**
      * Starts an engine schedule. 
      * @param scheduleID  Schedule ID to start. See `SCHED` 
      */
-    protected StartEngineSchedule(scheduleID: SCHED): void;
+    public StartEngineSchedule(scheduleID: SCHED): void;
     
     /**
      * Called when an engine task has been started on the entity.
@@ -35822,7 +35922,7 @@ declare class Entity {
      * @param taskID  Task ID to start, see [https://github.com/ValveSoftware/source-sdk-2013/blob/55ed12f8d1eb6887d348be03aee5573d44177ffb/mp/src/game/server/ai_task.h#L89-L502 ai_task.h] 
      * @param TaskData  Task data 
      */
-    protected StartEngineTask(taskID: number, TaskData: number): void;
+    public StartEngineTask(taskID: number, TaskData: number): void;
     
     /**
      * Starts a "looping" sound. As with any other sound playing methods, this function expects the sound file to be looping itself and will not automatically loop a non looping sound file as one might expect.
@@ -35857,13 +35957,13 @@ declare class Entity {
      * Not to be confused with `ENTITY.StartEngineSchedule` or `NPC.SetSchedule` which start an Engine-based schedule. 
      * @param sched  Schedule to start. 
      */
-    protected StartSchedule(sched: Schedule): void;
+    public StartSchedule(sched: Schedule): void;
     
     /**
      * Called once on starting task. 
      * @param task  The task to start, created by `ai_task.New`. 
      */
-    protected StartTask(task: Task): void;
+    public StartTask(task: Task): void;
     
     /**
      * Called when the entity starts touching another entity.
@@ -35872,7 +35972,7 @@ declare class Entity {
      * >This only works for "brush" entities and for entities that have `Entity.SetTrigger` set to true. 
      * @param entity  The entity which is being touched. 
      */
-    protected StartTouch(entity: Entity): void;
+    public StartTouch(entity: Entity): void;
     
     /**
      * Stops all particle effects parented to the entity and immediately destroys them. 
@@ -35936,7 +36036,7 @@ declare class Entity {
      * @param name  Name of output to store 
      * @param info  Output info 
      */
-    protected StoreOutput(name: string, info: string): void;
+    public StoreOutput(name: string, info: string): void;
     
     /**
      * Applies the specified amount of damage to the entity. 
@@ -35962,13 +36062,13 @@ declare class Entity {
      * Returns true if the current running Task is finished. 
      * @returns Is the current running Task is finished or not. 
      */
-    protected TaskFinished(): boolean;
+    public TaskFinished(): boolean;
     
     /**
      * Returns how many seconds we've been doing this current task 
      * @returns How many seconds we've been doing this current task 
      */
-    protected TaskTime(): number;
+    public TaskTime(): number;
     
     /**
      * Allows you to override trace result when a trace hits the entitys Bounding Box.
@@ -35982,7 +36082,7 @@ declare class Entity {
      * @param mask  The `CONTENTS` mask 
      * @returns A table containing new HitPos, Fraction and Normal. Returning nothing allows the trace to ignore the entity completely. 
      */
-    protected TestCollision(startpos: Vector, delta: Vector, isbox: boolean, extents: Vector, mask: CONTENTS): table;
+    public TestCollision(startpos: Vector, delta: Vector, isbox: boolean, extents: Vector, mask: CONTENTS): table;
     
     /**
      * Check if the given position or entity is within this entity's PVS.
@@ -36002,7 +36102,7 @@ declare class Entity {
      * >By default, it runs about 5-6 times per second on the server, but you can force it to run at servers tickrate using the example below. 
      * @returns Return true if you used `Entity.NextThink` to override the next execution time. 
      */
-    protected Think(): boolean;
+    public Think(): boolean;
     
     /**
      * Called every tick for every entity being "touched".
@@ -36016,7 +36116,7 @@ declare class Entity {
      * >For physics enabled entities, this hook will "not" be ran while the entity's physics is asleep. See `PhysObj.Wake`. 
      * @param entity  The entity that touched it. 
      */
-    protected Touch(entity: Entity): void;
+    public Touch(entity: Entity): void;
     
     /**
      * Returns the ID of a `PhysObj` attached to the given bone. To be used with `Entity.GetPhysicsObjectNum`.
@@ -36044,13 +36144,13 @@ declare class Entity {
      * @param activator  Activator entity 
      * @param data [=nil] The data to give to the output. 
      */
-    protected TriggerOutput(output: string, activator: Entity, data?: string): void;
+    public TriggerOutput(output: string, activator: Entity, data?: string): void;
     
     /**
      * Called whenever the transmit state should be updated. 
      * @returns Transmit state to set, see `TRANSMIT`. 
      */
-    protected UpdateTransmitState(): TRANSMIT;
+    public UpdateTransmitState(): TRANSMIT;
     
     /**
      * Called when another entity uses this entity, example would be a player pressing "+use" this entity.
@@ -36061,7 +36161,7 @@ declare class Entity {
      * @param useType  Use type, see `USE`. 
      * @param value  Any passed value. 
      */
-    protected Use(activator: Entity, caller: Entity, useType: USE, value: number): void;
+    public Use(activator: Entity, caller: Entity, useType: USE, value: number): void;
     
     /**
      * **Note:**
@@ -36675,7 +36775,8 @@ declare class File {
 /**
  * **INTERNAL**
  * A panel used by Sandbox's Finger Poser tool. 
- */
+ *
+ * !PureAbstract */
 declare class fingerposer extends ContextBase {
 
 }
@@ -36683,14 +36784,16 @@ declare class fingerposer extends ContextBase {
 /**
  * **INTERNAL**
  * A panel used by Sandbox's Finger Poser tool. 
- */
+ *
+ * !PureAbstract */
 declare class FingerVar extends Panel {
 
 }
 
 /**
  * A window that in which you can place just about every other component and even another frame. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create("Frame")
  * frame:SetSize( ScrW()*0.25, ScrH()*0.25 )
@@ -37068,7 +37171,7 @@ declare namespace game {
     /**
      * Sets the time scale of the game.
      * 
-     * This function is supposed to remove the need of using the host_timescale convar, which is cheat protected.
+     * This function is supposed to remove the need of using the host_timescale convar, which is cheat public.
      * 
      * To slow down or speed up the movement of a specific player, use `Player.SetLaggedMovementValue` instead.
      * 
@@ -40948,7 +41051,7 @@ declare namespace Global {
      * @param func  Function to run 
      * @returns Were there any errors or not 
      */
-    function ProtectedCall(func: Function): boolean;
+    function publicCall(func: Function): boolean;
     
     /**
      * Returns an iterator function that can be used to loop through a table in random order 
@@ -43300,7 +43403,7 @@ declare function PrintTable(tableToPrint: table, indent?: number, done?: table):
  * @param func  Function to run 
  * @returns Were there any errors or not 
  */
-declare function ProtectedCall(func: Function): boolean;
+declare function publicCall(func: Function): boolean;
 
 /**
  * Returns an iterator function that can be used to loop through a table in random order 
@@ -47579,7 +47682,8 @@ declare namespace hook {
  * * .zip
  * * .mp3
  * * .swf 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * HTMLTest = vgui.Create( "HTML" )
  * HTMLTest:SetPos( 50, 50 )
@@ -47801,7 +47905,8 @@ declare namespace http {
  * 
  * **Note:**
  * >This panel is only available in Sandbox and Sandbox derived gamemodes! 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" ) // Container for the SpawnIcon
  * frame:SetPos( 200, 200 )
@@ -48131,7 +48236,8 @@ declare class IGModAudioChannel {
 }
 
 /**
- */
+ *
+ * !PureAbstract */
 declare class ImageCheckBox extends Button {
 
 }
@@ -48929,7 +49035,8 @@ declare namespace killicon {
 
 /**
  * A basic label or "single line text area" that is non-editable. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "Frame" )
  * frame.Label1 = vgui.Create( "Label", frame )
@@ -49265,7 +49372,8 @@ declare class MarkupObject {
 
 /**
  * Material is a VGUI element that renders a VMT material. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * // Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -49837,7 +49945,8 @@ declare namespace matproxy {
 
 /**
  * The panel used by Material & Lamp Sandbox tools for texture selection. 
- */
+ *
+ * !PureAbstract */
 declare class MatSelect extends ContextBase {
 
 }
@@ -50004,7 +50113,8 @@ declare namespace mesh {
 /**
  * **INTERNAL**
  * Panel used to display models, used by `SpawnIcon`. 
- */
+ *
+ * !PureAbstract */
 declare class ModelImage {
     /**
      * Causes a `SpawnIcon` to rebuild its model image.
@@ -50801,13 +50911,13 @@ declare class NextBot extends Entity {
      * 
      * This is called automatically when the NPC is created, there should be no need to call it manually. 
      */
-    protected BehaveStart(): void;
+    public BehaveStart(): void;
     
     /**
      * Called to update the bot's behaviour. 
      * @param interval  How long since the last update 
      */
-    protected BehaveUpdate(interval: number): void;
+    public BehaveUpdate(interval: number): void;
     
     /**
      * Should only be called in BodyUpdate. This sets the move_x and move_y pose parameters of the bot to fit how they're currently moving, sets the animation speed to suit the ground speed, and calls FrameAdvance.
@@ -50820,7 +50930,7 @@ declare class NextBot extends Entity {
     /**
      * Called to update the bot's animation. 
      */
-    protected BodyUpdate(): void;
+    public BodyUpdate(): void;
     
     /**
      * Like `NextBot.FindSpots` but only returns a vector. 
@@ -50911,60 +51021,60 @@ declare class NextBot extends Entity {
      * Called when the nextbot touches another entity. 
      * @param ent  The entity the nextbot came in contact with. 
      */
-    protected OnContact(ent: Entity): void;
+    public OnContact(ent: Entity): void;
     
     /**
      * Called when the bot is ignited. 
      */
-    protected OnIgnite(): void;
+    public OnIgnite(): void;
     
     /**
      * Called when the bot gets hurt. 
      * @param info  The damage info 
      */
-    protected OnInjured(info: CTakeDamageInfo): void;
+    public OnInjured(info: CTakeDamageInfo): void;
     
     /**
      * Called when the bot gets killed. 
      * @param info  The damage info 
      */
-    protected OnKilled(info: CTakeDamageInfo): void;
+    public OnKilled(info: CTakeDamageInfo): void;
     
     /**
      * Called when the bot's feet return to the ground. 
      * @param ent  The entity the nextbot has landed on. 
      */
-    protected OnLandOnGround(ent: Entity): void;
+    public OnLandOnGround(ent: Entity): void;
     
     /**
      * Called when the bot's feet leave the ground - for whatever reason. 
      * @param ent  The entity the bot "jumped" from. 
      */
-    protected OnLeaveGround(ent: Entity): void;
+    public OnLeaveGround(ent: Entity): void;
     
     /**
      * Called when the nextbot enters a new navigation area. 
      * @param old  The navigation area the bot just left 
      * @param newVal  The navigation area the bot just entered 
      */
-    protected OnNavAreaChanged(old: CNavArea, newVal: CNavArea): void;
+    public OnNavAreaChanged(old: CNavArea, newVal: CNavArea): void;
     
     /**
      * Called when someone else or something else has been killed. 
      * @param victim  The victim that was killed 
      * @param info  The damage info 
      */
-    protected OnOtherKilled(victim: Entity, info: CTakeDamageInfo): void;
+    public OnOtherKilled(victim: Entity, info: CTakeDamageInfo): void;
     
     /**
      * Called when the bot thinks it is stuck. 
      */
-    protected OnStuck(): void;
+    public OnStuck(): void;
     
     /**
      * Called when the bot thinks it is un-stuck. 
      */
-    protected OnUnStuck(): void;
+    public OnUnStuck(): void;
     
     /**
      * To be called in the behaviour coroutine only! Plays an animation sequence and waits for it to end before returning. 
@@ -50991,7 +51101,7 @@ declare class NextBot extends Entity {
      * Called every tick on the server. Called every frame on the client. 
      * @returns Return true if you used `Entity.NextThink` to override the next execution time. 
      */
-    protected Think(): boolean;
+    public Think(): boolean;
     
     /**
      * Called when a player 'uses' the entity. 
@@ -51000,7 +51110,7 @@ declare class NextBot extends Entity {
      * @param useType  The type of use, see `USE` 
      * @param value  Any passed value 
      */
-    protected Use(activator: Entity, caller: Entity, useType: USE, value: number): void;
+    public Use(activator: Entity, caller: Entity, useType: USE, value: number): void;
 }
 
 /**
@@ -51716,7 +51826,8 @@ declare namespace package {
  * 
  * vgui.Register( "NewPanel", PANEL, "DLabel" )
  * ``` 
- */
+ *
+ * !PureAbstract */
 declare class Panel {
     /**
      * Called whenever a panel receives a command signal from one of its children.
@@ -51725,7 +51836,7 @@ declare class Panel {
      * @param signalName  The name of the signal, usually the sender of the signal or the command name. 
      * @param signalValue  The value of the signal, usually a command argument. 
      */
-    protected ActionSignal(signalName: string, signalValue: string): void;
+    public ActionSignal(signalName: string, signalValue: string): void;
     
     /**
      * Adds the specified object to the panel.
@@ -51789,7 +51900,7 @@ declare class Panel {
      * 
      * If you want to "disable" this hook with `Panel.SetAnimationEnabled`, you must call it after defining this hook. Once disabled, a custom hook "will not" be re-enabled by `Panel.SetAnimationEnabled` again - the hook will have to be re-defined. 
      */
-    protected AnimationThink(): void;
+    public AnimationThink(): void;
     
     /**
      * **INTERNAL**
@@ -51824,7 +51935,7 @@ declare class Panel {
     /**
      * Called whenever the panel should apply its scheme(style). 
      */
-    protected ApplySchemeSettings(): void;
+    public ApplySchemeSettings(): void;
     
     /**
      * Centers the panel on its parent. 
@@ -52054,7 +52165,7 @@ declare class Panel {
      * This is used by `DPropertySheet` and `DTree`, for example to open a tab or expand a node when an object is hovered over it. 
      * @param hoverTime  The time the object was hovered over this panel. 
      */
-    protected DragHoverClick(hoverTime: number): void;
+    public DragHoverClick(hoverTime: number): void;
     
     /**
      * **INTERNAL**
@@ -52128,7 +52239,7 @@ declare class Panel {
      * Only works for panels derived from `DDragBase`. 
      * @param pnl  The panel we are dropped onto 
      */
-    protected DroppedOn(pnl: Panel): void;
+    public DroppedOn(pnl: Panel): void;
     
     /**
      * Completes a box selection. If the end point of the selection box is within the selection canvas, mouse capture is disabled for the panel object, and the selected state of each child object within the selection box is toggled. 
@@ -52167,7 +52278,7 @@ declare class Panel {
      * @param width  Width of the property sheet? 
      * @param height  Width of the property sheet? 
      */
-    protected GenerateExample(classRef: string, dpropertysheet: DPropertySheet, width: number, height: number): void;
+    public GenerateExample(classRef: string, dpropertysheet: DPropertySheet, width: number, height: number): void;
     
     /**
      * Returns the alpha multiplier for this panel. 
@@ -52613,7 +52724,7 @@ declare class Panel {
     /**
      * Called when the panel is created. This is called for each base type that the panel has. 
      */
-    protected Init(): void;
+    public Init(): void;
     
     /**
      * Marks the end of a clickable text segment in a `RichText` element, started with `Panel.InsertClickableTextStart`.
@@ -52834,7 +52945,7 @@ declare class Panel {
     /**
      * Called after `Panel.SetCookieName` is called on this panel to apply the just loaded cookie values for this panel. 
      */
-    protected LoadCookies(): void;
+    public LoadCookies(): void;
     
     /**
      * Loads a .gwen file (created by GWEN Designer) and calls `Panel.LoadGWENString` with the contents of the loaded file.
@@ -53054,13 +53165,13 @@ declare class Panel {
      * Called by HTML panels when the target URL of the frame has changed, this happens when you hover over a link. 
      * @param targetURL  New target URL. 
      */
-    protected OnChangeTargetURL(targetURL: string): void;
+    public OnChangeTargetURL(targetURL: string): void;
     
     /**
      * Called by HTML panels when the title of the loaded page has been changed. 
      * @param newTitle  The new title of the page. 
      */
-    protected OnChangeTitle(newTitle: string): void;
+    public OnChangeTitle(newTitle: string): void;
     
     /**
      * Called whenever a child was parented to the panel.
@@ -53069,13 +53180,13 @@ declare class Panel {
      * >This is called before the panel's metatable is set. 
      * @param child  The child which was added. 
      */
-    protected OnChildAdded(child: Panel): void;
+    public OnChildAdded(child: Panel): void;
     
     /**
      * Called whenever a child of the panel is about to removed. 
      * @param child  The child which is about to be removed. 
      */
-    protected OnChildRemoved(child: Panel): void;
+    public OnChildRemoved(child: Panel): void;
     
     /**
      * Called by HTML panels when the page attempts to open a new child view (such as a popup or new tab). 
@@ -53083,30 +53194,30 @@ declare class Panel {
      * @param targetURL  The URL of the requested child. 
      * @param isPopup  True if the requested view is a popup. 
      */
-    protected OnChildViewCreated(sourceURL: string, targetURL: string, isPopup: boolean): void;
+    public OnChildViewCreated(sourceURL: string, targetURL: string, isPopup: boolean): void;
     
     /**
      * Called whenever the cursor entered the panels bounds. 
      */
-    protected OnCursorEntered(): void;
+    public OnCursorEntered(): void;
     
     /**
      * Called whenever the cursor left the panels bounds. 
      */
-    protected OnCursorExited(): void;
+    public OnCursorExited(): void;
     
     /**
      * Called whenever the cursor was moved with the panels bounds. 
      * @param cursorX  The new x position of the cursor relative to the panels origin. 
      * @param cursorY  The new y position of the cursor relative to the panels origin. 
      */
-    protected OnCursorMoved(cursorX: number, cursorY: number): void;
+    public OnCursorMoved(cursorX: number, cursorY: number): void;
     
     /**
      * Called by HTML panels when the panel's DOM has been set up. You can run JavaScript in here. 
      * @param url  The URL of the current page. 
      */
-    protected OnDocumentReady(url: string): void;
+    public OnDocumentReady(url: string): void;
     
     /**
      * We're being dropped on something
@@ -53115,7 +53226,7 @@ declare class Panel {
      * Only works for panels derived from DDragBase. 
      * @returns The panel to drop instead of us. By default you should return self. 
      */
-    protected OnDrop(): Panel;
+    public OnDrop(): Panel;
     
     /**
      * Called whenever the panel gained or lost focus.
@@ -53124,7 +53235,7 @@ declare class Panel {
      * >`Panel.HasFocus` will only be updated on the next frame and will return the "old" value at the time this hook is run. Same goes for `vgui.GetKeyboardFocus`. 
      * @param gained  Is the focus was gained ( true ) or lost ( false ) 
      */
-    protected OnFocusChanged(gained: boolean): void;
+    public OnFocusChanged(gained: boolean): void;
     
     /**
      * Called whenever a keyboard key was pressed while the panel is focused.
@@ -53133,7 +53244,7 @@ declare class Panel {
      * >This is not run for ESC/"cancelselect" binding. 
      * @param keyCode  They key code of the pressed key, see `KEY`. 
      */
-    protected OnKeyCodePressed(keyCode: KEY): void;
+    public OnKeyCodePressed(keyCode: KEY): void;
     
     /**
      * Called whenever a keyboard key was released while the panel is focused.
@@ -53142,42 +53253,42 @@ declare class Panel {
      * >This is not run for TILDE/"toggleconsole" binding. 
      * @param keyCode  They key code of the released key, see `KEY`. 
      */
-    protected OnKeyCodeReleased(keyCode: KEY): void;
+    public OnKeyCodeReleased(keyCode: KEY): void;
     
     /**
      * Called whenever a mouse key was pressed while the panel is focused. 
      * @param keyCode  They key code of the key pressed, see `MOUSE`. 
      */
-    protected OnMousePressed(keyCode: MOUSE): void;
+    public OnMousePressed(keyCode: MOUSE): void;
     
     /**
      * Called whenever a mouse key was released while the panel is focused. 
      * @param keyCode  They key code of the key released, see `MOUSE`. 
      */
-    protected OnMouseReleased(keyCode: MOUSE): void;
+    public OnMouseReleased(keyCode: MOUSE): void;
     
     /**
      * Called whenever the mouse wheel was used. 
      * @param scrollDelta  The scroll delta, indicating how much the user turned the mouse wheel. 
      */
-    protected OnMouseWheeled(scrollDelta: number): void;
+    public OnMouseWheeled(scrollDelta: number): void;
     
     /**
      * Called when the panel is about to be removed. 
      */
-    protected OnRemove(): void;
+    public OnRemove(): void;
     
     /**
      * **INTERNAL**
      *  Called by `dragndrop.StartDragging` when the panel starts being dragged. 
      */
-    protected OnStartDragging(): void;
+    public OnStartDragging(): void;
     
     /**
      * **INTERNAL**
      *  Called by `Panel.DragMouseRelease` when the panel object is released after being dragged. 
      */
-    protected OnStopDragging(): void;
+    public OnStopDragging(): void;
     
     /**
      * [[Category:HTML]][[Category:Awesomium]]Instructs a HTML control to download and parse a HTML script using the passed URL. 
@@ -53196,7 +53307,7 @@ declare class Panel {
      * @param height  The panel's height. 
      * @returns Returning true prevents the background from being drawn. 
      */
-    protected Paint(width: number, height: number): boolean;
+    public Paint(width: number, height: number): boolean;
     
     /**
      * Paints a ghost copy of the panel at the given position. 
@@ -53216,7 +53327,7 @@ declare class Panel {
      * @param height  The panels current height. 
      * @returns Should we disable default PaintOver rendering? This is useful in case with Derma panels that use Derma hooks. 
      */
-    protected PaintOver(width: number, height: number): boolean;
+    public PaintOver(width: number, height: number): boolean;
     
     /**
      * Parents the panel to the HUD.
@@ -53247,7 +53358,7 @@ declare class Panel {
      * @param width  The panels current width. 
      * @param height  The panels current height. 
      */
-    protected PerformLayout(width: number, height: number): void;
+    public PerformLayout(width: number, height: number): void;
     
     /**
      * Sets the width and position of a `DLabel` and places the passed panel object directly to the right of it. Returns the ''y'' value of the bottom of the tallest object. The panel on which this method is run is not relevant; only the passed objects are affected. 
@@ -53267,7 +53378,7 @@ declare class Panel {
      * 
      * See also `PANEL.PreAutoRefresh` 
      */
-    protected PostAutoRefresh(): void;
+    public PostAutoRefresh(): void;
     
     /**
      * **Deprecated:**
@@ -53288,7 +53399,7 @@ declare class Panel {
      * 
      * See also `PANEL.PostAutoRefresh` 
      */
-    protected PreAutoRefresh(): void;
+    public PreAutoRefresh(): void;
     
     /**
      * **INTERNAL**
@@ -54157,7 +54268,7 @@ declare class Panel {
     /**
      * Called every frame while `Panel.IsVisible` is true. 
      */
-    protected Think(): void;
+    public Think(): void;
     
     /**
      * Toggles the selected state of a selectable panel object. This functionality is set with `Panel.SetSelectable` and checked with `Panel.IsSelectable`. To check whether the object is selected or not, `Panel.IsSelected` is used. 
@@ -54207,7 +54318,8 @@ declare class Panel {
 }
 
 /**
- */
+ *
+ * !PureAbstract */
 declare class PanelList extends Panel {
 
 }
@@ -57151,7 +57263,8 @@ declare namespace player_manager {
  * A preset editor, which can be opened by `ControlPresets`.
  * 
  * This control only exists in Sandbox derived gamemodes. 
- */
+ *
+ * !PureAbstract */
 declare class PresetEditor extends DFrame {
 
 }
@@ -57545,7 +57658,8 @@ declare namespace properties {
 
 /**
  * Used in sandbox tools 
- */
+ *
+ * !PureAbstract */
 declare class PropSelect extends ContextBase {
 
 }
@@ -57553,7 +57667,8 @@ declare class PropSelect extends ContextBase {
 /**
  * **INTERNAL**
  * Currently broken? 
- */
+ *
+ * !PureAbstract */
 declare class RadioButton {
 
 }
@@ -58715,7 +58830,8 @@ declare namespace resource {
  * A very versatile text display element that's used to power the default chat and console.
  * 
  * Rich Text panels allows multicolored, highlight-able, and interactive text using individual text segment markup (segments are defined by the `Panel.AppendText` method). 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * // Window frame for containing text
  * local frame = vgui.Create("DFrame")
@@ -59637,7 +59753,8 @@ declare namespace serverlist {
 }
 
 /**
- */
+ *
+ * !PureAbstract */
 declare class SlideBar extends Panel {
 
 }
@@ -59647,7 +59764,8 @@ declare class SlideBar extends Panel {
  * >Only exists for backwards compatibility with `Panel.SetActionFunction` and `Panel.PostMessage`. Use `DNumSlider` instead.
  * 
  * A simple slider featuring an numeric display. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 280, 70 )
@@ -59839,7 +59957,8 @@ declare namespace sound {
 
 /**
  * A SpawnIcon displays an image for the given model path. It is mostly used in the Spawn Menu (Q). 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local Panel = vgui.Create( "DFrame" ) // Main Frame
  * Panel:SetPos( 200, 200 )
@@ -61856,7 +61975,8 @@ declare namespace team {
 
 /**
  * Basic text input field. 
- */
+ *
+ * !PureAbstract */
 declare class TextEntry extends Panel {
     /**
      * Performs the "CONTROL + C" key combination effect ( Copy selection to clipboard ) on selected text.
@@ -62235,7 +62355,8 @@ declare class TextEntry extends Panel {
 
 /**
  * A panel capable of loading .tga images. 
- * @example
+ *
+ * !PureAbstract * @example
  * 
  * local panel = vgui.Create( "DFrame" )
  * panel:SetSize( 500, 500 )
@@ -62757,7 +62878,8 @@ declare namespace undo {
 
 /**
  * A panel similar to `Label` used by `DLabelURL`. 
- */
+ *
+ * !PureAbstract */
 declare class URLLabel {
     /**
      * [[Category:DLabelURL]][[Category:URLLabel]]Sets the URL of a link-based panel such as `DLabelURL`. 
@@ -63564,9 +63686,7 @@ declare class Vector {
      * @param z [=0] The z component of the vector. 
      */
     public constructor(x?: number, y?: number, z?: number);
-
     public constructor(vec: Vector);
-
     
     /**
      * Adds the values of the argument vector to the orignal vector. This functions the same as vector1 + vector2 without creating a new vector object, skipping object construction and garbage collection. 
@@ -64449,13 +64569,13 @@ declare class Weapon extends Entity {
      * @param data  The data passed. 
      * @returns Should we suppress the default action for this input? 
      */
-    protected AcceptInput(inputName: string, activator: Entity, called: Entity, data: string): boolean;
+    public AcceptInput(inputName: string, activator: Entity, called: Entity, data: string): boolean;
     
     /**
      * Allows you to adjust the mouse sensitivity. This hook only works if you haven't overridden `GM.AdjustMouseSensitivity`. 
      * @returns Sensitivity scale 
      */
-    protected AdjustMouseSensitivity(): number;
+    public AdjustMouseSensitivity(): number;
     
     /**
      * Returns whether the weapon allows to being switched from when a better ( `Weapon.GetWeight` ) weapon is being picked up. 
@@ -64473,13 +64593,13 @@ declare class Weapon extends Entity {
      * Returns how much of primary ammo the player has. 
      * @returns The amount of primary ammo player has 
      */
-    protected Ammo1(): number;
+    public Ammo1(): number;
     
     /**
      * Returns how much of secondary ammo the player has. 
      * @returns The amount of secondary ammo player has 
      */
-    protected Ammo2(): number;
+    public Ammo2(): number;
     
     /**
      * !TupleReturn
@@ -64496,7 +64616,7 @@ declare class Weapon extends Entity {
      * @param fov  Current FOV of players view 
      * @returns [New position of players view, New angle of players view, New FOV of players view] 
      */
-    protected CalcView(ply: Player, pos: Vector, ang: Angle, fov: number): [Vector, Angle, number];
+    public CalcView(ply: Player, pos: Vector, ang: Angle, fov: number): [Vector, Angle, number];
     
     /**
      * !TupleReturn
@@ -64509,7 +64629,7 @@ declare class Weapon extends Entity {
      * @param ang  Current angle 
      * @returns [New position, New angle] 
      */
-    protected CalcViewModelView(vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle): [Vector, Angle];
+    public CalcViewModelView(vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle): [Vector, Angle];
     
     /**
      * Calls a SWEP function on client.
@@ -64527,13 +64647,13 @@ declare class Weapon extends Entity {
      * Helper function for checking for no ammo. 
      * @returns Can use primary attack 
      */
-    protected CanPrimaryAttack(): boolean;
+    public CanPrimaryAttack(): boolean;
     
     /**
      * Helper function for checking for no ammo. 
      * @returns Can use secondary attack 
      */
-    protected CanSecondaryAttack(): boolean;
+    public CanSecondaryAttack(): boolean;
     
     /**
      * Returns how much primary ammo is in the magazine. 
@@ -64553,7 +64673,7 @@ declare class Weapon extends Entity {
      * Can be useful for weapons that don't use standard ammo. 
      * @returns The new ammo display settings. 
      */
-    protected CustomAmmoDisplay(): table;
+    public CustomAmmoDisplay(): table;
     
     /**
      * Forces the weapon to reload while playing given animation. 
@@ -64569,7 +64689,7 @@ declare class Weapon extends Entity {
      * >Due to this hook being predicted, it is not called clientside in singleplayer at all, and in multiplayer it will not be called clientside if the weapon is switched with `Player.SelectWeapon` or the "use" console command, however it will be called clientside with the default weapon selection menu and when using `CUserCmd.SelectWeapon` 
      * @returns Return true to allow switching away from this weapon using lastinv command 
      */
-    protected Deploy(): boolean;
+    public Deploy(): boolean;
     
     /**
      * Called when the crosshair is about to get drawn, and allows you to override it.
@@ -64583,7 +64703,7 @@ declare class Weapon extends Entity {
      * @param y  Y coordinate of the crosshair. 
      * @returns Return true to override the default crosshair. 
      */
-    protected DoDrawCrosshair(x: number, y: number): boolean;
+    public DoDrawCrosshair(x: number, y: number): boolean;
     
     /**
      * Called so the weapon can override the impact effects it makes. 
@@ -64591,19 +64711,19 @@ declare class Weapon extends Entity {
      * @param damageType  The damage type of bullet 
      * @returns Return true to not do the default thing - which is to call UTIL_ImpactTrace in C++ 
      */
-    protected DoImpactEffect(tr: TraceResult, damageType: number): boolean;
+    public DoImpactEffect(tr: TraceResult, damageType: number): boolean;
     
     /**
      * This hook allows you to draw on screen while this weapon is in use.
      * 
      * If you want to draw a custom crosshair, consider using `WEAPON.DoDrawCrosshair` instead. 
      */
-    protected DrawHUD(): void;
+    public DrawHUD(): void;
     
     /**
      * This hook allows you to draw on screen while this weapon is in use. This hook is called "before" `WEAPON.DrawHUD` and is equivalent of `GM.HUDPaintBackground`. 
      */
-    protected DrawHUDBackground(): void;
+    public DrawHUDBackground(): void;
     
     /**
      * This hook draws the selection icon in the weapon selection menu. 
@@ -64613,30 +64733,30 @@ declare class Weapon extends Entity {
      * @param height  Height of the selection panel 
      * @param alpha  Alpha value of the selection panel 
      */
-    protected DrawWeaponSelection(x: number, y: number, width: number, height: number, alpha: number): void;
+    public DrawWeaponSelection(x: number, y: number, width: number, height: number, alpha: number): void;
     
     /**
      * Called when we are about to draw the world model. 
      */
-    protected DrawWorldModel(): void;
+    public DrawWorldModel(): void;
     
     /**
      * Called when we are about to draw the translucent world model. 
      */
-    protected DrawWorldModelTranslucent(): void;
+    public DrawWorldModelTranslucent(): void;
     
     /**
      * Called when a player or NPC has picked the weapon up. 
      * @param NewOwner  The one who picked the weapon up. Can be `Player` or `NPC`. 
      */
-    protected Equip(NewOwner: Player | NPC): void;
+    public Equip(NewOwner: Player | NPC): void;
     
     /**
      * The player has picked up the weapon and has taken the ammo from it.
      * The weapon will be removed immidiately after this call. 
      * @param ply  The player who picked up the weapon 
      */
-    protected EquipAmmo(ply: Player): void;
+    public EquipAmmo(ply: Player): void;
     
     /**
      * Called before firing animation events, such as muzzle flashes or shell ejections.
@@ -64648,7 +64768,7 @@ declare class Weapon extends Entity {
      * @param options  Name or options of the event. 
      * @returns Return true to disable the effect. 
      */
-    protected FireAnimationEvent(pos: Vector, ang: Angle, event: number, options: string): boolean;
+    public FireAnimationEvent(pos: Vector, ang: Angle, event: number, options: string): boolean;
     
     /**
      * This hook allows you to freeze players screen.
@@ -64657,7 +64777,7 @@ declare class Weapon extends Entity {
      * >Player will still be able to move or shoot 
      * @returns Return true to freeze moving the view 
      */
-    protected FreezeMovement(): boolean;
+    public FreezeMovement(): boolean;
     
     /**
      * Returns the sequence enumeration number that the weapon is playing.
@@ -64672,7 +64792,7 @@ declare class Weapon extends Entity {
      * This hook is for NPCs, you return what they should try to do with it. 
      * @returns A number defining what NPC should do with the weapon. Use the `CAP`. 
      */
-    protected GetCapabilities(): CAP;
+    public GetCapabilities(): CAP;
     
     /**
      * Returns the hold type of the weapon. 
@@ -64744,7 +64864,7 @@ declare class Weapon extends Entity {
      * Allows you to override where the tracer effect comes from. ( Visual bullets ) 
      * @returns The new position to start tracer effect from 
      */
-    protected GetTracerOrigin(): Vector;
+    public GetTracerOrigin(): Vector;
     
     /**
      * !TupleReturn
@@ -64754,7 +64874,7 @@ declare class Weapon extends Entity {
      * @param ang  Current angle 
      * @returns [New position, New angle] 
      */
-    protected GetViewModelPosition(pos: Vector, ang: Angle): [Vector, Angle];
+    public GetViewModelPosition(pos: Vector, ang: Angle): [Vector, Angle];
     
     /**
      * Returns the view model of the weapon. 
@@ -64794,14 +64914,14 @@ declare class Weapon extends Entity {
      * @param weapon  The weapon we are trying switch to. 
      * @returns Return true to allow weapon to holster 
      */
-    protected Holster(weapon: Entity): boolean;
+    public Holster(weapon: Entity): boolean;
     
     /**
      * This hook determines which parts of the HUD to draw. 
      * @param element  The HUD element in question 
      * @returns Return false to hide this HUD element 
      */
-    protected HUDShouldDraw(element: string): boolean;
+    public HUDShouldDraw(element: string): boolean;
     
     /**
      * Called when the weapon entity is created.
@@ -64812,7 +64932,7 @@ declare class Weapon extends Entity {
      * **Bug [#3015](https://github.com/Facepunch/garrysmod-issues/issues/3015):**
      * >This is not called serverside after a quicksave. 
      */
-    protected Initialize(): void;
+    public Initialize(): void;
     
     /**
      * Returns whenever the weapon is carried by the local player. 
@@ -64842,7 +64962,7 @@ declare class Weapon extends Entity {
      * @param value  The new value. 
      * @returns Return true to suppress this KeyValue or return false or nothing to apply this key value. 
      */
-    protected KeyValue(key: string, value: string): boolean;
+    public KeyValue(key: string, value: string): boolean;
     
     /**
      * Returns the time since this weapon last fired a bullet with `Entity.FireBullets` in seconds. It is not networked. 
@@ -64855,17 +64975,17 @@ declare class Weapon extends Entity {
      * 
      * See also `WEAPON.OwnerChanged`. 
      */
-    protected OnDrop(): void;
+    public OnDrop(): void;
     
     /**
      * Called whenever the weapons Lua script is reloaded. 
      */
-    protected OnReloaded(): void;
+    public OnReloaded(): void;
     
     /**
      * Called when the swep is about to be removed. 
      */
-    protected OnRemove(): void;
+    public OnRemove(): void;
     
     /**
      * Called when the weapon entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).
@@ -64874,14 +64994,14 @@ declare class Weapon extends Entity {
      * 
      * See also {{Lib|saverestore}} for relevant functions. 
      */
-    protected OnRestore(): void;
+    public OnRestore(): void;
     
     /**
      * Called when weapon is dropped or picked up by a new player.
      * 
      * See also `WEAPON.OnDrop`. 
      */
-    protected OwnerChanged(): void;
+    public OwnerChanged(): void;
     
     /**
      * Called after the view model has been drawn while the weapon in use. This hook is called from the default implementation of `GM.PostDrawViewModel`, and as such, will not occur if it has been overridden.
@@ -64891,7 +65011,7 @@ declare class Weapon extends Entity {
      * @param weapon  This is the weapon that is from the view model (same as self) 
      * @param ply  The owner of the view model 
      */
-    protected PostDrawViewModel(vm: Entity, weapon: Weapon, ply: Player): void;
+    public PostDrawViewModel(vm: Entity, weapon: Weapon, ply: Player): void;
     
     /**
      * Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven't overridden `GM.PreDrawViewModel`. 
@@ -64899,7 +65019,7 @@ declare class Weapon extends Entity {
      * @param weapon  This is the weapon that is from the view model. 
      * @param ply  The the owner of the view model. 
      */
-    protected PreDrawViewModel(vm: Entity, weapon: Weapon, ply: Player): void;
+    public PreDrawViewModel(vm: Entity, weapon: Weapon, ply: Player): void;
     
     /**
      * Called when primary attack button ( +attack ) is pressed.
@@ -64915,7 +65035,7 @@ declare class Weapon extends Entity {
      * 
      * Note that due to prediction, in multiplayer SWEP:PrimaryAttack is called multiple times per one "shot" with the gun. To work around that, use `IsFirstTimePredicted`. 
      */
-    protected PrimaryAttack(): void;
+    public PrimaryAttack(): void;
     
     /**
      * A convenience function that draws the weapon info box, used in `WEAPON.DrawWeaponSelection`. 
@@ -64923,12 +65043,12 @@ declare class Weapon extends Entity {
      * @param y  The y co-ordinate of box position 
      * @param alpha  Alpha value for the box 
      */
-    protected PrintWeaponInfo(x: number, y: number, alpha: number): void;
+    public PrintWeaponInfo(x: number, y: number, alpha: number): void;
     
     /**
      * Called when the reload key ( +reload ) is pressed. 
      */
-    protected Reload(): void;
+    public Reload(): void;
     
     /**
      * **Deprecated:**
@@ -64936,14 +65056,14 @@ declare class Weapon extends Entity {
      * 
      * . Called every frame just before `GM.RenderScene`. Used by tool gun to render screens. 
      */
-    protected RenderScreen(): void;
+    public RenderScreen(): void;
     
     /**
      * Called when secondary attack button ( +attack2 ) is pressed.
      * 
      * For issues with this hook being called rapidly on the client side, see the global function `IsFirstTimePredicted`. 
      */
-    protected SecondaryAttack(): void;
+    public SecondaryAttack(): void;
     
     /**
      * Forces weapon to play activity/animation. 
@@ -64967,7 +65087,7 @@ declare class Weapon extends Entity {
      * Sets the weapon deploy speed. This value needs to match on client and server. 
      * @param speed  The value to set deploy speed to. Negative will slow down playback. 
      */
-    protected SetDeploySpeed(speed: number): void;
+    public SetDeploySpeed(speed: number): void;
     
     /**
      * Sets the hold type of the weapon. This function also calls `WEAPON.SetWeaponHoldType` and properly networks it to all clients.
@@ -65002,7 +65122,7 @@ declare class Weapon extends Entity {
     /**
      * Called when the SWEP should set up its [[Networking Entities| Data Tables]]. 
      */
-    protected SetupDataTables(): void;
+    public SetupDataTables(): void;
     
     /**
      * Sets the hold type of the weapon. This must be called on "both" the server and the client to work properly.
@@ -65010,7 +65130,7 @@ declare class Weapon extends Entity {
      * "NOTE:" You should avoid calling this function and call `Weapon.SetHoldType` now. 
      * @param name  Name of the hold type. You can find all default hold types [[Hold_Types|here]] 
      */
-    protected SetWeaponHoldType(name: string): void;
+    public SetWeaponHoldType(name: string): void;
     
     /**
      * A convenience function to shoot bullets.
@@ -65021,12 +65141,12 @@ declare class Weapon extends Entity {
      * @param num_bullets  Amount of bullets to shoot 
      * @param aimcone  Spread of bullets 
      */
-    protected ShootBullet(damage: number, num_bullets: number, aimcone: number): void;
+    public ShootBullet(damage: number, num_bullets: number, aimcone: number): void;
     
     /**
      * A convenience function to create shoot effects. 
      */
-    protected ShootEffects(): void;
+    public ShootEffects(): void;
     
     /**
      * Should this weapon be dropped when its owner dies?
@@ -65034,19 +65154,19 @@ declare class Weapon extends Entity {
      * This only works if the player has `Player.ShouldDropWeapon` set to true. 
      * @returns Return true to drop the weapon, false otherwise. Default ( if you don't return anything ) is false. 
      */
-    protected ShouldDropOnDie(): boolean;
+    public ShouldDropOnDie(): boolean;
     
     /**
      * A convenience function to remove primary ammo from clip. 
      * @param amount  Amount of primary ammo to remove 
      */
-    protected TakePrimaryAmmo(amount: number): void;
+    public TakePrimaryAmmo(amount: number): void;
     
     /**
      * A convenience function to remove secondary ammo from clip. 
      * @param amount  How much of secondary ammo to remove 
      */
-    protected TakeSecondaryAmmo(amount: number): void;
+    public TakeSecondaryAmmo(amount: number): void;
     
     /**
      * Called when the swep thinks.
@@ -65063,7 +65183,7 @@ declare class Weapon extends Entity {
      * >This will not be run during deploy animations after a serverside-only deploy. This usually happens after picking up and dropping an object with +use. 
      * @returns 
      */
-    protected Think(): boolean;
+    public Think(): boolean;
     
     /**
      * Translate a player's Activity into a weapon's activity, depending on how you want the player to be holding the weapon.
@@ -65072,7 +65192,7 @@ declare class Weapon extends Entity {
      * @param act  The activity to translate 
      * @returns The translated activity 
      */
-    protected TranslateActivity(act: number): number;
+    public TranslateActivity(act: number): number;
     
     /**
      * Allows to change players field of view while player holds the weapon.
@@ -65082,13 +65202,13 @@ declare class Weapon extends Entity {
      * @param fov  The current/default FOV. 
      * @returns The target FOV. 
      */
-    protected TranslateFOV(fov: number): number;
+    public TranslateFOV(fov: number): number;
     
     /**
      * Called straight after the view model has been drawn. This is called before `GM.PostDrawViewModel` and `WEAPON.PostDrawViewModel`. 
      * @param ViewModel  Players view model 
      */
-    protected ViewModelDrawn(ViewModel: Entity): void;
+    public ViewModelDrawn(ViewModel: Entity): void;
 }
 
 /**

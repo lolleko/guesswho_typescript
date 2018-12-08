@@ -1,15 +1,5 @@
 
 -- Lua Library Imports
-function __TS__ArrayForEach(arr,callbackFn)
-    local i = 0
-    while(i<#arr) do
-        do
-            callbackFn(arr[i+1],i,arr)
-        end
-        i = (i+1)
-    end
-end
-
 function __TS__ArraySome(arr,callbackfn)
     local i = 0
     while(i<#arr) do
@@ -21,6 +11,16 @@ function __TS__ArraySome(arr,callbackfn)
         i = (i+1)
     end
     return false
+end
+
+function __TS__ArrayForEach(arr,callbackFn)
+    local i = 0
+    while(i<#arr) do
+        do
+            callbackFn(arr[i+1],i,arr)
+        end
+        i = (i+1)
+    end
 end
 
 function __TS__ArrayPush(arr,...)
@@ -53,7 +53,7 @@ function ENT.get__SettingRoundDuration(self)
     return GetConVar("gw_roundduration"):GetInt()
 end
 function ENT.get__SettingHidingDuration(self)
-    return GetConVar("gw_hidinguration"):GetInt()
+    return GetConVar("gw_hideduration"):GetInt()
 end
 function ENT.get__SettingPostRoundDuration(self)
     return GetConVar("gw_postroundduration"):GetInt()
@@ -93,6 +93,7 @@ function ENT.Initialize(self)
 )
     self:set__GameTimerEndTime(CurTime())
     self:HandleWaiting()
+    print("updating spawnpoints")
     self:UpdateSpawnpoints()
     print("Initializing Gamerules")
 end
@@ -100,7 +101,6 @@ function ENT.Think(self)
     if SERVER then
         if self:get__GameState()==GWGameState.WAITING then
             if (team.NumPlayers(HIDER)<self:get__SettingMinHiders()) or (team.NumPlayers(SEEKER)<self:get__SettingMinSeekers()) then
-                __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(ent) return ent:Remove() end)
                 self:NextThink(CurTime()+1)
                 print("Wating")
                 return true
@@ -109,6 +109,8 @@ function ENT.Think(self)
             end
         end
     end
+    DebugInfo(0,"TIME: " .. self:get__GameTime())
+    DebugInfo(1,"STATE: " .. self:get__GameState())
     return false
 end
 function ENT.UpdateTransmitState(self)
@@ -117,9 +119,11 @@ end
 function ENT.HandlePlayerDeath(self,victim,inflictor,attacker)
     local playersOnVictimTeam = team.GetPlayers(victim:Team())
 
-    local someAlive = __TS__ArraySome(playersOnVictimTeam, function(ply) return ply:Alive() end)
+    local someAlive = __TS__ArraySome(playersOnVictimTeam, function(ply) return ply:Alive() and (ply~=victim) end)
 
-    if (not someAlive) then
+    print("dead ",someAlive)
+    if (not someAlive) and (self:get__GameState()==GWGameState.SEEKING) then
+        print(self)
         self:HandlePostRound()
     end
 end
@@ -138,25 +142,26 @@ function ENT.HandleCreating(self)
 
         MsgN("GW Spawned ",walkersSpawned," NPCs in 1 wave.")
     else
-        local spawnRounds = math.floor(self.maxWalkers/#self.spawnPoints)
+        local spawnRounds = math.ceil(self.maxWalkers/#self.spawnPoints)
 
-        self:set__GameTimerEndTime((CurTime()+(spawnRounds*5)))
+        self:set__GameTimerEndTime((CurTime()+(spawnRounds*7)))
         local wave = 0
-        while(wave<=spawnRounds) do
+        while(wave<spawnRounds) do
             do
-                timer.Simple(wave*5,function()
+                timer.Simple(wave*7,function()
                     local walkersSpawned = self:SpawnNPCWave()
 
                     MsgN("GW Spawned ",walkersSpawned," NPCs in wave ",wave+1,".")
-                    if wave==spawnRounds then
-                        self:HandleHiding()
-                    end
                 end
 )
             end
             ::__continue0::
             wave = (wave+1)
         end
+        timer.Simple(spawnRounds*7,function()
+            self:HandleHiding()
+        end
+)
     end
 end
 function ENT.HandleHiding(self)
@@ -168,9 +173,12 @@ end
 function ENT.HandleSeeking(self)
     self:set__GameState(GWGameState.SEEKING)
     self:set__GameTimerEndTime((CurTime()+self:get__SettingRoundDuration()))
-    timer.Simple(self:get__SettingHidingDuration(),function() return self:HandlePostRound() end)
+    timer.Create("GWRoundEndTimer",self:get__SettingRoundDuration(),1,function() return self:HandlePostRound() end)
 end
 function ENT.HandlePostRound(self)
+    if timer.Exists("GWRoundEndTimer") then
+        timer.Remove("GWRoundEndTimer")
+    end
     local hiders = team.GetPlayers(HIDER)
 
     local someHidersAlive = __TS__ArraySome(hiders, function(ply) return ply:Alive() end)
@@ -180,6 +188,18 @@ function ENT.HandlePostRound(self)
     else
         print("Seekers Win")
     end
+    game.CleanUpMap(false,{self:GetClass()})
+    __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(npc) return npc:Remove() end)
+    __TS__ArrayForEach((player.GetAll()), function(ply)
+        if ply:Team()==HIDER then
+            ply:SetTeam(SEEKER)
+        else
+            if ply:Team()==SEEKER then
+                ply:SetTeam(HIDER)
+            end
+        end
+    end
+)
     self:set__GameTimerEndTime((CurTime()+self:get__SettingPostRoundDuration()))
     timer.Simple(self:get__SettingPostRoundDuration(),function() return self:HandleWaiting() end)
 end
@@ -187,7 +207,12 @@ function ENT.UpdateSpawnpoints(self)
     local spawnPointClasses = {"info_player_start","info_player_deathmatch","info_player_combine","info_player_rebel","info_player_counterterrorist","info_player_terrorist","info_player_axis","info_player_allies","gmod_player_start","info_player_teamspawn","ins_spawnpoint","aoc_spawnpoint","dys_spawn_point","info_player_pirate","info_player_viking","info_player_knight","diprip_start_team_blue","diprip_start_team_red","info_player_red","info_player_blue","info_player_coop","info_player_human","info_player_zombie","info_player_deathmatch","info_player_zombiemaster"}
 
     self.spawnPoints = {}
-    __TS__ArrayForEach(spawnPointClasses, function(sp) return __TS__ArrayPush(self.spawnPoints, table.unpack(ents.FindByClass(sp))) end)
+    for _, sp in ipairs(spawnPointClasses) do
+        do
+            __TS__ArrayPush(self.spawnPoints, table.unpack(ents.FindByClass(sp)))
+        end
+        ::__continue1::
+    end
     local rand = math.random
 
     local n = #self.spawnPoints-1
@@ -202,7 +227,7 @@ function ENT.UpdateSpawnpoints(self)
             self.spawnPoints[k+1] = temp
             n = (n-1)
         end
-        ::__continue1::
+        ::__continue2::
     end
 end
 function ENT.SpawnNPCWave(self)

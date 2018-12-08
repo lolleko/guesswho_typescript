@@ -13,12 +13,28 @@ function __TS__ArraySome(arr,callbackfn)
     return false
 end
 
+function __TS__ArrayFilter(arr,callbackfn)
+    local result = {}
+
+    local i = 0
+    while(i<#arr) do
+        do
+            if callbackfn(arr[i+1],i,arr) then
+                result[#result+1] = arr[i+1]
+            end
+        end
+        i = (i+1)
+    end
+    return result
+end
+
 AddCSLuaFile()
 local eyeGlow = Material("sprites/redglow1")
 
 local white = Color(255,255,255,255)
 
 ENT.Base = "base_nextbot"
+ENT.boundsSize = 10
 function ENT.get__LastAct(self)
     return self:GetDTInt(0)
 end
@@ -45,6 +61,27 @@ function ENT.Sit(self,duration)
     self.isSitting = true
     self.sitUntil = (CurTime()+duration)
 end
+function ENT.SetCrouchCollision(self,state)
+    if state then
+        self:SetCollisionBounds(Vector(-self.boundsSize,-self.boundsSize,0),Vector(self.boundsSize,self.boundsSize,36))
+    else
+        self:SetCollisionBounds(Vector(-self.boundsSize,-self.boundsSize,0),Vector(self.boundsSize,self.boundsSize,70))
+    end
+end
+function ENT.Doge(self,dogePos,maxDuration)
+    if maxDuration==nil then maxDuration=0.35 end
+    self.dogePos = dogePos
+    self.dogeUntil = (CurTime()+maxDuration)
+    self.isDoging = true
+end
+function ENT.Jump(self)
+    if self.isJumping or (self.nextPossibleJump>CurTime()) then
+        return
+    end
+    self.loco:Jump()
+    self.isJumping = true
+    self.nextPossibleJump = (CurTime()+2)
+end
 function ENT.SetupDataTables(self)
     self:DTVar("Int",0,"LastAct")
     self:DTVar("Int",1,"WalkerColorIndex")
@@ -54,7 +91,6 @@ function ENT.Initialize(self)
     local models = GWConfigManager:GetInstance():get__Data().HiderModels
 
     if SERVER then
-        PrintTable(models)
         self:set__WalkerModelIndex((math.random(#models)-1))
     end
     self:SetModel(models[self:get__WalkerModelIndex()+1])
@@ -69,43 +105,16 @@ function ENT.Initialize(self)
     self.GetPlayerColor = function() return self.walkerColor end
     self:SetHealth(100)
     if SERVER then
-        self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,70))
-        self.loco:SetStepHeight(21)
+        self:SetCollisionBounds(Vector(-self.boundsSize,-self.boundsSize,0),Vector(self.boundsSize,self.boundsSize,70))
+        self.loco:SetStepHeight(20)
         self.loco:SetJumpHeight(68)
-        self.nextPossibleJump = (CurTime()+5)
+        self.loco:SetDesiredSpeed(100)
+        self.nextPossibleJump = (CurTime()+8)
+        self.nextPossibleSettingsChange = (CurTime()+10)
+        self.dogeUntil = CurTime()
         self.isJumping = false
         self.shouldCrouch = false
-    end
-end
-function ENT.Draw(self)
-    self:DrawModel()
-    local leftEye = self:GetAttachment(self:LookupAttachment("lefteye"))
-
-    local rightEye = self:GetAttachment(self:LookupAttachment("righteye"))
-
-    if (not leftEye) then
-        leftEye = self:GetAttachment(self:LookupAttachment("left_eye"))
-        rightEye = self:GetAttachment(self:LookupAttachment("right_eye"))
-    end
-    local leftEyePos = nil
-
-    local rightEyePos = nil
-
-    if leftEye and rightEye then
-        leftEyePos = (leftEye.Pos+self:GetForward())
-        rightEyePos = (rightEye.Pos+self:GetForward())
-    else
-        local eyes = self:GetAttachment(self:LookupAttachment("eyes"))
-
-        if eyes then
-            leftEyePos = ((self:GetRight())*-1.5)+((self:GetForward())*0.5)
-            rightEyePos = ((self:GetRight())*1.5)+((self:GetForward())*0.5)
-        end
-    end
-    if leftEyePos and rightEyePos then
-        render.SetMaterial(eyeGlow)
-        render.DrawSprite(leftEyePos,4,4,white)
-        render.DrawSprite(rightEyePos,4,4,white)
+        self.isFirstPath = true
     end
 end
 function ENT.Think(self)
@@ -124,20 +133,20 @@ function ENT.Think(self)
             end
             ::__continue0::
         end
-        if (self.isStuck and (CurTime()>(self.stuckTime+20))) and (self.stuckPos:DistToSqr(self:GetPos())<25) then
+        if (self.isStuck and (CurTime()>(self.stuckTime+15))) and (self.stuckPos:DistToSqr(self:GetPos())<25) then
             local spawnPoints = (GAMEMODE):get__Gamerules():get__SpawnPoints()
 
             local spawnPoint = spawnPoints[math.random(#spawnPoints)-1+1]:GetPos()
 
             self:SetPos(spawnPoint)
             self.isStuck = false
-            MsgN("Nextbot ["..tostring(tostring(self:EntIndex())).."]["..tostring(self:GetClass()).."]" .. "Got Stuck for over 20 seconds and will be repositioned, if this error gets spammed" .. "you might want to consider the following: Edit the navmesh or lower the walker amount.")
+            MsgN("Nextbot ["..tostring(tostring(self:EntIndex())).."]["..tostring(self:GetClass()).."]" .. "Got Stuck for over 15 seconds and will be repositioned, if this error gets spammed" .. "you might want to consider the following: Edit the navmesh or lower the walker amount.")
         end
         if self.isStuck and (self.stuckPos:DistToSqr(self:GetPos())>100) then
             self.isStuck = false
         end
         if self:GetSolidMask()==MASK_NPCSOLID_BRUSHONLY then
-            local entsInBox = ents.FindInBox(self:GetPos()+Vector(-16,-16,0),self:GetPos()+Vector(16,16,70))
+            local entsInBox = ents.FindInBox(self:GetPos()+Vector(-self.boundsSize,-self.boundsSize,0),self:GetPos()+Vector(self.boundsSize,self.boundsSize,70))
 
             local occupied = __TS__ArraySome(entsInBox, function(ent) return (ent:GetClass()=="npc_walker") and (ent~=self) end)
 
@@ -150,13 +159,39 @@ function ENT.Think(self)
 end
 function ENT.RunBehaviour(self)
     self.behaviourTree = BehaviourTreeBuilder.new(true):sequence():action(function()
+        if self.nextPossibleSettingsChange>CurTime() then
+            return BehaviourStatus.Success
+        end
+        local rand = math.random(1,100)
+
+        if (rand>0) and (rand<15) then
+            self.loco:SetDesiredSpeed(200)
+        else
+            if (rand>15) and (rand<22) then
+                local entsAround = ents.FindInSphere(self:GetPos(),300)
+
+                local walkersAround = __TS__ArrayFilter(entsAround, function(ent) return ent:GetClass()==self:GetClass() end)
+
+                local doorsAround = __TS__ArrayFilter(entsAround, function(ent) return ((ent:GetClass()=="func_door") or (ent:GetClass()=="func_door_rotating")) or (ent:GetClass()=="prop_door_rotating") end)
+
+                if (#walkersAround<3) and (#doorsAround==0) then
+                    self:Sit(math.random(10,60))
+                end
+            else
+                self.loco:SetDesiredSpeed(100)
+            end
+        end
+        self.nextPossibleSettingsChange = (CurTime()+5)
+        return BehaviourStatus.Success
+    end
+):action(function()
         if (not self.isSitting) then
             return BehaviourStatus.Success
         end
         self:SetSequence("sit_zen")
-        self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,36))
+        self:SetCrouchCollision(true)
         if self.sitUntil<CurTime() then
-            self:SetCollisionBounds(Vector(-8,-8,0),Vector(8,8,70))
+            self:SetCrouchCollision(false)
             self.isSitting = false
             return BehaviourStatus.Success
         end
@@ -166,8 +201,12 @@ function ENT.RunBehaviour(self)
         if self.hasPath and self.currentPath:IsValid() then
             return BehaviourStatus.Success
         end
-        self.loco:SetDesiredSpeed(100)
-        local navs = navmesh.Find(self:GetPos(),1000,120,120)
+        local radius = 2200
+
+        if self.isFirstPath then
+            radius = 8000
+        end
+        local navs = navmesh.Find(self:GetPos(),radius,200,200)
 
         local nav = navs[math.random(#navs)-1+1]
 
@@ -181,29 +220,56 @@ function ENT.RunBehaviour(self)
         self.currentPath = Path("Follow")
         self.currentPath:SetMinLookAheadDistance(10)
         self.currentPath:SetGoalTolerance(10)
-        self.currentPath:Compute(self,self.targetPos,self:PathGenerator())
-        self.currentPathMaxAge = math.Clamp(self.currentPath:GetLength()/90,0.1,15)
+        self.currentPath:Compute(self,self.targetPos)
+        if self.isFirstPath then
+            self.currentPathMaxAge = 20
+        else
+            self.currentPathMaxAge = math.Clamp(self.currentPath:GetLength()/90,0.1,12)
+        end
         if (not self.currentPath:IsValid()) then
             return BehaviourStatus.Failure
         end
+        self.isFirstPath = false
+        self.hasPath = true
         return BehaviourStatus.Success
     end
 ):action(function()
         if (not self.currentPath:IsValid()) then
             return BehaviourStatus.Success
         end
+        if (self.isDoging and (self.dogeUntil>CurTime())) and (self.dogePos:DistToSqr(self:GetPos())>100) then
+            local dogeDirection = (self.dogePos-self:GetPos()):GetNormalized()
+
+            self.loco:FaceTowards(self.dogePos)
+            self.loco:SetVelocity(dogeDirection*80)
+            self.loco:Approach(self.dogePos,1)
+            return BehaviourStatus.Running
+        else
+            self.isDoging = false
+        end
         local goal = self.currentPath:GetCurrentGoal()
 
+        local distToGoal = self:GetPos():Distance(goal.pos)
+
         if goal.type==3 then
+            self.isJumping = true
             self.loco:JumpAcrossGap(goal.pos,goal.forward)
         else
-            if (goal.type==2) and (self:GetPos():Distance(goal.pos)<30) then
-                self.isJumping = true
-                self.loco:Jump()
+            if (not goal.area:HasAttributes(bit.bor(NAV_MESH_NO_JUMP,NAV_MESH_STAIRS))) then
+                if (goal.type==2) and (distToGoal<30) then
+                    self:Jump()
+                else
+                    local scanDist = 25
+
+                    local scanPoint = self.currentPath:GetClosestPosition(({ self:EyePos() })[0+1]+(self.loco:GetGroundMotionVector()*scanDist))
+
+                    if (math.abs(self:GetPos().z-scanPoint.z)>self.loco:GetStepHeight()) and (distToGoal<300) then
+                        self:Jump()
+                    end
+                end
             end
         end
         self.currentPath:Update(self)
-        self.currentPath:Draw()
         if self.loco:IsStuck() then
             self:HandleStuck()
         end
@@ -250,24 +316,24 @@ function ENT.BodyUpdate(self)
 end
 function ENT.OnLandOnGround(self,ent)
     self.isJumping = false
+    self:SetCrouchCollision(false)
 end
 function ENT.OnLeaveGround(self,ent)
     self.isJumping = true
+    self:SetCrouchCollision(true)
 end
 function ENT.OnContact(self,ent)
     if (ent:GetClass()==self:GetClass()) or ent:IsPlayer() then
-        local calcDogeGoal = function(collider)
-            local dogeDirection = Vector(collider:GetPos())
-
-            dogeDirection:Add(collider:GetRight()*30)
-            dogeDirection:Add(collider:GetForward()*30)
-            return dogeDirection
-        end
-
-
-        self.loco:Approach(calcDogeGoal(self),1000)
-        if math.abs(self:GetPos().z-ent:GetPos().z)>30 then
+        if math.abs(self:GetPos().z-ent:GetPos().z)>20 then
             self:SetSolidMask(MASK_NPCSOLID_BRUSHONLY)
+        else
+            if (not self.isDoging) then
+                local dogeDirection = (ent:GetPos()-self:GetPos()):GetNormalized()
+
+                dogeDirection:Rotate(Angle(0,math.random(85,95),0))
+                dogeDirection.z = 0
+                self:Doge(self:GetPos()+(dogeDirection*200),math.random(0.2,0.35))
+            end
         end
     end
     if (ent:GetClass()=="prop_physics_multiplayer") or ((ent:GetClass()=="prop_physics") and (not GetConVar("gw_propfreeze_enabled"):GetBool())) then
@@ -276,21 +342,44 @@ function ENT.OnContact(self,ent)
         if (not IsValid(phys)) then
             return
         end
-        phys:ApplyForceCenter(self:GetPos()-(ent:GetPos()*1.2))
+        local force = ((ent:GetPos()-self:GetPos()):GetNormalized()*3)*self:GetVelocity():Length2D()
+
+        force.z = 0
+        phys:ApplyForceCenter(force)
         DropEntityIfHeld(ent)
     end
     if (ent:GetClass()=="func_breakable") or (ent:GetClass()=="func_breakable_surf") then
         ent:Fire("Shatter")
     end
+    if self.isStuck and ((ent:GetClass()==self:GetClass()) or ent:IsPlayer()) then
+        local thisMin = self:OBBMins()+self:GetPos()
+
+        local thisMax = self:OBBMaxs()+self:GetPos()
+
+        local entMin = ent:OBBMins()+ent:GetPos()
+
+        local entMax = ent:OBBMaxs()+ent:GetPos()
+
+        if (not ((((thisMax.x<entMin.x) or (thisMin.x>entMax.x)) or (thisMax.y<entMin.y)) or (thisMin.y>entMax.y))) then
+            self:SetSolidMask(MASK_NPCSOLID_BRUSHONLY)
+        end
+    end
 end
 function ENT.OnStuck(self)
     if (not self.isStuck) then
         self.stuckTime = CurTime()
+        self.isStuck = true
     end
     self.stuckPos = self:GetPos()
+    if (self.hasPath and (not self.isDoging)) and (self.loco:GetVelocity():Length2DSqr()<0.1) then
+        local randomDir = VectorRand()*100
+
+        randomDir.z = 0
+        self:Doge(self:GetPos()+randomDir,0.4)
+    end
 end
 function ENT.OnUnStuck(self)
-    if (self.stuckPos:Distance(self:GetPos())>10) or self.isSitting then
+    if (self.stuckPos:DistToSqr(self:GetPos())>100) or self.isSitting then
         self.isStuck = false
     end
 end
