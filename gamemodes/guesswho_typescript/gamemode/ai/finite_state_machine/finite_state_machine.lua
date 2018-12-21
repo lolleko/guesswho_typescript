@@ -2,12 +2,12 @@
 -- Lua Library Imports
 function __TS__ArrayPush(arr,...)
     local items = { ... }
-    local i = 0
-    while(i<#items) do
+    local __loopVariable0 = items;
+    for i0=1, #__loopVariable0 do
+        local item = __loopVariable0[i0];
         do
-            arr[#arr+1] = items[i+1]
+            arr[(#arr)+1] = item;
         end
-        i = (i+1)
     end
     return #arr
 end
@@ -15,37 +15,37 @@ end
 FiniteStateMachine = FiniteStateMachine or {}
 FiniteStateMachine.__index = FiniteStateMachine
 function FiniteStateMachine.new(construct, ...)
-    local instance = setmetatable({}, FiniteStateMachine)
-    if construct and FiniteStateMachine.constructor then FiniteStateMachine.constructor(instance, ...) end
-    return instance
+    local self = setmetatable({}, FiniteStateMachine)
+    if construct and FiniteStateMachine.constructor then FiniteStateMachine.constructor(self, ...) end
+    return self
 end
 function FiniteStateMachine.constructor(self,startState)
-    self.startState = startState
-    self.currentState = startState
-    self.transitions = {}
-    self.enterCallbacks = {}
-    self.leaveCallbacks = {}
+    self.startState = startState;
+    self.currentState = startState;
+    self.transitions = {};
+    self.enterCallbacks = {};
+    self.leaveCallbacks = {};
 end
 function FiniteStateMachine.AddTransition(self,fromState,toState,condition)
-    local newTransition = StateTransition.new(true,fromState,toState,condition)
-
+    local newTransition = StateTransition.new(true,fromState,toState,condition);
     local i = 0
     while(i<#self.transitions) do
         do
-            local transition = self.transitions[i+1]
-
+            local transition = self.transitions[(i)+1];
             if (transition.fromState==fromState) and (transition.toState==toState) then
-                self.transitions[i+1] = newTransition
+                self.transitions[(i)+1] = newTransition;
                 return
             end
         end
         ::__continue0::
         i = (i+1)
     end
-    __TS__ArrayPush(self.transitions, newTransition)
+    __TS__ArrayPush(self.transitions, newTransition);
 end
 function FiniteStateMachine.CanJump(self,fromState,toState)
-    for _, transition in ipairs(self.transitions) do
+    local __loopVariable1 = self.transitions;
+    for i1=1, #__loopVariable1 do
+        local transition = __loopVariable1[i1];
         do
             if (transition.fromState==fromState) and (transition.toState==toState) then
                 return transition.condition()
@@ -57,14 +57,13 @@ function FiniteStateMachine.CanJump(self,fromState,toState)
 end
 function FiniteStateMachine.Jump(self,toState)
     if self:CanJump(self.currentState,toState) then
-        local prevState = self.currentState
-
+        local prevState = self.currentState;
         if self.leaveCallbacks[tostring(self.currentState)] then
-            self.leaveCallbacks[tostring(self.currentState)](toState)
+            self.leaveCallbacks[tostring(self.currentState)](toState);
         end
-        self.currentState = toState
+        self.currentState = toState;
         if self.enterCallbacks[tostring(self.currentState)] then
-            self.enterCallbacks[tostring(self.currentState)](prevState)
+            self.enterCallbacks[tostring(self.currentState)](prevState);
         end
         return true
     end
@@ -77,5 +76,5 @@ function FiniteStateMachine.IsInState(self,state)
     return self.currentState==state
 end
 function FiniteStateMachine.Reset(self)
-    self.currentState = self.startState
+    self.currentState = self.startState;
 end

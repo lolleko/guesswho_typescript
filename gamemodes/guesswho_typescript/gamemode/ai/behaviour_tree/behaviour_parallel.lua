@@ -2,12 +2,12 @@
 -- Lua Library Imports
 function __TS__ArrayPush(arr,...)
     local items = { ... }
-    local i = 0
-    while(i<#items) do
+    local __loopVariable0 = items;
+    for i0=1, #__loopVariable0 do
+        local item = __loopVariable0[i0];
         do
-            arr[#arr+1] = items[i+1]
+            arr[(#arr)+1] = item;
         end
-        i = (i+1)
     end
     return #arr
 end
@@ -15,35 +15,36 @@ end
 BehaviourParallel = BehaviourParallel or {}
 BehaviourParallel.__index = BehaviourParallel
 function BehaviourParallel.new(construct, ...)
-    local instance = setmetatable({}, BehaviourParallel)
-    if construct and BehaviourParallel.constructor then BehaviourParallel.constructor(instance, ...) end
-    return instance
+    local self = setmetatable({}, BehaviourParallel)
+    if construct and BehaviourParallel.constructor then BehaviourParallel.constructor(self, ...) end
+    return self
 end
 function BehaviourParallel.constructor(self,requiredToFail,requiredToSucceed)
-    self.children = {}
-    self.requiredToFail = requiredToFail
-    self.requiredToSucceed = requiredToSucceed
+    if requiredToFail==nil then requiredToFail=-1 end
+    if requiredToSucceed==nil then requiredToSucceed=-1 end
+    self.children = {};
+    self.requiredToFail = requiredToFail;
+    self.requiredToSucceed = requiredToSucceed;
 end
 function BehaviourParallel.addChild(self,child)
-    __TS__ArrayPush(self.children, child)
+    __TS__ArrayPush(self.children, child);
 end
 function BehaviourParallel.tick(self)
-    local successCounter = 0
-
-    local failCounter = 0
-
-    for _, child in ipairs(self.children) do
+    local successCounter = 0;
+    local failCounter = 0;
+    local __loopVariable0 = self.children;
+    for i0=1, #__loopVariable0 do
+        local child = __loopVariable0[i0];
         do
-            local result = child:tick()
-
+            local result = child:tick();
             if result==BehaviourStatus.Failure then
-                failCounter = (failCounter+1)
+                failCounter = (failCounter+1);
                 if failCounter==self.requiredToFail then
                     return BehaviourStatus.Failure
                 end
             end
             if result==BehaviourStatus.Success then
-                successCounter = (successCounter+1)
+                successCounter = (successCounter+1);
                 if failCounter==self.requiredToSucceed then
                     return BehaviourStatus.Success
                 end

@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-/** !MetaExtension */
+/** @metaExtension */
 class GWPlayer extends Player {
     public IsHider(): boolean {
         return this.Team() === TEAM.HIDER;

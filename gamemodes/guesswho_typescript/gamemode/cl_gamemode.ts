@@ -1,4 +1,4 @@
-/** !Extension GM */
+/** @extension GM */
 class GWGamemodeCL extends Gamemode {
 
     private teamSelectScreen: GWTeamSelectScreen;

@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-/** !Extension ENT */
+/** @extension ENT */
 class GWGamerules extends Entity {
     public Type: string = "point";
 

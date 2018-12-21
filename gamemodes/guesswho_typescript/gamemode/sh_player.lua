@@ -1,9 +1,5 @@
-
--- Lua Library Imports
-AddCSLuaFile()
+AddCSLuaFile();
 local __meta__Player = debug.getregistry()["Player"]
-function __meta__Player.constructor(self)
-end
 function __meta__Player.IsHider(self)
     return self:Team()==HIDER
 end

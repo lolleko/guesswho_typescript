@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-/** !Extension ENT */
+/** @extension ENT */
 class GWNPCTest extends NextBot {
     public Base: string = "base_nextbot";
 

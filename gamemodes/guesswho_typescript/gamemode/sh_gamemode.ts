@@ -1,6 +1,6 @@
 AddCSLuaFile();
 
-/** !Extension GM */
+/** @extension GM */
 class GWGamemode extends Gamemode {
     public TeamBased = true;
 

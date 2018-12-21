@@ -11,12 +11,12 @@ end
 BehaviourCondition = BehaviourCondition or {}
 BehaviourCondition.__index = BehaviourCondition
 function BehaviourCondition.new(construct, ...)
-    local instance = setmetatable({}, BehaviourCondition)
-    if construct and BehaviourCondition.constructor then BehaviourCondition.constructor(instance, ...) end
-    return instance
+    local self = setmetatable({}, BehaviourCondition)
+    if construct and BehaviourCondition.constructor then BehaviourCondition.constructor(self, ...) end
+    return self
 end
 function BehaviourCondition.constructor(self,func)
-    self.func = func
+    self.func = func;
 end
 function BehaviourCondition.tick(self)
     return __TS__Ternary(self.func(), function() return BehaviourStatus.Success end, function() return BehaviourStatus.Failure end)

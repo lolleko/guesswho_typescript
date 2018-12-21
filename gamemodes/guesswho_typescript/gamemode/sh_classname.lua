@@ -1,6 +1,4 @@
-
--- Lua Library Imports
-AddCSLuaFile()
+AddCSLuaFile();
 GWClassName={}
 GWClassName.NPC_WALKER="gw_npc_walker"
 GWClassName.HIDER_PLAYER_CLASS="gw_player_hider"

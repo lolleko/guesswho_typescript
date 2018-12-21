@@ -1,5 +1,3 @@
-
--- Lua Library Imports
-AddCSLuaFile()
+AddCSLuaFile();
 HIDER=1
 SEEKER=2

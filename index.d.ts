@@ -12,8 +12,8 @@ declare var CLIENT: boolean;
 declare var GM: Gamemode;
 declare var GAMEMODE: Gamemode;
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetUseType`. Affects when `ENTITY.Use` is triggered.
  * 
  * Not to be confused with `USE` used for `ENTITY.Use` and others. 
@@ -47,8 +47,8 @@ declare enum _USE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by functions like `Weapon.SendWeaponAnim` & `Entity.SelectWeightedSequence`.
  * 
  * **Bug [#3075](https://github.com/Facepunch/garrysmod-issues/issues/3075):**
@@ -117,7 +117,7 @@ declare enum ACT {
     
     /**
      */
-    ACT_RUN_public = 14,
+    ACT_RUN_PROTECTED = 14,
     
     /**
      */
@@ -4989,7 +4989,7 @@ declare enum ACT {
     
     /**
      */
-    ACT_HL2MP_RUN_public = 1624,
+    ACT_HL2MP_RUN_PROTECTED = 1624,
     
     /**
      */
@@ -6374,8 +6374,8 @@ declare enum ACT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `game.AddAmmoType`'s input structure - the `AmmoData`.
  * 
  * **Note:**
@@ -6394,8 +6394,8 @@ declare enum AMMO {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `render.OverrideBlend` to determine how texture RGBA information should be interpreted when rendered. 
  * 
  * For more information refer to OpenGL's glBlendFunc page here: https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml  
@@ -6449,8 +6449,8 @@ declare enum BLEND {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `render.OverrideBlend`. 
  */
 declare enum BLENDFUNC {
@@ -6468,8 +6468,8 @@ declare enum BLENDFUNC {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.GetBloodColor` and `Entity.SetBloodColor`. 
  */
 declare enum BLOOD_COLOR {
@@ -6515,8 +6515,8 @@ declare enum BLOOD_COLOR {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `Entity.BoneHasFlag`. 
  */
 declare enum BONE {
@@ -6606,8 +6606,8 @@ declare enum BONE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `render.SetModelLighting`. 
  */
 declare enum BOX {
@@ -6643,8 +6643,8 @@ declare enum BOX {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Encompasses the range of `KEY`, `MOUSE` and `JOYSTICK`, all of which can be used by:
  * * `input.IsButtonDown`
  * * `input.LookupKeyBinding`
@@ -6672,8 +6672,8 @@ declare enum BUTTON_CODE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `NPC.CapabilitiesAdd`, `WEAPON.GetCapabilities` and `NPC.CapabilitiesGet`. Serverside only. 
  */
 declare enum CAP {
@@ -6815,8 +6815,8 @@ declare enum CAP {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `EmitSound` and `sound.Add`. 
  */
 declare enum CHAN {
@@ -6876,8 +6876,8 @@ declare enum CHAN {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `NPC.Classify`. 
  */
 declare enum CLASS {
@@ -7012,9 +7012,7 @@ declare enum CLASS {
     CLASS_COMBINE_HUNTER = 25,
     
     /**
-     * HL:S turrets - monster_turret, monster_miniturret, monster_sentry.
-     * 
-     * {{NextUpdate|This and below are only available in the next update}} 
+     * HL:S turrets - monster_turret, monster_miniturret, monster_sentry. 
      */
     CLASS_MACHINE = 26,
     
@@ -7065,8 +7063,8 @@ declare enum CLASS {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetCollisionGroup` and `Entity.GetCollisionGroup`. 
  */
 declare enum COLLISION_GROUP {
@@ -7175,8 +7173,8 @@ declare enum COLLISION_GROUP {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations for NPC conditions, used by `NPC.SetCondition`. Serverside only.
  * 
  * **Note:**
@@ -7351,6 +7349,7 @@ declare enum COND {
     COND_NO_WEAPON = 6,
     
     /**
+     * No additional conditions are being played 
      */
     COND_NONE = 0,
     
@@ -7474,8 +7473,8 @@ declare enum COND {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `util.PointContents` and as tracer masks. 
  */
 declare enum CONTENTS {
@@ -7630,8 +7629,8 @@ declare enum CONTENTS {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `GetRenderTargetEx`. Clientside only. 
  */
 declare enum CREATERENDERTARGETFLAGS {
@@ -7649,8 +7648,8 @@ declare enum CREATERENDERTARGETFLAGS {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Citizen type, a KeyValue for npc_citizen( citizentype ), serverside only. 
  */
 declare enum CT {
@@ -7680,8 +7679,8 @@ declare enum CT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `NPC.Disposition` and `ENTITY.GetRelationship`. 
  */
 declare enum D {
@@ -7712,8 +7711,8 @@ declare enum D {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `CTakeDamageInfo.GetDamageType`, `CTakeDamageInfo.SetDamageType` and `CTakeDamageInfo.IsDamageType` 
  */
 declare enum DMG {
@@ -7723,7 +7722,7 @@ declare enum DMG {
     DMG_GENERIC = 0,
     
     /**
-     * Caused by physics interaction 
+     * Caused by physics interaction. Ignored by airboat drivers. Used by the Crowbar 
      */
     DMG_CRUSH = 1,
     
@@ -7743,7 +7742,7 @@ declare enum DMG {
     DMG_BURN = 8,
     
     /**
-     * Hit by a vehicle 
+     * Hit by a vehicle. This will need to be set for passengers of some vehicle to receive damage. 
      */
     DMG_VEHICLE = 16,
     
@@ -7753,7 +7752,7 @@ declare enum DMG {
     DMG_FALL = 32,
     
     /**
-     * Explosion damage 
+     * Explosion damage. Will be ignored by most vehicle passengers. 
      */
     DMG_BLAST = 64,
     
@@ -7783,7 +7782,7 @@ declare enum DMG {
     DMG_PREVENT_PHYSICS_FORCE = 2048,
     
     /**
-     * Never creates gibs. Used by the crossbow 
+     * Never creates gibs. (Used by the crossbow) 
      */
     DMG_NEVERGIB = 4096,
     
@@ -7813,7 +7812,7 @@ declare enum DMG {
     DMG_POISON = 131072,
     
     /**
-     * Radiation 
+     * Radiation. Will be ignored by most vehicle passengers. 
      */
     DMG_RADIATION = 262144,
     
@@ -7873,23 +7872,19 @@ declare enum DMG {
     DMG_BUCKSHOT = 536870912,
     
     /**
-     * Damage from SniperRound/SniperPenetratedRound ammo types
-     * 
-     * {{NextUpdate}} 
+     * Damage from SniperRound/SniperPenetratedRound ammo types 
      */
     DMG_SNIPER = 1073741824,
     
     /**
-     * Damage from npc_missiledefense, npc_combinegunship, or monster_mortar
-     * 
-     * {{NextUpdate}} 
+     * Damage from npc_missiledefense, npc_combinegunship, or monster_mortar 
      */
     DMG_MISSILEDEFENSE = 2147483648,
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Panel.Dock`. 
  */
 declare enum DOCK {
@@ -7925,8 +7920,8 @@ declare enum DOCK {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Internal globals for SimpleDoF. Clientside only. 
  */
 declare enum DOF {
@@ -7940,8 +7935,8 @@ declare enum DOF {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.AddEffects`,  `Entity.RemoveEffects` and  `Entity.IsEffectActive`. 
  */
 declare enum EF {
@@ -8002,8 +7997,8 @@ declare enum EF {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.AddEFlags`, `Entity.RemoveEFlags` and `Entity.IsEFlagSet`. 
  */
 declare enum EFL {
@@ -8164,8 +8159,8 @@ declare enum EFL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `concommand.Add`, `CreateClientConVar` and `CreateConVar`. 
  */
 declare enum FCVAR {
@@ -8275,7 +8270,7 @@ declare enum FCVAR {
      * 
      * Reported as "prot" by ''cvarlist'' 
      */
-    FCVAR_public = 32,
+    FCVAR_PROTECTED = 32,
     
     /**
      * For serverside `ConVar`s, it will send its value to all clients. The `ConVar` with the same name must also exist on the client!
@@ -8324,8 +8319,8 @@ declare enum FCVAR {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `IGModAudioChannel.FFT`. Clientside only. 
  */
 declare enum FFT {
@@ -8371,8 +8366,8 @@ declare enum FFT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.AddFlags`, `Entity.RemoveFlags` and `Entity.IsFlagSet`. 
  */
 declare enum FL {
@@ -8447,7 +8442,7 @@ declare enum FL {
     FL_CONVEYOR = 8192,
     
     /**
-     * NPCs have this flag 
+     * NPCs have this flag (NPC: Ignore player push) 
      */
     FL_NPC = 16384,
     
@@ -8538,8 +8533,8 @@ declare enum FL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `AccessorFunc`. 
  */
 declare enum FORCE {
@@ -8560,8 +8555,8 @@ declare enum FORCE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetSolidFlags` and `Entity.GetSolidFlags`. 
  */
 declare enum FSOLID {
@@ -8611,80 +8606,80 @@ declare enum FSOLID {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `PhysObj.AddGameFlag`, `PhysObj.HasGameFlag` and `PhysObj.ClearGameFlag`. 
  */
 declare enum FVPHYSICS {
     /**
-     * Won't receive physics forces from collisions and won't collide with other `PhysObj` with the same flag set 
+     * Won't receive physics forces from collisions and won't collide with other `PhysObj` with the same flag set. 
      */
     FVPHYSICS_CONSTRAINT_STATIC = 2,
     
     /**
-     * Colliding with entities will cause 1000 damage with DMG_DISSOLVE as the damage type, but only if EFL_NO_DISSOLVE is not set 
+     * Colliding with entities will cause 1000 damage with DMG_DISSOLVE as the damage type, but only if EFL_NO_DISSOLVE is not set. 
      */
     FVPHYSICS_DMG_DISSOLVE = 512,
     
     /**
-     * Does slice damage, not just blunt damage 
+     * Does slice damage, not just blunt damage. 
      */
     FVPHYSICS_DMG_SLICE = 1,
     
     /**
-     * Will deal high physics damage(?) even with a small mass 
+     * Will deal high physics damage even with a small mass. 
      */
     FVPHYSICS_HEAVY_OBJECT = 32,
     
     /**
-     * This `PhysObj` is part of an entity with multiple `PhysObj` , such as a ragdoll or a vehicle , and will be considered during collision damage events 
+     * This `PhysObj` is part of an entity with multiple `PhysObj` , such as a ragdoll or a vehicle , and will be considered during collision damage events. 
      */
     FVPHYSICS_MULTIOBJECT_ENTITY = 16,
     
     /**
-     * Colliding with entities won't cause physics damage 
+     * Colliding with entities won't cause physics damage. 
      */
     FVPHYSICS_NO_IMPACT_DMG = 1024,
     
     /**
-     * Like FVPHYSICS_NO_NPC_IMPACT_DMG, but only checks for NPCs. Usually set on Combine Balls fired by Combine Soldiers 
+     * Like FVPHYSICS_NO_NPC_IMPACT_DMG, but only checks for NPCs. Usually set on Combine Balls fired by Combine Soldiers. 
      */
     FVPHYSICS_NO_NPC_IMPACT_DMG = 2048,
     
     /**
-     * Doesn't allow the player to pick this `PhysObj` with the Gravity Gun or +use pickup 
+     * Doesn't allow the player to pick this `PhysObj` with the Gravity Gun or +use pickup. 
      */
     FVPHYSICS_NO_PLAYER_PICKUP = 128,
     
     /**
-     * We won't collide with other `PhysObj` associated to the same entity, only used for vehicles and ragdolls held by the Super Gravity Gun 
+     * We won't collide with other `PhysObj` associated to the same entity, only used for vehicles and ragdolls held by the Super Gravity Gun. 
      */
     FVPHYSICS_NO_SELF_COLLISIONS = 32768,
     
     /**
-     * This `PhysObj` is part of a ragdoll 
+     * This `PhysObj` is part of a ragdoll. 
      */
     FVPHYSICS_PART_OF_RAGDOLL = 8,
     
     /**
-     * Set by the physics engine when two `PhysObj` are penetrating each other 
+     * Set by the physics engine when two `PhysObj` are penetrating each other. This is only automatically updated for non-static physics objects. 
      */
     FVPHYSICS_PENETRATING = 64,
     
     /**
-     * Set when the player is holding this `PhysObj` with the Gravity Gun or +use pickup 
+     * Set when the player is holding this `PhysObj` with the Gravity Gun or +use pickup. 
      */
     FVPHYSICS_PLAYER_HELD = 4,
     
     /**
-     * This object was thrown by the Gravity Gun , stuns Antlion guards, Hunters, and squashes Antlion grubs 
+     * This object was thrown by the Gravity Gun , stuns Antlion guards, Hunters, and squashes Antlion grubs. 
      */
     FVPHYSICS_WAS_THROWN = 256,
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Player.AnimResetGestureSlot` and `Player.AnimRestartGesture`. 
  */
 declare enum GESTURE_SLOT {
@@ -8723,8 +8718,8 @@ declare enum GESTURE_SLOT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `game.SetGlobalState` and `game.GetGlobalState`.
  * 
  * Serverside only. 
@@ -8747,8 +8742,8 @@ declare enum GLOBAL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `IGModAudioChannel.GetState`. Clientside only. 
  */
 declare enum GMOD_CHANNEL {
@@ -8774,8 +8769,8 @@ declare enum GMOD_CHANNEL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `GM.ScalePlayerDamage` and `GM.ScaleNPCDamage` and returned by `Player.LastHitGroup`. 
  */
 declare enum HITGROUP {
@@ -8828,8 +8823,8 @@ declare enum HITGROUP {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Player.PrintMessage` and `PrintMessage`. 
  */
 declare enum HUD {
@@ -8855,12 +8850,13 @@ declare enum HUD {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `NPC.SetHullType` and  `NPC.GetHullType`. Serverside only. 
  */
 declare enum HULL {
     /**
+     * Hull of a Citizen 
      */
     HULL_HUMAN = 0,
     
@@ -8902,8 +8898,8 @@ declare enum HULL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `GetRenderTargetEx`. Clientside only. 
  */
 declare enum IMAGE_FORMAT {
@@ -8949,8 +8945,8 @@ declare enum IMAGE_FORMAT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Unlike `BUTTON_CODE`, these enums are abstracted to allow the user to bind actions to any key they might prefer.
  * 
  * Keybinds using these actions work with two console commands, one starting with a plus and one with a minus symbol. A key press or release will call either the plus or minus command, adding or removing the corresponding enum in the current `CUserCmd`.
@@ -9101,8 +9097,8 @@ declare enum IN {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `input.IsButtonDown`.
  * 
  * It's also part of the `BUTTON_CODE`. 
@@ -9148,8 +9144,8 @@ declare enum JOYSTICK {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by:
  * * `input.IsKeyDown`
  * * `input.WasKeyPressed`
@@ -9730,8 +9726,8 @@ declare enum KEY {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `Entity.SetRenderFX` and returned by `Entity.GetRenderFX`.
  * 
  * Most of these require alpha value of entitys color to be less than 255 to have any visible effect. 
@@ -9860,8 +9856,8 @@ declare enum kRenderFx {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used as trace masks in `Trace` and `HullTrace`. These enumerations are simply combinations of `CONTENTS`. 
  */
 declare enum MASK {
@@ -9972,8 +9968,8 @@ declare enum MASK {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used in `TraceResult` and by `Entity.GetMaterialType`. 
  */
 declare enum MAT {
@@ -10094,8 +10090,8 @@ declare enum MAT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `mesh.Begin`. Clientside only. 
  */
 declare enum MATERIAL {
@@ -10133,8 +10129,8 @@ declare enum MATERIAL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `render.CullMode`. Clientside only. 
  */
 declare enum MATERIAL_CULLMODE {
@@ -10150,8 +10146,8 @@ declare enum MATERIAL_CULLMODE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `render.GetFogMode` and `render.FogMode`. Clientside only. 
  */
 declare enum MATERIAL_FOG {
@@ -10172,8 +10168,8 @@ declare enum MATERIAL_FOG {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `render.SetLocalModelLights`. Clientside only. 
  */
 declare enum MATERIAL_LIGHT {
@@ -10199,8 +10195,8 @@ declare enum MATERIAL_LIGHT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `GetRenderTargetEx`. Clientside only. 
  */
 declare enum MATERIAL_RT_DEPTH {
@@ -10234,8 +10230,8 @@ declare enum MATERIAL_RT_DEPTH {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by:
  * * `input.IsMouseDown`
  * * `input.WasMousePressed`
@@ -10296,8 +10292,8 @@ declare enum MOUSE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetMoveCollide` and `Entity.GetMoveCollide`. 
  */
 declare enum MOVECOLLIDE {
@@ -10328,8 +10324,8 @@ declare enum MOVECOLLIDE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetMoveType` and `Entity.GetMoveType`. 
  */
 declare enum MOVETYPE {
@@ -10395,8 +10391,8 @@ declare enum MOVETYPE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `CNavArea.GetAttributes` and `CNavArea.HasAttributes`. 
  */
 declare enum NAV_MESH {
@@ -10501,8 +10497,8 @@ declare enum NAV_MESH {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `CNavArea` methods.
  * These Enums correspond to each corner of a `CNavArea`
  * 
@@ -10537,8 +10533,8 @@ declare enum NavCorner {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `CNavArea` methods.
  * These Enums correspond to each side of a `CNavArea`
  * 
@@ -10568,8 +10564,8 @@ declare enum NavDir {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `CNavArea.GetParentHow`.
  * 
  * **Note:**
@@ -10614,8 +10610,8 @@ declare enum NavTraverseType {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `notification.AddLegacy`. Clientside only. 
  */
 declare enum NOTIFY {
@@ -10646,8 +10642,8 @@ declare enum NOTIFY {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `NPC.SetNPCState`. Serverside only. 
  */
 declare enum NPC_STATE {
@@ -10698,8 +10694,8 @@ declare enum NPC_STATE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * **Note:**
  * >These only exist serverside.
  * 
@@ -10718,8 +10714,8 @@ declare enum NUM {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Player.SetObserverMode`, `Player.GetObserverMode` and `Player.Spectate`. 
  */
 declare enum OBS_MODE {
@@ -10753,14 +10749,14 @@ declare enum OBS_MODE {
     OBS_MODE_CHASE = 5,
     
     /**
-     * Free roam/noclip-alike 
+     * Free roam/noclip-alike. Does not work from `GM.PlayerDeath` 
      */
     OBS_MODE_ROAMING = 6,
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `ParticleEffectAttach`. 
  */
 declare enum PATTACH {
@@ -10796,8 +10792,8 @@ declare enum PATTACH {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetAnimation` 
  */
 declare enum PLAYER_ANIM {
@@ -10845,8 +10841,8 @@ declare enum PLAYER_ANIM {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `GM.DoAnimationEvent` and `Player.DoCustomAnimEvent`. 
  */
 declare enum PLAYERANIMEVENT {
@@ -10963,8 +10959,8 @@ declare enum PLAYERANIMEVENT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `ClientsideModel`, ENT.RenderGroup in `ENT` and `Entity.GetRenderGroup`. 
  */
 declare enum RENDERGROUP {
@@ -11026,8 +11022,8 @@ declare enum RENDERGROUP {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `Entity.SetRenderMode` and `Entity.GetRenderMode`. 
  */
 declare enum RENDERMODE {
@@ -11079,8 +11075,8 @@ declare enum RENDERMODE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `GetRenderTargetEx`. Clientside only. 
  */
 declare enum RT_SIZE {
@@ -11121,8 +11117,8 @@ declare enum RT_SIZE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations for NPC schedules, used by `ENTITY.StartEngineSchedule` and `NPC.SetSchedule`. Serverside only. 
  */
 declare enum SCHED {
@@ -11204,6 +11200,7 @@ declare enum SCHED {
     SCHED_COMBAT_FACE = 12,
     
     /**
+     * Will walk around patrolling an area until an enemy is found. 
      */
     SCHED_COMBAT_PATROL = 75,
     
@@ -11254,6 +11251,7 @@ declare enum SCHED {
     SCHED_ESTABLISH_LINE_OF_FIRE = 35,
     
     /**
+     * Fallback from an established line of fire. 
      */
     SCHED_ESTABLISH_LINE_OF_FIRE_FALLBACK = 36,
     
@@ -11282,6 +11280,7 @@ declare enum SCHED {
     SCHED_FALL_TO_GROUND = 78,
     
     /**
+     * Will express fear face. (Only works on NPCs with expressions) 
      */
     SCHED_FEAR_FACE = 14,
     
@@ -11422,6 +11421,7 @@ declare enum SCHED {
     SCHED_RELOAD = 51,
     
     /**
+     * Retreat from the established enemy. 
      */
     SCHED_RUN_FROM_ENEMY = 32,
     
@@ -11650,8 +11650,8 @@ declare enum SENSORBONE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations describing certain spawnflags. Everything except for SF_PHYS* is serverside only.
  * 
  * * SF_CITIZEN_* spawnflags represent spawnflags only usable on [https://developer.valvesoftware.com/wiki/Npc_citizen npc_citizen].
@@ -11803,8 +11803,8 @@ declare enum SF {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `ENTITY.PhysicsSimulate`. 
  */
 declare enum SIM {
@@ -11835,8 +11835,8 @@ declare enum SIM {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Sound flags used by `EmitSound` and `Entity.EmitSound`. 
  */
 declare enum SND {
@@ -11895,8 +11895,8 @@ declare enum SND {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * The sound's attenuation; how fast it drops away, enumerations used by `EmitSound` and `Entity.EmitSound`.
  * 
  * {{Validate}}
@@ -12034,13 +12034,14 @@ declare enum SNDLVL {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * For use with `Entity.PhysicsInit`, `Entity.SetSolid` and `Entity.GetSolid`. 
  */
 declare enum SOLID {
     /**
      * Does not collide with anything
+     * 
      * **Note:**
      * >No Physics Object will be created when using this. 
      */
@@ -12063,6 +12064,7 @@ declare enum SOLID {
     
     /**
      * Same as SOLID_OBB but restricts orientation to the Z-axis
+     * 
      * **Note:**
      * >Seems to be broken. 
      */
@@ -12080,14 +12082,15 @@ declare enum SOLID {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations for use with `render.SetStencilCompareFunction`.
  * 
  * The comparison is between the reference value set by `render.SetStencilReferenceValue`, and the value of each pixel in the stencil buffer.
  * 
  * Clientside only.
- * <noinclude>**Note:**
+ * <noinclude>
+ * **Note:**
  * >These enumerations are also mirrored as `STENCIL`.
  * 
  * </noinclude><includeonly>
@@ -12138,10 +12141,11 @@ declare enum STENCILCOMPARISONFUNCTION {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations for use with `render.SetStencilPassOperation`, `render.SetStencilFailOperation` and `render.SetStencilZFailOperation`. Clientside only.
- * <noinclude>**Note:**
+ * <noinclude>
+ * **Note:**
  * >These enumerations are also mirrored as `STENCIL`.
  * 
  * </noinclude><includeonly>
@@ -12192,8 +12196,8 @@ declare enum STENCILOPERATION {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used in `GM.PlayerStepSoundTime` hook. 
  */
 declare enum STEPSOUNDTIME {
@@ -12219,8 +12223,8 @@ declare enum STEPSOUNDTIME {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Used by `ENTITY.Draw` and `ENTITY.DrawTranslucent`. 
  */
 declare enum STUDIO {
@@ -12282,8 +12286,8 @@ declare enum STUDIO {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Surface flags, currently unused, these would've been returned by the `TraceResult`. 
  */
 declare enum SURF {
@@ -12364,8 +12368,8 @@ declare enum SURF {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Default defined teams in Garry's Mod. This does not include any custom teams created in custom gamemodes. Enumerations to use with `Player.Team` 
  */
 declare enum TEAM {
@@ -12409,8 +12413,8 @@ declare enum TEXFILTER {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `draw.SimpleText`, `draw.DrawText` and in `TextData`. 
  */
 declare enum TEXT_ALIGN {
@@ -12441,8 +12445,8 @@ declare enum TEXT_ALIGN {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Bit flags used by `GetRenderTargetEx`. Clientside only. Information taken from [https://developer.valvesoftware.com/wiki/Valve_Texture_Format#Image_flags here]
  * 
  * **Warning:**
@@ -12606,8 +12610,8 @@ declare enum TEXTUREFLAGS {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `AmmoData`. 
  */
 declare enum TRACER {
@@ -12638,8 +12642,8 @@ declare enum TRACER {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used in `ENTITY.UpdateTransmitState` hook. 
  */
 declare enum TRANSMIT {
@@ -12660,8 +12664,8 @@ declare enum TRANSMIT {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `net.ReadType` and returned by `TypeID` 
  */
 declare enum TYPE {
@@ -12911,8 +12915,8 @@ declare enum TYPE {
 }
 
 /**
- * !CompileMembersOnly
-
+ * @compileMembersOnly
+ *
  * Enumerations used by `ENTITY.Use`.
  * 
  * Not to be confused with `_USE` used by `Entity.SetUseType`. 
@@ -12936,28 +12940,34 @@ declare enum USE {
 }
 
 /**
- * !CompileMembersOnly
-
- * Enumerations used by `NPC.SetCurrentWeaponProficiency` and  `NPC.GetCurrentWeaponProficiency`. 
+ * @compileMembersOnly
+ *
+ * Enumerations used by `NPC.SetCurrentWeaponProficiency` and  
+ * `NPC.GetCurrentWeaponProficiency`. 
  */
 declare enum WEAPON_PROFICIENCY {
     /**
+     * The NPC will miss a large majority of their shots. 
      */
     WEAPON_PROFICIENCY_POOR = 0,
     
     /**
+     * The NPC will miss about half of their shots. 
      */
     WEAPON_PROFICIENCY_AVERAGE = 1,
     
     /**
+     * The NPC will sometimes miss their shots. 
      */
     WEAPON_PROFICIENCY_GOOD = 2,
     
     /**
+     * The NPC will rarely miss their shots. 
      */
     WEAPON_PROFICIENCY_VERY_GOOD = 3,
     
     /**
+     * The NPC will almost never miss their shots. 
      */
     WEAPON_PROFICIENCY_PERFECT = 4,
 }
@@ -13267,7 +13277,7 @@ interface Bullet {
     AmmoType?: string;
     
     /**
-     * The tracer name 
+     * The tracer name. You can find a list of default effects [[Effects|here]]. 
      */
     TracerName?: string;
     
@@ -13451,47 +13461,51 @@ interface CreationMenus {
  */
 interface DateData {
     /**
-     * The current day of the month 
+     * Day of the month 
      */
     day: number;
     
     /**
-     * The current hour 
+     * Hour 
      */
     hour: number;
     
     /**
-     * Daylight saving 
+     * Daylight saving enabled 
      */
     isdst: boolean;
     
     /**
-     * The current minutes 
+     * Minute 
      */
     min: number;
     
     /**
-     * The current month 
+     * Month
+     * 
+     * January: 1, December: 12 
      */
     month: number;
     
     /**
-     * The current seconds of the minute 
+     * Second 
      */
     sec: number;
     
     /**
-     * The current day of the week 
+     * Day of the week
+     * 
+     * Sunday: 1, Saturday: 7 
      */
     wday: number;
     
     /**
-     * The current day of the year 
+     * Day of the year 
      */
     yday: number;
     
     /**
-     * The current year 
+     * Year 
      */
     year: number;
 }
@@ -13502,7 +13516,7 @@ interface DateData {
  * **Note:**
  * >If a filter is applied to `debug.getinfo`, some members may not exist!
  * 
- * For functions defined in C/C++ the following members will always have the given values: 
+ * For functions defined in C/C++, the following members will always have the given values: 
  * * what = "C"
  * * source = "[C]"
  * * nparams = 0
@@ -14008,6 +14022,7 @@ interface Entity {
  * * `ENTITY.OnEntityCopyTableFinish`
  * * `ENTITY.OnDuplicated`
  * <nowiki />
+ * 
  * **Note:**
  * >1=In addition to all fields listed here, any field saved on the entity will be saved as-is to this table. For example, if you set ent.FavoriteFood = "Steak" before duplicating it, this structure will also contain the field FavoriteFood with the value "Steak". 
  */
@@ -15102,14 +15117,14 @@ interface SoundData {
     sound: string;
     
     /**
-     * The volume of the sound. Can be a table of two numbers, a minimum and a maximum values. 
+     * The volume of the sound as a decimal between 0 and 1. Can be a table of two numbers, a minimum and a maximum value. 
      */
-    volume: number;
+    volume?: number;
     
     /**
-     * The pitch of the sound. Can be a table of two numbers, a minimum and a maximum values. 
+     * The pitch of the sound. Can be a table of two numbers, a minimum and a maximum value. 
      */
-    pitch: number;
+    pitch?: number;
 }
 
 /**
@@ -15341,7 +15356,10 @@ interface SWEP {
     ViewModelFlip?: boolean;
     
     /**
-     * (Clientside) Same as ViewModelFlip, but for the second viewmodel 
+     * (Clientside) Same as ViewModelFlip, but for the second viewmodel
+     * 
+     * **Bug [#3633](https://github.com/Facepunch/garrysmod-issues/issues/3633):**
+     * >Fixed= 
      */
     ViewModelFlip1?: boolean;
     
@@ -15351,7 +15369,7 @@ interface SWEP {
     ViewModelFlip2?: boolean;
     
     /**
-     * (Clientside) An angle of FOV used for the view model (Half-Life value is 90; Half-Life 2 is 54; Counter-Strike: Source is 74; Day of Defeat is 45) 
+     * (Clientside) An angle of FOV used for the view model (Half-Life value is 90; Half-Life 2 is 54; Counter-Strike: Source is 74; Day of Defeat: Source is 45) 
      */
     ViewModelFOV?: number;
     
@@ -15736,112 +15754,113 @@ interface Trace {
 }
 
 /**
- * Table structure used as trace result. 
+ * Table structure used as trace result. Default values are when the trace hits nothing. 
  */
 interface TraceResult {
     /**
-     * The entity hit by the trace 
+     * The entity hit by the trace. 
      */
-    Entity: Entity;
+    Entity?: Entity;
     
     /**
-     * This indicates the how much of your trace length was used from 0-1 (resultLength/originalLength) 
+     * This indicates the how much of your trace length was used from 0-1 (resultLength/originalLength). 
      */
-    Fraction: number;
+    Fraction?: number;
     
     /**
-     * Given the trace started in a solid enviroment, this will return at what distance the trace left the solid from 0-1. Doesn't work on entities. 
+     * Given the trace started in a solid enviroment, this will return at what distance the trace left the solid from 0-1. Doesn't work if the trace hit a non-worldspawn entity. 
      */
-    FractionLeftSolid: number;
+    FractionLeftSolid?: number;
     
     /**
-     * Indicates whether the trace hit something 
+     * Indicates whether the trace hit something. 
      */
-    Hit: boolean;
+    Hit?: boolean;
     
     /**
-     * The id of the hitbox hit by the trace. 
+     * The ID of the hitbox hit by the trace. 
      */
-    HitBox: number;
+    HitBox?: number;
     
     /**
-     * `HITGROUP` describing what hitgroup the trace hit (not the same as HitBox) 
+     * `HITGROUP` describing what hitgroup the trace hit (not the same as HitBox). 
      */
-    HitGroup: HITGROUP;
+    HitGroup?: HITGROUP;
     
     /**
-     * Indicates whenever the trace hit a no-draw brush 
+     * Indicates whenever the trace hit a no-draw brush. 
      */
-    HitNoDraw: boolean;
+    HitNoDraw?: boolean;
     
     /**
-     * Indicates whenever the trace did not hit the world 
+     * Indicates whenever the trace did not hit the world. 
      */
-    HitNonWorld: boolean;
+    HitNonWorld?: boolean;
     
     /**
-     * The direction of the surface that was hit as a normal/direction vector. ( Vector with length of 1 ) 
+     * The direction of the surface that was hit as a normal vector (vector with [[Vector/Length|length]] of 1). 
      */
-    HitNormal: Vector;
+    HitNormal?: Vector;
     
     /**
-     * Position of the traces hit point 
+     * The position the trace stopped. This will be the provided endpos if the trace hit nothing. 
      */
     HitPos: Vector;
     
     /**
-     * Indicates whenever the trace hit the sky 
+     * Indicates whenever the trace hit the sky. 
      */
-    HitSky: boolean;
+    HitSky?: boolean;
     
     /**
-     * The surface MATERIAL (not texture) of whatever the trace hit 
+     * The surface material (not texture) of whatever the trace hit. Will be "**displacement**" if the trace hit a displacement, and **studio** if it hit a prop. 
      */
-    HitTexture: string;
+    HitTexture?: string;
     
     /**
-     * Indicates whenever the trace hit the world 
+     * Indicates whenever the trace hit the world. 
      */
-    HitWorld: boolean;
+    HitWorld?: boolean;
     
     /**
-     * `MAT` of the material hit by the trace 
+     * `MAT` of the material hit by the trace. 
      */
-    MatType: MAT;
+    MatType?: MAT;
     
     /**
-     * The direction of the trace as a normal/direction vector. ( Vector with length of 1 ) 
+     * The direction of the trace as a normal vector (vector with [[Vector/Length|length]] of 1). 
      */
     Normal: Vector;
     
     /**
-     * The physics bone enum hit 
+     * The `PhysObj` ID that was hit.
+     * 
+     * Used for `Entity.GetPhysicsObjectNum`. 
      */
-    PhysicsBone: number;
+    PhysicsBone?: number;
     
     /**
-     * The origin of the trace 
+     * The origin of the trace. Will match the provided startpos. 
      */
     StartPos: Vector;
     
     /**
-     * ID of hit surface property, from scripts/surfaceproperties.txt
+     * ID of hit surface property from scripts/surfaceproperties.txt.
+     * You can get the name using `util.GetSurfacePropName`.
      * 
-     * You can get the name using `util.GetSurfacePropName`
-     * 
-     * Used for `CEffectData.SetSurfaceProp` in "Impact" effect. 
+     * Used for `CEffectData.SetSurfaceProp`. 
      */
-    SurfaceProps: number;
+    SurfaceProps?: number;
     
     /**
-     * Indicates whenever the trace started in a solid enviroment 
+     * Indicates whenever the trace started in a solid enviroment. 
      */
-    StartSolid: boolean;
+    StartSolid?: boolean;
     
     /**
-     * True if the entire trace is inside a solid 
+     * True if the entire trace is inside a solid. 
      */
-    AllSolid: boolean;
+    AllSolid?: boolean;
 }
 
 /**
@@ -16080,9 +16099,10 @@ interface VehicleParamsEngine {
     /**
      * Maximum speed while boosting
      * 
-     * "WARNING!" The SetVehicleParams function takes this in MILES PER HOUR, but GetVehicleParams returns this IN HAMMER UNITS!
+     * **Warning:**
+     * >The `Vehicle.SetVehicleParams` function takes this in "miles per hour", but `Vehicle.GetVehicleParams` returns this in "hammer units per second"!
      * 
-     * 1MPH is roughly 17.6 HU. 
+     * 1 MPH is roughly 17.6 HU/s. 
      */
     boostMaxSpeed: number;
     
@@ -16113,25 +16133,28 @@ interface VehicleParamsEngine {
      * Maximum RPM of the vehicle.
      * Despite this being a maximum value, the vehicle can exceed it.
      * 
-     * "WARNING!" Attempts to exceed the max RPM will force the active gear ratio to be that of the 1st gear, which will provide even more torque. This is the opposite of a rev limiter. This value is only used for the calculation of the effectively applied torque. 
+     * **Warning:**
+     * >Attempts to exceed the max RPM will force the active gear ratio to be that of the 1st gear, which will provide even more torque. This is the opposite of a rev limiter. This value is only used for the calculation of the effectively applied torque. 
      */
     maxRPM: number;
     
     /**
      * Maximum reverse speed of the vehicle
      * 
-     * "WARNING!" The SetVehicleParams function takes this in MILES PER HOUR, but GetVehicleParams returns this IN HAMMER UNITS!
+     * **Warning:**
+     * >The `Vehicle.SetVehicleParams` function takes this in "miles per hour", but `Vehicle.GetVehicleParams` returns this in "hammer units per second"!
      * 
-     * 1MPH is roughly 17.6 HU. 
+     * 1 MPH is roughly 17.6 HU/s. 
      */
     maxRevSpeed: number;
     
     /**
      * Maximum forward going speed of the vehicle without boosting
      * 
-     * "WARNING!" The SetVehicleParams function takes this in MILES PER HOUR, but GetVehicleParams returns this IN HAMMER UNITS!
+     * **Warning:**
+     * >The `Vehicle.SetVehicleParams` function takes this in "miles per hour", but `Vehicle.GetVehicleParams` returns this in "hammer units per second"!
      * 
-     * 1MPH is roughly 17.6 HU. 
+     * 1 MPH is roughly 17.6 HU/s. 
      */
     maxSpeed: number;
     
@@ -16521,7 +16544,10 @@ interface Weapon {
     ViewModelFlip?: boolean;
     
     /**
-     * (Clientside) Same as ViewModelFlip, but for the second viewmodel 
+     * (Clientside) Same as ViewModelFlip, but for the second viewmodel
+     * 
+     * **Bug [#3633](https://github.com/Facepunch/garrysmod-issues/issues/3633):**
+     * >Fixed= 
      */
     ViewModelFlip1?: boolean;
     
@@ -16531,7 +16557,7 @@ interface Weapon {
     ViewModelFlip2?: boolean;
     
     /**
-     * (Clientside) An angle of FOV used for the view model (Half-Life value is 90; Half-Life 2 is 54; Counter-Strike: Source is 74; Day of Defeat is 45) 
+     * (Clientside) An angle of FOV used for the view model (Half-Life value is 90; Half-Life 2 is 54; Counter-Strike: Source is 74; Day of Defeat: Source is 45) 
      */
     ViewModelFOV?: number;
     
@@ -16674,7 +16700,9 @@ interface Weapon {
  * 
  * If the viewer has not unlocked the achievement on Steam, the icon will be grayed out. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class AchievementIcon extends Panel {
     /**
      * Sets the achievement to be displayed by `AchievementIcon`.[[Category:AchievementIcon]] 
@@ -16696,7 +16724,8 @@ declare class AchievementIcon extends Panel {
  */
 declare namespace achievements {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of balloons burst. Once this count reaches 1000, the 'Popper' achievement is unlocked. 
      */
     function BalloonPopped(): void;
@@ -16708,7 +16737,8 @@ declare namespace achievements {
     function Count(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of balls eaten. Once this count reaches 200, the 'Ball Eater' achievement is unlocked. 
      */
     function EatBall(): void;
@@ -16741,19 +16771,22 @@ declare namespace achievements {
     function GetName(achievementID: number): string;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of baddies killed. Once this count reaches 1000, the 'War Zone' achievement is unlocked. 
      */
     function IncBaddies(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of innocent animals killed. Once this count reaches 1000, the 'Innocent Bystander' achievement is unlocked. 
      */
     function IncBystander(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of friendly NPCs killed. Once this count reaches 1000, the 'Bad Friend' achievement is unlocked. 
      */
     function IncGoodies(): void;
@@ -16766,31 +16799,36 @@ declare namespace achievements {
     function IsAchieved(AchievementID: number): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of things removed. Once this count reaches 5000, the 'Destroyer' achievement is unlocked. 
      */
     function Remover(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of NPCs spawned. Once this count reaches 1000, the 'Procreator' achievement is unlocked. 
      */
     function SpawnedNPC(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of props spawned. Once this count reaches 5000, the 'Creator' achievement is unlocked. 
      */
     function SpawnedProp(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of ragdolls spawned. Once this count reaches 2000, the 'Dollhouse' achievement is unlocked. 
      */
     function SpawnedRagdoll(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds one to the count of how many times the spawnmenu has been opened. Once this count reaches 100,000, the 'Menu User' achievement is unlocked. 
      */
     function SpawnMenuOpen(): void;
@@ -16801,17 +16839,18 @@ declare namespace achievements {
  */
 declare namespace ai {
     /**
-     * @param sched  Schedule, see `SCHED` 
-     * @returns The ID 
+     * Translates a schedule name to its corresponding ID. 
+     * @param sched  Then schedule name. In most cases, this will be the same as the `SCHED` name. 
+     * @returns The schedule ID, see `SCHED`. Returns -1 if the schedule name isn't valid. 
      */
-    function GetScheduleID(sched: string): number;
+    function GetScheduleID(sched: string): SCHED;
     
     /**
-     * Returns the task Id corresponding to the given task name. 
-     * @param taskName  The task name to get the ID of 
-     * @returns The ID 
+     * Translates a task name to its corresponding ID. 
+     * @param task  The task name. 
+     * @returns The task ID, see [https://github.com/ValveSoftware/source-sdk-2013/blob/55ed12f8d1eb6887d348be03aee5573d44177ffb/mp/src/game/server/ai_task.h#L89-L502 ai_task.h]. Returns -1 if the schedule name isn't valid. 
      */
-    function GetTaskID(taskName: string): number;
+    function GetTaskID(task: string): number;
 }
 
 /**
@@ -16851,7 +16890,9 @@ declare namespace ai_task {
  * {{ClassField|number|r|The roll component of the angle}}
  * }} 
  *
- * !CustomConstructor Angle */
+ * @customConstructor Angle
+ *
+ */
 declare class Angle {
     /**
      * The pitch component of the angle 
@@ -16983,7 +17024,9 @@ declare class Angle {
 /**
  * Used to show a player's Steam avatar. You are recommended but not limited to pick one of the following sizes: 16, 32, 64, 84, 128, 184. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Avatar = vgui.Create( "AvatarImage", Panel )
  * Avatar:SetSize( 64, 64 )
@@ -17025,7 +17068,9 @@ declare class AvatarImage extends Panel {
 /**
  * Base panel for elements using the [http://www.awesomium.com Awesomium] UI engine. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class Awesomium extends Panel {
     /**
      * Returns the panel's HTML material. Only works with `Awesomium`, `HTML` and `DHTML` panels that have been fully loaded.
@@ -17088,7 +17133,7 @@ declare class Awesomium extends Panel {
     public GoToHistoryOffset(offset: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -17097,7 +17142,7 @@ declare class Awesomium extends Panel {
     public NewObject(objectName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -17106,7 +17151,7 @@ declare class Awesomium extends Panel {
     public NewObject(objectName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -17116,7 +17161,7 @@ declare class Awesomium extends Panel {
     public NewObjectCallback(objectName: string, callbackName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -17175,6 +17220,7 @@ declare class Awesomium extends Panel {
     /**
      * Forcibly updates the panels' HTML Material, similar to when Paint is called on it.
      * This is only useful if the panel is not normally visible, i.e the panel exists purely for its HTML Material.
+     * 
      * **Note:**
      * >Only works on with panels that have a HTML Material. See `Panel.GetHTMLMaterial` for more details.
      * 
@@ -17188,6 +17234,7 @@ declare class Awesomium extends Panel {
     /**
      * Forcibly updates the panels' HTML Material, similar to when Paint is called on it.
      * This is only useful if the panel is not normally visible, i.e the panel exists purely for its HTML Material.
+     * 
      * **Note:**
      * >Only works on with panels that have a HTML Material. See `Panel.GetHTMLMaterial` for more details.
      * 
@@ -17440,7 +17487,9 @@ declare namespace bit {
  * 
  * Creates a button that players can click on. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local button = vgui.Create( "Button" )
  * button:SetSize( 150, 30 )
@@ -17867,16 +17916,16 @@ declare namespace chat {
     function Close(): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the chatbox position. 
      * @returns [The X coordinate of the chatbox's position., The Y coordinate of the chatbox's position.] 
      */
     function GetChatBoxPos(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the chatbox size. 
      * @returns [The width of the chatbox., The height of the chatbox.] 
      */
@@ -17895,10 +17944,13 @@ declare namespace chat {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Engine checkbox 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class CheckButton {
 
 }
@@ -17916,7 +17968,8 @@ declare namespace cleanup {
     function Add(pl: Player, type: string, ent: Entity): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by the ''gmod_admin_cleanup'' console command. Allows admins to clean up the server. 
      * @param pl  The player that called the console command. 
      * @param command  The console command that called this function. 
@@ -17925,7 +17978,8 @@ declare namespace cleanup {
     function CC_AdminCleanup(pl: Player, command: string, args: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by the ''gmod_cleanup'' console command. Allows players to cleanup their own props. 
      * @param pl  The player that called the console command. 
      * @param command  The console command that called this function. 
@@ -18259,8 +18313,8 @@ declare class CLuaParticle {
     public GetBounce(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the color of the particle. 
      * @returns [Red part of the color, Green part of the color, Blue part of the color] 
      */
@@ -18701,6 +18755,7 @@ declare class CMoveData {
      * This must be called on both client and server to avoid prediction errors.
      * 
      * This will "not" reduce speed in air.
+     * 
      * **Note:**
      * >Setting this to 0 will not make the player stationary. It won't do anything. 
      * @param maxSpeed  The new maximum speed 
@@ -18930,6 +18985,7 @@ declare class CNavArea {
     public GetExposedSpots(): Vector[];
     
     /**
+     * Returns size info about the nav area. 
      * @returns Returns a table containing the following keys:
      * * `hi: Vector` 
      * * `lo: Vector` 
@@ -19007,7 +19063,7 @@ declare class CNavArea {
     public GetParentHow(): NavTraverseType;
     
     /**
-     * {{NextUpdate}}Returns the Place of the nav area. 
+     * Returns the Place of the nav area. 
      * @returns The place of the nav area, or no value if it doesn't have a place set. 
      */
     public GetPlace(): string;
@@ -19164,8 +19220,8 @@ declare class CNavArea {
     public IsValid(): CNavArea;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns whether we can be seen from the given position. 
      * @param pos  The position to check. 
      * @returns [Whether we can be seen or not., If we can be seen, this is returned with either the center or one of the corners of the Nav Area.] 
@@ -19232,7 +19288,7 @@ declare class CNavArea {
     public SetParent(parent: CNavArea): void;
     
     /**
-     * {{NextUpdate}}Sets the Place of the nav area.
+     * Sets the Place of the nav area.
      * 
      * There is a limit of 256 Places per nav file. 
      * @param place  Set to "" to remove place from the nav area. 
@@ -19406,7 +19462,9 @@ declare class CNavLadder {
 /**
  * This object represents a .pcf ( Orange Box ) particle system. Created by `Entity.CreateParticleEffect` and `CreateParticleSystem`. 
  *
- * !CustomConstructor CreateParticleSystem */
+ * @customConstructor CreateParticleSystem
+ *
+ */
 declare class CNewParticleEffect {
     /**
      * Creates a new particle system.
@@ -19612,7 +19670,8 @@ declare namespace concommand {
     function Add(name: string, callback: Function, autoComplete?: Function, helpText?: string, flags?: FCVAR): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by the engine to call the autocomplete function for a console command, and retrieve returned options. 
      * @param command  Name of command 
      * @param arguments  Arguments given to the command 
@@ -19621,8 +19680,8 @@ declare namespace concommand {
     function AutoComplete(command: string, arguments: string): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the tables of all console command callbacks, and autocomplete functions, that were added to the game with `concommand.Add`. 
      * @returns [Table of command callback functions., Table of command autocomplete functions.] 
      */
@@ -19641,7 +19700,8 @@ declare namespace concommand {
     function Remove(name: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by the engine to run a console command's callback function, that was added with `concommand.Add`. An error is sent to the player's chat if no callback is found. 
      * @param ply  Player to run concommand on 
      * @param cmd  Command name 
@@ -19762,8 +19822,8 @@ declare namespace constraint {
     function CreateKeyframeRope(pos: Vector, width: number, material: string, Constraint: Entity, Ent1: Entity, LPos1: Vector, Bone1: number, Ent2: Entity, LPos2: Vector, Bone2: number, kv: table): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates an invisible, non-moveable anchor point in the world to which things can be attached. 
      * @param pos  The position to spawn the anchor at 
      * @returns [anchor, physicsObject,, bone, LPos] 
@@ -19771,8 +19831,8 @@ declare namespace constraint {
     function CreateStaticAnchorPoint(pos: Vector): [Entity, PhysObj, number, Vector];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates an elastic constraint. 
      * @param Ent1  First entity. 
      * @param Ent2  Second entity 
@@ -19854,8 +19914,8 @@ declare namespace constraint {
     function HasConstraints(ent: Entity): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a Hydraulic constraint. 
      * @param pl  The player that will be used to call `numpad.OnDown`. 
      * @param Ent1  First entity. 
@@ -19889,8 +19949,8 @@ declare namespace constraint {
     function Keepupright(ent: Entity, ang: Angle, bone: number, angularLimit: number): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a motor constraint. 
      * @param Ent1  First entity. 
      * @param Ent2  Second entity. 
@@ -19914,8 +19974,8 @@ declare namespace constraint {
     function Motor(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, friction: number, torque: number, forcetime: number, nocollide: number, toggle: number, pl: Player, forcelimit: number, numpadkey_fwd: KEY, numpadkey_bwd: KEY, direction: number, LocalAxis: Vector): [Entity, Entity];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a muscle constraint. 
      * @param pl  The player that will be used to call `numpad.OnDown`. 
      * @param Ent1  First entity. 
@@ -19966,8 +20026,8 @@ declare namespace constraint {
     function Pulley(Ent1: Entity, Ent4: Entity, Bone1: number, Bone4: number, LPos1: Vector, LPos4: Vector, WPos2: Vector, WPos3: Vector, forcelimit: number, rigid: boolean, width: number, material: string): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Attempts to remove all constraints associated with an entity 
      * @param ent  The entity to remove constraints from 
      * @returns [Whether any constraints were removed, Number of constraints removed] 
@@ -19975,8 +20035,8 @@ declare namespace constraint {
     function RemoveAll(ent: Entity): [boolean, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Attempts to remove all constraints of a specified type associated with an entity 
      * @param ent  The entity to check 
      * @param type  The constraint type to remove (eg. "Weld", "Elastic", "NoCollide") 
@@ -19985,8 +20045,8 @@ declare namespace constraint {
     function RemoveConstraints(ent: Entity, type: string): [boolean, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a rope constraint - with rope! 
      * @param Ent1  First entity 
      * @param Ent2  Second entity 
@@ -20005,8 +20065,8 @@ declare namespace constraint {
     function Rope(Ent1: Entity, Ent2: Entity, Bone1: number, Bone2: number, LPos1: Vector, LPos2: Vector, length: number, addlength: number, forcelimit: number, width: number, material: string, rigid: boolean): [Entity, Entity];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a slider constraint. 
      * @param Ent1  First entity. 
      * @param Ent2  Second entity. 
@@ -20036,8 +20096,8 @@ declare namespace constraint {
     function Weld(ent1: Entity, ent2: Entity, bone1: number, bone2: number, forcelimit: number, nocollide: boolean, deleteent1onbreak: boolean): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a Winch constraint. 
      * @param pl  The player that will be used to call `numpad.OnDown` and `numpad.OnUp`. 
      * @param Ent1  First entity. 
@@ -20114,7 +20174,9 @@ declare namespace construct {
  * 
  * This control only exists in Sandbox derived gamemodes. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ContentIcon extends DButton {
     /**
      * Returns the color set by `ContentIcon.SetColor` 
@@ -20123,12 +20185,10 @@ declare class ContentIcon extends DButton {
     public GetColor(): Color;
     
     /**
-     * Returns the "internal" desired color of the text, alias of `DLabel.GetTextStyleColor`.
+     * Returns the actual color of the text.
      * 
-     * **Bug:**
-     * >FIXED IN NEXT UPDATE: This doesn't return ACTUAL color of the text. Use the following instead for now:
-     * ```local clr = DLabel:GetTextColor() or DLabel:GetTextStyleColor()``` 
-     * @returns The "internal" desired color of the text 
+     * See also `DLabel.GetTextColor` and `DLabel.GetTextStyleColor`. 
+     * @returns The the actual color of the text. 
      */
     public GetColor(): table;
     
@@ -20213,7 +20273,9 @@ declare class ContentIcon extends DButton {
 /**
  * A base for all context menu panels ( The ones used for tool options in sandbox ) 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ContextBase extends Panel {
     /**
      * Called by spawnmenu functions (when creating a context menu) to fill this control with data. 
@@ -20275,7 +20337,9 @@ declare namespace controlpanel {
  * **Note:**
  * >This panel is only available in Sandbox and Sandbox derived gamemodes! 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ControlPanel extends DForm {
     /**
      * **Deprecated:**
@@ -20357,7 +20421,7 @@ declare class ControlPanel extends DForm {
      * **cvars (optional)
      * 
      * *listbox:
-     * **height (if set, becomes ListView, otherwise is ListBox)
+     * **height (if set, becomes `DListView`, otherwise is `CtrlListBox`)
      * **label (def: "unknown")
      * **options (optional)
      * 
@@ -20368,7 +20432,7 @@ declare class ControlPanel extends DForm {
      * **convar
      * **options 
      */
-    public AddControl(type: string, controlinfo: table): void;
+    public AddControl(type: string, controlinfo: DListView[]): void;
 }
 
 /**
@@ -20376,7 +20440,9 @@ declare class ControlPanel extends DForm {
  * 
  * This control only exists in Sandbox derived gamemodes. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ControlPresets extends Panel {
     /**
      * Adds a convar to be managed by this control. 
@@ -20523,8 +20589,8 @@ declare namespace coroutine {
     function create(func: Function): thread;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Resumes the given coroutine and passes the given vararg to either the function arguments or the `coroutine.yield` that is inside that function and returns whatever yield is called with the next time or by the final return in the function. 
      * @param coroutine  Coroutine to resume. 
      * @param args  Arguments to be returned by `coroutine.yield`. 
@@ -20668,7 +20734,9 @@ declare class CSEnt extends Entity {
  * 
  * Created with `CreateSound` 
  *
- * !CustomConstructor CreateSound */
+ * @customConstructor CreateSound
+ *
+ */
 declare class CSoundPatch {
     /**
      * Returns a sound parented to the specified entity.
@@ -20994,7 +21062,9 @@ declare class CTakeDamageInfo {
  * 
  * This control only exists in Sandbox derived gamemodes. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class CtrlListBox extends DComboBox {
 
 }
@@ -21124,8 +21194,8 @@ declare class CUserCmd {
     /**
      * Sets speed the client wishes to move forward with, negative if the clients wants to move backwards.
      * 
-     * See also `CUserCmd.ClearMovement`, `CUserCmd.SetSideMove` and  `CUserCmd.SetUpMove`. 
-     * @param speed  The new speed to request. 
+     * See also `CUserCmd.ClearMovement`, `CUserCmd.SetSideMove` and `CUserCmd.SetUpMove`. 
+     * @param speed  The new speed to request. The client will not be able to move faster than their set walk/sprint speed. 
      */
     public SetForwardMove(speed: number): void;
     
@@ -21208,7 +21278,7 @@ declare namespace cvars {
      * >This does not callback convars in the menu state.
      * 
      * **Bug [#3503](https://github.com/Facepunch/garrysmod-issues/issues/3503):**
-     * >This does not callback all convars. 
+     * >This does not callback convars on the client with FCVAR_GAMEDLL and convars on the server without FCVAR_GAMEDLL. 
      * @param name  The name of the convar to add the change callback to. 
      * @param callback  The function to be called when the convar changes. The arguments passed are:
      * * `convar: string` The name of the convar.
@@ -21245,7 +21315,7 @@ declare namespace cvars {
     function Number(cvar: string, defaultVal?: any): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by the engine when a convar value changes. 
      * @param name  Convar name 
@@ -21277,7 +21347,9 @@ declare namespace cvars {
  * 
  * This is used by `IconEditor` for modifying spawn icons. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local AdjustableModelPanel = vgui.Create( "DAdjustableModelPanel" )
  * AdjustableModelPanel:SetPos( 10, 10 )
@@ -21289,13 +21361,15 @@ declare namespace cvars {
  */
 declare class DAdjustableModelPanel extends DModelPanel {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by the panel to perform mouse capture operations when adjusting the model. 
      */
     public CaptureMouse(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used to adjust the perspective in the model panel via the keyboard, when the right mouse button is used. 
      */
     public FirstPersonControls(): void;
@@ -21318,7 +21392,9 @@ declare class DAdjustableModelPanel extends DModelPanel {
 /**
  * A bar to select the opacity (alpha level) of a color. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DAlphaBar = vgui.Create( "DAlphaBar" )
  * DAlphaBar:SetPos( 20, 30 )
@@ -21373,7 +21449,9 @@ declare class DAlphaBar extends DPanel {
 /**
  * Input which can bind a command to a key. Used for binding inputs and outputs of TOOLs. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(250,100)
@@ -21431,7 +21509,8 @@ declare class DBinder extends DButton {
     public SetValue(keyCode: KEY): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used to set the text of the DBinder to the current key binding, or ''NONE''. 
      */
     public UpdateText(): void;
@@ -21440,7 +21519,9 @@ declare class DBinder extends DButton {
 /**
  * A transparent gray speech bubble panel made up of a rounded box and point coming from the bottom. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * //Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -21505,7 +21586,9 @@ declare class DBubbleContainer extends DPanel {
  * 
  * By default, a `DButton` is 22px tall. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -21667,22 +21750,6 @@ declare class DButton extends DLabel {
     public SetDrawBorder(draw: boolean): void;
     
     /**
-     * Sets whether or not the DButton is enabled.
-     * 
-     * This performs the same function as `DButton.SetDisabled`. It overrides `Panel.SetEnabled`. 
-     * @param enable  ''true'' to enable the button, ''false'' to disable it. 
-     */
-    public SetEnabled(enable: boolean): void;
-    
-    /**
-     * Sets the enabled state of a disable-able panel object, such as a `DButton` or `DTextEntry`.
-     * 
-     * See `Panel.IsEnabled` for a function that retrieves the "enabled" state of a panel. 
-     * @param enable  Whether to enable or disable the panel object. 
-     */
-    public SetEnabled(enable: boolean): void;
-    
-    /**
      * [[Category:DButton]] Sets the font of the label. 
      * @param fontName  The name of the font.
      * 
@@ -21726,11 +21793,22 @@ declare class DButton extends DLabel {
 }
 
 /**
- * **INTERNAL**
+ * ERROR 
+ */
+declare class DButton2 {
+    /**
+     */
+    public Test(): void;
+}
+
+/**
+ * **[INTERNAL]**
  * 
  * Used by `DCollapsibleCategory` 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DCategoryHeader extends DButton {
 
 }
@@ -21738,7 +21816,9 @@ declare class DCategoryHeader extends DButton {
 /**
  * A host for multiple `DCollapsibleCategory` panels. As the name suggests, each one of them can be collapsed or expanded on demand by the user. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -21776,10 +21856,7 @@ declare class DCategoryList extends DScrollPanel {
     public Add(categoryName: string): DCollapsibleCategory;
     
     /**
-     * Adds the specified object to the panel.
-     * 
-     * **Bug [#1482](https://github.com/Facepunch/garrysmod-issues/issues/1482):**
-     * >Creating a DFrame or a panel that inherits from DFrame will not drag/resize correctly when created through this function. 
+     * Adds the specified object to the panel. 
      * @param object  The panel to be added (parented). Can also be:
      * * `Class Name: string` creates panel with the specified name and adds it to the panel.
      * * `PANEL table: table` creates a panel from table and adds it to the panel. 
@@ -21813,7 +21890,9 @@ declare class DCategoryList extends DScrollPanel {
 /**
  * The DCheckBox is a checkbox. It allows you to get a boolean value from the user (true/false - yes/no) 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DermaCheckbox = vgui.Create("DCheckBox")// Create the checkbox
  * DermaCheckbox:SetPos(25, 50)// Set the position
@@ -21868,7 +21947,9 @@ declare class DCheckBox extends DButton {
 /**
  * The "DCheckBoxLabel" is a `DCheckBox` with a `DLabel` next to it. It allows you to get a boolean value from the user (true/false - yes/no) 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DermaCheckbox = vgui.Create("DCheckBoxLabel") // Create the checkbox
  * DermaCheckbox:SetParent(DermaPanel)
@@ -21975,7 +22056,9 @@ declare class DCheckBoxLabel extends DPanel {
  * 
  * Consider using `DCategoryList` if you plan on using more than 1 of these. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 300 )
@@ -22016,10 +22099,7 @@ declare class DCollapsibleCategory extends Panel {
     public Add(name: string): DButton;
     
     /**
-     * Adds the specified object to the panel.
-     * 
-     * **Bug [#1482](https://github.com/Facepunch/garrysmod-issues/issues/1482):**
-     * >Creating a DFrame or a panel that inherits from DFrame will not drag/resize correctly when created through this function. 
+     * Adds the specified object to the panel. 
      * @param object  The panel to be added (parented). Can also be:
      * * `Class Name: string` creates panel with the specified name and adds it to the panel.
      * * `PANEL table: table` creates a panel from table and adds it to the panel. 
@@ -22028,7 +22108,7 @@ declare class DCollapsibleCategory extends Panel {
     public Add(object: Panel): Panel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function that handles the open/close animations. 
      * @param anim 
@@ -22147,7 +22227,7 @@ declare class DCollapsibleCategory extends Panel {
     public UnselectAll(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to update the "AltLine" property on all "child" panels. 
      */
@@ -22157,7 +22237,9 @@ declare class DCollapsibleCategory extends Panel {
 /**
  * Colorful buttons. Used internally by `DColorPalette`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -22184,12 +22266,10 @@ declare class DColorButton extends DLabel {
     public GetColor(): Color;
     
     /**
-     * Returns the "internal" desired color of the text, alias of `DLabel.GetTextStyleColor`.
+     * Returns the actual color of the text.
      * 
-     * **Bug:**
-     * >FIXED IN NEXT UPDATE: This doesn't return ACTUAL color of the text. Use the following instead for now:
-     * ```local clr = DLabel:GetTextColor() or DLabel:GetTextStyleColor()``` 
-     * @returns The "internal" desired color of the text 
+     * See also `DLabel.GetTextColor` and `DLabel.GetTextStyleColor`. 
+     * @returns The the actual color of the text. 
      */
     public GetColor(): table;
     
@@ -22229,7 +22309,9 @@ declare class DColorButton extends DLabel {
 /**
  * The "DColorCombo" allows the user to choose color, without alpha, using `DColorMixer` or `DColorPalette` in a tabbed view. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -22251,7 +22333,7 @@ declare class DColorButton extends DLabel {
  */
 declare class DColorCombo extends DPropertySheet {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called internally to create panels necessary for this panel to work. 
      */
@@ -22287,7 +22369,9 @@ declare class DColorCombo extends DPropertySheet {
 /**
  * The DColorCube allows a user to select saturation and value but not hue. Uses HSV colors 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 300, 300 )
@@ -22409,7 +22493,7 @@ declare class DColorCube extends DSlider {
     public SetHue(hue: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to set the real "output" color of the panel. 
      * @param clr  A `Color` 
@@ -22417,9 +22501,9 @@ declare class DColorCube extends DSlider {
     public SetRGB(clr: Color): void;
     
     /**
-     * !TupleReturn
-    
-     * **INTERNAL**
+     * @tupleReturn
+     *
+     * **[INTERNAL]**
      * 
      * Updates the color cube RGB based on the given x and y position and returns its arguments. Similar to `DColorCube.UpdateColor`. 
      * @param x  The x position to sample color from/the percentage of saturation to remove from the color (ranges from 0.0 to 1.0). 
@@ -22429,8 +22513,8 @@ declare class DColorCube extends DSlider {
     public TranslateValues(x: number, y: number): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * For override by child panels, such as `DNumSlider`. 
      * @param x 
      * @param y 
@@ -22439,7 +22523,7 @@ declare class DColorCube extends DSlider {
     public TranslateValues(x: number, y: number): [number, number];
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Updates the color cube RGB based on the given x and y position. Similar to `DColorCube.TranslateValues`. 
      * @param x [=nil] The x position to set color to/the percentage of saturation to remove from the color (ranges from 0.0 to 1.0). 
@@ -22451,7 +22535,9 @@ declare class DColorCube extends DSlider {
 /**
  * A standard Derma color mixer 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create("DFrame")
  * Frame:SetSize(267,186) //good size for example
@@ -22469,12 +22555,12 @@ declare class DColorCube extends DSlider {
  */
 declare class DColorMixer extends DPanel {
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      */
     public ConVarThink(): void;
     
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      * @param cvar 
      */
     public DoConVarThink(cvar: string): void;
@@ -22644,7 +22730,7 @@ declare class DColorMixer extends DPanel {
     public SetWangs(show: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * **Deprecated!**
      * 
@@ -22653,7 +22739,7 @@ declare class DColorMixer extends DPanel {
     public TranslateValues(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Use `DColorMixer.SetColor` instead! 
      * @param clr 
@@ -22661,7 +22747,7 @@ declare class DColorMixer extends DPanel {
     public UpdateColor(clr: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @param cvar  The `ConVar` name 
@@ -22671,7 +22757,7 @@ declare class DColorMixer extends DPanel {
     public UpdateConVar(cvar: string, part: string, clr: Color): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @param clr  The `Color` 
@@ -22692,7 +22778,9 @@ declare class DColorMixer extends DPanel {
  * 
  * Use `Panel.SetCookieName` to change "save files". 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 170, 200 )
@@ -22780,7 +22868,7 @@ declare class DColorPalette extends DIconLayout {
     public GetNumRows(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to make sure changes on one palette affect other palettes with same name. 
      */
@@ -22899,7 +22987,7 @@ declare class DColorPalette extends DIconLayout {
     public SetNumRows(rows: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal helper function for `DColorPalette.UpdateConVars`. 
      * @param name  The name of the console variable to set 
@@ -22910,7 +22998,7 @@ declare class DColorPalette extends DIconLayout {
     public UpdateConVar(name: string, key: string, clr: Color): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Updates all the console variables set by `DColorPalette.SetConVarR` and so on with given color.
      * 
@@ -22923,7 +23011,9 @@ declare class DColorPalette extends DIconLayout {
 /**
  * Similar to `DPropertySheet`, but with tabs on the left. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -22951,8 +23041,11 @@ declare class DColumnSheet extends Panel {
      * @param name  Name of the column/tab 
      * @param pnl  Panel to be used as contents of the tab. This normally would be a `DPanel` 
      * @param icon [=nil] Icon for the tab. This will ideally be a [[Silkicons|silkicon]], but any material name can be used. 
+     * @returns A table containing the following keys:
+     * * `Button: Panel` The created tab button that will switch to the given panel
+     * * `Panel: Panel` The given panel to switch to when the button is pressed 
      */
-    public AddSheet(name: string, pnl: DPanel, icon?: string): void;
+    public AddSheet(name: string, pnl: DPanel, icon?: string): table;
     
     /**
      * Returns the active button of this `DColumnSheet`. 
@@ -22961,7 +23054,7 @@ declare class DColumnSheet extends Panel {
     public GetActiveButton(): Panel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Makes a button an active button for this `DColumnSheet`. 
      * @param active  The button to make active button 
@@ -22977,7 +23070,9 @@ declare class DColumnSheet extends Panel {
 /**
  * A field with multiple selectable values. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DComboBox = vgui.Create( "DComboBox" )
  * DComboBox:SetPos( 5, 5 )
@@ -22990,16 +23085,36 @@ declare class DColumnSheet extends Panel {
  * 	print( value .." was selected!" )
  * end
  * 
- * // Creates a Combo Box. 
+ * // Creates a Combo Box.@example
+ * 
+ * local comboBox = vgui.Create("DComboBox")
+ * comboBox:SetPos(5, 5)
+ * comboBox:SetSize(100, 20)
+ * comboBox:SetValue("All Players")
+ * 
+ * comboBox.OnSelect = function(_, _, value)
+ * 	print(value.." was selected!")
+ * end
+ * 
+ * for k,v in pairs(player.GetAll()) do
+ * 	comboBox:AddChoice(v:Name())
+ * end
+ * 
+ * // Create a Combo Box with all players 
  */
 declare class DComboBox extends DButton {
     /**
-     * Adds a choice to the combo box 
+     * Adds a choice to the combo box. 
      * @param value  The text show to the user. 
-     * @param data [=nil] The data accompanying this string. Accessed again with the second argument of `DComboBox.GetSelected`. If left empty, the value argument is used instead. 
+     * @param data [=nil] The data accompanying this string. If left empty, the value argument is used instead.
+     * 
+     * Can be accessed with the second argument of `DComboBox.GetSelected`, `DComboBox.GetOptionData` and as an argument of `DComboBox.OnSelect`. 
      * @param select [=false] Should this be the default selected text show to the user or not. 
+     * @param icon [=nil] Adds an icon for this choice.
+     * {{NextUpdate}} 
+     * @returns The index of the new option. 
      */
-    public AddChoice(value: string, data?: any, select?: boolean): void;
+    public AddChoice(value: string, data?: any, select?: boolean, icon?: Panel): number;
     
     /**
      * Selects a combo box option by its index and changes the text displayed at the top of the combo box. 
@@ -23055,8 +23170,8 @@ declare class DComboBox extends DButton {
     public GetOptionTextByData(data: string): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the currently selected option's text and data 
      * @returns [The option's text value., The option's stored data.] 
      */
@@ -23083,8 +23198,8 @@ declare class DComboBox extends DButton {
     public IsMenuOpen(): boolean;
     
     /**
-     * Internal function which is called when an option in the combo box is selected. This function does nothing by default and is meant to be overridden in order to make the combo box functional. 
-     * @param index  The table index of the option. 
+     * Called when an option in the combo box is selected. 
+     * @param index  The index of the option for use with other `DComboBox` functions. 
      * @param value  The name of the option. 
      * @param data  The data assigned to the option. 
      */
@@ -23111,11 +23226,13 @@ declare class DComboBox extends DButton {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * A VGUI base panel providing drag/drop functionality. Used by `DIconLayout`, `DListLayout` and `DTileLayout`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 500 )
@@ -23141,7 +23258,7 @@ declare class DComboBox extends DButton {
  */
 declare class DDragBase extends DPanel {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function used in `DDragBase.MakeDroppable` 
      * @param drops 
@@ -23153,7 +23270,7 @@ declare class DDragBase extends DPanel {
     public DropAction_Copy(drops: table, bDoDrop: boolean, command: string, y: number, x: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function used in `DDragBase.DropAction_Copy` 
      * @param drops 
@@ -23165,7 +23282,7 @@ declare class DDragBase extends DPanel {
     public DropAction_Normal(drops: table, bDoDrop: boolean, command: string, y: number, x: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function used in `DDragBase.DropAction_Normal` 
      * @param drops 
@@ -23220,7 +23337,7 @@ declare class DDragBase extends DPanel {
     public SetUseLiveDrag(newState: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function used in `DDragBase.DropAction_Normal` 
      * @param drop 
@@ -23232,7 +23349,9 @@ declare class DDragBase extends DPanel {
 /**
  * A simple Derma Drawer 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 400, 200 )
@@ -23313,8 +23432,8 @@ declare namespace debug {
     function getfenv(object: table): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the current hook settings of the passed thread. The thread argument can be omitted. This is unrelated to [[:Category:GM Hooks|gamemode hooks]]. More information on hooks can be found at http://www.lua.org/pil/23.2.html 
      * @param thread [=nil] Which thread to retrieve its hook from 
      * @returns [Hook function, Hook mask, Hook count] 
@@ -23339,8 +23458,8 @@ declare namespace debug {
     function getinfo(funcOrStackLevel: Function, fields?: string): DebugInfo;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the name and value of a local variable indexed from the level 
      * @param thread [=Current thread] The thread 
      * @param level [=] The level above the thread. 
@@ -23388,8 +23507,8 @@ declare namespace debug {
     function getregistry(): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Used for getting variable values in an index from the passed function. This does nothing for C functions. 
      * @param func  Function to get the upvalue indexed from. 
      * @param index  The index in the upvalue array. The max number of entries can be found in `debug.getinfo`'s "[[Structures/DebugInfo|nups]]" key. 
@@ -23679,14 +23798,16 @@ declare namespace debugoverlay {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * A panel used by the [[Editable Entities]] system. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DEntityProperties extends DProperties {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called internally by `DEntityProperties.RebuildControls`. 
      * @param varname 
@@ -23695,7 +23816,7 @@ declare class DEntityProperties extends DProperties {
     public EditVariable(varname: string, editdata: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called internally when an entity being edited became invalid.
      * 
@@ -23709,7 +23830,7 @@ declare class DEntityProperties extends DProperties {
     public OnEntityLost(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called internally by `DEntityProperties.SetEntity` to rebuild the controls. 
      */
@@ -23816,10 +23937,13 @@ declare namespace derma {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * The little "+" button used by `DProperties` and `DTree_Node`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DExpandButton extends DButton {
     /**
      * Returns whether this DExpandButton is expanded or not. 
@@ -23839,7 +23963,9 @@ declare class DExpandButton extends DButton {
  * 
  * It allows filtering by folder (directory) name and file extension, and can display models as `SpawnIcon`s. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 250 )
@@ -24066,7 +24192,8 @@ declare class DFileBrowser extends DPanel {
     public SetSearch(filter?: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to set up the `DTree` and file viewer when a base path has been set.
      * 
      * Calls `DFileBrowser.SetupTree` and `DFileBrowser.SetupFiles`. 
@@ -24075,7 +24202,8 @@ declare class DFileBrowser extends DPanel {
     public Setup(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to set up the `DListView` or `DIconBrowser` by `DFileBrowser.Setup`.
      * 
      * The icon browser is used when in models mode. See `DFileBrowser.SetModels`. 
@@ -24084,14 +24212,16 @@ declare class DFileBrowser extends DPanel {
     public SetupFiles(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to set up the `DTree` by `DFileBrowser.Setup`. 
      * @returns Whether or not the tree was set up successfully. 
      */
     public SetupTree(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Builds the file or icon list for the current directory.
      * 
      * You should use `DFileBrowser.SetCurrentFolder` to change the directory. 
@@ -24112,7 +24242,9 @@ declare class DFileBrowser extends DPanel {
 /**
  * An easy form with functions to quickly add form elements 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DForm extends DCollapsibleCategory {
     /**
      * Adds one or two items to the DForm.
@@ -24142,8 +24274,8 @@ declare class DForm extends DCollapsibleCategory {
     public CheckBox(label: string, convar: string): DCheckBoxLabel;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Adds a `DComboBox` onto the `DForm` 
      * @param title  Text to the left of the combo box 
      * @param convar  Console variable to change when the user selects something from the dropdown. 
@@ -24166,8 +24298,8 @@ declare class DForm extends DCollapsibleCategory {
     public Help(help: string): DLabel;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Adds a `DListBox` onto the `DForm` 
      * @param label  The label to set on the DListBox 
      * @returns [The created `DListBox`, The created `DLabel`] 
@@ -24175,8 +24307,8 @@ declare class DForm extends DCollapsibleCategory {
     public ListBox(label: string): [DListBox, DLabel];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Adds a `DNumberWang` onto the `DForm` 
      * @param label  The label to be placed next to the DNumberWang 
      * @param convar  The console variable to change when the slider is changed 
@@ -24224,8 +24356,8 @@ declare class DForm extends DCollapsibleCategory {
     public SetName(name: string): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Adds a `DTextEntry` to a `DForm` 
      * @param label  The label to be next to the text entry 
      * @param convar  The console variable to be changed when the text entry is changed 
@@ -24237,7 +24369,9 @@ declare class DForm extends DCollapsibleCategory {
 /**
  * The DFrame control is the foundation for any Derma menu. It holds all of your controls. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DermaPanel = vgui.Create( "DFrame" )
  * DermaPanel:SetPos( 100, 100 )
@@ -24429,7 +24563,9 @@ declare class DFrame extends EditablePanel {
  * **Note:**
  * >This panel will set its size automatically based on set column count. This makes it play badly with `Panel.Dock` and cause a `PANEL.PerformLayout` call every frame. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetPos( 500, 500 )
@@ -24524,7 +24660,9 @@ declare class DGrid extends Panel {
 /**
  * Creates an invisible vertical divider between two GUI elements. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 400, 200 )
@@ -24559,7 +24697,7 @@ declare class DHorizontalDivider extends DPanel {
     public GetDragging(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns the local X coordinate of where the player started dragging the thing 
      * @returns 
@@ -24609,7 +24747,7 @@ declare class DHorizontalDivider extends DPanel {
     public SetDividerWidth(width: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether the player is dragging the divider or not 
      * @param dragonot 
@@ -24617,7 +24755,7 @@ declare class DHorizontalDivider extends DPanel {
     public SetDragging(dragonot: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the local X coordinate of where the player started dragging the thing 
      * @param x 
@@ -24663,7 +24801,7 @@ declare class DHorizontalDivider extends DPanel {
     public SetRightMin(minWidth: number): void;
     
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      */
     public StartGrab(): void;
 }
@@ -24673,7 +24811,9 @@ declare class DHorizontalDivider extends DPanel {
  * 
  * Used internally in `DPropertySheet`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetTitle( "DHorizontalScroller Example" )
@@ -24775,7 +24915,9 @@ declare class DHorizontalScroller extends Panel {
 /**
  * The DHTML control wraps the internal Awesomium framework, supports calling Javascript functions from Lua, as well as running Lua from within the HTML. Running Lua code is disabled by default. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 200 )
@@ -24812,6 +24954,7 @@ declare class DHorizontalScroller extends Panel {
 declare class DHTML extends Awesomium {
     /**
      * Defines a Javascript function that when called will call a Lua callback.
+     * 
      * **Note:**
      * >Must be called after the HTML document has fully loaded. 
      * @param library  Library name of the JS function you are defining. 
@@ -24822,6 +24965,7 @@ declare class DHTML extends Awesomium {
     
     /**
      * Runs/Executes a string as JavaScript code.
+     * 
      * **Note:**
      * >This function does "NOT" evaluate expression (i.e. allow you to pass variables from JavaScript (JS) to Lua context).
      * Because a return value is nil/no value (a.k.a. void).
@@ -24847,6 +24991,7 @@ declare class DHTML extends Awesomium {
     
     /**
      * Runs/Executes a string as JavaScript code.
+     * 
      * **Note:**
      * >This function does "NOT" evaluate expression (i.e. allow you to pass variables from JavaScript (JS) to Lua context).
      * Because a return value is nil/no value (a.k.a. void).
@@ -24888,7 +25033,9 @@ declare class DHTML extends Awesomium {
 /**
  * An element providing navigation controls for a `DHTML` window. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * <nowiki>local frame = vgui.Create( "DFrame" ) // Create a container for everything
  * frame:SetSize( 800, 600 )
@@ -24913,7 +25060,7 @@ declare class DHTML extends Awesomium {
  */
 declare class DHTMLControls extends Panel {
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      */
     public FinishedLoading(): void;
     
@@ -24936,12 +25083,12 @@ declare class DHTMLControls extends Panel {
     public SetHTML(HTML_code: string): void;
     
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      */
     public StartedLoading(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Basically adds an URL to the history. 
      * @param url 
@@ -24949,7 +25096,7 @@ declare class DHTMLControls extends Panel {
     public UpdateHistory(url: string): void;
     
     /**
-     * **INTERNAL** 
+     * **[INTERNAL]** 
      */
     public UpdateNavButtonStatus(): void;
 }
@@ -24957,7 +25104,9 @@ declare class DHTMLControls extends Panel {
 /**
  * Simply a [http://wiki.garrysmod.com/page/VGUI/Elements/DIconLayout DIconLayout] which automatically displays all of the [http://wiki.garrysmod.com/page/silkicons Silkicons]. Used as a way to get the user to select an icon. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DermaPanel = vgui.Create( "DFrame" )
  * DermaPanel:SetPos( 100, 100 )
@@ -24979,7 +25128,7 @@ declare class DHTMLControls extends Panel {
  */
 declare class DIconBrowser extends DScrollPanel {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Automatically called to fill the browser with icons. Will not work if `DIconBrowser.SetManual` is set to true. 
      */
@@ -25009,7 +25158,7 @@ declare class DIconBrowser extends DScrollPanel {
     public OnChange(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Use `DIconBrowser.OnChange` instead 
      */
@@ -25033,7 +25182,7 @@ declare class DIconBrowser extends DScrollPanel {
     public SetManual(manual: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Set the currently selected file path. Do not use. Use `DIconBrowser.SelectIcon` instead. 
      * @param str 
@@ -25046,7 +25195,9 @@ declare class DIconBrowser extends DScrollPanel {
  * 
  * `DIconLayout` is used to make a list of panels. Unlike DPanelList, DIconLayout does not automatically add a scroll bar - the example below shows you how you can do this. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" ) // Create a Frame to contain everything.
  * Frame:SetTitle( "DIconLayout Example" )
@@ -25138,14 +25289,14 @@ declare class DIconLayout extends DDragBase {
     public Layout(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to layout the child elements if the `DIconLayout.SetLayoutDir` is set to LEFT (See `DOCK`). 
      */
     public LayoutIcons_LEFT(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to layout the child elements if the `DIconLayout.SetLayoutDir` is set to TOP (See `DOCK`). 
      */
@@ -25209,7 +25360,9 @@ declare class DIconLayout extends DDragBase {
  * 
  * See `DImageButton` for a click-able version of this panel. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * // Frame
  * Frame = vgui.Create("DFrame")
@@ -25254,14 +25407,14 @@ declare class DIconLayout extends DDragBase {
  */
 declare class DImage extends DPanel {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Actually loads the `IMaterial` to render it. Called from `DImage.LoadMaterial`. 
      */
     public DoLoadMaterial(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * "Fixes" the current material of the `DImage` if it has VertexLit shader by creating a new one with the same name and a prefix of "_DImage" and automatically calling `DImage.SetMaterial` with the new material.
      * 
@@ -25270,7 +25423,7 @@ declare class DImage extends DPanel {
     public FixVertexLitMaterial(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns the texture path set by `DImage.SetFailsafeMatName`. 
      * @returns 
@@ -25304,7 +25457,7 @@ declare class DImage extends DPanel {
     public GetMaterial(): IMaterial;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns the texture path set by `DImage.SetMatName`. 
      * @returns 
@@ -25312,7 +25465,7 @@ declare class DImage extends DPanel {
     public GetMatName(): string;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Initializes the loading process of the material to render if it is not loaded yet.
      * 
@@ -25337,7 +25490,7 @@ declare class DImage extends DPanel {
     public PaintAt(posX: number, posY: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the backup material to be loaded when the image is first rendered. Used by `DImage.SetOnViewMaterial`. 
      * @param backupMat 
@@ -25349,7 +25502,7 @@ declare class DImage extends DPanel {
      * 
      * This eventually calls `DImage.SetMaterial`. 
      * @param strImage  The path of the image to load. When no file extension is supplied the VMT file extension is used. 
-     * @param strBackup  The path of the backup image. 
+     * @param strBackup [=nil] The path of the backup image. 
      */
     public SetImage(strImage: string, strBackup?: string): void;
     
@@ -25374,7 +25527,7 @@ declare class DImage extends DPanel {
     public SetMaterial(mat: IMaterial): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the material to be loaded when the image is first rendered. Used by `DImage.SetOnViewMaterial`. 
      * @param mat 
@@ -25434,7 +25587,9 @@ declare class DImage extends DPanel {
  * 
  * This panel inherits all methods of `DButton`, such as `DLabel.DoClick`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -25576,7 +25731,9 @@ declare class DImageButton extends DButton {
 /**
  * Uses the {{Lib|killicon}} to persistently draw a killicon. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(200,200)
@@ -25621,8 +25778,12 @@ declare class DKillIcon extends Panel {
 /**
  * A standard Derma text label. A lot of this panels functionality is a base for button elements, such as `DButton` 
  *
- * !CustomConstructor Label *
- * !PureAbstract * @example
+ * @customConstructor Label
+ *
+ *
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 200, 200 )
@@ -25657,6 +25818,13 @@ declare class DLabel extends Label {
     public DoClick(): void;
     
     /**
+     * Called just before `DLabel.DoClick`.
+     * 
+     * In `DLabel` does nothing and is safe to override. Used by `DMenuOption` and `DCollapsibleCategory`'s tabs. 
+     */
+    public DoClickInternal(): void;
+    
+    /**
      * Called when the label is double clicked by the player with left clicks.
      * 
      * `DLabel.SetDoubleClickingEnabled` must be set to true for this hook to work, which it is by default.
@@ -25666,6 +25834,11 @@ declare class DLabel extends Label {
      * See also `DLabel.DoRightClick` and `DLabel.DoMiddleClick`. 
      */
     public DoDoubleClick(): void;
+    
+    /**
+     * Called just before `DLabel.DoDoubleClick`. In `DLabel` does nothing and is safe to override. 
+     */
+    public DoDoubleClickInternal(): void;
     
     /**
      * Called when the label is middle mouse (Mouse wheel, also known as mouse 3) clicked (on key release) by the player.
@@ -25706,12 +25879,10 @@ declare class DLabel extends Label {
     public GetBright(): boolean;
     
     /**
-     * Returns the "internal" desired color of the text, alias of `DLabel.GetTextStyleColor`.
+     * Returns the actual color of the text.
      * 
-     * **Bug:**
-     * >FIXED IN NEXT UPDATE: This doesn't return ACTUAL color of the text. Use the following instead for now:
-     * ```local clr = DLabel:GetTextColor() or DLabel:GetTextStyleColor()``` 
-     * @returns The "internal" desired color of the text 
+     * See also `DLabel.GetTextColor` and `DLabel.GetTextStyleColor`. 
+     * @returns The the actual color of the text. 
      */
     public GetColor(): table;
     
@@ -25775,9 +25946,9 @@ declare class DLabel extends Label {
     public GetTextColor(): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
-     * Returns the "internal" color of the text.
+     * Returns the "internal" or fallback color of the text.
      * 
      * See also `DLabel.GetTextColor` and `DLabel.SetTextStyleColor`. 
      * @returns The "internal" color of the text 
@@ -26004,7 +26175,7 @@ declare class DLabel extends Label {
     public SetTextColor(color: Color): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used by `DLabel.SetDark`, `DLabel.SetBright` and `DLabel.SetHighlight` to set the text color without affecting `DLabel.SetTextColor` calls. 
      * @param color  The text color. Uses the `Color`. 
@@ -26033,7 +26204,7 @@ declare class DLabel extends Label {
     public UpdateColours(skin: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called internally to update the color of the text. 
      */
@@ -26045,7 +26216,9 @@ declare class DLabel extends Label {
  * 
  * This is used in the spawnmenu spawnlist headers. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local EditLabel = vgui.Create( "DLabelEditable" )
  * EditLabel:SetPos( 40, 40 )
@@ -26070,7 +26243,9 @@ declare class DLabelEditable extends DLabel {
  * 
  * This panel uses `gui.OpenURL` internally and its restrictions apply. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize(400,400)
@@ -26087,34 +26262,24 @@ declare class DLabelEditable extends DLabel {
  * 
  * // Creates a DLabelURL that opens the wiki when clicked. 
  */
-declare class DLabelURL extends DLabel {
+declare class DLabelURL extends URLLabel {
     /**
-     * Gets the current text color of the DLabelURL. Same as `DLabelURL.GetTextColor`. 
+     * Gets the current text color of the `DLabelURL`. Alias as `DLabelURL.GetTextColor`. 
      * @returns The current text `Color`. 
      */
     public GetColor(): table;
     
     /**
-     * Returns the "internal" desired color of the text, alias of `DLabel.GetTextStyleColor`.
-     * 
-     * **Bug:**
-     * >FIXED IN NEXT UPDATE: This doesn't return ACTUAL color of the text. Use the following instead for now:
-     * ```local clr = DLabel:GetTextColor() or DLabel:GetTextStyleColor()``` 
-     * @returns The "internal" desired color of the text 
-     */
-    public GetColor(): table;
-    
-    /**
-     * Gets the current text color of the DLabelURL. Same as `DLabelURL.GetColor`. 
+     * Gets the current text color of the `DLabelURL` set by `DLabelURL.SetTextColor`. 
      * @returns The current text `Color`. 
      */
     public GetTextColor(): table;
     
     /**
-     * Returns the "override" text color, set by `DLabel.SetTextColor`. 
-     * @returns The color of the text, or nil. 
+     * Returns the color set by `DLabelURL.SetTextStyleColor`. 
+     * @returns The `Color` 
      */
-    public GetTextColor(): table;
+    public GetTextStyleColor(): Color;
     
     /**
      * Alias of `DLabelURL.SetTextColor`. 
@@ -26123,22 +26288,19 @@ declare class DLabelURL extends DLabel {
     public SetColor(col: table): void;
     
     /**
-     * Changes color of label. Alias of `DLabel.SetTextColor`. 
-     * @param color  The color to set. Uses the Color structure. 
-     */
-    public SetColor(color: table): void;
-    
-    /**
-     * Sets the text color of the DLabelURL. This should only be used immediately after it is created, and otherwise `Panel.SetFGColor`. 
+     * Sets the text color of the `DLabelURL`. Overrides `DLabelURL.SetTextStyleColor`.
+     * 
+     * {{Validate}}
+     * This should only be used immediately after it is created, and otherwise `Panel.SetFGColor`. 
      * @param col  The `Color` to use. 
      */
     public SetTextColor(col: table): void;
     
     /**
-     * Sets the text color of the `DLabel`. This will take precedence over `DLabel.SetTextStyleColor`. 
-     * @param color  The text color. Uses the `Color`. 
+     * Sets the base text color of the `DLabelURL`. This is overridden by `DLabelURL.SetTextColor`. 
+     * @param color  The `Color` to set 
      */
-    public SetTextColor(color: Color): void;
+    public SetTextStyleColor(color: table): void;
     
     /**
      * [[Category:DLabelURL]][[Category:URLLabel]]Sets the URL of a link-based panel such as `DLabelURL`. 
@@ -26159,15 +26321,19 @@ declare class DLabelURL extends DLabel {
  * 
  *  A simple list box with optional multi-select. As this is deprecated, it is recommended that you use `DListView`, which contains the same functionality with multi-column options. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListBox extends DPanelList {
 
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListBoxItem extends DLabel {
 
 }
@@ -26179,7 +26345,9 @@ declare class DListBoxItem extends DLabel {
  * 
  * To enable the drag & drop rearrangement functionality, call `DDragBase.MakeDroppable` on the DListLayout with a unique identifier. All panels added following this will be moveable. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(250, 250)
@@ -26210,7 +26378,9 @@ declare class DListLayout extends DDragBase {
 /**
  * A data view with rows and columns. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 500, 500 )
@@ -26239,15 +26409,10 @@ declare class DListView extends DPanel {
     /**
      * Adds a column to the listview. 
      * @param column  The name of the column to add. 
-     * @param material  The material to apply to the column. 
-     * 
-     * Appears to only get applied if the listview is set to not be sortable. 
      * @param position  Sets the ordering of this column compared to other columns. 
-     * 
-     * Does not appear to be implemented. 
      * @returns The newly created `DListView_Column`. 
      */
-    public AddColumn(column: string, material: string, position: number): DListView_Column;
+    public AddColumn(column: string, position: number): DListView_Column;
     
     /**
      * Adds a line to the list view. 
@@ -26297,7 +26462,7 @@ declare class DListView extends DPanel {
     public DoDoubleClick(lineID: number, line: DListView_Line): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal helper function called from the `PANEL.PerformLayout` of `DListView`. 
      */
@@ -26318,7 +26483,7 @@ declare class DListView extends DPanel {
     public GetDataHeight(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * See `DListView.SetDirty`. 
      * @returns 
@@ -26391,7 +26556,7 @@ declare class DListView extends DPanel {
     public GetSortable(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Converts LineID to SortedID 
      * @param lineId  The `DListView_Line.GetID` of a line to look up 
@@ -26400,7 +26565,7 @@ declare class DListView extends DPanel {
     public GetSortedID(lineId: number): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called whenever a line is clicked. 
      * @param line  The selected line. 
@@ -26409,7 +26574,7 @@ declare class DListView extends DPanel {
     public OnClickLine(line: Panel, isSelected: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called from `DListView_Column`. 
      * @param column  The column which initialized the resize 
@@ -26457,7 +26622,7 @@ declare class DListView extends DPanel {
     public SetDataHeight(height: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to signify if the `DListView` needs a rebuild. 
      * @param isDirty 
@@ -26546,10 +26711,13 @@ declare class DListView extends DPanel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A single column, used by `DListView`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListView_Column extends DPanel {
     /**
      * Sets the text alignment for the column 
@@ -26564,26 +26732,33 @@ declare class DListView_Column extends DPanel {
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListView_ColumnPlain extends Panel {
 
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListView_DraggerBar extends DButton {
 
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A panel used by `DListView` 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListView_Line extends Panel {
     /**
      * Gets the string held in the specified column of a `DListView_Line` panel.
@@ -26593,48 +26768,69 @@ declare class DListView_Line extends Panel {
      * @returns The contents of the specified column. 
      */
     public GetColumnText(column: number): string;
+    
+    /**
+     * Sets the string held in the specified column of a `DListView_Line` panel. 
+     * @param column  The number of the column to write the text from, starts with 1. 
+     * @param value  Column text you want to set 
+     */
+    public SetColumnText(column: number, value: string): void;
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListViewHeaderLabel extends DLabel {
 
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListViewLabel extends DLabel {
 
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]** 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DListViewLine extends Panel {
 
 }
 
 /**
- * A simple DMenu 
+ * A simple menu with sub menu, icon and convar support. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
- * local Menu = DermaMenu() 		// Is the same as  vgui.Create("DMenu")
- * Menu:AddOption( "Simple option" ) 	// Add a simple option.
+ * local Menu = DermaMenu()
  * 
- * local btnWithIcon = Menu:AddOption( "Option with icon" ) // Simple option, but we're going to add an icon
+ * // Add a simple option.
+ * Menu:AddOption( "Simple option" )
+ * 
+ * // Simple option, but we're going to add an icon
+ * local btnWithIcon = Menu:AddOption( "Option with icon" )
  * btnWithIcon:SetIcon( "icon16/bug.png" )	// Icons are in materials/icon16 folder
  * 
- * Menu:AddSpacer()			// Adds a simple line spacer
+ * // Adds a simple line spacer
+ * Menu:AddSpacer()
  * 
- * local SubMenu = Menu:AddSubMenu( "A Sub Menu" )				// Add a submenu
- * SubMenu:AddOption( "Sub Option #1" ):SetIcon( "icon16/group.png" )	// SetIcon possible like this
+ * // Add a submenu
+ * local SubMenu = Menu:AddSubMenu( "A Sub Menu" )
+ * SubMenu:AddOption( "Sub Option #1" ):SetIcon( "icon16/group.png" )
  * 
+ * // Open the menu
  * Menu:Open()
  * 
  * // Creates a DMenu with a submenu. 
@@ -26676,24 +26872,24 @@ declare class DMenu extends DScrollPanel {
     public AddSpacer(): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Add a sub menu to the DMenu 
      * @param Name  Name of the sub menu. 
      * @param func [=nil] Function to execute when this sub menu is clicked. 
-     * @returns [The sub menu, The option added to the parent DMenu] 
+     * @returns [The created sub `DMenu`, The created `DMenuOption`] 
      */
-    public AddSubMenu(Name: string, func?: Function): [Panel, Label];
-    
-    /**
-     * Returns the number of child elements of `DMenu`'s `DScrollPanel.GetCanvas`. 
-     * @returns The number of child elements 
-     */
-    public ChildCount(): number;
+    public AddSubMenu(Name: string, func?: Function): [DMenu, DMenuOption];
     
     /**
      * Returns the amount of children of the of panel. 
      * @returns childCount 
+     */
+    public ChildCount(): number;
+    
+    /**
+     * Returns the number of child elements of `DMenu`'s `DScrollPanel.GetCanvas`. 
+     * @returns The number of child elements 
      */
     public ChildCount(): number;
     
@@ -26707,7 +26903,7 @@ declare class DMenu extends DScrollPanel {
     public ClearHighlights(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally by `DMenu.OpenSubMenu`. 
      * @param menu  The menu to close 
@@ -26719,7 +26915,7 @@ declare class DMenu extends DScrollPanel {
      * @param childIndex  The index of the child to get.
      * 
      * **Note:**
-     * >Unlike `Panel.GetChild`, this index starts at 1. 
+     * >This index starts at 0, except when you use this on a `DMenu`. 
      */
     public GetChild(childIndex: number): void;
     
@@ -26728,7 +26924,7 @@ declare class DMenu extends DScrollPanel {
      * @param childIndex  The index of the child to get.
      * 
      * **Note:**
-     * >This index starts at 0, except when you use this on a `DMenu`. 
+     * >Unlike `Panel.GetChild`, this index starts at 1. 
      */
     public GetChild(childIndex: number): void;
     
@@ -26741,7 +26937,35 @@ declare class DMenu extends DScrollPanel {
     public GetDeleteSelf(): boolean;
     
     /**
-     * **INTERNAL**
+     * **Deprecated!**
+     * 
+     * Returns the value set by `DMenu.SetDrawBorder`. 
+     * @returns 
+     */
+    public GetDrawBorder(): boolean;
+    
+    /**
+     * Returns whether the `DMenu` should draw the icon column with a different color or not.
+     * 
+     * See `DMenu.SetDrawColumn` 
+     * @returns Whether to draw the column or not 
+     */
+    public GetDrawColumn(): boolean;
+    
+    /**
+     * Returns the maximum height of the `DMenu`. 
+     * @returns The maximum height in pixels 
+     */
+    public GetMaxHeight(): number;
+    
+    /**
+     * Returns the minimum width of the `DMenu` in pixels 
+     * @returns the minimum width of the `DMenu` 
+     */
+    public GetMinimumWidth(): number;
+    
+    /**
+     * **[INTERNAL]**
      * 
      * Returns the currently opened submenu.
      * 
@@ -26801,7 +27025,7 @@ declare class DMenu extends DScrollPanel {
     public OptionSelected(option: DMenuOption, optionText: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by `DMenuOption`. Calls `DMenu.OptionSelected`. 
      * @param option  The `DMenuOption` that called this function 
@@ -26817,7 +27041,33 @@ declare class DMenu extends DScrollPanel {
     public SetDeleteSelf(newState: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **Deprecated!**
+     * 
+     * Does nothing. 
+     * @param arg0 
+     */
+    public SetDrawBorder(arg0: boolean): void;
+    
+    /**
+     * Sets whether the `DMenu` should draw the icon column with a different color. 
+     * @param draw  Whether to draw the column or not 
+     */
+    public SetDrawColumn(draw: boolean): void;
+    
+    /**
+     * Sets the maximum height the `DMenu` can have. If the height of all menu items exceed this value, a scroll bar will be automatically added. 
+     * @param maxHeight  The maximum height of the `DMenu` to set, in pixels 
+     */
+    public SetMaxHeight(maxHeight: number): void;
+    
+    /**
+     * Sets the minimum width of the `DMenu`. The menu will be stretched to match the given value. 
+     * @param minWidth  The minimum width of the `DMenu` in pixels 
+     */
+    public SetMinimumWidth(minWidth: number): void;
+    
+    /**
+     * **[INTERNAL]**
      * 
      * Used internally to store the open submenu by `DMenu.Hide`, `DMenu.OpenSubMenu`, `DMenu.CloseSubMenu` 
      * @param item  The menu to store 
@@ -26828,7 +27078,9 @@ declare class DMenu extends DScrollPanel {
 /**
  * A simple Derma MenuBar 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" )
  * Frame:SetSize( 300, 200 )
@@ -26848,7 +27100,26 @@ declare class DMenu extends DScrollPanel {
  * local M3 = MenuBar:AddMenu("Help")
  * M3:AddOption("About", function() Msg("Chose Help:About\n") end)
  * 
- * // Creates a DMenuBar in a DFrame. 
+ * // Creates a DMenuBar in a DFrame.@example
+ * 
+ * local frame = vgui.Create( "DFrame" )
+ * frame:SetSize( 300, 200 )
+ * frame:Center()
+ * frame:MakePopup()
+ * 
+ * local menuBar = vgui.Create( "DMenuBar", frame )
+ * menuBar:DockMargin( -3, -6, -3, 0 )
+ * 
+ * local option1 = menuBar:AddMenu( "Option 1" )
+ * option1:AddOption( "Dummy option", function() MsgN( "Chose Dummy option" ) end )
+ * 
+ * local sub = option1:AddSubMenu( "Sub Menu" )
+ * sub:SetDeleteSelf( false ) // Necessary so the sub menu is not automatically removed on close
+ * for i = 0, 5 do
+ * 	sub:AddOption( "Option " .. i, function() MsgN( "Chose sub menu option " .. i ) end )
+ * end
+ * 
+ * // A sub menu example 
  */
 declare class DMenuBar extends DPanel {
     /**
@@ -27000,26 +27271,141 @@ declare class DMenuBar extends DPanel {
 }
 
 /**
- * **INTERNAL**
- * Internal subpanel of a `DMenu`. 
+ * **[INTERNAL]**
+ * 
+ * Internal subpanel that represents an option used by `DMenu`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DMenuOption extends DButton {
-
+    /**
+     * Creates a sub `DMenu` and returns it. Has no duplicate call protection. 
+     * @returns The created `DMenu` to add options to. 
+     */
+    public AddSubMenu(): DMenu;
+    
+    /**
+     * Returns the checked state of `DMenuOption`. 
+     * @returns Are we checked or not 
+     */
+    public GetChecked(): boolean;
+    
+    /**
+     * Returns whether the `DMenuOption` is a checkbox option or a normal button option. 
+     * @returns 
+     */
+    public GetIsCheckable(): boolean;
+    
+    /**
+     * @returns A `DMenu` 
+     */
+    public GetMenu(): DMenu;
+    
+    /**
+     * Called whenever the `DMenuOption`'s checked state changes. 
+     * @param checked  The new checked state 
+     */
+    public OnChecked(checked: boolean): void;
+    
+    /**
+     * Sets the checked state of the `DMenuOption`. Does not invoke `DMenuOption.OnChecked`. 
+     * @param checked 
+     */
+    public SetChecked(checked: boolean): void;
+    
+    /**
+     * Sets whether the `DMenuOption` is a checkbox option or a normal button option. 
+     * @param checkable 
+     */
+    public SetIsCheckable(checkable: boolean): void;
+    
+    /**
+     * @param pnl 
+     */
+    public SetMenu(pnl: Panel): void;
+    
+    /**
+     * **[INTERNAL]**
+     * 
+     * Used internally by `DMenuOption.AddSubMenu` to create the submenu arrow and assign the created submenu to be opened this this option is hovered. 
+     * @param menu 
+     */
+    public SetSubMenu(menu: Panel): void;
+    
+    /**
+     * Toggles the checked state of `DMenuOption`. Does not respect `DMenuOption.GetIsCheckable`. 
+     */
+    public ToggleCheck(): void;
 }
 
 /**
- * **INTERNAL** 
+ * **[INTERNAL]**
+ * 
+ * An internal panel used by `DMenu`. It acts as a menu option that can be checked. It automatically sets and reads the given console variable.
+ * 
+ * It can be right clicked to toggle without closing the `DMenu`.
+ * 
+ * Use `DMenu.AddCVar` instead. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DMenuOptionCVar extends DMenuOption {
-
+    /**
+     * Returns the [[ConVars|console variable]] used by the `DMenuOptionCVar`. 
+     * @returns The [[ConVars|console variable]] used 
+     */
+    public GetConVar(): string;
+    
+    /**
+     * Returns the value of the [[ConVars|console variable]] when the `DMenuOptionCVar` is not checked. 
+     * @returns The value 
+     */
+    public GetValueOff(): string;
+    
+    /**
+     * Return the value of the [[ConVars|console variable]] when the `DMenuOptionCVar` is checked. 
+     * @returns The value 
+     */
+    public GetValueOn(): string;
+    
+    /**
+     * Sets the [[ConVars|console variable]] to be used by `DMenuOptionCVar`. 
+     * @param cvar  The [[ConVars|console variable]] name to set 
+     */
+    public SetConVar(cvar: string): void;
+    
+    /**
+     * **Warning:**
+     * >This function does not exist on all panels
+     * 
+     * Sets this panel's convar. When the convar changes this panel will update automatically.
+     * 
+     * For developer implementation, see `Derma_Install_Convar_Functions`. 
+     * @param convar  The console variable to check. 
+     */
+    public SetConVar(convar: string): void;
+    
+    /**
+     * Sets the value of the [[ConVars|console variable]] when the `DMenuOptionCVar` is not checked. 
+     * @param value  The value 
+     */
+    public SetValueOff(value: string): void;
+    
+    /**
+     * Sets the value of the [[ConVars|console variable]] when the `DMenuOptionCVar` is checked. 
+     * @param value  The value 
+     */
+    public SetValueOn(value: string): void;
 }
 
 /**
  * DModelPanel is a VGUI element that projects a 3D model onto a 2D plane. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DPanel" )
  * Panel:SetPos( 10, 10 )
@@ -27045,7 +27431,8 @@ declare class DMenuOptionCVar extends DMenuOption {
  */
 declare class DModelPanel extends DButton {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by the DModelPanel's paint hook to draw the model and background. 
      */
     public DrawModel(): void;
@@ -27081,12 +27468,10 @@ declare class DModelPanel extends DButton {
     public GetColor(): Color;
     
     /**
-     * Returns the "internal" desired color of the text, alias of `DLabel.GetTextStyleColor`.
+     * Returns the actual color of the text.
      * 
-     * **Bug:**
-     * >FIXED IN NEXT UPDATE: This doesn't return ACTUAL color of the text. Use the following instead for now:
-     * ```local clr = DLabel:GetTextColor() or DLabel:GetTextStyleColor()``` 
-     * @returns The "internal" desired color of the text 
+     * See also `DLabel.GetTextColor` and `DLabel.GetTextStyleColor`. 
+     * @returns The the actual color of the text. 
      */
     public GetColor(): table;
     
@@ -27121,7 +27506,8 @@ declare class DModelPanel extends DButton {
     public GetModel(): string;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  By default, this function slowly rotates and animates the entity being rendered.
      * 
      * If you want to change this behavior, you should override it. 
@@ -27232,10 +27618,13 @@ declare class DModelPanel extends DButton {
     public SetModel(model: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.[[Category:SpawnIcon]] 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.
+     * 
+     * **Note:**
+     * >This must be called after setting size if you wish to use a different size spawnicon 
      * @param ModelPath  The path of the model to set 
      * @param skin [=0] The skin to set 
-     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup. "This make it impossible to set any body group to a value higher than 9!" 
+     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup, "up to 9 in total". 
      */
     public SetModel(ModelPath: string, skin?: number, bodygroups?: string): void;
     
@@ -27251,7 +27640,9 @@ declare class DModelPanel extends DButton {
  * 
  *  A vertical list of models. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * // Create a table of models
  * local models = {
@@ -27284,7 +27675,11 @@ declare class DModelSelect extends DPanelSelect {
     public SetHeight(num?: number): void;
     
     /**
-     * Sets the height of the panel. 
+     * Sets the height of the panel.
+     * 
+     * Calls `PANEL.OnSizeChanged` and marks this panel for layout (`Panel.InvalidateLayout`).
+     * 
+     * See also `Panel.SetSize`. 
      * @param height  The height to be set. 
      */
     public SetHeight(height: number): void;
@@ -27302,7 +27697,9 @@ declare class DModelSelect extends DPanelSelect {
 /**
  * A combination of `DModelSelect` and `DPropertySheet`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DModelSelectMulti extends DPropertySheet {
 
 }
@@ -27310,10 +27707,12 @@ declare class DModelSelectMulti extends DPropertySheet {
 /**
  * A panel that fades its contents in and out once, like a notification. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * //Notification panel
- * NotifyPanel = vgui.Create("DNotify")
+ * local NotifyPanel = vgui.Create("DNotify")
  * NotifyPanel:SetPos(10, 5)
  * NotifyPanel:SetSize(200, 40)
  * 
@@ -27330,7 +27729,7 @@ declare class DModelSelectMulti extends DPropertySheet {
  * // Creates a notification panel with a text label inside.@example
  * 
  * // Notification panel
- * NotifyPanel = vgui.Create("DNotify")
+ * local NotifyPanel = vgui.Create("DNotify")
  * NotifyPanel:SetPos(15, 15)
  * NotifyPanel:SetSize(150, 210)
  * 
@@ -27411,7 +27810,7 @@ declare class DNotify extends Panel {
     public SetSpacing(spacing: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      */
@@ -27421,7 +27820,9 @@ declare class DNotify extends Panel {
 /**
  * Choose a number from a number line, with zooming for precision. Zoom in by moving your mouse forward and moving back does the opposite. Looks like a blue circle until you click and hold on it 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 250 )
@@ -27438,7 +27839,7 @@ declare class DNotify extends Panel {
  */
 declare class DNumberScratch extends DImageButton {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used by `DNumberScratch.DrawScreen`. 
      * @param level 
@@ -27454,7 +27855,7 @@ declare class DNumberScratch extends DImageButton {
     public DrawNotches(level: number, x: number, y: number, w: number, h: number, range: number, value: number, min: number, max: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used by `DNumberScratch.PaintScratchWindow`. 
      * @param x 
@@ -27546,7 +27947,7 @@ declare class DNumberScratch extends DImageButton {
     public IsEditing(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used to lock the cursor in place. 
      */
@@ -27559,14 +27960,14 @@ declare class DNumberScratch extends DImageButton {
     public OnValueChanged(newValue: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used to paint the 'scratch' window. 
      */
     public PaintScratchWindow(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether or not the panel is 'active'.
      * 
@@ -27582,7 +27983,7 @@ declare class DNumberScratch extends DImageButton {
     public SetDecimals(decimals: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Does not trigger `DNumberScratch.OnValueChanged`
      * 
@@ -27610,7 +28011,7 @@ declare class DNumberScratch extends DImageButton {
     public SetMin(min: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets if the scratch window should be drawn or not. Cannot be used to force it to draw, only to hide it, which will not stop the panel from working with invisible window. 
      * @param shouldDraw 
@@ -27630,7 +28031,7 @@ declare class DNumberScratch extends DImageButton {
     public SetZoom(zoom: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Forces the assigned ConVar to be updated to the value of this `DNumberScratch` 
      */
@@ -27640,7 +28041,9 @@ declare class DNumberScratch extends DImageButton {
 /**
  * DNumberWang is a VGUI element that allows you to input a numeric value using up and down arrows or direct entry. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DNumberWang extends DTextEntry {
     /**
      * Returns the amount of decimal places allowed in the number selector, set by `DNumberWang.SetDecimals` 
@@ -27797,7 +28200,9 @@ declare class DNumberWang extends DTextEntry {
  * 
  * GMod 12 style "number pad" panel used by tools for binding keys to tool actions. Deprecated in favor of `DBinder`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DNumPad extends DPanel {
 
 }
@@ -27805,7 +28210,9 @@ declare class DNumPad extends DPanel {
 /**
  * The DNumSlider allows you to create a slider, allowing the user to slide it to set a value, or changing the value in the box. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DermaPanel = vgui.Create( 'DFrame' ) // Create a panel to parent it to
  * DermaPanel:SetSize( 500, 200 ) // Set the size
@@ -27954,9 +28361,9 @@ declare class DNumSlider extends Panel {
     public SetValue(val: number): void;
     
     /**
-     * !TupleReturn
-    
-     * **INTERNAL**
+     * @tupleReturn
+     *
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @param x 
@@ -27966,14 +28373,15 @@ declare class DNumSlider extends Panel {
     public TranslateSliderValues(x: number, y: number): [number, number];
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      */
     public UpdateNotches(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called when the value has been changed. This will also be called when the user manually changes the value through the text panel.
      * 
      * This is an internal function. Override `DNumSlider.OnValueChanged` instead. 
@@ -27985,7 +28393,9 @@ declare class DNumSlider extends Panel {
 /**
  * A simple rectangular box, commonly used for parenting other elements to. Pretty much all elements are based on this. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DPanel = vgui.Create( "DPanel" )
  * DPanel:SetPos( 10, 30 ) // Set the position of the panel
@@ -28065,19 +28475,64 @@ declare class DPanel extends Panel {
  * Displays elements in a horizontal or vertical list. A scrollbar is automatically shown if necessary.
  * Use is not recommended due to deprecation. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DPanelList extends DPanel {
+    /**
+     * Adds a existing panel to the end of `DPanelList`. 
+     * @param pnl  Panel to be used as element of list 
+     */
+    public AddItem(pnl: Panel): void;
+    
+    /**
+     * Enables/creates the vertical scroll bar so that the panel list can be scrolled through. 
+     */
+    public EnableVerticalScrollbar(): void;
+    
+    /**
+     * Returns all panels has added by `DPanelList.AddItem` 
+     * @returns A table of panels used as items of `DPanelList`. 
+     */
+    public GetItems(): DPanelList[];
+    
+    /**
+     * Returns offset of list items from the panel borders set by `DPanelList.SetPadding` 
+     * @returns Offset from panel borders 
+     */
+    public GetPadding(): number;
+    
+    /**
+     * Returns distance between list items set by `DPanelList.SetSpacing` 
+     * @returns Distance between panels 
+     */
+    public GetSpacing(): number;
+    
     /**
      * @param insert  The panel to insert 
      * @param strLineState  If set to "ownline", no other panels will be placed to the left or right of the panel we are inserting 
      */
     public InsertAtTop(insert: Panel, strLineState: string): void;
+    
+    /**
+     * Sets the offset of the lists items from the panel borders 
+     * @param Offset  Offset from panel borders 
+     */
+    public SetPadding(Offset: number): void;
+    
+    /**
+     * Sets distance between list items 
+     * @param Distance  Distance between panels 
+     */
+    public SetSpacing(Distance: number): void;
 }
 
 /**
  * Adds curved corners. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetSize( 350, 200 ) // Set the size of the panel
@@ -28112,7 +28567,8 @@ declare class DPanelOverlay extends DPanel {
     public GetType(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Used internally by the panel for type 3. 
      * @param cola 
      * @param colb 
@@ -28123,7 +28579,8 @@ declare class DPanelOverlay extends DPanel {
     public PaintDifferentColours(cola: table, colb: table, colc: table, cold: table, size: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Used internally by the panel for types 1 and 2. 
      * @param size 
      */
@@ -28153,7 +28610,9 @@ declare class DPanelOverlay extends DPanel {
  * 
  *  A base panel for things like `DModelSelect`. Basically, a list of panels that can be selected. Selected panel can be retrieved and has visual indication of being selected. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DPanelSelect extends DPanelList {
 
 }
@@ -28161,7 +28620,9 @@ declare class DPanelSelect extends DPanelList {
 /**
  * A progressbar, works with a fraction between 0 and 1 where 0 is 0% and 1 is 100%. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DProgress = vgui.Create( "DProgress" )
  * DProgress:SetPos( 10, 30 )
@@ -28195,7 +28656,9 @@ declare class DProgress extends Panel {
  * *`DProperty_Float`
  * *`DProperty_Int` 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local f = vgui.Create( "DFrame" )
  * f:SetSize( 500, 300 )
@@ -28253,7 +28716,7 @@ declare class DProperties extends Panel {
     public GetCanvas(): DScrollPanel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns (or creates) a category of properties.
      * 
@@ -28266,11 +28729,13 @@ declare class DProperties extends Panel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * Checkbox control for the `DProperties` panel. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28293,10 +28758,13 @@ declare class DProperty_Boolean extends DProperty_Generic {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Combo control for a `DProperties` panel. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28361,10 +28829,13 @@ declare class DProperty_Combo extends DProperty_Generic {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Float control for the `DProperties` panel. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DProperty_Float extends DProperty_Generic {
 
 }
@@ -28372,7 +28843,9 @@ declare class DProperty_Float extends DProperty_Generic {
 /**
  * A base for other controls for `DProperties`. Acts as a generic text input on its own. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28395,10 +28868,13 @@ declare class DProperty_Generic extends Panel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Integer control for the `DProperties` panel. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DProperty_Int extends DProperty_Float {
 
 }
@@ -28408,7 +28884,9 @@ declare class DProperty_Int extends DProperty_Float {
  * 
  * See [[Editable Entities]] for how this is used ingame. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" )
  * Panel:SetSize( 500, 500 )
@@ -28428,7 +28906,8 @@ declare class DProperty_Int extends DProperty_Float {
  */
 declare class DProperty_VectorColor extends DProperty_Generic {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by a property row to setup a color selection control. 
      * @param prop [="VectorColor"] 
      * @param settings [=] A table of settings. None of the values are used for this property. See [[Editable Entities]]. 
@@ -28436,7 +28915,8 @@ declare class DProperty_VectorColor extends DProperty_Generic {
     public Setup(prop?: string, settings?: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by a property row to setup a color selection control. 
      * @param settings  A table of settings. None of the values are used for this property. See [[Editable Entities]]. 
      */
@@ -28452,7 +28932,9 @@ declare class DProperty_VectorColor extends DProperty_Generic {
 /**
  * A tab oriented control where you can create multiple tabs with items within. Used mainly for organization. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -28499,7 +28981,7 @@ declare class DPropertySheet extends DPanel {
     public CloseTab(tab: DTab | DPropertySheet, removePanel: boolean): Panel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function that handles the cross fade animation when the player switches tabs. 
      * @param anim 
@@ -28608,7 +29090,7 @@ declare class DPropertySheet extends DPanel {
  */
 declare namespace dragndrop {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Calls the receiver function of hovered panel. 
      * @param bDoDrop  true if the mouse was released, false if we right clicked. 
@@ -28624,7 +29106,8 @@ declare namespace dragndrop {
     function Clear(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Handles the drop action of drag'n'drop library. 
      */
     function Drop(): void;
@@ -28642,7 +29125,7 @@ declare namespace dragndrop {
     function HandleDroppedInGame(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Handles the hover think. Called from `dragndrop.Think`. 
      */
@@ -28655,7 +29138,7 @@ declare namespace dragndrop {
     function IsDragging(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Starts the drag'n'drop. 
      */
@@ -28667,14 +29150,14 @@ declare namespace dragndrop {
     function StopDragging(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Handles all the drag'n'drop processes. Calls `dragndrop.UpdateReceiver` and `dragndrop.HoverThink`. 
      */
     function Think(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Updates the receiver to drop the panels onto. Called from `dragndrop.Think`. 
      */
@@ -28718,6 +29201,7 @@ declare namespace draw {
     
     /**
      * Draws a rounded rectangle.
+     * 
      * **Note:**
      * >If you intend to draw a non-rounded rectangle, then it's more efficient to use `surface.DrawRect`.
      * 
@@ -28749,8 +29233,8 @@ declare namespace draw {
     function RoundedBoxEx(cornerRadius: number, x: number, y: number, width: number, height: number, color: Color, roundTopLeft?: boolean, roundTopRight?: boolean, roundBottomLeft?: boolean, roundBottomRight?: boolean): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Draws text on the screen.
      * 
      * {{RenderingContext|Function|2D}} 
@@ -28766,8 +29250,8 @@ declare namespace draw {
     function SimpleText(text: string, font?: string, x?: number, y?: number, color?: Color, xAlign?: TEXT_ALIGN, yAlign?: TEXT_ALIGN): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a simple line of text that is outlined.
      * 
      * {{RenderingContext|Function|2D}} 
@@ -28785,8 +29269,8 @@ declare namespace draw {
     function SimpleTextOutlined(Text: string, font?: string, x?: number, y?: number, color?: Color, xAlign?: TEXT_ALIGN, yAlign?: TEXT_ALIGN, outlinewidth?: number, outlinecolor?: Color): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Creates a simple line of text that is outlined.
      * 
      * {{RenderingContext|Function|2D}} 
@@ -28797,8 +29281,8 @@ declare namespace draw {
     function SimpleTextOutlined(Text: string, outlinewidth: number): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Works like `draw.SimpleText` but uses a table structure instead.
      * 
      * {{RenderingContext|Function|2D}} 
@@ -28826,8 +29310,8 @@ declare namespace draw {
     function TexturedQuad(texturedata: TextureData): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Draws a rounded box with text in it.
      * 
      * {{RenderingContext|Function|2D}} 
@@ -28850,7 +29334,9 @@ declare namespace draw {
  * 
  * See `DColorMixer` for a color picker that allows control over hue, saturation, and brightness at once. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * // Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -28931,9 +29417,9 @@ declare namespace draw {
  */
 declare class DRGBPicker extends DPanel {
     /**
-     * !TupleReturn
-    
-     * **INTERNAL**
+     * @tupleReturn
+     *
+     * **[INTERNAL]**
      * 
      * Returns the color at given position on the internal texture. 
      * @param x  The X coordinate on the texture to get the color from 
@@ -28969,7 +29455,7 @@ declare class DRGBPicker extends DPanel {
  */
 declare namespace drive {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Optionally alter the view. 
      * @param ply  The player 
@@ -28979,7 +29465,7 @@ declare namespace drive {
     function CalcView(ply: Player, view: ViewData): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Clientside, the client creates the cmd (usercommand) from their input device (mouse, keyboard) and then it's sent to the server. Restrict view angles here. 
      * @param cmd  The user command 
@@ -28988,7 +29474,7 @@ declare namespace drive {
     function CreateMove(cmd: CUserCmd): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Destroys players current driving method. 
      * @param ply  The player to affect 
@@ -29003,7 +29489,7 @@ declare namespace drive {
     function End(ply: Player, ent: Entity): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * The move is finished. Copy mv back into the target. 
      * @param ply  The player 
@@ -29013,7 +29499,7 @@ declare namespace drive {
     function FinishMove(ply: Player, mv: CMoveData): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns ( or creates if inexistent ) a driving method. 
      * @param ply  The player 
@@ -29022,7 +29508,7 @@ declare namespace drive {
     function GetMethod(ply: Player): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * The move is executed here. 
      * @param ply  The player 
@@ -29061,7 +29547,7 @@ declare namespace drive {
     function Start(ply: Player, ent: Entity): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * The user command is received by the server and then converted into a move. This is also run clientside when in multiplayer, for prediction to work. 
      * @param ply  The player 
@@ -29073,11 +29559,13 @@ declare namespace drive {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * An internal panel used by `DVScrollBar` as the grip (middle) part of the scrollbar. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DScrollBarGrip extends DPanel {
 
 }
@@ -29092,7 +29580,9 @@ declare class DScrollBarGrip extends DPanel {
  * **Note:**
  * >`Panel.DockPadding` will not have an effect on children of this panel. Use the function on `DScrollPanel.GetCanvas` instead. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 500 )
@@ -29153,7 +29643,8 @@ declare class DScrollPanel extends DPanel {
     public ScrollToChild(panel: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Sets the canvas of the DScrollPanel. 
      * @param canvas  The new canvas 
      */
@@ -29169,7 +29660,9 @@ declare class DScrollPanel extends DPanel {
 /**
  * Draw a shape on a derma panel. Only one kind of shape, a rectangle, is available for use. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Frame = vgui.Create( "DFrame" ) // Create a frame 
  * Frame:SetTitle( "Test panel" )
@@ -29236,7 +29729,9 @@ declare class DShape extends DPanel {
 /**
  * A helper panel that will automatically resize itself to fit all its children using `Panel.SizeToChildren`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DSizeToContents extends Panel {
 
 }
@@ -29244,7 +29739,9 @@ declare class DSizeToContents extends Panel {
 /**
  * Creates a slider that can be moved along the X and/or Y axis 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 500, 300 )
@@ -29333,7 +29830,7 @@ declare class DSlider extends DPanel {
     public SetBackground(path: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether or not the slider is being dragged. 
      * @param dragging 
@@ -29391,7 +29888,7 @@ declare class DSlider extends DPanel {
     public SetNumSlider(slider: any): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used to position the draggable panel of the slider on the X axis. 
      * @param x  The value range seems to be from 0 to 1 
@@ -29399,7 +29896,7 @@ declare class DSlider extends DPanel {
     public SetSlideX(x: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used to position the draggable panel of the slider on the Y axis. 
      * @param y  The value range seems to be from 0 to 1 
@@ -29415,8 +29912,8 @@ declare class DSlider extends DPanel {
     public SetTrapInside(trap: boolean): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * For override by child panels, such as `DNumSlider`. 
      * @param x 
      * @param y 
@@ -29430,8 +29927,12 @@ declare class DSlider extends DPanel {
  * 
  * A shortcut for this is `CreateSprite`(). 
  *
- * !CustomConstructor CreateSprite *
- * !PureAbstract * @example
+ * @customConstructor CreateSprite
+ *
+ *
+ * @pureAbstract
+ *
+ * @example
  * 
  * local sprite = vgui.Create("DSprite")
  * sprite:SetMaterial(Material("sprites/sent_ball"))
@@ -29499,10 +30000,13 @@ declare class DSprite extends DPanel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A tab for internal use on the DPropertySheet. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DTab extends DButton {
 
 }
@@ -29513,7 +30017,9 @@ declare class DTab extends DButton {
  * **Bug [#1588](https://github.com/Facepunch/garrysmod-issues/issues/1588):**
  * >This does not clear out previously-pasted text properly. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 400, 200 )
@@ -29608,7 +30114,8 @@ declare class DTextEntry extends TextEntry {
     public OnKeyCodeTyped(keyCode: KEY): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Called internally when the text inside the DTextEntry changes.
      * 
      * You should not override this function. Use `DTextEntry.OnValueChange` instead. 
@@ -29688,7 +30195,9 @@ declare class DTextEntry extends TextEntry {
  * 
  * It also optionally permits the rearrangement of these tiles. To enable this functionality, call `DDragBase.MakeDroppable` on the DTileLayout with a unique identifier. All panels added following this will be moveable. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create("DFrame")
  * frame:SetSize(300, 300)
@@ -29714,13 +30223,15 @@ declare class DTextEntry extends TextEntry {
  */
 declare class DTileLayout extends DDragBase {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Clears the panel's tile table. Used by `DTileLayout.LayoutTiles`. 
      */
     public ClearTiles(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to designate a range of tiles as occupied by a panel. 
      * @param x  The x coordinate of the top-left corner of the panel. 
      * @param y  The y coordinate of the top-left corner of the panel. 
@@ -29742,9 +30253,10 @@ declare class DTileLayout extends DDragBase {
     public CopyContents(source: Panel): void;
     
     /**
-     * !TupleReturn
-    
-     * **INTERNAL**
+     * @tupleReturn
+     *
+     * **[INTERNAL]**
+     * 
      *  Finds the coordinates of the first group of free tiles that fit the given size. 
      * @param x  The x coordinate to start looking from. 
      * @param y  The y coordinate to start looking from. 
@@ -29755,7 +30267,8 @@ declare class DTileLayout extends DDragBase {
     public FindFreeTile(x: number, y: number, w: number, h: number): [number, number];
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Determines if a group of tiles is vacant. 
      * @param x  The x coordinate of the first tile. 
      * @param y  The y coordinate of the first tile. 
@@ -29796,7 +30309,8 @@ declare class DTileLayout extends DDragBase {
     public GetSpaceY(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Gets the occupied state of a tile. 
      * @param x  The x coordinate of the tile. 
      * @param y  The y coordinate of the tile. 
@@ -29810,7 +30324,8 @@ declare class DTileLayout extends DDragBase {
     public Layout(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by `PANEL.PerformLayout` to arrange and lay out the child panels, if it has changed in size. 
      */
     public LayoutTiles(): void;
@@ -29858,7 +30373,8 @@ declare class DTileLayout extends DDragBase {
     public SetSpaceY(spaceY: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to set the occupied state of a tile. 
      * @param x  The x coordinate of the tile. 
      * @param y  The y coordinate of the tile. 
@@ -29868,11 +30384,13 @@ declare class DTileLayout extends DDragBase {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * The panel used internally for tool tips. See `Panel.SetTooltip`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local DFrame = vgui.Create( "DFrame" )
  * DFrame:SetPos( 100, 100 )
@@ -29898,6 +30416,7 @@ declare class DTooltip extends DLabel {
     
     /**
      * Used to draw a triangle beneath the `DTooltip`
+     * 
      * **Note:**
      * >Requires `DTooltip.SetContents`, without this it will error 
      * @param x  arrow location on the x axis 
@@ -29912,7 +30431,7 @@ declare class DTooltip extends DLabel {
     public OpenForPanel(pnl: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Positions the `DTooltip` so it doesn't stay in the same draw position. 
      */
@@ -29934,7 +30453,9 @@ declare class DTooltip extends DLabel {
  * 
  * See also `DTree_Node`. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 300, 500 )
@@ -29969,7 +30490,7 @@ declare class DTree extends DScrollPanel {
     public AddNode(name: string, icon?: string): DTree_Node;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Calls directly to `Panel.InvalidateLayout`.
      * Called by `DTree_Node`s when a sub element has been expanded or collapsed.
@@ -29992,7 +30513,7 @@ declare class DTree extends DScrollPanel {
     public DoRightClick(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Does nothing. Used as a placeholder empty function alongside `DTree.MoveChildTo`, `DTree.SetExpanded` and `DTree.ChildExpanded`.
      * 
@@ -30077,7 +30598,7 @@ declare class DTree extends DScrollPanel {
     public SetClickOnDragHover(enable: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Does nothing. Is not called by the `DTree` itself.
      * 
@@ -30126,13 +30647,15 @@ declare class DTree extends DScrollPanel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * This panel is created whenever you add a node to a `DTree`.
  * 
  * The root node of a `DTree` is also a `DTree_Node` and controls much of its action; it can be accessed with `DTree.Root`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DTree_Node extends DPanel {
     /**
      * A helper function that adds a new node and calls to `DTree_Node.MakeFolder` on it. 
@@ -30154,7 +30677,7 @@ declare class DTree_Node extends DPanel {
     public AddNode(name: string, icon?: string): DTree_Node;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Adds the given panel to the child nodes list, a `DListLayout`. 
      * @param pnl  The panel to add. 
@@ -30162,7 +30685,7 @@ declare class DTree_Node extends DPanel {
     public AddPanel(pnl: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Internal function that handles the expand/collapse animations. 
      * @param anim 
@@ -30172,7 +30695,7 @@ declare class DTree_Node extends DPanel {
     public AnimSlide(anim: table, delta: number, data: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called when a child node is expanded or collapsed to propagate this event to parent nodes to update layout. 
      * @param expanded 
@@ -30193,7 +30716,7 @@ declare class DTree_Node extends DPanel {
     public Copy(): DTree_Node;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Creates the container `DListLayout` for the `DTree_Node`s.
      * 
@@ -30202,7 +30725,7 @@ declare class DTree_Node extends DPanel {
     public CreateChildNodes(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically to update the status of `DTree_Node.GetLastChild` on children of this node. 
      */
@@ -30241,7 +30764,7 @@ declare class DTree_Node extends DPanel {
     public ExpandTo(expand: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically from `DTree_Node.PopulateChildrenAndSelf` and `DTree_Node.PopulateChildren` to populate this node with child nodes of files and folders. 
      * @param bAndChildren  Does nothing. Set to true if called from `DTree_Node.PopulateChildren`. 
@@ -30250,7 +30773,7 @@ declare class DTree_Node extends DPanel {
     public FilePopulate(bAndChildren: boolean, bExpand: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically from `DTree_Node.FilePopulate` to actually fill the node with sub-nodes based on set preferences like should files be added, etc. 
      * @param files  A list of files in this folder 
@@ -30286,7 +30809,7 @@ declare class DTree_Node extends DPanel {
     public GetDoubleClickToOpen(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns what is set by `DTree_Node.SetDraggableName`. 
      * @returns 
@@ -30294,7 +30817,7 @@ declare class DTree_Node extends DPanel {
     public GetDraggableName(): string;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns whether or not this node is drawing lines 
      * @returns 
@@ -30356,7 +30879,7 @@ declare class DTree_Node extends DPanel {
     public GetLineHeight(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @returns 
@@ -30364,7 +30887,7 @@ declare class DTree_Node extends DPanel {
     public GetNeedsChildSearch(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns whether or not the node is set to be populated from the filesystem. 
      * @returns 
@@ -30414,7 +30937,7 @@ declare class DTree_Node extends DPanel {
     public Insert(node: DTree_Node, nodeNextTo: Panel, before: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Inserts an existing node as a "child" or a sub-node of this node.
      * Used internally by the drag'n'drop functionality. 
@@ -30423,7 +30946,7 @@ declare class DTree_Node extends DPanel {
     public InsertNode(node: DTree_Node): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically internally.
      * 
@@ -30433,7 +30956,7 @@ declare class DTree_Node extends DPanel {
     public InstallDraggable(node: DTree_Node): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}}
      * 
@@ -30442,7 +30965,7 @@ declare class DTree_Node extends DPanel {
     public InternalDoClick(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}}
      * 
@@ -30495,7 +31018,7 @@ declare class DTree_Node extends DPanel {
     public OnModified(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called when this or a sub node is selected. Do not use this, it is not for override.
      * 
@@ -30505,21 +31028,21 @@ declare class DTree_Node extends DPanel {
     public OnNodeSelected(node: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically to perform layout on this node if this node `DTree_Node.IsRootNode`. 
      */
     public PerformRootNodeLayout(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically from `DTree_Node.PopulateChildrenAndSelf`. 
      */
     public PopulateChildren(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically from `DTree_Node.SetExpanded` (or when user manually expands the node) to populate the node with sub-nodes from the filesystem if this was enabled via `DTree_Node.MakeFolder`. 
      * @param expand  Expand self once population process is finished. 
@@ -30541,7 +31064,7 @@ declare class DTree_Node extends DPanel {
     public SetDoubleClickToOpen(enable: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used to store name for sub elements for a `Panel.Droppable` call. 
      * @param name 
@@ -30549,7 +31072,7 @@ declare class DTree_Node extends DPanel {
     public SetDraggableName(name: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether or not this node should draw visual lines. 
      * @param draw 
@@ -30564,7 +31087,7 @@ declare class DTree_Node extends DPanel {
     public SetExpanded(expand: boolean, surpressAnimation?: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the file full filepath to the file attached to this node 
      * @param filename 
@@ -30572,7 +31095,7 @@ declare class DTree_Node extends DPanel {
     public SetFileName(filename: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the folder to search files and folders in.
      * 
@@ -30588,7 +31111,7 @@ declare class DTree_Node extends DPanel {
     public SetForceShowExpander(forceShow: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether the expand button (little + button) should be shown or hidden. 
      * @param hide 
@@ -30602,7 +31125,7 @@ declare class DTree_Node extends DPanel {
     public SetIcon(path: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically to set whether this node is the last child on this level or not. 
      * @param last 
@@ -30610,7 +31133,7 @@ declare class DTree_Node extends DPanel {
     public SetLastChild(last: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @param newState 
@@ -30618,7 +31141,7 @@ declare class DTree_Node extends DPanel {
     public SetNeedsChildSearch(newState: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether or not the node needs populating from the filesystem. 
      * @param needs  Whether or not the node needs populating 
@@ -30626,7 +31149,7 @@ declare class DTree_Node extends DPanel {
     public SetNeedsPopulating(needs: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the parent node of this node. Not the same as `Panel.SetParent`.
      * 
@@ -30636,7 +31159,7 @@ declare class DTree_Node extends DPanel {
     public SetParentNode(parent: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the path ID ([[File Search Paths]]) for populating the tree from the filesystem.
      * 
@@ -30646,7 +31169,7 @@ declare class DTree_Node extends DPanel {
     public SetPathID(path: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the root node (the `DTree`) of this node.
      * 
@@ -30656,7 +31179,7 @@ declare class DTree_Node extends DPanel {
     public SetRoot(root: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called automatically to update the "selected" status of this node. 
      * @param selected  Whether this node is currently selected or not. 
@@ -30670,7 +31193,7 @@ declare class DTree_Node extends DPanel {
     public SetSelected(selected?: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets whether or not nodes for files should be added when populating the node from filesystem. 
      * @param showFiles 
@@ -30715,7 +31238,7 @@ declare class DTree_Node extends DPanel {
     public SetupCopy(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the search wildcard.
      * 
@@ -30734,11 +31257,13 @@ declare class DTree_Node extends DPanel {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * Used by `DTree_Node`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DTree_Node_Button extends DButton {
 
 }
@@ -30808,7 +31333,8 @@ declare namespace duplicator {
     function CopyEntTable(ent: Entity): EntityCopyData;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Creates a constraint from a saved/copied constraint table. 
      * @param constraint  Saved/copied constraint table 
      * @param entityList  The list of entities that are to be constrained 
@@ -30897,9 +31423,10 @@ declare namespace duplicator {
     function GenericDuplicatorFunction(ply: Player, data: table): Entity;
     
     /**
-     * !TupleReturn
-    
-     * **INTERNAL**
+     * @tupleReturn
+     *
+     * **[INTERNAL]**
+     * 
      *  Fills entStorageTable with all of the entities in a group connected with constraints. Fills constraintStorageTable with all of the constrains constraining the group. 
      * @param ent  The entity to start from 
      * @param entStorageTable  The table the entities will be inserted into 
@@ -30916,8 +31443,8 @@ declare namespace duplicator {
     function IsAllowed(classname: string): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * "Given entity list and constraint list, create all entities and return their tables"
      * 
      * Calls `duplicator.CreateEntityFromTable` on each sub-table of EntityList. If an entity is actually created, it calls `ENTITY.OnDuplicated` with the entity's duplicator data, then `duplicator.ApplyEntityModifiers`, `duplicator.ApplyBoneModifiers` and finally  `ENTITY.PostEntityPaste` is called.
@@ -31027,18 +31554,23 @@ declare namespace duplicator {
 /**
  * Vertical version of `DHorizontalDivider`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DVerticalDivider extends DPanel {
 
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A scrollbar used in `DScrollPanel`.
  * 
  * The scrollbar notably contains "DVScrollBar.btnUp, DVScrollBar.btnDown, and DVScrollBar.btnGrip" which are the up button, down button, and grip respectively. Editing the paint functions of these allows custom scrollbar styling. See `DScrollPanel.GetVBar` for an example. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class DVScrollBar extends Panel {
     /**
      * Adds specified amount of scroll in pixels. 
@@ -31080,7 +31612,7 @@ declare class DVScrollBar extends Panel {
     public GetScroll(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called from within `DScrollBarGrip` 
      */
@@ -31117,14 +31649,16 @@ declare class DVScrollBar extends Panel {
 }
 
 /**
- * Base panel used by DFrame, this panel is needed so that elements such as the TextEntry can obtain focus. 
+ * Base panel used by `DFrame`, this panel is needed so that elements such as the TextEntry can obtain focus. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class EditablePanel {
     /**
      * **Deprecated!**
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Similar to `Panel.LoadControlsFromString` but loads controls from a file.
      * 
@@ -31136,7 +31670,7 @@ declare class EditablePanel {
     /**
      * **Deprecated!**
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Loads controls(positions, etc) from given data. This is what the default options menu uses.
      * 
@@ -31355,7 +31889,8 @@ declare class EFFECT {
  */
 declare namespace effects {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Returns the table of the effect specified. 
      * @param name  Effect name. 
      * @returns Effect table. 
@@ -31363,7 +31898,8 @@ declare namespace effects {
     function Create(name: string): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Registers a new effect. 
      * @param effect_table  Effect table. 
      * @param name  Effect name. 
@@ -31465,7 +32001,10 @@ declare namespace engine {
     function IsRecordingDemo(): boolean;
     
     /**
-     * This is a direct binding to the function “engine->LightStyle”. This function allows you to change the default light style of the map - so you can make lighting lighter or darker. You’ll need to call `render.RedownloadAllLightmaps` clientside to refresh the lightmaps to this new color. 
+     * This is a direct binding to the function “engine->LightStyle”. This function allows you to change the default light style of the map - so you can make lighting lighter or darker. You’ll need to call `render.RedownloadAllLightmaps` clientside to refresh the lightmaps to this new color.
+     * 
+     * **Bug [#3626](https://github.com/Facepunch/garrysmod-issues/issues/3626):**
+     * >Calling this function with arguments 0 and "a" will cause dynamic lights such as those produced by the Light tool to stop working. 
      * @param lightstyle  The lightstyle to edit. 0 to 63. If you want to edit map lighting, you want to set this to 0. 
      * @param pattern  The pattern to change the lightstyle to. "a" is the darkest, "z" is the brightest. You can use stuff like "abcxyz" to make flashing patterns. The normal brightness for a map is "m". Values over "z" are allowed, "~" for instance. 
      */
@@ -31479,8 +32018,8 @@ declare namespace engine {
     function OpenDupe(dupeName: string): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an estimate of the server's performance. Equivalent to calling `FrameTime` from the server, according to source code. 
      * @returns [Frame time, Server Framerate Std Deviation] 
      */
@@ -31531,7 +32070,9 @@ declare namespace engine {
 /**
  * This is a list of all available methods for entites, which includes [http://wiki.garrysmod.com/page/Category:Player Players], [http://wiki.garrysmod.com/page/Category:Weapon Weapons], [http://wiki.garrysmod.com/page/Category:NPC NPCs] and [http://wiki.garrysmod.com/page/Category:Vehicle Vehicles]. 
  *
- * !CustomConstructor Entity */
+ * @customConstructor Entity
+ *
+ */
 declare class Entity {
     /**
      * Returns the entity with the matching `Entity.EntIndex`.
@@ -31690,7 +32231,8 @@ declare class Entity {
     public BeingLookedAtByLocalPlayer(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Dispatches blocked events to this entity's blocked handler. This function is only useful when interacting with entities like func_movelinear. 
      * @param entity  The entity that is blocking us 
      */
@@ -31729,8 +32271,8 @@ declare class Entity {
     public BoundingRadius(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Called whenever the entity's position changes. A callback for when an entity's angle changes is available via `Entity.AddCallback`.
      * 
      * Like `ENTITY.RenderOverride`, this hook works on any entity (scripted or not) it is applied on. 
@@ -31857,7 +32399,9 @@ declare class Entity {
     /**
      * Called if and when the entity should be drawn opaquely, based on the `Entity.GetRenderGroup` of the entity.
      * 
-     * See `ENT` and `RENDERGROUP` for more information. 
+     * See `ENT` and `RENDERGROUP` for more information.
+     * 
+     * See also `ENTITY.DrawTranslucent`. 
      * @param flags  The bit flags from `STUDIO` 
      */
     public Draw(flags: STUDIO): void;
@@ -31902,7 +32446,7 @@ declare class Entity {
     public DropToFloor(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets up a self.dt.NAME alias for a Data Table variable.
      * 
@@ -31917,30 +32461,33 @@ declare class Entity {
     /**
      * Plays a sound on an entity. If run clientside, the sound will only be heard locally.
      * 
-     * If used on a player or NPC character with the mouth rigged, the character will "lip-sync". ( Does not work with all sounds )
+     * If used on a player or NPC character with the mouth rigged, the character will "lip-sync". This does not work with all sound files.
+     * 
+     * It is recommended to use sound scripts ( see `sound.Add` ) over direct file paths. This will allow you to use `Entity.StopSound` to stop the played sound scripts.
      * 
      * **Note:**
-     * >You can only override the volume and pitch if you use the filename, not the sound script/manifest name.
-     * 
-     * **Note:**
-     * >It is recommended to use sound scripts ( see `sound.Add` ) over direct file paths. This will allow you to use `Entity.StopSound` to stop the played sound scripts.
+     * >When using this function with weapons, use the `Weapon` itself as the entity, not its owner!
      * 
      * **Bug [#2651](https://github.com/Facepunch/garrysmod-issues/issues/2651):**
      * >This does not respond to `SuppressHostEvents`. 
      * @param soundName  The name of the sound to be played.
-     * **Note:**
-     * >Ensure this string has no whitespace at the start or end (you can use string.Trim), or else you'll get an error. 
-     * @param soundLevel [=75] A modifier for the distance this sound will reach, acceptable range is 0 to 511. 100 means no adjustment to the level. See `SNDLVL` 
+     * **Warning:**
+     * >The string will cannot have whitespace at the start or end. You can remove this with `string.Trim`. 
+     * @param soundLevel [=75] A modifier for the distance this sound will reach, acceptable range is 0 to 511. 100 means no adjustment to the level. See `SNDLVL`
+     * 
+     * Will not work if a [https://developer.valvesoftware.com/wiki/Soundscripts sound script] is used. 
      * @param pitchPercent [=100] The pitch applied to the sound. The acceptable range is from 0 to 255. 100 means the pitch is not changed. 
      * @param volume [=1] The volume, from 0 to 1. 
-     * @param channel [=CHAN_AUTO] The sound channel , see `CHAN`
-     * **Note:**
-     * >For weapons, the default is CHAN_WEAPON. 
+     * @param channel [=CHAN_AUTO, CHAN_WEAPON for weapons] The sound channel, see `CHAN`.
+     * 
+     * Will not work if a [https://developer.valvesoftware.com/wiki/Soundscripts sound script] is used. 
      */
     public EmitSound(soundName: string, soundLevel?: SNDLVL, pitchPercent?: number, volume?: number, channel?: CHAN): void;
     
     /**
-     * Toggles the constraints of this ragdoll entity on and off. 
+     * Toggles the constraints of this ragdoll entity on and off.
+     * 
+     * {{NextUpdate|Disabling constraints will delete the constraint entities.}} 
      * @param toggleConstraints  Set to true to enable the constraints and false to disable them. 
      */
     public EnableConstraints(toggleConstraints: boolean): void;
@@ -32021,8 +32568,8 @@ declare class Entity {
     public EyeAngles(): Angle;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the position of an Player/NPC's view, or two vectors for ragdolls (one for each eye) 
      * @returns [View position of the entity.
      * This will be be position of the first eye for ragdoll., For a ragdoll, this is the position of the second eye.] 
@@ -32083,8 +32630,12 @@ declare class Entity {
      * Makes an entity follow another entity's bone.
      * 
      * Internally this function calls `Entity.SetParent`( parent, boneid ) and `Entity.AddEffects`( EF_FOLLOWBONE ).
+     * 
      * **Note:**
-     * >If the entity vibrates, you probably need to run `Entity.SetPredictable`( false ) clientside. 
+     * >If the entity vibrates, you probably need to run `Entity.SetPredictable`( false ) clientside.
+     * 
+     * **Warning:**
+     * >This function will not work if the target bone's parent bone is invalid or if the bone is not used by VERTEX LOD0 
      * @param boneid  The bone to follow 
      */
     public FollowBone(boneid: number): void;
@@ -32093,8 +32644,12 @@ declare class Entity {
      * Makes an entity follow another entity's bone.
      * 
      * Internally this function calls `Entity.SetParent`( parent, boneid ) and `Entity.AddEffects`( EF_FOLLOWBONE ).
+     * 
      * **Note:**
-     * >If the entity vibrates, you probably need to run `Entity.SetPredictable`( false ) clientside. 
+     * >If the entity vibrates, you probably need to run `Entity.SetPredictable`( false ) clientside.
+     * 
+     * **Warning:**
+     * >This function will not work if the target bone's parent bone is invalid or if the bone is not used by VERTEX LOD0 
      * @param parent [=NULL] The entity to follow the bone of. If unset, removes the FollowBone effect. 
      * @param boneid [=] The bone to follow 
      */
@@ -32279,8 +32834,8 @@ declare class Entity {
     public GetBoneParent(bone: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the position and angle of the given attachment, relative to the world.
      * 
      * **Bug [#884](https://github.com/Facepunch/garrysmod-issues/issues/884):**
@@ -32294,8 +32849,8 @@ declare class Entity {
     public GetBonePosition(boneIndex: number): [Vector, Angle];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns info about given plane of non-nodraw brush model surfaces of the entity's model. Works on worldspawn as well. 
      * @param id  The index of the plane to get info of. Starts from 0. 
      * @returns [The origin of the plane.
@@ -32348,8 +32903,8 @@ declare class Entity {
     public GetClass(): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an entity's collision bounding box. In most cases, this will return the same bounding box as `Entity.GetModelBounds` unless the entity does not have a physics mesh or it has a `PhysObj` different from the default.
      * 
      * **Bug [#223](https://github.com/Facepunch/garrysmod-issues/issues/223):**
@@ -32365,22 +32920,25 @@ declare class Entity {
     public GetCollisionGroup(): COLLISION_GROUP;
     
     /**
-     * Returns the color the entity is set to. 
+     * Returns the color the entity is set to.
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable. 
      * @returns The color of the entity as a `Color`. 
      */
     public GetColor(): Color;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the two entities involved in a constraint ent, or nil if the entity is not a constraint. 
      * @returns [ent1, ent2] 
      */
     public GetConstrainedEntities(): [Entity, Entity];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the two entities physobjects involved in a constraint ent, or no value if the entity is not a constraint. 
      * @returns [phys1, phys2] 
      */
@@ -32417,7 +32975,7 @@ declare class Entity {
     public GetCycle(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32429,7 +32987,7 @@ declare class Entity {
     public GetDTAngle(key: number): Angle;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32441,7 +32999,7 @@ declare class Entity {
     public GetDTBool(key: number): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32453,7 +33011,7 @@ declare class Entity {
     public GetDTEntity(key: number): Entity;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32465,7 +33023,7 @@ declare class Entity {
     public GetDTFloat(key: number): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32477,7 +33035,7 @@ declare class Entity {
     public GetDTInt(key: number): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32489,7 +33047,7 @@ declare class Entity {
     public GetDTString(key: number): string;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -32525,8 +33083,8 @@ declare class Entity {
     public GetFlags(): FL;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns acceptable value range for the flex. 
      * @param flex  The ID of the flex to look up bounds of 
      * @returns [The minimum value for this flex, The maximum value for this flex] 
@@ -32604,20 +33162,22 @@ declare class Entity {
     public GetHitboxBone(): void;
     
     /**
-     * Gets the bone of a hit box 
-     * @param hitbox  The number of the hit box 
-     * @param group  The number of the hit box group 
-     * @returns The number of the bone 
+     * Gets the bone the hit box is attached to. 
+     * @param hitbox  The number of the hit box. 
+     * @param group  The number of the hit box group. This should be 0 in most cases.
+     * 
+     * Numbering for these groups start from 0. The total group count can be found with `Entity.GetHitBoxGroupCount`. 
+     * @returns The number of the bone. Will be nil if the hit box index was out of range. 
      */
     public GetHitBoxBone(hitbox: number, group: number): number;
     
     /**
-     * !TupleReturn
-    
-     * Gets the bounding box of a hit box 
-     * @param hitbox  The number of the hitbox 
-     * @param group  The group of the hitbox 
-     * @returns [hit box mins, hit box maxs] 
+     * @tupleReturn
+     *
+     * Gets the bounds (min and max corners) of a hit box. 
+     * @param hitbox  The number of the hit box. 
+     * @param group  The group of the hit box. This should be 0 in most cases. 
+     * @returns [Hit box mins. Will be nil if the hit box index was out of range., Hit box maxs. Will be nil if the hit box index was out of range.] 
      */
     public GetHitBoxBounds(hitbox: number, group: number): [Vector, Vector];
     
@@ -32635,8 +33195,8 @@ declare class Entity {
     public GetHitBoxGroupCount(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns entity's current hit box set 
      * @returns [The current hit box set id, or no value if the entity doesn't have hit boxes, The current hit box set name, or no value if the entity doesn't have hit boxes] 
      */
@@ -32656,9 +33216,7 @@ declare class Entity {
      * See `Entity.GetSaveTable` for a more detailed explanation.
      * 
      * **Bug [#2552](https://github.com/Facepunch/garrysmod-issues/issues/2552):**
-     * >This is missing prediction fields and most of the datatable clientside.
-     * 
-     * {{NextUpdate|This now supports "DEFINE_FIELD"s and supports all the same keys as `Entity.GetSaveTable`.}} 
+     * >This is missing prediction fields and most of the datatable clientside. 
      * @param VariableName  Name of variable corresponding to an entity save value. 
      * @returns The internal variable value 
      */
@@ -32801,15 +33359,15 @@ declare class Entity {
     public GetModel(): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the entity's model bounds. This is different than the collision bounds/hull. This is not scaled with `Entity.SetModelScale`, and will return the model's original, unmodified mins and maxs. 
      * @returns [The minimum vector of the bounds, The maximum vector of the bounds] 
      */
     public GetModelBounds(): [Vector, Vector];
     
     /**
-     * Gets the physics bone count of the entity's model. 
+     * Gets the physics bone count of the entity's model. This is only applicable to ragdoll models and only to "anim" type [[Scripted Entities]]. 
      * @returns How many physics bones exist on the model. 
      */
     public GetModelPhysBoneCount(): number;
@@ -32821,8 +33379,8 @@ declare class Entity {
     public GetModelRadius(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * {{Validate}}
      * Returns the entity's model render bounds. By default this will return the same bounds as `Entity.GetModelBounds`. 
      * @returns [The minimum vector of the bounds, The maximum vector of the bounds] 
@@ -32947,6 +33505,7 @@ declare class Entity {
      * >You should be using `Entity.GetNWVarProxy` instead.
      * 
      * Returns callback function for given NWVar of this entity.
+     * 
      * **Note:**
      * >Currently this function only works for the NW2Var system (accessed by adding a 2 in between Networked and Var for most NetworkedVar functions), which will replace the original one at some point in the future 
      * @param name  The name of the NWVar to get callback of. 
@@ -33056,6 +33615,7 @@ declare class Entity {
     
     /**
      * Returns callback function for given NWVar of this entity.
+     * 
      * **Note:**
      * >Currently this function only works for the NW2Var system (accessed by adding a 2 in between NW and Var for most NWVar functions), which will replace the original one at some point in the future 
      * @param key  The key of the NWVar to get callback of. 
@@ -33174,8 +33734,8 @@ declare class Entity {
     public GetPoseParameterName(id: number): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns pose parameter range 
      * @param id  Pose parameter ID to look up 
      * @returns [The minimum value, The maximum value] 
@@ -33210,8 +33770,8 @@ declare class Entity {
     public GetRenderAngles(): Angle;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns render bounds of the entity. Can be overridden by `Entity.SetRenderBounds`.
      * 
      * If the render bounds are not inside players view, the entity will not be drawn! 
@@ -33259,8 +33819,8 @@ declare class Entity {
     public GetRight(): Vector;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the min and max of the entity's axis-aligned bounding box. 
      * @param min  Minimum extent of the bounding box. 
      * @param max  Maximum extent of the bounding box. 
@@ -33318,7 +33878,7 @@ declare class Entity {
      * >This is missing prediction fields and most of the datatable clientside. 
      * @returns A table containing all save values in key/value format.
      * 
-     * {{NextUpdate|The value may be a sequential table (starting with 1) if the field in question is an array in engine.}} 
+     * The value may be a sequential table (starting with 1) if the field in question is an array in engine. 
      */
     public GetSaveTable(): table;
     
@@ -33376,8 +33936,8 @@ declare class Entity {
     public GetSequenceMoveDist(sequenceId: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the delta movement and angles of a sequence of the entity's model. 
      * @param sequenceId  The sequence index. See `Entity.GetSequenceName`. 
      * @param startCycle  The sequence start cycle. 0 is the start of the animation, 1 is the end. 
@@ -33531,8 +34091,6 @@ declare class Entity {
     public GetWorkshopID(): number;
     
     /**
-     * {{NextUpdate}}
-     * 
      * Returns the position and angle of the entity as a 3x4 matrix (`VMatrix` is 4x4 so the fourth row goes unused). The first three columns store the angle as a [https://en.wikipedia.org/wiki/Rotation_matrix rotation matrix], and the fourth column stores the position vector.
      * 
      * **Bug [#2764](https://github.com/Facepunch/garrysmod-issues/issues/2764):**
@@ -33699,7 +34257,8 @@ declare class Entity {
     public Input(input: string, activator: Entity, inflictor: Entity, param?: any): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Sets up Data Tables from entity to use with `Entity.NetworkVar`. 
      */
     public InstallDataTable(): void;
@@ -33942,8 +34501,8 @@ declare class Entity {
     public LookupBone(boneName: string): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns sequence ID from its name. 
      * @param name  Sequence name 
      * @returns [Sequence ID for that name. This "will" differ for models with same sequence names. Will be -1 whether the sequence is invalid., The sequence duration
@@ -33977,14 +34536,12 @@ declare class Entity {
     public ManipulateBoneAngles(boneID: number, ang: Angle): void;
     
     /**
-     * Manipulates the bone's jiggle value(s).
-     * 
-     * {{Validate|Working example required}} 
+     * Manipulates the bone's jiggle value(s). 
      * @param boneID  Index of the bone you want to manipulate. 
-     * @param amount  0 = No Jiggle
+     * @param enabled  0 = No Jiggle
      * 1 = Jiggle 
      */
-    public ManipulateBoneJiggle(boneID: number, amount: number): void;
+    public ManipulateBoneJiggle(boneID: number, enabled: number): void;
     
     /**
      * Sets custom bone offsets. 
@@ -34276,7 +34833,7 @@ declare class Entity {
      * >If successful, this function will automatically call `Entity.SetSolid`( solidType ) and `Entity.SetSolidFlags`( 0 ).
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param solidType  The solid type of the physics object to create, see `SOLID`. Should be SOLID_VPHYSICS in most cases.
      * 
      * **Note:**
@@ -34295,7 +34852,7 @@ declare class Entity {
      * >This function will automatically destroy any previous physics objects if successful and call `Entity.SetSolid`( SOLID_BBOX ), `Entity.SetMoveType`( MOVETYPE_VPHYSICS ), and `Entity.SetCollisionBounds`( mins, maxs ).
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param mins  The minimum position of the box. This is automatically ordered with the maxs. 
      * @param maxs  The maximum position of the box. This is automatically ordered with the mins. 
      * @returns Returns true on success, nil otherwise. This fails when the game cannot create any more `PhysCollide`s. 
@@ -34311,7 +34868,7 @@ declare class Entity {
      * >This will crash if given all `Vector`(0,0,0)s.
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param points  A table of eight `Vector`s, in local coordinates, to be used in the computation of the convex mesh. Order does not matter. 
      * @returns Returns true on success, nil otherwise. 
      */
@@ -34323,7 +34880,7 @@ declare class Entity {
      * If successful, the previous physics object will be removed.
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param vertices  A table consisting of tables of `Vector`s. Each sub-table defines a set of points to be used in the computation of one convex mesh. 
      * @returns Returns true on success, nil otherwise 
      */
@@ -34335,7 +34892,7 @@ declare class Entity {
      * A physics shadow can be used to have static entities that never move by setting both arguments to false.
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param allowPhysicsMovement [=true] Whether to allow the physics shadow to move under stress. 
      * @param allowPhysicsRotation [=true] Whether to allow the physics shadow to rotate under stress. 
      * @returns Return true on success, nil otherwise. 
@@ -34349,7 +34906,7 @@ declare class Entity {
      * >This function will automatically destroy any previous physics objects and call `Entity.SetSolid`( SOLID_BBOX ) and `Entity.SetMoveType`( MOVETYPE_VPHYSICS ).
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param radius  The radius of the sphere. 
      * @param physmat  Physical material from [https://github.com/Facepunch/garrysmod/blob/master/garrysmod/scripts/surfaceproperties.txt surfaceproperties.txt] or added with `physenv.AddSurfaceData`. 
      * @returns Returns true on success, false otherwise 
@@ -34367,15 +34924,15 @@ declare class Entity {
      * >This function will automatically call `Entity.SetSolid`( solidType ).
      * 
      * **Bug:**
-     * >Clientside physics objects are broken and do not move properly. Physics objects should only created on the server or you will experience incorrect physgun beam position and prediction issues. 
+     * >Clientside physics objects are broken and do not move properly in some cases. Physics objects should only created on the server or you will experience incorrect physgun beam position, prediction issues, and other unexpected behavior. 
      * @param solidType  The solid type of the physics object to create, see `SOLID`. Should be SOLID_VPHYSICS in most cases. 
      * @returns Returns true on success, false otherwise. This will fail if the entity's current model has no associated physics mesh. 
      */
     public PhysicsInitStatic(solidType: SOLID): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Called from the Entity's motion controller to simulate physics.
      * 
      * This will only be called after using `Entity.StartMotionController` on a scripted entity of "anim" type.
@@ -34435,7 +34992,8 @@ declare class Entity {
      * **Bug [#1408](https://github.com/Facepunch/garrysmod-issues/issues/1408):**
      * >This will be nil for invalid players. 
      * @param ent  The entity itself. Same as 'self'. 
-     * @param createdEntities  All entities that are within the placed dupe. **Note:**
+     * @param createdEntities  All entities that are within the placed dupe. 
+     * **Note:**
      * >The keys of each value in this table are the original entity indexes when the duplication was created. This can be utilized to restore entity references that don't get saved in duplications. 
      */
     public PostEntityPaste(ply: Player, ent: Entity, createdEntities: table): void;
@@ -34801,7 +35359,10 @@ declare class Entity {
     public SetCollisionBoundsWS(vec1: Vector, vec2: Vector): void;
     
     /**
-     * Sets the entity's collision group. 
+     * Sets the entity's collision group.
+     * 
+     * **Bug [#3656](https://github.com/Facepunch/garrysmod-issues/issues/3656):**
+     * >This doesn't work on players. 
      * @param group  Collision group of the entity, see `COLLISION_GROUP` 
      */
     public SetCollisionGroup(group: COLLISION_GROUP): void;
@@ -34834,7 +35395,7 @@ declare class Entity {
     public SetCycle(value: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34845,7 +35406,7 @@ declare class Entity {
     public SetDTAngle(key: number, ang: Angle): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34856,7 +35417,7 @@ declare class Entity {
     public SetDTBool(key: number, bool: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34867,7 +35428,7 @@ declare class Entity {
     public SetDTEntity(key: number, ent: Entity): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34878,7 +35439,7 @@ declare class Entity {
     public SetDTFloat(key: number, float: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34889,7 +35450,7 @@ declare class Entity {
     public SetDTInt(key: number, integer: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34903,7 +35464,7 @@ declare class Entity {
     public SetDTString(key: number, str: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This is called internally by the `Entity.NetworkVar` system, you can use this in cases where using NetworkVar is not possible.
      * 
@@ -34943,10 +35504,7 @@ declare class Entity {
     public SetFlexScale(scale: number): void;
     
     /**
-     * Sets the flex weight.
-     * 
-     * **Bug [#1779](https://github.com/Facepunch/garrysmod-issues/issues/1779):**
-     * >This does not work on `ClientsideModel`s or `ClientsideRagdoll`s. 
+     * Sets the flex weight. 
      * @param flex  The ID of the flex to modify weight of 
      * @param weight  The new weight to set 
      */
@@ -34965,7 +35523,10 @@ declare class Entity {
     public SetFriction(friction: number): void;
     
     /**
-     * Sets the gravity multiplier of the entity. 
+     * Sets the gravity multiplier of the entity.
+     * 
+     * **Bug [#3648](https://github.com/Facepunch/garrysmod-issues/issues/3648):**
+     * >This function is not predicted. 
      * @param gravityMultiplier  Value which specifies the gravity multiplier. 
      */
     public SetGravity(gravityMultiplier: number): void;
@@ -34986,8 +35547,10 @@ declare class Entity {
     public SetHealth(newHealth: number): void;
     
     /**
-     * Sets the current Hitbox Set for the entity. 
-     * @param id  The new hitbox set to set. Can be a name as a `string`, or the ID as a `number`. 
+     * Sets the current Hitbox set for the entity. 
+     * @param id  The new hitbox set to set. Can be a name as a `string`, or the ID as a `number`.
+     * 
+     * If the operation failed, the function will silently fail. 
      */
     public SetHitboxSet(id: number): void;
     
@@ -35229,8 +35792,8 @@ declare class Entity {
     public SetName(mappingName: string): void;
     
     /**
-     * Alters networked entity angles. 
-     * @param angle 
+     * Alters the entity's perceived serverside angle on the client. 
+     * @param angle  Networked angle. 
      */
     public SetNetworkAngles(angle: Angle): void;
     
@@ -35338,6 +35901,7 @@ declare class Entity {
      * >You should be using `Entity.SetNWVarProxy` instead.
      * 
      * Sets callback function to be called when given NWVar changes.
+     * 
      * **Note:**
      * >Currently this function only works for the NW2Var system (accessed by adding a 2 in between Networked and Var for most NetworkedVar functions), which will replace the original one at some point in the future 
      * @param name  The name of the NWVar to add callback for. 
@@ -35467,6 +36031,7 @@ declare class Entity {
     
     /**
      * Sets a function to be called when the NWVar changes.
+     * 
      * **Note:**
      * >Currently this function only works for the NW2Var system (accessed by adding a 2 in between NW and Var for most NWVar functions), which will replace the original one at some point in the future 
      * @param key  The key of the NWVar to add callback for. 
@@ -35502,8 +36067,11 @@ declare class Entity {
     /**
      * Sets the parent of this entity, making it move with its parent.
      * 
-     * **Bug [#3466](https://github.com/Facepunch/garrysmod-issues/issues/3466):**
-     * >Parented entities do not interact with physics and have glitchy player collision. 
+     * **Note:**
+     * >This does not work on [[game/GetWorld|the world]].
+     * 
+     * **Warning:**
+     * >This can cause undefined physics behaviour when used on entities that don't support parenting. See the [https://developer.valvesoftware.com/wiki/Entity_Hierarchy_(parenting) Valve developer wiki] for more information. 
      * @param parent [=NULL] The entity to parent to. Setting this to nil will clear the parent. 
      * @param attachmentId [=-1] The attachment id to use when parenting, defaults to -1 or whatever the parent had set previously.
      * 
@@ -35714,7 +36282,7 @@ declare class Entity {
      * >This will not work properly if called directly after calling `Entity.SetModel`. Consider waiting until the next Tick.
      * 
      * **Note:**
-     * >Will not work on players due to the animations being reset every frame by the base gamemode animation system. See `GM.CalcMainActivity`. 
+     * >Will not work on players due to the animations being reset every frame by the base gamemode animation system in `GM.CalcMainActivity`. For Players, use in `GM.UpdateAnimation` instead. 
      * @param sequenceId  The sequence to play. Also accepts strings.
      * 
      * **Note:**
@@ -35852,10 +36420,13 @@ declare class Entity {
     public SetVar(key: any, value: any): void;
     
     /**
-     * Sets the entity's velocity.
+     * Sets the entity's velocity. For entities with physics, consider using `PhysObj.SetVelocity` on the `PhysObj` of the entity.
      * 
      * **Note:**
-     * >Actually binds to CBaseEntity::SetBaseVelocity() which sets the entity's velocity due to forces applied by other entities. 
+     * >Actually binds to CBaseEntity::SetBaseVelocity() which sets the entity's velocity due to forces applied by other entities.
+     * 
+     * **Warning:**
+     * >If applied to a player, this will actually "ADD" velocity, not set it. 
      * @param velocity  The new velocity to set. 
      */
     public SetVelocity(velocity: Vector): void;
@@ -36039,7 +36610,7 @@ declare class Entity {
     public StoreOutput(name: string, info: string): void;
     
     /**
-     * Applies the specified amount of damage to the entity. 
+     * Applies the specified amount of damage to the entity with [[Enums/DMG|DMG_GENERIC]] flag. 
      * @param damageAmount  The amount of damage to be applied. 
      * @param attacker  The entity that initiated the attack that caused the damage. 
      * @param inflictor  The entity that applied the damage, eg. a weapon. 
@@ -36193,13 +36764,21 @@ declare class Entity {
     public ViewModelIndex(): number;
     
     /**
-     * Returns true if the provided entity is visible from the passed entity.
+     * Returns whether the target/given entity is visible from the this entity.
      * 
-     * This is achieved similarly to a trace. 
-     * @param Entity  Entity to check for visibility to. 
+     * This is meant to be used only with NPCs.
+     * 
+     * Differences from a simple trace include:
+     * * If target has "FL_NOTARGET", returns false
+     * * If "ai_ignoreplayers" is turned on and target is a player, returns false
+     * * Reacts to "ai_LOS_mode":
+     * ** If 1, does a simple trace with "COLLISION_GROUP_NONE" and "MASK_BLOCKLOS"
+     * ** If not, does a trace with "MASK_BLOCKLOS_AND_NPCS" ( - "CONTENTS_BLOCKLOS" is target is player ) and a custom LOS filter ( "CTraceFilterLOS" )
+     * * Returns true if hits a vehicle the target is driving 
+     * @param target  Entity to check for visibility to. 
      * @returns If the entities can see each other. 
      */
-    public Visible(Entity: Entity): boolean;
+    public Visible(target: Entity): boolean;
     
     /**
      * Returns true if supplied vector is visible from the entity's line of sight.
@@ -36247,8 +36826,8 @@ declare class Entity {
     public Weapon_TranslateActivity(act: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns two vectors representing the minimum and maximum extent of the entity's bounding box. 
      * @returns [The minimum vector for the entity's bounding box., The maximum vector for the entity's bounding box.] 
      */
@@ -36502,8 +37081,8 @@ declare namespace file {
     function Exists(name: string, path: string): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns a list of files and directories inside a single folder.
      * 
      * **Bug [#3437](https://github.com/Facepunch/garrysmod-issues/issues/3437):**
@@ -36773,19 +37352,25 @@ declare class File {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A panel used by Sandbox's Finger Poser tool. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class fingerposer extends ContextBase {
 
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A panel used by Sandbox's Finger Poser tool. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class FingerVar extends Panel {
 
 }
@@ -36793,7 +37378,9 @@ declare class FingerVar extends Panel {
 /**
  * A window that in which you can place just about every other component and even another frame. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create("Frame")
  * frame:SetSize( ScrW()*0.25, ScrH()*0.25 )
@@ -36812,28 +37399,28 @@ declare class Frame extends Panel {
  */
 declare namespace frame_blend {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Adds a frame to the blend. Calls `frame_blend.CompleteFrame` once enough frames have passed since last `frame_blend.CompleteFrame` call. 
      */
     function AddFrame(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Blends the frame(s). 
      */
     function BlendFrame(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Renders the frame onto internal render target. 
      */
     function CompleteFrame(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Actually draws the frame blend effect. 
      */
@@ -36846,7 +37433,7 @@ declare namespace frame_blend {
     function IsActive(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Validate}}
      * 
@@ -36856,7 +37443,8 @@ declare namespace frame_blend {
     function IsLastFrame(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * {{Validate}}
      * 
      * Returns amount of frames needed to render? 
@@ -36893,7 +37481,10 @@ declare namespace game {
     function AddAmmoType(ammoData: AmmoData): void;
     
     /**
-     * Registers a new decal. 
+     * Registers a new decal.
+     * 
+     * **Warning:**
+     * >There's a rather low limit of around 256 for decals that may be registered and they are not cleared on map load. 
      * @param decalName  The name of the decal. 
      * @param materialName  The material to be used for the decal. May also be a list of material names, in which case a random material from that list will be chosen every time the decal is placed. 
      */
@@ -36909,7 +37500,7 @@ declare namespace game {
     function AddParticles(particleFileName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by the engine to retrieve the ammo types. 
      * @returns All ammo types registered via `game.AddAmmoType`, sorted by its name value. 
@@ -36927,7 +37518,10 @@ declare namespace game {
      * >Calling this in a `ENTITY.StartTouch` or `ENTITY.Touch` hook will crash the game.
      * 
      * **Bug [#2874](https://github.com/Facepunch/garrysmod-issues/issues/2874):**
-     * >Calling this destroys all BASS streams. 
+     * >Calling this destroys all BASS streams.
+     * 
+     * **Bug [#3637](https://github.com/Facepunch/garrysmod-issues/issues/3637):**
+     * >This can crash when removing _firesmoke entities. 
      * @param dontSendToClients [=false] If set to true, don't run this functions on all clients. 
      * @param ExtraFilters [={}] Entity classes not to reset during cleanup. 
      */
@@ -37029,6 +37623,7 @@ declare namespace game {
     
     /**
      * Returns the public IP address and port of the current server. This will return the IP/port that you are connecting through when ran clientside.
+     * 
      * **Note:**
      * >Returns "0.0.0.0:0" in singleplayer.
      * 
@@ -37116,8 +37711,8 @@ declare namespace game {
     function MaxPlayers(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Mounts a GMA addon from the disk. Any error models currently loaded that the mounted addon provides will be reloaded.
      * 
      * Can be used with `steamworks.Download` 
@@ -37171,7 +37766,7 @@ declare namespace game {
     /**
      * Sets the time scale of the game.
      * 
-     * This function is supposed to remove the need of using the host_timescale convar, which is cheat public.
+     * This function is supposed to remove the need of using the host_timescale convar, which is cheat protected.
      * 
      * To slow down or speed up the movement of a specific player, use `Player.SetLaggedMovementValue` instead.
      * 
@@ -37224,7 +37819,8 @@ declare namespace gamemode {
     function Call(name: string, ...args: (any)[]): any;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  This returns the internally stored gamemode table. 
      * @param name  The name of the gamemode you want to get 
      * @returns The gamemode's table 
@@ -37232,7 +37828,8 @@ declare namespace gamemode {
     function Get(name: string): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Called by the engine when a gamemode is being loaded. 
      * @param gm  Your GM table 
      * @param name  Name of your gamemode, lowercase, no spaces. 
@@ -37291,8 +37888,8 @@ declare class Gamemode {
     public AllowPlayerPickup(ply: Player, ent: Entity): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * This hook is used to calculate animations for a player.
      * 
      * **Warning:**
@@ -37330,8 +37927,8 @@ declare class Gamemode {
     public CalcView(ply: Player, origin: Vector, angles: Angle, fov: number, znear: number, zfar: number): CamData;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Allows overriding the position and angle of the viewmodel. 
      * @param wep  The weapon entity 
      * @param vm  The viewmodel entity 
@@ -37424,8 +38021,8 @@ declare class Gamemode {
     public ChatTextChanged(text: string): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Called when a non local player connects to allow the Lua system to check the password.
      * 
      * The default behaviour in the base gamemodes emulates what would normally happen. If sv_password is set and its value matches the password passed in by the client - then they are allowed to join. If it isn't set it lets them in too. 
@@ -37494,9 +38091,13 @@ declare class Gamemode {
     /**
      * Handles the player's death.
      * 
-     * `Player.Alive` returns true when this is called and the player will be considered dead right after this hook.
+     * This hook is "not" called if the player is killed by `Player.KillSilent`. See `GM.PlayerSilentDeath` for that.
      * 
-     * See `GM.PostPlayerDeath` for a hook in which the player is 100% dead. See also `GM.PlayerDeath`. 
+     * * `GM.PlayerDeath` is called after this hook
+     * * `GM.PostPlayerDeath` is called after that
+     * 
+     * **Note:**
+     * >`Player.Alive` returns true when this is called 
      * @param ply  The player 
      * @param attacker  The entity that killed the player 
      * @param dmg  Damage info 
@@ -37669,8 +38270,8 @@ declare class Gamemode {
     public GetGameDescription(): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Allows you to modify the Source Engine's motion blur shaders. 
      * @param horizontal  The amount of horizontal blur. 
      * @param vertical  The amount of vertical  blur. 
@@ -38158,9 +38759,8 @@ declare class Gamemode {
     
     /**
      * Called when a player presses the "+menu" bind on their keyboard, which is bound to Q by default. 
-     * @returns Allow the player to open the spawn menu or not. 
      */
-    public OnSpawnMenuOpen(): boolean;
+    public OnSpawnMenuOpen(): void;
     
     /**
      * Called when a `DTextEntry` gets focus.
@@ -38256,8 +38856,8 @@ declare class Gamemode {
     public PlayerButtonUp(ply: Player, button: BUTTON_CODE): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Decides whether a player can hear another player using voice chat. 
      * @param listener  The listening player. 
      * @param talker  The talking player. 
@@ -38316,13 +38916,12 @@ declare class Gamemode {
     public PlayerConnect(name: string, ip: string): void;
     
     /**
-     * Called when a player is killed by `Player.Kill` or any other normal means, except for when the player is killed with `Player.KillSilent`.
+     * Called when a player is killed by `Player.Kill` or any other normal means.
      * 
-     * See `GM.PostPlayerDeath` for a hook in which the player is 100% dead.
+     * This hook is "not" called if the player is killed by `Player.KillSilent`. See `GM.PlayerSilentDeath` for that.
      * 
-     * See `GM.PlayerSilentDeath` for a hook that handles player deaths caused by `Player.KillSilent`.
-     * 
-     * See `GM.DoPlayerDeath` for a hook where player is still considered alive and is about to die.
+     * * `GM.DoPlayerDeath` is called "before" this hook.
+     * * `GM.PostPlayerDeath` is called "after" this hook.
      * 
      * See `Player.LastHitGroup` if you need to get the last hit hitgroup of the player.
      * 
@@ -38428,6 +39027,8 @@ declare class Gamemode {
     /**
      * Called when the player spawns for the first time.
      * 
+     * See `GM.PlayerSpawn` for a hook called every player spawn.
+     * 
      * **Note:**
      * >This hook is called before the player has fully loaded, when the player is still in seeing the "Sending Client Info" screen. For example, trying to use the `Entity.GetModel` function will return the default model ("player/default.mdl") 
      * @param player  The player who spawned. 
@@ -38520,6 +39121,7 @@ declare class Gamemode {
     
     /**
      * Called whenever a player spawns and must choose a model. A good place to assign a model to a player.
+     * 
      * **Note:**
      * >This function may not work in your custom gamemode if you have overridden your `GM.PlayerSpawn` and you do not use self.BaseClass.PlayerSpawn or `hook.Call`. 
      * @param ply  The player being chosen 
@@ -38556,7 +39158,11 @@ declare class Gamemode {
     public PlayerSilentDeath(ply: Player): void;
     
     /**
-     * Called whenever a player spawns, including respawns. See the [[Game_Events|player_spawn gameevent]] for a shared version of this hook.
+     * Called whenever a player spawns, including respawns.
+     * 
+     * See `GM.PlayerInitialSpawn` for a hook called only the first time a player spawns.
+     * 
+     * See the [[Game_Events|player_spawn gameevent]] for a shared version of this hook.
      * 
      * **Warning:**
      * >By default, in "base" derived gamemodes, this hook will also call `GM.PlayerLoadout` and `GM.PlayerSetModel`, which may override your `Entity.SetModel` and `Player.Give` calls. Consider using the other hooks or a 0-second timer. 
@@ -38753,9 +39359,12 @@ declare class Gamemode {
     public PostGamemodeLoaded(): void;
     
     /**
-     * Called right after `GM.DoPlayerDeath` and `GM.PlayerSilentDeath`.
+     * Called right after `GM.DoPlayerDeath`, `GM.PlayerDeath` and `GM.PlayerSilentDeath`.
      * 
-     * The player is considered dead when this is hook is called, `Player.Alive` will return false. 
+     * This hook will be called for all deaths, including `Player.KillSilent`
+     * 
+     * **Note:**
+     * >The player is considered dead when this is hook is called, `Player.Alive` will return false. 
      * @param ply  The player 
      */
     public PostPlayerDeath(ply: Player): void;
@@ -38842,8 +39451,9 @@ declare class Gamemode {
      * Called before the sky box is drawn.
      * 
      * {{RenderingContext|Hook|3D}} 
+     * @returns Return true to disable skybox drawing (both 2D and 3D skybox) 
      */
-    public PreDrawSkyBox(): void;
+    public PreDrawSkyBox(): boolean;
     
     /**
      * Called before all the translucent entities are drawn.
@@ -39146,11 +39756,11 @@ declare class Gamemode {
     
     /**
      * Animation updates (pose params etc) should be done here. 
-     * @param ply  The player 
-     * @param velocity  Players velocity 
-     * @param maxSeqGroundSpeed  Velocity, at which animation will play at normal speed ( Playback Rate = 1 ) 
+     * @param ply  The player to update the animation info for. 
+     * @param velocity  The player's velocity. 
+     * @param maxSeqGroundSpeed  Speed of the animation - used for playback rate scaling. 
      */
-    public UpdateAnimation(ply: Player, velocity: number, maxSeqGroundSpeed: number): void;
+    public UpdateAnimation(ply: Player, velocity: Vector, maxSeqGroundSpeed: number): void;
     
     /**
      * Called when a variable is edited on an Entity (called by Edit Properties... menu) 
@@ -39260,7 +39870,7 @@ declare class Gamemode {
     public WorkshopStart(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by the engine when the game initially fetches subscriptions to be displayed on the bottom of the main menu screen. 
      * @param num  Amount of subscribed addons that have info retrieved. 
@@ -39297,7 +39907,8 @@ declare namespace Global {
     function AddBackgroundImage(path: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Tells the engine to register a console command. If the command was ran, the engine calls `concommand.Run`. 
      * @param name  The name of the console command to add. 
      * @param helpText  The help text. 
@@ -39374,12 +39985,17 @@ declare namespace Global {
     function AngleRand(): Angle;
     
     /**
+     * @tupleReturn
+     *
      * If the result of the first argument is false or nil, an error is thrown with the second argument as the message. 
      * @param expression  The expression to assert. 
-     * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. 
-     * @returns If successful, returns the result of the first argument. 
+     * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. This is only type-checked if the assertion fails. 
+     * @param returns  Any arguments past the error message will be returned by a successful assert. 
+     * @returns [If successful, returns the first argument., If successful, returns the error message. This will be nil if the second argument wasn't specified.
+     * 
+     * Since the second argument is only type-checked if the assertion fails, this doesn't have to be a string., Returns any arguments past the error message.] 
      */
-    function assert(expression: any, errorMessage?: string): any;
+    function assert(expression: any, errorMessage?: string, ...returns: (any)[]): [any, any, any];
     
     /**
      * Sends the specified Lua code to all connected clients and executes it. 
@@ -39398,7 +40014,7 @@ declare namespace Global {
     function BuildNetworkedVarsTable(): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to check if the current server the player is on can be added to favorites or not. Does not check if the server is ALREADY in the favorites. 
      * @returns 
@@ -39519,8 +40135,8 @@ declare namespace Global {
     function ColorRand(a?: boolean): Color;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Converts a `Color` into HSV color space. 
      * @param color  The `Color`. 
      * @returns [The hue in degrees., The saturation in the range 0-1., The value in the range 0-1.] 
@@ -39535,8 +40151,8 @@ declare namespace Global {
     function CompileFile(path: string): Function;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * This function will compile the code argument as lua code and return a function that will execute that code. 
      * 
      * Please note that this function will not automatically execute the given code after compiling it. 
@@ -39565,7 +40181,7 @@ declare namespace Global {
      * Makes a clientside-only console variable
      * 
      * **Note:**
-     * >This function is a wrapper of `CreateConVar`, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when "shouldsave" and "userdata" are true, respectively.
+     * >This function is a wrapper of `CreateConVar`, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when "shouldsave" and "userinfo" are true, respectively.
      * 
      * Although this function is shared, it should only be used clientside. 
      * @param name  Name of the ConVar to be created and able to be accessed.
@@ -39573,11 +40189,11 @@ declare namespace Global {
      * This cannot be a name of existing console command or console variable. It will silently fail if it is. 
      * @param defaultVal  Default value of the ConVar. 
      * @param shouldsave [=true] Should the ConVar be saved across sessions 
-     * @param userdata [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using `Player.GetInfoNum` and similar functions. 
+     * @param userinfo [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using `Player.GetInfoNum` and similar functions. 
      * @param helptext [=""] Help text to display in the console. 
      * @returns Created convar. 
      */
-    function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userdata?: boolean, helptext?: string): ConVar;
+    function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userinfo?: boolean, helptext?: string): ConVar;
     
     /**
      * Creates a console variable (`ConVar`), in general these are for things like gamemode/server settings. 
@@ -39850,7 +40466,7 @@ declare namespace Global {
     /**
      * A hacky method used to fix some bugs regarding DoF.
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * {{Stub}} 
      * @param enable  Enables or disables depth-of-field mode 
@@ -39858,7 +40474,8 @@ declare namespace Global {
     function DOFModeHack(enable: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Draws the currently active main menu background image and handles transitioning between background images.
      * 
      * This is called by default in the menu panel's Paint hook. 
@@ -39944,8 +40561,11 @@ declare namespace Global {
     function DropEntityIfHeld(ent: Entity): void;
     
     /**
-     * Creates or replaces a dynamic light with the given id. 
-     * @param index  Usually an entity index is used here. 
+     * Creates or replaces a dynamic light with the given id.
+     * 
+     * **Note:**
+     * >Only 32 lights can be active at once. 
+     * @param index  An unsigned Integer. Usually an [[Entity/EntIndex|entity index]] is used here. 
      * @returns A DynamicLight structured table. See `DynamicLight` 
      */
     function DynamicLight(index: number): DynamicLight;
@@ -39971,7 +40591,8 @@ declare namespace Global {
     /**
      * Plays a sentence from scripts/sentences.txt
      * 
-     * Seems to work only on serverside. 
+     * **Bug:**
+     * >FIXED IN NEXT UPDATE: Seems to work only on serverside. 
      * @param soundName  The sound to play 
      * @param position  The position to play at 
      * @param entity  The entity to emit the sound from. Must be `Entity.EntIndex` 
@@ -39987,13 +40608,16 @@ declare namespace Global {
      * Emits the specified sound at the specified position.
      * 
      * **Bug:**
-     * >This only works clientside.
+     * >Sounds must be precached serverside manually before they can be played. util.PrecacheSound does not work for this purpose, Entity.EmitSound does the trick
      * 
      * **Bug:**
-     * >This does not work with soundscripts. 
+     * >This does not work with soundscripts. TODO: Is this a bug or intended? 
      * @param soundName  The sound to play 
      * @param position  The position to play at 
-     * @param entity  The entity to emit the sound from. Must be `Entity.EntIndex` 
+     * @param entity  The entity to emit the sound from. Can be an `Entity.EntIndex` or one of the following:
+     * * 0 - Plays sound on the world (Position set to 0,0,0)
+     * * -1 - Plays sound on the local player (on server acts as 0)
+     * * -2 - Plays UI sound (Position set to 0,0,0, no spatial sound,on server acts as 0) 
      * @param channel [=CHAN_AUTO] The sound channel, see `CHAN`. 
      * @param volume [=1] The volume of the sound, from 0 to 1 
      * @param soundLevel [=75] The sound level of the sound, see `SNDLVL` 
@@ -40080,8 +40704,8 @@ declare namespace Global {
     function FindMetaTable(metaName: string): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself 
      * @param panel  Panel to find tool-tip of 
      * @returns [tool-tip text, tool-tip panel, panel that the function was called with] 
@@ -40141,7 +40765,8 @@ declare namespace Global {
     function GetConVar(name: string): ConVar;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Gets the ConVar with the specified name. This function doesn't cache the convar. 
      * @param name  Name of the ConVar to get 
      * @returns The ConVar object 
@@ -40376,21 +41001,22 @@ declare namespace Global {
     function HTTP(parameters: HTTPRequest): boolean;
     
     /**
-     * Executes a Lua script either relative to the current file, or absolute(relative to the /lua/ folder).
+     * Executes a Lua script.
      * 
      * **Note:**
      * >Addon files (.gma files) do not support relative parent folders (''..'' notation).
      * 
      * **Warning:**
-     * >Files over a certain size may fail to be included.
-     * 
-     * {{Warning|The file you are attempting to include MUST NOT be empty or the include will fail.}}
+     * >The file you are attempting to include MUST NOT be empty or the include will fail. Files over a certain size may fail as well.
      * 
      * {{Warning|If the file you are including is clientside or shared, it "must" be `AddCSLuaFile`'d or this function will error saying the file doesn't exist.}}
      * 
      * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
      * >`pcall`ing this function will break autorefresh. 
-     * @param fileName  The name of the script to be executed. 
+     * @param fileName  The name of the script to be executed. The path must be either relative to the current file, or be an absolute path (relative to and excluding the lua/ folder).
+     * 
+     * **Note:**
+     * >Please make sure your file names are unique, the filesystem is shared across all addons, so a file named "lua/config.lua" in your addon may be overwritten by the same file in another addon. 
      * @returns Anything that the executed Lua script returns. 
      */
     function include(fileName: string): any;
@@ -40407,8 +41033,8 @@ declare namespace Global {
     function IncludeCS(filename: string): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an iterator function for a for loop, to return ordered key-value pairs from a table.
      * 
      * This will only iterate though "numerical" keys, and these must also be "sequential"; starting at 1 with no gaps.
@@ -40689,7 +41315,8 @@ declare namespace Global {
     function LerpVector(fraction: number, from: Vector, to: Vector): Vector;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * This function is used to get the last map and category to which the map belongs from the cookie saved with `SaveLastMap`. 
      */
     function LoadLastMap(): void;
@@ -40716,8 +41343,8 @@ declare namespace Global {
     function LocalPlayer(): Player;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Translates the specified position and angle from the specified local coordinate system into worldspace coordinates.
      * 
      * If you're working with an entity's local vectors, use `Entity.LocalToWorld` and/or `Entity.LocalToWorldAngles` instead.
@@ -40732,8 +41359,8 @@ declare namespace Global {
     function LocalToWorld(localPos: Vector, localAng: Angle, originPos: Vector, originAngle: Angle): [Vector, Angle];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Either returns the material with the given name, or loads the material interpreting the first argument as the path.
      * 
      * **Note:**
@@ -40830,8 +41457,8 @@ declare namespace Global {
     function newproxy(addMetatable?: boolean): userdata;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the next key and value pair in a table.
      * 
      * **Note:**
@@ -40856,7 +41483,8 @@ declare namespace Global {
     function NumModelSkins(modelName: string): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by the engine when a model has been loaded. Caches model information with the {{Lib|sql}}. 
      * @param modelName  Name of the model. 
      * @param numPostParams  Number of pose parameters the model has. 
@@ -40869,7 +41497,10 @@ declare namespace Global {
     function OnModelLoaded(modelName: string, numPostParams: number, numSeq: number, numAttachments: number, numBoneControllers: number, numSkins: number, size: number): void;
     
     /**
-     * Opens a folder with the given name in the garrysmod folder using the operating system's file browser. Currently broken on OS X and Linux. 
+     * Opens a folder with the given name in the garrysmod folder using the operating system's file browser.
+     * 
+     * **Bug [#1532](https://github.com/Facepunch/garrysmod-issues/issues/1532):**
+     * >Currently broken on macOS and Linux. 
      * @param folder  The subdirectory to open in the garrysmod folder. 
      */
     function OpenFolder(folder: string): void;
@@ -40885,8 +41516,8 @@ declare namespace Global {
     function OrderVectors(vector1: Vector, vector2: Vector): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an iterator function(`next`) for a for loop that will return the values of the specified table in an arbitrary order.
      * 
      * For alphabetical "key" order use `SortedPairs`.
@@ -40950,8 +41581,8 @@ declare namespace Global {
     function Path(type: string): PathFollower;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Calls a function and catches an error that can be thrown while the execution of the call.
      * 
      * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
@@ -41051,7 +41682,7 @@ declare namespace Global {
      * @param func  Function to run 
      * @returns Were there any errors or not 
      */
-    function publicCall(func: Function): boolean;
+    function ProtectedCall(func: Function): boolean;
     
     /**
      * Returns an iterator function that can be used to loop through a table in random order 
@@ -41111,7 +41742,7 @@ declare namespace Global {
     function RecipientFilter(): CRecipientFilter;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Adds a frame to the currently recording demo. 
      */
@@ -41225,6 +41856,7 @@ declare namespace Global {
     
     /**
      * Evaluates and executes the given code, will throw an error on failure.
+     * 
      * **Note:**
      * >Local variables are not passed to the given code. 
      * @param code  The code to execute. 
@@ -41256,7 +41888,7 @@ declare namespace Global {
     function SafeRemoveEntityDelayed(entity: Entity, delay: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This function is used to save the last map and category to which the map belongs as a [[:Category:cookie|cookie]]. 
      * @param map  The name of the map. 
@@ -41415,8 +42047,8 @@ declare namespace Global {
     function SetPhysConstraintSystem(constraintSystem: Entity): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * This function can be used in a for loop instead of `pairs`. It sorts all "keys" alphabetically.
      * 
      * For sorting by specific "value member", use `SortedPairsByMemberValue`.
@@ -41429,8 +42061,8 @@ declare namespace Global {
     function SortedPairs(table: table, desc?: boolean): [Function, table];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an iterator function that can be used to loop through a table in order of member values, when the values of the table are also tables and contain that member.
      * 
      * To sort by "value", use `SortedPairsByValue`.
@@ -41444,8 +42076,8 @@ declare namespace Global {
     function SortedPairsByMemberValue(table: table, memberKey: any, descending?: boolean): [Function, table];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns an iterator function that can be used to loop through a table in order of its "values".
      * 
      * To sort by specific "value member", use `SortedPairsByMemberValue`.
@@ -41584,7 +42216,7 @@ declare namespace Global {
     /**
      * **Deprecated!**
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
      * @param filename  File name to test 
@@ -41709,7 +42341,8 @@ declare namespace Global {
     function VisualizeLayout(panel: Panel): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Returns a new WorkshopFileBase element 
      * @param namespace  Namespace for the file base 
      * @param requiredTags  Tags required for a Workshop submission to be interacted with by the filebase 
@@ -41718,8 +42351,8 @@ declare namespace Global {
     function WorkshopFileBase(namespace: string, requiredTags: table): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Translates the specified position and angle into the specified coordinate system. 
      * @param position  The position that should be translated from the current to the new system. 
      * @param angle  The angles that should be translated from the current to the new system. 
@@ -41730,8 +42363,8 @@ declare namespace Global {
     function WorldToLocal(position: Vector, angle: Angle, newSystemOrigin: Vector, newSystemAngles: Angle): [Vector, Angle];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Attempts to call the first function. If the execution succeeds, this returns ''true'' followed by the returns of the function. If execution fails, this returns ''false'' and the second function is called with the error message. 
      * 
      * Unlike in `pcall`, the stack is not unwound and can therefore be used for stack analyses with the {{Lib|debug}}.
@@ -41781,7 +42414,8 @@ declare function Add_NPC_Class(name: string): void;
 declare function AddBackgroundImage(path: string): void;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Tells the engine to register a console command. If the command was ran, the engine calls `concommand.Run`. 
  * @param name  The name of the console command to add. 
  * @param helpText  The help text. 
@@ -41844,12 +42478,17 @@ declare function AddWorldTip(entindex?: number, text?: string, dieTime?: number,
 declare function AngleRand(): Angle;
 
 /**
+ * @tupleReturn
+ *
  * If the result of the first argument is false or nil, an error is thrown with the second argument as the message. 
  * @param expression  The expression to assert. 
- * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. 
- * @returns If successful, returns the result of the first argument. 
+ * @param errorMessage [="assertion failed!"] The error message to throw when assertion fails. This is only type-checked if the assertion fails. 
+ * @param returns  Any arguments past the error message will be returned by a successful assert. 
+ * @returns [If successful, returns the first argument., If successful, returns the error message. This will be nil if the second argument wasn't specified.
+ * 
+ * Since the second argument is only type-checked if the assertion fails, this doesn't have to be a string., Returns any arguments past the error message.] 
  */
-declare function assert(expression: any, errorMessage?: string): any;
+declare function assert(expression: any, errorMessage?: string, ...returns: (any)[]): [any, any, any];
 
 /**
  * Sends the specified Lua code to all connected clients and executes it. 
@@ -41868,7 +42507,7 @@ declare function BroadcastLua(code: string): void;
 declare function BuildNetworkedVarsTable(): table;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * Used internally to check if the current server the player is on can be added to favorites or not. Does not check if the server is ALREADY in the favorites. 
  * @returns 
@@ -41989,8 +42628,8 @@ declare function ColorAlpha(color: Color, alpha: number): Color;
 declare function ColorRand(a?: boolean): Color;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Converts a `Color` into HSV color space. 
  * @param color  The `Color`. 
  * @returns [The hue in degrees., The saturation in the range 0-1., The value in the range 0-1.] 
@@ -42005,8 +42644,8 @@ declare function ColorToHSV(color: Color): [number, number, number];
 declare function CompileFile(path: string): Function;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * This function will compile the code argument as lua code and return a function that will execute that code. 
  * 
  * Please note that this function will not automatically execute the given code after compiling it. 
@@ -42035,7 +42674,7 @@ declare function ConVarExists(name: string): ConVar;
  * Makes a clientside-only console variable
  * 
  * **Note:**
- * >This function is a wrapper of `CreateConVar`, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when "shouldsave" and "userdata" are true, respectively.
+ * >This function is a wrapper of `CreateConVar`, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when "shouldsave" and "userinfo" are true, respectively.
  * 
  * Although this function is shared, it should only be used clientside. 
  * @param name  Name of the ConVar to be created and able to be accessed.
@@ -42043,11 +42682,11 @@ declare function ConVarExists(name: string): ConVar;
  * This cannot be a name of existing console command or console variable. It will silently fail if it is. 
  * @param defaultVal  Default value of the ConVar. 
  * @param shouldsave [=true] Should the ConVar be saved across sessions 
- * @param userdata [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using `Player.GetInfoNum` and similar functions. 
+ * @param userinfo [=false] Should the ConVar and its containing data be sent to the server when it has changed. This make the convar accessible from server using `Player.GetInfoNum` and similar functions. 
  * @param helptext [=""] Help text to display in the console. 
  * @returns Created convar. 
  */
-declare function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userdata?: boolean, helptext?: string): ConVar;
+declare function CreateClientConVar(name: string, defaultVal: string, shouldsave?: boolean, userinfo?: boolean, helptext?: string): ConVar;
 
 /**
  * Creates a console variable (`ConVar`), in general these are for things like gamemode/server settings. 
@@ -42273,7 +42912,7 @@ declare function DOF_Start(): void;
 /**
  * A hacky method used to fix some bugs regarding DoF.
  * 
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * {{Stub}} 
  * @param enable  Enables or disables depth-of-field mode 
@@ -42281,7 +42920,8 @@ declare function DOF_Start(): void;
 declare function DOFModeHack(enable: boolean): void;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  *  Draws the currently active main menu background image and handles transitioning between background images.
  * 
  * This is called by default in the menu panel's Paint hook. 
@@ -42367,8 +43007,11 @@ declare function DrawToyTown(Passes: number, Height: number): void;
 declare function DropEntityIfHeld(ent: Entity): void;
 
 /**
- * Creates or replaces a dynamic light with the given id. 
- * @param index  Usually an entity index is used here. 
+ * Creates or replaces a dynamic light with the given id.
+ * 
+ * **Note:**
+ * >Only 32 lights can be active at once. 
+ * @param index  An unsigned Integer. Usually an [[Entity/EntIndex|entity index]] is used here. 
  * @returns A DynamicLight structured table. See `DynamicLight` 
  */
 declare function DynamicLight(index: number): DynamicLight;
@@ -42394,7 +43037,8 @@ declare function Either(condition: any, truevar: any, falsevar: any): any;
 /**
  * Plays a sentence from scripts/sentences.txt
  * 
- * Seems to work only on serverside. 
+ * **Bug:**
+ * >FIXED IN NEXT UPDATE: Seems to work only on serverside. 
  * @param soundName  The sound to play 
  * @param position  The position to play at 
  * @param entity  The entity to emit the sound from. Must be `Entity.EntIndex` 
@@ -42410,13 +43054,16 @@ declare function EmitSentence(soundName: string, position: Vector, entity: numbe
  * Emits the specified sound at the specified position.
  * 
  * **Bug:**
- * >This only works clientside.
+ * >Sounds must be precached serverside manually before they can be played. util.PrecacheSound does not work for this purpose, Entity.EmitSound does the trick
  * 
  * **Bug:**
- * >This does not work with soundscripts. 
+ * >This does not work with soundscripts. TODO: Is this a bug or intended? 
  * @param soundName  The sound to play 
  * @param position  The position to play at 
- * @param entity  The entity to emit the sound from. Must be `Entity.EntIndex` 
+ * @param entity  The entity to emit the sound from. Can be an `Entity.EntIndex` or one of the following:
+ * * 0 - Plays sound on the world (Position set to 0,0,0)
+ * * -1 - Plays sound on the local player (on server acts as 0)
+ * * -2 - Plays UI sound (Position set to 0,0,0, no spatial sound,on server acts as 0) 
  * @param channel [=CHAN_AUTO] The sound channel, see `CHAN`. 
  * @param volume [=1] The volume of the sound, from 0 to 1 
  * @param soundLevel [=75] The sound level of the sound, see `SNDLVL` 
@@ -42491,8 +43138,8 @@ declare function EyeVector(): Vector;
 declare function FindMetaTable(metaName: string): table;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself 
  * @param panel  Panel to find tool-tip of 
  * @returns [tool-tip text, tool-tip panel, panel that the function was called with] 
@@ -42552,7 +43199,8 @@ declare function gcinfo(): number;
 declare function GetConVar(name: string): ConVar;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Gets the ConVar with the specified name. This function doesn't cache the convar. 
  * @param name  Name of the ConVar to get 
  * @returns The ConVar object 
@@ -42787,21 +43435,22 @@ declare function HSVToColor(hue: number, saturation: number, value: number): Col
 declare function HTTP(parameters: HTTPRequest): boolean;
 
 /**
- * Executes a Lua script either relative to the current file, or absolute(relative to the /lua/ folder).
+ * Executes a Lua script.
  * 
  * **Note:**
  * >Addon files (.gma files) do not support relative parent folders (''..'' notation).
  * 
  * **Warning:**
- * >Files over a certain size may fail to be included.
- * 
- * {{Warning|The file you are attempting to include MUST NOT be empty or the include will fail.}}
+ * >The file you are attempting to include MUST NOT be empty or the include will fail. Files over a certain size may fail as well.
  * 
  * {{Warning|If the file you are including is clientside or shared, it "must" be `AddCSLuaFile`'d or this function will error saying the file doesn't exist.}}
  * 
  * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
  * >`pcall`ing this function will break autorefresh. 
- * @param fileName  The name of the script to be executed. 
+ * @param fileName  The name of the script to be executed. The path must be either relative to the current file, or be an absolute path (relative to and excluding the lua/ folder).
+ * 
+ * **Note:**
+ * >Please make sure your file names are unique, the filesystem is shared across all addons, so a file named "lua/config.lua" in your addon may be overwritten by the same file in another addon. 
  * @returns Anything that the executed Lua script returns. 
  */
 declare function include(fileName: string): any;
@@ -42818,8 +43467,8 @@ declare function include(fileName: string): any;
 declare function IncludeCS(filename: string): void;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns an iterator function for a for loop, to return ordered key-value pairs from a table.
  * 
  * This will only iterate though "numerical" keys, and these must also be "sequential"; starting at 1 with no gaps.
@@ -43092,7 +43741,8 @@ declare function LerpAngle(ratio: number, angleStart: Angle, angleEnd: Angle): A
 declare function LerpVector(fraction: number, from: Vector, to: Vector): Vector;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * This function is used to get the last map and category to which the map belongs from the cookie saved with `SaveLastMap`. 
  */
 declare function LoadLastMap(): void;
@@ -43119,8 +43769,8 @@ declare function Localize(localisationToken: string, defaultVal: string): void;
 declare function LocalPlayer(): Player;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Translates the specified position and angle from the specified local coordinate system into worldspace coordinates.
  * 
  * If you're working with an entity's local vectors, use `Entity.LocalToWorld` and/or `Entity.LocalToWorldAngles` instead.
@@ -43199,8 +43849,8 @@ declare function NamedColor(name: string): Color;
 declare function newproxy(addMetatable?: boolean): userdata;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns the next key and value pair in a table.
  * 
  * **Note:**
@@ -43225,7 +43875,8 @@ declare function NumDownloadables(): number;
 declare function NumModelSkins(modelName: string): number;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  *  Called by the engine when a model has been loaded. Caches model information with the {{Lib|sql}}. 
  * @param modelName  Name of the model. 
  * @param numPostParams  Number of pose parameters the model has. 
@@ -43238,7 +43889,10 @@ declare function NumModelSkins(modelName: string): number;
 declare function OnModelLoaded(modelName: string, numPostParams: number, numSeq: number, numAttachments: number, numBoneControllers: number, numSkins: number, size: number): void;
 
 /**
- * Opens a folder with the given name in the garrysmod folder using the operating system's file browser. Currently broken on OS X and Linux. 
+ * Opens a folder with the given name in the garrysmod folder using the operating system's file browser.
+ * 
+ * **Bug [#1532](https://github.com/Facepunch/garrysmod-issues/issues/1532):**
+ * >Currently broken on macOS and Linux. 
  * @param folder  The subdirectory to open in the garrysmod folder. 
  */
 declare function OpenFolder(folder: string): void;
@@ -43254,8 +43908,8 @@ declare function OpenFolder(folder: string): void;
 declare function OrderVectors(vector1: Vector, vector2: Vector): void;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns an iterator function(`next`) for a for loop that will return the values of the specified table in an arbitrary order.
  * 
  * For alphabetical "key" order use `SortedPairs`.
@@ -43319,8 +43973,8 @@ declare function ParticleEmitter(position: Vector, use3D: boolean): CLuaEmitter;
 declare function Path(type: string): PathFollower;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Calls a function and catches an error that can be thrown while the execution of the call.
  * 
  * **Bug [#1976](https://github.com/Facepunch/garrysmod-issues/issues/1976):**
@@ -43403,7 +44057,7 @@ declare function PrintTable(tableToPrint: table, indent?: number, done?: table):
  * @param func  Function to run 
  * @returns Were there any errors or not 
  */
-declare function publicCall(func: Function): boolean;
+declare function ProtectedCall(func: Function): boolean;
 
 /**
  * Returns an iterator function that can be used to loop through a table in random order 
@@ -43463,7 +44117,7 @@ declare function RealTime(): number;
 declare function RecipientFilter(): CRecipientFilter;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * Adds a frame to the currently recording demo. 
  */
@@ -43577,6 +44231,7 @@ declare function RunGameUICommand(command: string): void;
 
 /**
  * Evaluates and executes the given code, will throw an error on failure.
+ * 
  * **Note:**
  * >Local variables are not passed to the given code. 
  * @param code  The code to execute. 
@@ -43608,7 +44263,7 @@ declare function SafeRemoveEntity(ent: Entity): void;
 declare function SafeRemoveEntityDelayed(entity: Entity, delay: number): void;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * This function is used to save the last map and category to which the map belongs as a [[:Category:cookie|cookie]]. 
  * @param map  The name of the map. 
@@ -43767,8 +44422,8 @@ declare function setmetatable(Tab: table, Metatable: table): table;
 declare function SetPhysConstraintSystem(constraintSystem: Entity): void;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * This function can be used in a for loop instead of `pairs`. It sorts all "keys" alphabetically.
  * 
  * For sorting by specific "value member", use `SortedPairsByMemberValue`.
@@ -43781,8 +44436,8 @@ declare function SetPhysConstraintSystem(constraintSystem: Entity): void;
 declare function SortedPairs(table: table, desc?: boolean): [Function, table];
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns an iterator function that can be used to loop through a table in order of member values, when the values of the table are also tables and contain that member.
  * 
  * To sort by "value", use `SortedPairsByValue`.
@@ -43796,8 +44451,8 @@ declare function SortedPairs(table: table, desc?: boolean): [Function, table];
 declare function SortedPairsByMemberValue(table: table, memberKey: any, descending?: boolean): [Function, table];
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Returns an iterator function that can be used to loop through a table in order of its "values".
  * 
  * To sort by specific "value member", use `SortedPairsByMemberValue`.
@@ -43936,7 +44591,7 @@ declare function tostring(value: any): string;
 /**
  * **Deprecated!**
  * 
- * **INTERNAL**
+ * **[INTERNAL]**
  * 
  * Returns "Lua Cache File" if the given file name is in a certain string table, nothing otherwise. 
  * @param filename  File name to test 
@@ -44047,7 +44702,8 @@ declare function VGUIRect(x: number, y: number, w: number, h: number): DShape;
 declare function VisualizeLayout(panel: Panel): void;
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Returns a new WorkshopFileBase element 
  * @param namespace  Namespace for the file base 
  * @param requiredTags  Tags required for a Workshop submission to be interacted with by the filebase 
@@ -44056,8 +44712,8 @@ declare function VisualizeLayout(panel: Panel): void;
 declare function WorkshopFileBase(namespace: string, requiredTags: table): table;
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Translates the specified position and angle into the specified coordinate system. 
  * @param position  The position that should be translated from the current to the new system. 
  * @param angle  The angles that should be translated from the current to the new system. 
@@ -44068,8 +44724,8 @@ declare function WorkshopFileBase(namespace: string, requiredTags: table): table
 declare function WorldToLocal(position: Vector, angle: Angle, newSystemOrigin: Vector, newSystemAngles: Angle): [Vector, Angle];
 
 /**
- * !TupleReturn
-
+ * @tupleReturn
+ *
  * Attempts to call the first function. If the execution succeeds, this returns ''true'' followed by the returns of the function. If execution fails, this returns ''false'' and the second function is called with the error message. 
  * 
  * Unlike in `pcall`, the stack is not unwound and can therefore be used for stack analyses with the {{Lib|debug}}.
@@ -44238,8 +44894,8 @@ declare namespace gui {
     function IsGameUIVisible(): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the cursor's position on the screen 
      * @returns [mouseX, mouseY] 
      */
@@ -44311,15 +44967,11 @@ declare namespace GWEN {
      * @param bottom  Bottom width of border 
      * @param source [=nil] Texture of source image to create a bordered rectangle from. Uses SKIN.GwenTexture if not set. 
      * @returns The drawing function. Arguments are:
-     * `x: number` X coordinate for the box
-     * 
-     * `y: number` Y coordinate for the box
-     * 
-     * `w: number` Width of the box
-     * 
-     * `h: number` Height of the box
-     * 
-     * `clr: table` Optional color, default is white. Uses the `Color` 
+     * *`x: number` X coordinate for the box
+     * *`y: number` Y coordinate for the box
+     * *`w: number` Width of the box
+     * *`h: number` Height of the box
+     * *`clr: table` Optional color, default is white. Uses the `Color` 
      */
     function CreateTextureBorder(x: number, y: number, w: number, h: number, left: number, top: number, right: number, bottom: number, source?: IMaterial): Function;
     
@@ -44349,15 +45001,11 @@ declare namespace GWEN {
      * @param w  Width of the area on texture 
      * @param h  Height of the area on texture 
      * @returns The drawing function. Arguments are:
-     * `x: number` X coordinate for the box
-     * 
-     * `y: number` Y coordinate for the box
-     * 
-     * `w: number` Width of the box
-     * 
-     * `h: number` Height of the box
-     * 
-     * `clr: table` Optional color, default is white. Uses the `Color` 
+     * *`x: number` X coordinate for the box
+     * *`y: number` Y coordinate for the box
+     * *`w: number` Width of the box
+     * *`h: number` Height of the box
+     * *`clr: table` Optional color, default is white. Uses the `Color` 
      */
     function CreateTextureNormal(x: number, y: number, w: number, h: number): Function;
     
@@ -44375,7 +45023,9 @@ declare namespace GWEN {
  */
 declare namespace halo {
     /**
-     * Applies a "halo" glow effect to one or multiple entities. 
+     * Applies a "halo" glow effect to one or multiple entities.
+     * **Warning:**
+     * >Using this function outside of the PreDrawHalos hook can cause instability or crashes. 
      * @param entities  A table of entities to add the halo effect to 
      * @param color  The desired color of the halo. See `Color` 
      * @param blurX [=2] The strength of the halo's blur on the x axis. 
@@ -44387,7 +45037,8 @@ declare namespace halo {
     function Add(entities: table, color: Color, blurX?: number, blurY?: number, passes?: number, additive?: boolean, ignoreZ?: boolean): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Renders a halo according to the specified table, only used internally, called from a PostDrawEffects hook added by the halo library 
      * @param entry  Table with info about the halo to draw. 
      */
@@ -44627,7 +45278,7 @@ declare namespace hook {
      * If the identifier is a table/object, it will be inserted in front of the other arguments in the callback and the hook will be called as long as it's valid. However, as soon as IsValid( identifier ) returns false, the hook will be removed. 
      * @param func  see { @link GM#PreDrawSkyBox} 
      */
-    function Add(eventName: "PreDrawSkyBox", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
+    function Add(eventName: "PreDrawSkyBox", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -45875,7 +46526,7 @@ declare namespace hook {
      * If the identifier is a table/object, it will be inserted in front of the other arguments in the callback and the hook will be called as long as it's valid. However, as soon as IsValid( identifier ) returns false, the hook will be removed. 
      * @param func  see { @link GM#UpdateAnimation} 
      */
-    function Add(eventName: "UpdateAnimation", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: number, maxSeqGroundSpeed: number) => void): void;
+    function Add(eventName: "UpdateAnimation", identifier: string | table | Entity | Panel | number | boolean, func: (ply: Player, velocity: Vector, maxSeqGroundSpeed: number) => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -46907,7 +47558,7 @@ declare namespace hook {
      * If the identifier is a table/object, it will be inserted in front of the other arguments in the callback and the hook will be called as long as it's valid. However, as soon as IsValid( identifier ) returns false, the hook will be removed. 
      * @param func  see { @link GM#OnSpawnMenuOpen} 
      */
-    function Add(eventName: "OnSpawnMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void | boolean): void;
+    function Add(eventName: "OnSpawnMenuOpen", identifier: string | table | Entity | Panel | number | boolean, func: () => void): void;
     
     /**
      * Add a hook to be called upon the given event occurring. 
@@ -47683,7 +48334,9 @@ declare namespace hook {
  * * .mp3
  * * .swf 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * HTMLTest = vgui.Create( "HTML" )
  * HTMLTest:SetPos( 50, 50 )
@@ -47754,7 +48407,7 @@ declare class HTML extends Panel {
     public GoToHistoryOffset(offset: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -47763,7 +48416,7 @@ declare class HTML extends Panel {
     public NewObject(objectName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -47772,7 +48425,7 @@ declare class HTML extends Panel {
     public NewObject(objectName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -47782,7 +48435,7 @@ declare class HTML extends Panel {
     public NewObjectCallback(objectName: string, callbackName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -47841,6 +48494,7 @@ declare class HTML extends Panel {
     /**
      * Forcibly updates the panels' HTML Material, similar to when Paint is called on it.
      * This is only useful if the panel is not normally visible, i.e the panel exists purely for its HTML Material.
+     * 
      * **Note:**
      * >Only works on with panels that have a HTML Material. See `Panel.GetHTMLMaterial` for more details.
      * 
@@ -47854,6 +48508,7 @@ declare class HTML extends Panel {
     /**
      * Forcibly updates the panels' HTML Material, similar to when Paint is called on it.
      * This is only useful if the panel is not normally visible, i.e the panel exists purely for its HTML Material.
+     * 
      * **Note:**
      * >Only works on with panels that have a HTML Material. See `Panel.GetHTMLMaterial` for more details.
      * 
@@ -47906,7 +48561,9 @@ declare namespace http {
  * **Note:**
  * >This panel is only available in Sandbox and Sandbox derived gamemodes! 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" ) // Container for the SpawnIcon
  * frame:SetPos( 200, 200 )
@@ -47943,7 +48600,8 @@ declare class IconEditor extends DFrame {
     public BestGuessLayout(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Fills the `DListView` on the left of the editor with the model entity's animation list. Called by `IconEditor.Refresh`. 
      * @param ent  The entity being rendered within the model panel. 
      */
@@ -47985,7 +48643,8 @@ declare class IconEditor extends DFrame {
     public RightLayout(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Sets up the default ambient and directional lighting for the `DAdjustableModelPanel`. Called by `IconEditor.Refresh`. 
      */
     public SetDefaultLighting(): void;
@@ -48013,7 +48672,8 @@ declare class IconEditor extends DFrame {
     public SetIcon(path: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Updates the entity being rendered in the internal `DAdjustableModelPanel`. Called by the model panel's `DModelPanel.LayoutEntity` method. 
      * @param ent  The entity being rendered within the model panel. 
      */
@@ -48049,16 +48709,16 @@ declare class IGModAudioChannel {
     public FFT(tbl: table, size: FFT): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns 3D cone of the sound channel. See `IGModAudioChannel.Set3DCone`. 
      * @returns [The angle of the inside projection cone in degrees., The angle of the outside projection cone in degrees., The delta-volume outside the outer projection cone.] 
      */
     public Get3DCone(): [number, number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns 3D fade distances of a sound channel. 
      * @returns [The minimum distance. The channel's volume is at maximum when the listener is within this distance, The maximum distance. The channel's volume stops decreasing when the listener is beyond this distance] 
      */
@@ -48091,8 +48751,8 @@ declare class IGModAudioChannel {
     public GetLength(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the right and left levels of sound played by the sound channel. 
      * @returns [The left sound level. The value is between 0 and 1., The right sound level. The value is between 0 and 1.] 
      */
@@ -48237,7 +48897,9 @@ declare class IGModAudioChannel {
 
 /**
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ImageCheckBox extends Button {
 
 }
@@ -48247,7 +48909,9 @@ declare class ImageCheckBox extends Button {
  * 
  * It can be created with `Material` or `CreateMaterial`. 
  *
- * !CustomConstructor Material */
+ * @customConstructor Material
+ *
+ */
 declare class IMaterial {
     /**
      * Either returns the material with the given name, or loads the material interpreting the first argument as the path.
@@ -48269,7 +48933,10 @@ declare class IMaterial {
     /**
      * Returns the color of the specified pixel of the $basetexture, only works for materials created from PNG files.
      * 
-     * Basically identical to `ITexture.GetColor` used on `IMaterial.GetTexture`( "$basetexture" ). 
+     * Basically identical to `ITexture.GetColor` used on `IMaterial.GetTexture`( "$basetexture" ).
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable. 
      * @param x  The X coordinate. 
      * @param y  The Y coordinate. 
      * @returns The color of the pixel as a `Color`. 
@@ -48441,7 +49108,9 @@ declare class IMaterial {
  * **Bug [#2301](https://github.com/Facepunch/garrysmod-issues/issues/2301):**
  * >IMeshes only respond to one projected texture. 
  *
- * !CustomConstructor Mesh */
+ * @customConstructor Mesh
+ *
+ */
 declare class IMesh {
     /**
      * Returns a new mesh object. 
@@ -48477,17 +49146,15 @@ declare namespace input {
     function CheckKeyTrapping(): KEY;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the cursor's position on the screen 
      * @returns [mouseX, mouseY] 
      */
     function GetCursorPos(): [number, number];
     
     /**
-     * Gets the button code from a button name. This is opposite of `input.GetKeyName`.
-     * 
-     * {{NextUpdate}} 
+     * Gets the button code from a button name. This is opposite of `input.GetKeyName`. 
      * @param button  The internal button name, such as "e" or "shift". 
      * @returns The button code, see `BUTTON_CODE`. 
      */
@@ -48627,6 +49294,17 @@ declare namespace input {
      * @returns True if the mouse key was initially pressed the same frame that this function was called, false otherwise. 
      */
     function WasMousePressed(key: MOUSE): boolean;
+    
+    /**
+     * Returns whether a mouse key was released in the same frame this function was called.
+     * 
+     * This function only works in Move hooks, and will detect mouse events even in main menu or when a typing in a text field.
+     * 
+     * {{NextUpdate}} 
+     * @param key  The key to test, see `MOUSE` 
+     * @returns True if the mouse key was released the same frame that this function was called, false otherwise. 
+     */
+    function WasMouseReleased(key: MOUSE): boolean;
 }
 
 /**
@@ -48763,7 +49441,10 @@ declare class ITexture {
     public Download(): void;
     
     /**
-     * Returns the color of the specified pixel, only works for textures created from PNG files. 
+     * Returns the color of the specified pixel, only works for textures created from PNG files.
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable. 
      * @param x  The X coordinate. 
      * @param y  The Y coordinate. 
      * @returns The color of the pixel as a `Color`. 
@@ -48943,8 +49624,8 @@ declare namespace jit {
     function os(): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the status of the JIT compiler and the current optimizations enabled. 
      * @returns [Is JIT enabled, Strings for CPU-specific features and enabled optimizations] 
      */
@@ -49024,8 +49705,8 @@ declare namespace killicon {
     function Exists(classRef: string): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the size of a kill icon. 
      * @param name  Classname of the kill icon 
      * @returns [Width of the kill icon, Height of the kill icon] 
@@ -49036,7 +49717,9 @@ declare namespace killicon {
 /**
  * A basic label or "single line text area" that is non-editable. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "Frame" )
  * frame.Label1 = vgui.Create( "Label", frame )
@@ -49053,8 +49736,8 @@ declare namespace killicon {
  */
 declare class Label extends Panel {
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the content/children within a panel object.
      * 
      * Only works with `Label` derived panels by default such as `DLabel`.
@@ -49067,8 +49750,8 @@ declare class Label extends Panel {
     public GetContentSize(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the content/children within a panel object.
      * 
      * Only works with `Label` derived panels by default such as `DLabel`.
@@ -49081,8 +49764,8 @@ declare class Label extends Panel {
     public GetContentSize(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the left and top text margins of a text-based panel object, such as a `DButton` or `DLabel`. This is set with `Panel.SetTextInset`.
      * 
      * [[Category:Label]] 
@@ -49091,8 +49774,8 @@ declare class Label extends Panel {
     public GetTextInset(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the left and top text margins of a text-based panel object, such as a `DButton` or `DLabel`. This is set with `Panel.SetTextInset`.
      * 
      * [[Category:Label]] 
@@ -49101,8 +49784,8 @@ declare class Label extends Panel {
     public GetTextInset(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the text within a `Label` derived panel.
      * 
      * **Bug [#2576](https://github.com/Facepunch/garrysmod-issues/issues/2576):**
@@ -49114,8 +49797,8 @@ declare class Label extends Panel {
     public GetTextSize(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the text within a `Label` derived panel.
      * 
      * **Bug [#2576](https://github.com/Facepunch/garrysmod-issues/issues/2576):**
@@ -49267,7 +49950,7 @@ declare namespace language {
     /**
      * Retrieves the translated version of inputted string. Useful for concentrating multiple translated strings. 
      * @param phrase  The phrase to translate 
-     * @returns The translated phrase 
+     * @returns The translated phrase, or the input string if no translation was found 
      */
     function GetPhrase(phrase: string): string;
 }
@@ -49332,7 +50015,7 @@ declare namespace markup {
  */
 declare class MarkupObject {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Creates a new empty markupobject. Use `markup.Parse` instead of calling this. 
      * @returns The created object. 
@@ -49362,8 +50045,8 @@ declare class MarkupObject {
     public GetWidth(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets computed the width and height of the markupobject. 
      * @returns [The computed width., The computed height.] 
      */
@@ -49373,7 +50056,9 @@ declare class MarkupObject {
 /**
  * Material is a VGUI element that renders a VMT material. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * // Background panel
  * BGPanel = vgui.Create("DPanel")
@@ -49558,7 +50243,7 @@ declare namespace math {
     function BSplinePoint(tDiff: number, tPoints: Vector[], tMax: number): Vector;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Basic code for Bezier-Spline algorithm, helper function for `math.BSplinePoint`. 
      * @param i 
@@ -49664,8 +50349,8 @@ declare namespace math {
     function fmod(base: number, modulator: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * <!-- lua reference desctiption: Returns m and e such that x = m2e, e is an integer and the absolute value of m is in the range ((0.5, 1) (or zero when x is zero).  -->
      * Used to split the number value into a normalized fraction and an exponent. Two values are returned: the first is a multiplier in the range 1/2 (inclusive) to 1 (exclusive) and the second is an integer exponent.
      * 
@@ -49749,8 +50434,8 @@ declare namespace math {
     function mod(base: number, modulator: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the integral and fractional component of the modulo operation. 
      * @param base  The base value. 
      * @returns [The integral component., The fractional component.] 
@@ -49946,7 +50631,9 @@ declare namespace matproxy {
 /**
  * The panel used by Material & Lamp Sandbox tools for texture selection. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class MatSelect extends ContextBase {
 
 }
@@ -50111,10 +50798,13 @@ declare namespace mesh {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Panel used to display models, used by `SpawnIcon`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class ModelImage {
     /**
      * Causes a `SpawnIcon` to rebuild its model image.
@@ -50139,16 +50829,21 @@ declare class ModelImage {
     public RebuildSpawnIconEx(data: table): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.[[Category:SpawnIcon]] 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.
+     * 
+     * **Note:**
+     * >This must be called after setting size if you wish to use a different size spawnicon 
      * @param ModelPath  The path of the model to set 
      * @param skin [=0] The skin to set 
-     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup. "This make it impossible to set any body group to a value higher than 9!" 
+     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup, "up to 9 in total". 
      */
     public SetModel(ModelPath: string, skin?: number, bodygroups?: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the [[Silkicons|silkicon]] of a panel object such as a `SpawnIcon` and `ModelImage`. 
-     * @param icon  The [[Silkicons|silkicon]] to use. 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the .png image to be displayed on a  `SpawnIcon` or the panel it is based on `ModelImage`.
+     * 
+     * Only .png images can be used with this function. 
+     * @param icon  A path to the .png material, for example one of the [[Silkicons]] shipped with the game. 
      */
     public SetSpawnIcon(icon: string): void;
 }
@@ -50158,8 +50853,8 @@ declare class ModelImage {
  */
 declare namespace motionsensor {
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * @param translator 
      * @param player 
      * @param rotation 
@@ -50291,10 +50986,14 @@ declare namespace navmesh {
     function GetEditCursorPosition(): Vector;
     
     /**
-     * !TupleReturn
-    
-     * @param pos 
-     * @returns [The height, The normal] 
+     * @tupleReturn
+     *
+     * Finds the closest standable ground at, above, or below the provided position.
+     * 
+     * **Note:**
+     * >The ground must have at least 32 units of empty space above it to be considered by this function, unless 16 layers are tested without finding valid ground. 
+     * @param pos  Position to find the closest ground for. 
+     * @returns [The height of the ground layer., The normal of the ground layer.] 
      */
     function GetGroundHeight(pos: Vector): [number, Vector];
     
@@ -50417,21 +51116,19 @@ declare namespace navmesh {
 declare namespace net {
     /**
      * Sends the currently built net message to all connected players.
-     * More information can be found in [[Net Library Usage]].
-     * 
-     * **Bug [#3412](https://github.com/Facepunch/garrysmod-issues/issues/3412):**
-     * >Calling this too early causes the game to infinitely hang. You should wait until after `GM.InitPostEntity` to send a net message. 
+     * More information can be found in [[Net Library Usage]]. 
      */
     function Broadcast(): void;
     
     /**
      * Returns the size of the current message in bytes. 
-     * @returns bytes 
+     * @returns The amount of bytes written to the current net message.
+     * Returns nil if no net message has been started. 
      */
     function BytesWritten(): number;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Function called by the engine to tell the lua state a message arrived. 
      * @param length  The message length, in bits. 
@@ -50559,7 +51256,10 @@ declare namespace net {
     function ReadTable(): table;
     
     /**
-     * Reads a value from the net message with the specified type.
+     * **[INTERNAL]**
+     * 
+     * Reads a value from the net message with the specified type, written by `net.WriteType`.
+     * 
      * **Warning:**
      * >You "must" read information in same order as you write it. 
      * @param typeID [=net.ReadUInt(8)] The type of value to be read, using `TYPE`. 
@@ -50586,6 +51286,7 @@ declare namespace net {
     
     /**
      * Adds a net message handler. Only one receiver can be used to receive the net message.
+     * 
      * **Note:**
      * >The message-name is converted to lower-case so the message-names "''BigBlue''" and "''bigblue''" would be equal.
      * 
@@ -50632,15 +51333,12 @@ declare namespace net {
     function SendToServer(): void;
     
     /**
-     * Begins a new net message.
+     * Begins a new net message. If another net message is already started and hasn't been sent yet, it will be discarded.
      * 
      * **Warning:**
      * >Each net message has a length limit of 64KB!
      * 
-     * {{Warning|Don't forget to pool the messageName with `util.AddNetworkString`!}}
-     * 
-     * **Bug [#2220](https://github.com/Facepunch/garrysmod-issues/issues/2220):**
-     * >This will silently fail if another net message is already in progress. 
+     * {{Warning|The message name must be pooled with `util.AddNetworkString` beforehand!}} 
      * @param messageName  The name of the message to send 
      * @param unreliable [=false] If set to true, the message is not guaranteed to reach its destination 
      * @returns True if the message has been started. 
@@ -50870,8 +51568,13 @@ declare namespace net {
     function WriteTable(table: table): void;
     
     /**
-     * Appends any type of value to the current net message. 
-     * @param Data  The data to be sent. A UInt(8) indicating the type will automatically be written to the packet before the value, in order to facilitate reading with `net.ReadType`. 
+     * **[INTERNAL]**
+     * 
+     * Appends any type of value to the current net message.
+     * 
+     * **Note:**
+     * >An additional 8-bit unsigned integer indicating the type will automatically be written to the packet before the value, in order to facilitate reading with `net.ReadType`. If you know the data type you are writing, use a function meant for that specific data type to reduce amount of data sent. 
+     * @param Data  The data to be sent 
      */
     function WriteType(Data: any): void;
     
@@ -51737,7 +52440,7 @@ declare namespace os {
      * Returns the date/time as a formatted string or in a table. 
      * @param format  The format string.
      * 
-     * If this is equal to '*t' then this function will return a table, otherwise it will return a string.
+     * If this is equal to '*t' or '!*t' then this function will return a `DateData`, otherwise it will return a string.
      * 
      * If this starts with an '!', the returned data will use the UTC timezone rather than the local timezone.
      * 
@@ -51747,8 +52450,9 @@ declare namespace os {
      * >"Not all flags are available on all operating systems" and the result of using an invalid flag is undefined. This currently crashes the game on Windows. Most or all flags are available on OS X and Linux but considerably fewer are available on Windows. See http://msdn.microsoft.com/en-us/library/fe06s4ak.aspx for a list of available flags on Windows. Note that the "#" flags also crashes the game on Windows. 
      * @param time  Time to use for the format. 
      * @returns Formatted date
+     * 
      * **Note:**
-     * >This can be a table if the first argument equals to '*t'! 
+     * >This will be a `DateData` if the first argument equals to '*t' or '!*t' 
      */
     function date(format: string, time: number): string;
     
@@ -51827,7 +52531,9 @@ declare namespace package {
  * vgui.Register( "NewPanel", PANEL, "DLabel" )
  * ``` 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class Panel {
     /**
      * Called whenever a panel receives a command signal from one of its children.
@@ -51839,10 +52545,7 @@ declare class Panel {
     public ActionSignal(signalName: string, signalValue: string): void;
     
     /**
-     * Adds the specified object to the panel.
-     * 
-     * **Bug [#1482](https://github.com/Facepunch/garrysmod-issues/issues/1482):**
-     * >Creating a DFrame or a panel that inherits from DFrame will not drag/resize correctly when created through this function. 
+     * Adds the specified object to the panel. 
      * @param object  The panel to be added (parented). Can also be:
      * * `Class Name: string` creates panel with the specified name and adds it to the panel.
      * * `PANEL table: table` creates a panel from table and adds it to the panel. 
@@ -51903,7 +52606,8 @@ declare class Panel {
     public AnimationThink(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Performs the per-frame operations required for panel animations.
      * 
      * This is called every frame by `PANEL.AnimationThink`. 
@@ -51933,7 +52637,9 @@ declare class Panel {
     public ApplyGWEN(GWENTable: table): void;
     
     /**
-     * Called whenever the panel should apply its scheme(style). 
+     * Called whenever the panel should apply its scheme(style).
+     * 
+     * <!-- TODO: Specify when it is called --> 
      */
     public ApplySchemeSettings(): void;
     
@@ -51961,8 +52667,8 @@ declare class Panel {
     public ChildCount(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the width and height of the space between the position of the panel (upper-left corner) and the max bound of the children panels (farthest reaching lower-right corner). 
      * @returns [The children size width., The children size height.] 
      */
@@ -52054,8 +52760,8 @@ declare class Panel {
     public CopyWidth(base: Panel): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the cursor position relative to the top left of the panel.
      * 
      * This is equivalent to calling `gui.MousePos` and then `Panel.ScreenToLocal`.
@@ -52137,23 +52843,22 @@ declare class Panel {
     /**
      * Makes the panel "lock" the screen until it is removed. It will silently fail if used while cursor is not visible. Call `Panel.MakePopup` before calling this function.
      * 
-     * **Bug [#2015](https://github.com/Facepunch/garrysmod-issues/issues/2015):**
-     * >Fixed=
-     * 
      * **Bug [#3457](https://github.com/Facepunch/garrysmod-issues/issues/3457):**
      * >You can still click in the world even if locked. 
      */
     public DoModal(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by `Panel.DragMouseRelease` when a user clicks one mouse button whilst dragging with another. 
      * @returns Always returns ''true''. 
      */
     public DragClick(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by `dragndrop.HoverThink` to perform actions on an object that is dragged and hovered over another. 
      * @param HoverTime  If this time is greater than 0.1, `Panel.DragHoverClick`, passing it as an argument. 
      */
@@ -52168,7 +52873,8 @@ declare class Panel {
     public DragHoverClick(hoverTime: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to end a drag and hover action. This resets the panel's `PANEL.PaintOver` method, and is primarily used by `dragndrop.StopDragging`. 
      */
     public DragHoverEnd(): void;
@@ -52187,7 +52893,8 @@ declare class Panel {
     public DragMouseRelease(mouseCode: MOUSE): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called to draw the drop target when an object is being dragged across another. See `Panel.SetDropTarget`. 
      * @param x  The x coordinate of the top-left corner of the drop area. 
      * @param y  The y coordinate of the top-left corner of the drop area. 
@@ -52227,9 +52934,11 @@ declare class Panel {
     public DrawTexturedRect(): void;
     
     /**
-     * Makes this panel droppable. This is used with `Panel.Receiver` to create drag and drop events. 
+     * Makes this panel droppable. This is used with `Panel.Receiver` to create drag and drop events.
+     * 
+     * Can be called multiple times with different names allowing to be dropped onto different receivers. 
      * @param name  Name of your droppable panel 
-     * @returns Blank table 
+     * @returns Blank table stored on the panel itself under pnl.m_DragSlot[ name ]. Is reset every time this function is called and does not appear to be used or exposed anywhere else. 
      */
     public Droppable(name: string): table;
     
@@ -52248,7 +52957,8 @@ declare class Panel {
     public EndBoxSelection(): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used to run commands within a `DHTML` window. 
      * @param cmd  The command to be run. 
      */
@@ -52287,8 +52997,8 @@ declare class Panel {
     public GetAlpha(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the position and size of the panel.
      * 
      * This is equivalent to calling `Panel.GetPos` and `Panel.GetSize` together. 
@@ -52314,8 +53024,8 @@ declare class Panel {
     public GetChild(childIndex: number): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets a child object's position relative to this panel object. The number of levels is not relevant; the child may have many parents between itself and the object on which the method is called. 
      * @param pnl  The panel to get the position of. 
      * @returns [The horizontal (x) position of the child relative to this panel object., The vertical (y) position of the child relative to this panel object.] 
@@ -52345,8 +53055,8 @@ declare class Panel {
     public GetClassName(): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the child of this panel object that is closest to the specified point. The point is relative to the object on which the method is called. The distance the child is from this point is also returned. 
      * @param x  The horizontal (x) position of the point. 
      * @param y  The vertical (y) position of the point. 
@@ -52355,8 +53065,8 @@ declare class Panel {
     public GetClosestChild(x: number, y: number): [Panel, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the content/children within a panel object.
      * 
      * Only works with `Label` derived panels by default such as `DLabel`.
@@ -52401,16 +53111,16 @@ declare class Panel {
     public GetDock(): DOCK;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the docked margins of the panel. (set by `Panel.DockMargin`) 
      * @returns [Left margin., Top margin., Right margin., Bottom margin.] 
      */
     public GetDockMargin(): [number, number, number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the docked padding of the panel. (set by `Panel.DockPadding`) 
      * @returns [Left padding., Top padding., Right padding., Bottom padding.] 
      */
@@ -52456,8 +53166,8 @@ declare class Panel {
     public GetParent(): Panel;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the position of the panel relative to its `Panel.GetParent`.
      * 
      * If you require the panel's position "and" size, consider using `Panel.GetBounds` instead.
@@ -52480,8 +53190,8 @@ declare class Panel {
     public GetSelectionCanvas(): Panel;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the size of the panel.
      * 
      * If you require both the panel's position and size, consider using `Panel.GetBounds` instead. 
@@ -52516,8 +53226,8 @@ declare class Panel {
     public GetText(): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the left and top text margins of a text-based panel object, such as a `DButton` or `DLabel`. This is set with `Panel.SetTextInset`.
      * 
      * [[Category:Label]] 
@@ -52526,8 +53236,8 @@ declare class Panel {
     public GetTextInset(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the size of the text within a `Label` derived panel.
      * 
      * **Bug [#2576](https://github.com/Facepunch/garrysmod-issues/issues/2576):**
@@ -52539,8 +53249,8 @@ declare class Panel {
     public GetTextSize(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets valid receiver slot of currently dragged panel. 
      * @returns [The panel this was called on if a valid receiver slot exists, otherwise false., The slot table.] 
      */
@@ -52606,21 +53316,24 @@ declare class Panel {
     public GotoTextStart(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''CheckboxText'' property to a `DCheckBoxLabel`. This does exactly the same as `Panel.GWEN_SetText`, but exists to cater for the seperate GWEN properties. 
      * @param txt  The text to be applied to the DCheckBoxLabel. 
      */
     public GWEN_SetCheckboxText(txt: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''ControlName'' property to a panel. This calls `Panel.SetName`. 
      * @param name  The new name to apply to the panel. 
      */
     public GWEN_SetControlName(name: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Dock'' property to a  panel object. This calls `Panel.Dock`. 
      * @param dockState  The dock mode to pass to the panel's ''Dock'' method. This reads a string and applies the approriate `DOCK`.
      * * ''Right'': Dock right.
@@ -52632,7 +53345,8 @@ declare class Panel {
     public GWEN_SetDock(dockState: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''HorizontalAlign'' property to a  panel object. This calls `Panel.SetContentAlignment`. 
      * @param hAlign  The alignment, as a string, to pass to `Panel.SetContentAlignment`. Accepts:
      * * ''Right'': Align mid-right.
@@ -52642,7 +53356,8 @@ declare class Panel {
     public GWEN_SetHorizontalAlign(hAlign: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Margin'' property to a  panel object. This calls `Panel.DockMargin`. 
      * @param margins  A four-membered table containing the margins as numbers:
      * * `left: number` The left margin.
@@ -52653,21 +53368,24 @@ declare class Panel {
     public GWEN_SetMargin(margins: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Max'' property to a  `DNumberWang`, `Slider`, `DNumSlider` or `DNumberScratch`. This calls ''SetMax'' on one of the previously listed methods. 
      * @param maxValue  The maximum value the element is to permit. 
      */
     public GWEN_SetMax(maxValue: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Min'' property to a  `DNumberWang`, `Slider`, `DNumSlider` or `DNumberScratch`. This calls ''SetMin'' on one of the previously listed methods. 
      * @param minValue  The minimum value the element is to permit. 
      */
     public GWEN_SetMin(minValue: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Position'' property to a  panel object. This calls `Panel.SetPos`. 
      * @param pos  A two-membered table containing the x and y coordinates as numbers:
      * * `x: number` The x coordinate.
@@ -52676,7 +53394,8 @@ declare class Panel {
     public GWEN_SetPosition(pos: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Size'' property to a  panel object. This calls `Panel.SetSize`. 
      * @param size  A two-membered table containing the width and heights as numbers:
      * * `w: number` The width.
@@ -52685,7 +53404,8 @@ declare class Panel {
     public GWEN_SetSize(size: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Used by `Panel.ApplyGWEN` to apply the ''Text'' property to a panel. 
      * @param txt  The text to be applied to the panel. 
      */
@@ -52921,7 +53641,7 @@ declare class Panel {
     /**
      * **Deprecated!**
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Similar to `Panel.LoadControlsFromString` but loads controls from a file.
      * 
@@ -52933,7 +53653,7 @@ declare class Panel {
     /**
      * **Deprecated!**
      * 
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Loads controls(positions, etc) from given data. This is what the default options menu uses.
      * 
@@ -52979,16 +53699,16 @@ declare class Panel {
     public LoadTGAImage(imageName: string, strPath: string): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the cursor position local to the position of the panel (usually the upper-left corner). 
      * @returns [The x coordinate, The y coordinate] 
      */
     public LocalCursorPos(): [number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the absolute screen position of the position specified relative to the panel.
      * 
      * See also `Panel.ScreenToLocal`.
@@ -53009,7 +53729,10 @@ declare class Panel {
     /**
      * Focuses the panel and enables it to receive input.
      * 
-     * This automatically calls `Panel.SetMouseInputEnabled` and `Panel.SetKeyboardInputEnabled` and sets them to true. 
+     * This automatically calls `Panel.SetMouseInputEnabled` and `Panel.SetKeyboardInputEnabled` and sets them to true.
+     * 
+     * **Note:**
+     * >Panels derived from `Panel` will not work properly with this function. Due to this, any children will not be intractable with keyboard. Derive from `EditablePanel` instead. 
      */
     public MakePopup(): void;
     
@@ -53129,7 +53852,7 @@ declare class Panel {
     public NewAnimation(length: number, delay?: number, ease?: number, callback?: Function): AnimationData;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -53138,7 +53861,7 @@ declare class Panel {
     public NewObject(objectName: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * [[Category:HTML]]
      * [[Category:Awesomium]] 
@@ -53160,6 +53883,13 @@ declare class Panel {
      * @returns The number of child objects that are currently selected. This does not include the parent object you are calling the method from. 
      */
     public NumSelectedChildren(): number;
+    
+    /**
+     * **[INTERNAL]**
+     * 
+     * Called when we are activated during level load. Used by the loading screen panel. 
+     */
+    public OnActivate(): void;
     
     /**
      * Called by HTML panels when the target URL of the frame has changed, this happens when you hover over a link. 
@@ -53214,6 +53944,13 @@ declare class Panel {
     public OnCursorMoved(cursorX: number, cursorY: number): void;
     
     /**
+     * **[INTERNAL]**
+     * 
+     * Called when we are deactivated during level load. Used by the loading screen panel. 
+     */
+    public OnDeactivate(): void;
+    
+    /**
      * Called by HTML panels when the panel's DOM has been set up. You can run JavaScript in here. 
      * @param url  The URL of the current page. 
      */
@@ -53223,7 +53960,7 @@ declare class Panel {
      * We're being dropped on something
      * We can create a new panel here and return it, so that instead of dropping us - it drops the new panel instead! We remain where we are!
      * 
-     * Only works for panels derived from DDragBase. 
+     * Only works for panels derived from `DDragBase`. 
      * @returns The panel to drop instead of us. By default you should return self. 
      */
     public OnDrop(): Panel;
@@ -53279,13 +54016,40 @@ declare class Panel {
     public OnRemove(): void;
     
     /**
-     * **INTERNAL**
+     * Called when the player's screen resolution of the game changes.
+     * 
+     * `ScrW` and `ScrH` will return the new values when this hook is called.
+     * 
+     * {{NextUpdate|Arguments only available in the next update.}} 
+     * @param oldWidth  The previous width  of the game's window 
+     * @param oldHeight  The previous height of the game's window 
+     */
+    public OnScreenSizeChanged(oldWidth: number, oldHeight: number): void;
+    
+    /**
+     * Called just after the panel size changes.
+     * 
+     * All size functions will return the new values when this hook is called.
+     * 
+     * **Warning:**
+     * >Changing the panel size in this hook will cause an infinite loop!
+     * 
+     * {{NextUpdate}} 
+     * @param newWidth  The new width of the panel 
+     * @param newHeight  The new height of the panel 
+     */
+    public OnSizeChanged(newWidth: number, newHeight: number): void;
+    
+    /**
+     * **[INTERNAL]**
+     * 
      *  Called by `dragndrop.StartDragging` when the panel starts being dragged. 
      */
     public OnStartDragging(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Called by `Panel.DragMouseRelease` when the panel object is released after being dragged. 
      */
     public OnStopDragging(): void;
@@ -53302,7 +54066,10 @@ declare class Panel {
      * You can create panels with a customized appearance by overriding their Paint() function, which will prevent the default appearance from being drawn.
      * 
      * **Note:**
-     * >Render operations from the {{Lib|surface}} (and consequentially the {{Lib|draw}}) are always offset by the global position of this panel, as seen in the example below 
+     * >Render operations from the {{Lib|surface}} (and consequentially the {{Lib|draw}}) are always offset by the global position of this panel, as seen in the example below
+     * 
+     * **Note:**
+     * >This hook will not run if the panel is completely off the screen. The hook will still run however if any parts of the panel are still on screen. 
      * @param width  The panel's width. 
      * @param height  The panel's height. 
      * @returns Returning true prevents the background from being drawn. 
@@ -53402,7 +54169,7 @@ declare class Panel {
     public PreAutoRefresh(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Installs Lua defined functions into the panel. 
      */
@@ -53436,8 +54203,8 @@ declare class Panel {
     public RebuildSpawnIconEx(data: table): void;
     
     /**
-     * Allows the panel to receive drag and drop events. 
-     * @param name  Name of DnD panels to receive. This is set by `Panel.Droppable` 
+     * Allows the panel to receive drag and drop events. Can be called multiple times with different names to receive multiple different draggable panel events. 
+     * @param name  Name of DnD panels to receive. This is set on the drag'n'drop-able panels via  `Panel.Droppable` 
      * @param func  This function is called whenever a panel with valid name is hovering above and dropped on this panel. It has next arguments:
      * * `pnl: Panel` The receiver panel
      * * `tbl: table` A table of panels dropped onto receiver panel
@@ -53480,6 +54247,7 @@ declare class Panel {
     
     /**
      * Runs/Executes a string as JavaScript code in [[:Category:DHTML|DHTML]] panel.
+     * 
      * **Note:**
      * >This function does "NOT" evaluate expression (i.e. allow you to pass variables from JavaScript (JS) to Lua context).
      * Because a return value is nil/no value (a.k.a. void).
@@ -53498,8 +54266,8 @@ declare class Panel {
     public SaveUndoState(): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Translates global screen coordinate to coordinates relative to the panel.
      * 
      * See also `Panel.LocalToScreen`.
@@ -53609,7 +54377,8 @@ declare class Panel {
     public SetBGColor(r_or_color: number, g: number, b: number, a: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Sets the background color of the panel. 
      * @param r  The red channel of the color. 
      * @param g  The green channel of the color. 
@@ -53787,7 +54556,8 @@ declare class Panel {
     public SetFGColor(r_or_color: number, g: number, b: number, a: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Sets the foreground color of the panel.
      * 
      * For labels, this is the color of their text. 
@@ -53824,7 +54594,11 @@ declare class Panel {
     public SetFontInternal(fontName: string): void;
     
     /**
-     * Sets the height of the panel. 
+     * Sets the height of the panel.
+     * 
+     * Calls `PANEL.OnSizeChanged` and marks this panel for layout (`Panel.InvalidateLayout`).
+     * 
+     * See also `Panel.SetSize`. 
      * @param height  The height to be set. 
      */
     public SetHeight(height: number): void;
@@ -53862,10 +54636,13 @@ declare class Panel {
     public SetMinimumSize(minW?: number, minH?: number): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.[[Category:SpawnIcon]] 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.
+     * 
+     * **Note:**
+     * >This must be called after setting size if you wish to use a different size spawnicon 
      * @param ModelPath  The path of the model to set 
      * @param skin [=0] The skin to set 
-     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup. "This make it impossible to set any body group to a value higher than 9!" 
+     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup, "up to 9 in total". 
      */
     public SetModel(ModelPath: string, skin?: number, bodygroups?: string): void;
     
@@ -53973,6 +54750,10 @@ declare class Panel {
     /**
      * Sets the size of the panel.
      * 
+     * Calls `PANEL.OnSizeChanged` and marks this panel for layout (`Panel.InvalidateLayout`).
+     * 
+     * See also `Panel.SetWidth` and `Panel.SetHeight`.
+     * 
      * **Note:**
      * >If you wish to position and re-size panels without much guesswork and have them look good on different screen resolutions, you may find `Panel.Dock` useful 
      * @param width  The width of the panel. 
@@ -53987,8 +54768,10 @@ declare class Panel {
     public SetSkin(skinName: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the [[Silkicons|silkicon]] of a panel object such as a `SpawnIcon` and `ModelImage`. 
-     * @param icon  The [[Silkicons|silkicon]] to use. 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the .png image to be displayed on a  `SpawnIcon` or the panel it is based on `ModelImage`.
+     * 
+     * Only .png images can be used with this function. 
+     * @param icon  A path to the .png material, for example one of the [[Silkicons]] shipped with the game. 
      */
     public SetSpawnIcon(icon: string): void;
     
@@ -54015,6 +54798,7 @@ declare class Panel {
     
     /**
      * Removes the panel after given time in seconds.
+     * 
      * **Note:**
      * >This function will not work if `PANEL.AnimationThink` is overridden, unless `Panel.AnimationThinkInternal` is called every frame. 
      * @param delay  Delay in seconds after which the panel should be removed. 
@@ -54071,7 +54855,12 @@ declare class Panel {
      * Sets the panel to be displayed as a tooltip when a player hovers over the panel object with their cursor. Note that it will not override the default `DTooltip` panel.
      * 
      * **Note:**
-     * >`Panel.SetTooltip` will override this functionality. 
+     * >`Panel.SetTooltip` will override this functionality.
+     * 
+     * **Warning:**
+     * >Calling this from `PANEL.OnCursorEntered` is too late! The tooltip will not be displayed or be updated.
+     * 
+     * {{Warning|Given panel or the previously set one will NOT be automatically removed.}} 
      * @param tooltipPanel [=nil] The panel to use as the tooltip. 
      */
     public SetTooltipPanel(tooltipPanel?: Panel): void;
@@ -54112,8 +54901,12 @@ declare class Panel {
     public SetWide(width: number): void;
     
     /**
-     * Sets the width of the panel. 
-     * @param width  The width of the panel. 
+     * Sets the width of the panel.
+     * 
+     * Calls `PANEL.OnSizeChanged` and marks this panel for layout (`Panel.InvalidateLayout`).
+     * 
+     * See also `Panel.SetSize`. 
+     * @param width  The new width of the panel. 
      */
     public SetWidth(width: number): void;
     
@@ -54297,6 +55090,7 @@ declare class Panel {
     /**
      * Forcibly updates the panels' HTML Material, similar to when Paint is called on it.
      * This is only useful if the panel is not normally visible, i.e the panel exists purely for its HTML Material.
+     * 
      * **Note:**
      * >Only works on with panels that have a HTML Material. See `Panel.GetHTMLMaterial` for more details.
      * 
@@ -54318,8 +55112,31 @@ declare class Panel {
 }
 
 /**
+ * A panel list with a custom vertical scroll bar that doesn't have up/down buttons and has a momentum to scrolling.
+ * 
+ * **Deprecated:**
+ * >You should use `DScrollPanel` instead 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ * @example
+ * 
+ * local frame = vgui.Create( "DFrame" )
+ * frame:SetSize( 300, 500 )
+ * frame:Center()
+ * frame:MakePopup()
+ * 
+ * local pnl = frame:Add( "PanelList" )
+ * pnl:Dock( FILL )
+ * pnl:EnableVerticalScrollbar()
+ * 
+ * for i = 0, 100 do
+ * 	local button = pnl:Add( "DButton" )
+ * 	pnl:AddItem( button )
+ * end
+ * 
+ * // Example usage of the panel 
+ */
 declare class PanelList extends Panel {
 
 }
@@ -54516,7 +55333,9 @@ declare class PathFollower {
  * 
  * Created by `CreatePhysCollideBox` or `CreatePhysCollidesFromModel`. 
  *
- * !CustomConstructor CreatePhysCollideBox */
+ * @customConstructor CreatePhysCollideBox
+ *
+ */
 declare class PhysCollide {
     /**
      * Creates a new `PhysCollide` from the given bounds.
@@ -54542,8 +55361,8 @@ declare class PhysCollide {
     public IsValid(): boolean;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Performs a trace against this PhysCollide with the given parameters. This can be used for both line traces and box traces. 
      * @param origin  The origin for the PhysCollide during the trace 
      * @param angles  The angles for the PhysCollide during the trace 
@@ -54565,7 +55384,7 @@ declare namespace physenv {
      * 
      * **Bug [#2604](https://github.com/Facepunch/garrysmod-issues/issues/2604):**
      * >The game has a limit of 128 surface properties - this includes properties loaded automatically from [https://github.com/Facepunch/garrysmod/blob/master/garrysmod/scripts/surfaceproperties.txt surfaceproperties.txt]. Due to this, there's only a small amount of open slots that can be registered with GMod's provided surfaceproperties.txt. 
-     * @param properties  The properties to add. 
+     * @param properties  The properties to add. Each one should include "base" or the game will crash due to some values being missing. 
      */
     function AddSurfaceData(properties: string): void;
     
@@ -54661,8 +55480,8 @@ declare class PhysObj {
     public ApplyTorqueCenter(torque: Vector): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Calculates the force and torque on the center of mass for an offset force impulse. The outputs can be directly passed to `PhysObj.ApplyForceCenter` and `PhysObj.ApplyTorqueCenter`, respectively. 
      * @param force  The initial force 
      * @param pos  The location of the force in world coordinates 
@@ -54671,8 +55490,8 @@ declare class PhysObj {
     public CalculateForceOffset(force: Vector, pos: Vector): [Vector, Vector];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Calculates the linear and angular velocities on the center of mass for an offset force impulse. The outputs can be directly passed to `PhysObj.AddVelocity` and `PhysObj.AddAngleVelocity`, respectively. 
      * @param force  The initial force 
      * @param pos  The location of the force in world coordinates 
@@ -54710,7 +55529,7 @@ declare class PhysObj {
     public EnableDrag(enable: boolean): void;
     
     /**
-     * Sets whenever the physobject should be affected by gravity 
+     * Sets whether the PhysObject should be affected by gravity 
      * @param enable  True to enable, false to disable. 
      */
     public EnableGravity(enable: boolean): void;
@@ -54724,8 +55543,8 @@ declare class PhysObj {
     public EnableMotion(enable: boolean): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the mins and max of the physics object. 
      * @returns [Mins, Maxs] 
      */
@@ -54750,8 +55569,8 @@ declare class PhysObj {
     public GetContents(): CONTENTS;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the linear and angular damping of the physics object. 
      * @returns [The linear damping, The angular damping] 
      */
@@ -54830,8 +55649,6 @@ declare class PhysObj {
     public GetPos(): Vector;
     
     /**
-     * {{NextUpdate}}
-     * 
      * Returns the position and angle of the physics object as a 3x4 matrix (`VMatrix` is 4x4 so the fourth row goes unused). The first three columns store the angle as a [https://en.wikipedia.org/wiki/Rotation_matrix rotation matrix], and the fourth column stores the position vector. 
      * @returns The position and angle matrix. 
      */
@@ -54938,8 +55755,10 @@ declare class PhysObj {
     public IsMoveable(): boolean;
     
     /**
-     * Returns whenever the physics object is penetrating another physics object. 
-     * @returns isPenetrating 
+     * Returns whenever the physics object is penetrating another physics object.
+     * 
+     * This is internally implemented as <pre class="inline">PhysObj:HasGameFlag( FVPHYSICS_PENETRATING )``` and thus is only updated for non-static physics objects. 
+     * @returns Whether the physics object is penetrating another object. 
      */
     public IsPenetrating(): boolean;
     
@@ -55152,6 +55971,13 @@ declare namespace player {
     function GetBots(): Player[];
     
     /**
+     * Gets the player with the specified AccountID. 
+     * @param accountID  The `Player.AccountID` to find the player by. 
+     * @returns Player if one is found, false otherwise. 
+     */
+    function GetByAccountID(accountID: string): Player;
+    
+    /**
      * Gets the player with the specified connection ID.
      * 
      * Connection ID can be retrieved via `gameevent.Listen` events.
@@ -55207,7 +56033,9 @@ declare namespace player {
 /**
  * This is a list of all methods only available for players. It is also possible to call `Entity` functions on the Player. 
  *
- * !CustomConstructor Player */
+ * @customConstructor Player
+ *
+ */
 declare class Player extends Entity {
     /**
      * Returns the player with the matching `Player.UserID`.
@@ -55554,7 +56382,10 @@ declare class Player extends Entity {
     /**
      * Freeze the player. Frozen players cannot move, look around, or attack. Key bindings are still called. Similar to `Player.Lock` but the player can still take damage.
      * 
-     * Adds or removes the [[Enums/FL|FL_FROZEN]] flag from the player. 
+     * Adds or removes the [[Enums/FL|FL_FROZEN]] flag from the player.
+     * 
+     * **Note:**
+     * >Frozen bots will still be able to turn with bot_mimic 1 
      * @param frozen [=false] Whether the player should be frozen. 
      */
     public Freeze(frozen?: boolean): void;
@@ -55625,8 +56456,10 @@ declare class Player extends Entity {
     public GetCount(type: string, minus?: number): void;
     
     /**
-     * Gets the crouched walk speed. 
-     * @returns Speed 
+     * Returns the crouched walk speed multiplier.
+     * 
+     * See also `Player.GetWalkSpeed` and `Player.SetCrouchedWalkSpeed`. 
+     * @returns The crouched walk speed multiplier. 
      */
     public GetCrouchedWalkSpeed(): number;
     
@@ -55716,16 +56549,16 @@ declare class Player extends Entity {
     public GetHoveredWidget(): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the bottom base and the top base size of the player's hull. 
      * @returns [Player's hull bottom base size, Player's hull top base size] 
      */
     public GetHull(): [Vector, Vector];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the bottom base and the top base size of the player's crouch hull. 
      * @returns [Player's crouch hull bottom base size, Player's crouch hull top base size] 
      */
@@ -55762,7 +56595,9 @@ declare class Player extends Entity {
     public GetLaggedMovementValue(): number;
     
     /**
-     * Returns the player's maximum movement speed. 
+     * Returns the player's maximum movement speed.
+     * 
+     * See also `Player.SetMaxSpeed`, `Player.GetWalkSpeed` and `Player.GetRunSpeed`. 
      * @returns The maximum movement speed the player can go at. 
      */
     public GetMaxSpeed(): number;
@@ -55868,8 +56703,10 @@ declare class Player extends Entity {
     public GetRenderAngles(): Angle;
     
     /**
-     * Returns the amount of speed the player runs at. 
-     * @returns runspeed 
+     * Returns the player's sprint speed.
+     * 
+     * See also `Player.SetRunSpeed`, `Player.GetWalkSpeed` and `Player.GetMaxSpeed`. 
+     * @returns The sprint speed 
      */
     public GetRunSpeed(): number;
     
@@ -55961,8 +56798,10 @@ declare class Player extends Entity {
     public GetViewPunchAngles(): Angle;
     
     /**
-     * Returns a player's walk speed 
-     * @returns walk speed 
+     * Returns the player's normal walking speed. Not sprinting, not slow walking. (+walk)
+     * 
+     * See also `Player.SetWalkSpeed`, `Player.GetMaxSpeed` and `Player.GetRunSpeed`. 
+     * @returns The normal walking speed. 
      */
     public GetWalkSpeed(): number;
     
@@ -56204,8 +57043,8 @@ declare class Player extends Entity {
      * Kicks the player from the server. 
      * @param reason [="No reason given"] Reason to show for disconnection.
      * 
-     * **Bug [#3559](https://github.com/Facepunch/garrysmod-issues/issues/3559):**
-     * >This will be shortened to ~256 chars. If the string > ~512 chars, the kick will fail. 
+     * **Warning:**
+     * >This will be shortened to ~512 chars, though this includes the command itself and the player index so will realistically be more around ~498. It is recommended to avoid going near the limit to avoid truncation. 
      */
     public Kick(reason?: string): void;
     
@@ -56234,7 +57073,10 @@ declare class Player extends Entity {
      * Despite being defined shared, it can only be used server side in a [[:Category:Predicted_Hooks|Predicted Hook]].
      * 
      * **Warning:**
-     * >This function NEEDS to be disabled after you're done with it or it will break the movement of the entities affected! 
+     * >This function NEEDS to be disabled after you're done with it or it will break the movement of the entities affected!
+     * 
+     * **Bug [#3683](https://github.com/Facepunch/garrysmod-issues/issues/3683):**
+     * >Lag compensation does not support pose parameters. 
      * @param lagCompensation  The state of the lag compensation, true to enable and false to disable. 
      */
     public LagCompensation(lagCompensation: boolean): void;
@@ -56495,7 +57337,9 @@ declare class Player extends Entity {
     /**
      * Sets the crouched walk speed multiplier.
      * 
-     * Doesn't work for values above 1. 
+     * Doesn't work for values above 1.
+     * 
+     * See also `Player.SetWalkSpeed` and `Player.GetCrouchedWalkSpeed`. 
      * @param speed  The walk speed multiplier that crouch speed should be. 
      */
     public SetCrouchedWalkSpeed(speed: number): void;
@@ -56515,7 +57359,7 @@ declare class Player extends Entity {
     public SetDeaths(deathcount: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the driving entity and driving mode.
      * 
@@ -56525,7 +57369,7 @@ declare class Player extends Entity {
     public SetDrivingEntity(drivingMode: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Sets the driving entity and driving mode.
      * 
@@ -56624,13 +57468,19 @@ declare class Player extends Entity {
     public SetLaggedMovementValue(timescale: number): void;
     
     /**
-     * Sets the maximum speed which the player can move at. 
+     * Sets the maximum speed which the player can move at.
+     * 
+     * **Note:**
+     * >This is called automatically by the engine. If you wish to limit player speed without setting their run/sprint speeds, see `CMoveData.SetMaxClientSpeed`. 
      * @param walkSpeed  The maximum speed. 
      */
     public SetMaxSpeed(walkSpeed: number): void;
     
     /**
-     * Sets if the player should be muted locally. 
+     * Sets if the player should be muted locally.
+     * 
+     * **Bug [#3616](https://github.com/Facepunch/garrysmod-issues/issues/3616):**
+     * >This only works correctly for the first 32 players. Using this function on players with a [[Player/UserID|UserID]] 32 or above will apply the muting to the user with ID % 32. For example, `Player`(54):SetMuted(true) will actually mute player 22 since 54 % 32 {{eq}} 22. 
      * @param mute  Mute or unmute. 
      */
     public SetMuted(mute: boolean): void;
@@ -56651,10 +57501,10 @@ declare class Player extends Entity {
     public SetNoTarget(visibility: boolean): void;
     
     /**
-     * Sets the players observer mode. 
-     * @param observeMode  Observe mode using `OBS_MODE`. 
+     * Sets the players observer mode. You must start the spectating first with `Player.Spectate`. 
+     * @param mode  Spectator mode using `OBS_MODE`. 
      */
-    public SetObserverMode(observeMode: OBS_MODE): void;
+    public SetObserverMode(mode: OBS_MODE): void;
     
     /**
      * Writes a "P"layer "Data" key-value pair to the SQL database. (sv.db when called on server,  cl.db when called on client)
@@ -56693,8 +57543,12 @@ declare class Player extends Entity {
     public SetRenderAngles(ang: Angle): void;
     
     /**
-     * Sets the run speed eg. the speed when sprinting. 
-     * @param runSpeed  The new run speed. 
+     * Sets the player's sprint speed.
+     * 
+     * See also `Player.GetRunSpeed`, `Player.SetWalkSpeed` and `Player.SetMaxSpeed`. 
+     * @param runSpeed  The new sprint speed when sv_friction is below 10. Higher sv_friction values will result in slower speed.
+     * 
+     * Has to be 7 or above or the player won't be able to move. 
      */
     public SetRunSpeed(runSpeed: number): void;
     
@@ -56767,11 +57621,17 @@ declare class Player extends Entity {
     public SetViewPunchAngles(punchAngle: Angle): void;
     
     /**
-     * Sets the walk speed eg. the speed when normally walking.
+     * Sets the player's normal walking speed. Not sprinting, not slow walking {{Key|+walk}}.
+     * 
+     * There currently is no way to modify the slow walking {{Key|+walk}} speed.
+     * 
+     * See also `Player.GetWalkSpeed`, `Player.SetCrouchedWalkSpeed`, `Player.SetMaxSpeed` and `Player.SetRunSpeed`.
      * 
      * **Bug [#2030](https://github.com/Facepunch/garrysmod-issues/issues/2030):**
      * >Using a speed of 0 can lead to prediction errors. 
-     * @param walkSpeed  The new walk speed. 
+     * @param walkSpeed  The new walk speed when sv_friction is below 10. Higher sv_friction values will result in slower speed.
+     * 
+     * Has to be 7 or above or the player won't be able to move. 
      */
     public SetWalkSpeed(walkSpeed: number): void;
     
@@ -56813,10 +57673,10 @@ declare class Player extends Entity {
     public SimulateGravGunPickup(ent: Entity): void;
     
     /**
-     * Sets the spectate mode of the player. 
-     * @param spectateMode  Spectate mode, see `OBS_MODE`. 
+     * Starts spectate mode for given player. This will also affect the players movetype in some cases. 
+     * @param mode  Spectate mode, see `OBS_MODE`. 
      */
-    public Spectate(spectateMode: OBS_MODE): void;
+    public Spectate(mode: OBS_MODE): void;
     
     /**
      * Makes the player spectate the entity
@@ -57259,12 +58119,15 @@ declare namespace player_manager {
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * A preset editor, which can be opened by `ControlPresets`.
  * 
  * This control only exists in Sandbox derived gamemodes. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class PresetEditor extends DFrame {
 
 }
@@ -57282,7 +58145,7 @@ declare namespace presets {
     function Add(groupname: string, name: string, values: table): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to tell the player that the name they tried to use in their preset is not acceptable. 
      */
@@ -57304,7 +58167,7 @@ declare namespace presets {
     function GetTable(groupname: string): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Used internally to ask the player if they want to override an already existing preset. 
      * @param callback 
@@ -57330,7 +58193,9 @@ declare namespace presets {
 /**
  * A client side projected texture, created by `ProjectedTexture`. 
  *
- * !CustomConstructor ProjectedTexture */
+ * @customConstructor ProjectedTexture
+ *
+ */
 declare class ProjectedTexture {
     /**
      * Creates a new `ProjectedTexture`. 
@@ -57350,13 +58215,15 @@ declare class ProjectedTexture {
     public GetBrightness(): number;
     
     /**
-     * Returns the color of the ProjectedTexture, which was previously set by `ProjectedTexture.SetColor` 
+     * Returns the color of the ProjectedTexture, which was previously set by `ProjectedTexture.SetColor`.
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable. 
      * @returns `Color`, the color of the ProjectedTexture. 
      */
     public GetColor(): Color;
     
     /**
-     * {{NextUpdate}}
      * Returns the constant attenuation of the projected texture, which can also be set by `ProjectedTexture.SetConstantAttenuation`. 
      * @returns The constant attenuation 
      */
@@ -57381,7 +58248,6 @@ declare class ProjectedTexture {
     public GetHorizontalFOV(): number;
     
     /**
-     * {{NextUpdate}}
      * Returns the linear attenuation of the projected texture, which can also be set by `ProjectedTexture.SetLinearAttenuation`. 
      * @returns The linear attenuation. 
      */
@@ -57394,8 +58260,8 @@ declare class ProjectedTexture {
     public GetNearZ(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the current orthographic settings of the Projected Texture. To set these values, use `ProjectedTexture.SetOrthographic`. 
      * @returns [Whether or not this projected texture is orthographic. When false, nothing else is returned., left, top, right, bottom] 
      */
@@ -57408,7 +58274,6 @@ declare class ProjectedTexture {
     public GetPos(): Vector;
     
     /**
-     * {{NextUpdate}}
      * Returns the quadratic attenuation of the projected texture, which can also be set by `ProjectedTexture.SetQuadraticAttenuation`. 
      * @returns The quadratic attenuation 
      */
@@ -57476,7 +58341,6 @@ declare class ProjectedTexture {
     public SetColor(color: Color): void;
     
     /**
-     * {{NextUpdate}}
      * Sets the constant attenuation of the projected texture.
      * 
      * See also `ProjectedTexture.SetLinearAttenuation` and `ProjectedTexture.SetQuadraticAttenuation`.
@@ -57524,7 +58388,6 @@ declare class ProjectedTexture {
     public SetHorizontalFOV(hFOV: number): void;
     
     /**
-     * {{NextUpdate}}
      * Sets the linear attenuation of the projected texture.
      * 
      * See also `ProjectedTexture.SetConstantAttenuation` and `ProjectedTexture.SetQuadraticAttenuation`.
@@ -57571,7 +58434,6 @@ declare class ProjectedTexture {
     public SetPos(position: Vector): void;
     
     /**
-     * {{NextUpdate}}
      * Sets the quadratic attenuation of the projected texture.
      * 
      * See also `ProjectedTexture.SetLinearAttenuation` and `ProjectedTexture.SetConstantAttenuation`.
@@ -57623,7 +58485,6 @@ declare namespace properties {
     function Add(name: string, propertyData: PropertyAdd): void;
     
     /**
-     * {{NextUpdate}}
      * Returns true if given entity can be targeted by the player via the properties system.
      * 
      * This should be used serverside in your properties to prevent abuse by clientside scripting. 
@@ -57659,16 +58520,21 @@ declare namespace properties {
 /**
  * Used in sandbox tools 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class PropSelect extends ContextBase {
 
 }
 
 /**
- * **INTERNAL**
+ * **[INTERNAL]**
+ * 
  * Currently broken? 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class RadioButton {
 
 }
@@ -58066,16 +58932,16 @@ declare namespace render {
     function GetDXLevel(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the current fog color. 
      * @returns [Red part of the color., Green part of the color, Blue part of the color] 
      */
     function GetFogColor(): [number, number, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the fog start and end distance. 
      * @returns [Fog start distance set by `render.FogStart`, For end distance set by `render.FogEnd`, Fog Z distance set by `render.SetFogZ`] 
      */
@@ -58393,8 +59259,8 @@ declare namespace render {
     function PushRenderTarget(texture: ITexture, x?: number, y?: number, w?: number, h?: number): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Reads the color of the specified pixel from the RenderTarget sent by `render.CapturePixels` 
      * @param x  The x coordinate. 
      * @param y  The y coordinate. 
@@ -58555,7 +59421,7 @@ declare namespace render {
     function SetLocalModelLights(lights?: LocalLight): void;
     
     /**
-     * Sets the material to be used in any upcoming render operation using the Lib library.
+     * Sets the material to be used in any upcoming render operation using the {{Lib|render}}.
      * 
      * Not to be confused with `surface.SetMaterial`.
      * 
@@ -58831,7 +59697,9 @@ declare namespace resource {
  * 
  * Rich Text panels allows multicolored, highlight-able, and interactive text using individual text segment markup (segments are defined by the `Panel.AppendText` method). 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * // Window frame for containing text
  * local frame = vgui.Create("DFrame")
@@ -59158,7 +60026,7 @@ declare class RichText extends Panel {
  */
 declare class SANDBOX extends Gamemode {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This hook is used to add default categories to spawnmenu tool tabs.
      * 
@@ -59167,7 +60035,7 @@ declare class SANDBOX extends Gamemode {
     public AddGamemodeToolMenuCategories(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * This hook is used to add default tool tabs to spawnmenu.
      * 
@@ -59487,7 +60355,7 @@ declare namespace saverestore {
     function LoadEntity(ent: Entity, save: IRestore): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by engine when a save is being loaded.
      * 
@@ -59497,14 +60365,14 @@ declare namespace saverestore {
     function LoadGlobal(save: IRestore): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by the engine just before `saverestore.LoadGlobal` is. 
      */
     function PreRestore(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by the engine just before `saverestore.SaveGlobal` is. 
      */
@@ -59534,7 +60402,7 @@ declare namespace saverestore {
     function SaveEntity(ent: Entity, save: ISave): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called by engine when a save is being saved.
      * 
@@ -59600,7 +60468,8 @@ declare class Schedule {
     public GetTask(num: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Initialises the Schedule. Called by `ai_schedule.New` when the Schedule is created. 
      * @param debugName  The name passed from `ai_schedule.New`. 
      */
@@ -59674,7 +60543,7 @@ declare namespace scripted_ents {
     function IsBasedOn(name: string, base: string): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called after all ENTS have been loaded and runs `baseclass.Set` on each one.
      * 
@@ -59725,7 +60594,8 @@ declare namespace search {
  */
 declare namespace serverlist {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Adds current server the player is on to their favorites. 
      */
     function AddCurrentServerToFavorites(): void;
@@ -59754,7 +60624,9 @@ declare namespace serverlist {
 
 /**
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class SlideBar extends Panel {
 
 }
@@ -59765,7 +60637,9 @@ declare class SlideBar extends Panel {
  * 
  * A simple slider featuring an numeric display. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local frame = vgui.Create( "DFrame" )
  * frame:SetSize( 280, 70 )
@@ -59958,7 +60832,9 @@ declare namespace sound {
 /**
  * A SpawnIcon displays an image for the given model path. It is mostly used in the Spawn Menu (Q). 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local Panel = vgui.Create( "DFrame" ) // Main Frame
  * Panel:SetPos( 200, 200 )
@@ -60021,30 +60897,40 @@ declare class SpawnIcon extends DButton {
     public RebuildSpawnIconEx(data: table): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.[[Category:SpawnIcon]] 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.
+     * 
+     * **Note:**
+     * >This must be called after setting size if you wish to use a different size spawnicon 
      * @param ModelPath  The path of the model to set 
      * @param skin [=0] The skin to set 
-     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup. "This make it impossible to set any body group to a value higher than 9!" 
+     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup, "up to 9 in total". 
      */
     public SetModel(ModelPath: string, skin?: number, bodygroups?: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.[[Category:SpawnIcon]] 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the model to be displayed by `SpawnIcon`.
+     * 
+     * **Note:**
+     * >This must be called after setting size if you wish to use a different size spawnicon 
      * @param ModelPath  The path of the model to set 
      * @param skin [=0] The skin to set 
-     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup. "This make it impossible to set any body group to a value higher than 9!" 
+     * @param bodygroups [=""] The body groups to set. Each single-digit number in the string represents a separate bodygroup, "up to 9 in total". 
      */
     public SetModel(ModelPath: string, skin?: number, bodygroups?: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the [[Silkicons|silkicon]] of a panel object such as a `SpawnIcon` and `ModelImage`. 
-     * @param icon  The [[Silkicons|silkicon]] to use. 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the .png image to be displayed on a  `SpawnIcon` or the panel it is based on `ModelImage`.
+     * 
+     * Only .png images can be used with this function. 
+     * @param icon  A path to the .png material, for example one of the [[Silkicons]] shipped with the game. 
      */
     public SetSpawnIcon(icon: string): void;
     
     /**
-     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the [[Silkicons|silkicon]] of a panel object such as a `SpawnIcon` and `ModelImage`. 
-     * @param icon  The [[Silkicons|silkicon]] to use. 
+     * [[Category:ModelImage]][[Category:SpawnIcon]]Sets the .png image to be displayed on a  `SpawnIcon` or the panel it is based on `ModelImage`.
+     * 
+     * Only .png images can be used with this function. 
+     * @param icon  A path to the .png material, for example one of the [[Silkicons]] shipped with the game. 
      */
     public SetSpawnIcon(icon: string): void;
 }
@@ -60097,7 +60983,8 @@ declare namespace spawnmenu {
     function AddCreationTab(name: string, func: Function, material?: string, order?: number, tooltip?: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  
      * 
      * Used to populate prop categories in the spawnmenu tree. This function should generally be called within `SANDBOX.PopulatePropMenu`.
@@ -60203,7 +61090,7 @@ declare namespace spawnmenu {
     function CreateContentIcon(type: string, parent: Panel, data: table): Panel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Calls `spawnmenu.SaveToTextFiles`. 
      * @param spawnlists  A table containing spawnlists. 
@@ -60274,7 +61161,7 @@ declare namespace spawnmenu {
     function GetTools(): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Calls `spawnmenu.PopulateFromTextFiles`. 
      */
@@ -60287,7 +61174,7 @@ declare namespace spawnmenu {
     function PopulateFromTextFiles(callback: Function): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Saves a table of spawnlists to files. 
      * @param spawnlists  A table containing spawnlists. 
@@ -60479,7 +61366,7 @@ declare namespace steamworks {
     function OpenWorkshop(): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Publishes dupes, saves or demos to workshop. 
      * @param tags  The workshop tags to apply 
@@ -60526,7 +61413,7 @@ declare namespace steamworks {
     function ShouldMountAddon(workshopItemID: string): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Subscribes to the specified workshop addon. Call `steamworks.ApplyAddons` afterwards to update. 
      * @param workshopItemID  The ID of the Steam Workshop item we should subscribe to 
@@ -60534,7 +61421,8 @@ declare namespace steamworks {
     function Subscribe(workshopItemID: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Unsubscribes to the specified workshop addon. Call `steamworks.ApplyAddons` afterwards to update.
      * 
      * This function should ''never'' be called without a user's consent and should not be called if the addon is currently in use (aka: the user is not in the main menu) as it may result in unexpected behaviour. 
@@ -60549,7 +61437,8 @@ declare namespace steamworks {
     function ViewFile(workshopItemID: string): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Makes the user vote for the specified addon 
      * @param workshopItemID  The ID of workshop item. 
      * @param upOrDown  Sets if the user should vote up/down. True makes them upvote, false down 
@@ -60647,8 +61536,8 @@ declare namespace string {
     function Explode(separator: string, str: string, use_patterns: boolean): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Attempts to find the specified substring in a string, uses [[Patterns]] by default. 
      * @param haystack  The string to search in. 
      * @param needle  The string to find, can contain patterns if enabled. 
@@ -60745,8 +61634,8 @@ declare namespace string {
     function gmatch(data: string, pattern: string): Function;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * This functions main purpose is to replace certain character sequences in a string using [[Patterns]]. 
      * @param str  String which should be modified. 
      * @param pattern  The pattern that defines what should be matched and eventually be replaced. 
@@ -61152,6 +62041,25 @@ declare namespace surface {
     function DrawTexturedRectUV(x: number, y: number, width: number, height: number, startU: number, startV: number, endU: number, endV: number): void;
     
     /**
+     * Returns the current alpha multiplier affecting drawing operations.
+     * 
+     * {{NextUpdate}} 
+     * @returns The multiplier ranging from 0 to 1. 
+     */
+    function GetAlphaMultiplier(): number;
+    
+    /**
+     * Returns the current color affecting draw operations.
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable.
+     * 
+     * {{NextUpdate}} 
+     * @returns The color that drawing operations will use as a `Color`. 
+     */
+    function GetDrawColor(): Color;
+    
+    /**
      * Gets the HUD texture with the specified name. 
      * @param name  The name of the texture. 
      * @returns text 
@@ -61159,8 +62067,19 @@ declare namespace surface {
     function GetHUDTexture(name: string): ITexture;
     
     /**
-     * !TupleReturn
+     * Returns the current color affecting text draw operations.
+     * 
+     * **Bug [#2407](https://github.com/Facepunch/garrysmod-issues/issues/2407):**
+     * >The returned color will not have the color metatable.
+     * 
+     * {{NextUpdate}} 
+     * @returns The color that text drawing operations will use as a `Color`. 
+     */
+    function GetTextColor(): Color;
     
+    /**
+     * @tupleReturn
+     *
      * Returns the width and height (in pixels) of the given text, but only if the font has been set with `surface.SetFont`. 
      * @param text  The string to check the size of. 
      * @returns [Width of the provided text, Height of the provided text] 
@@ -61178,8 +62097,8 @@ declare namespace surface {
     function GetTextureID(name_path: string): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the size of the texture with the associated texture ID. 
      * @param textureID  The texture ID, returned by `surface.GetTextureID`. 
      * @returns [The texture width., The texture height.] 
@@ -61211,7 +62130,7 @@ declare namespace surface {
     function ScreenWidth(): number;
     
     /**
-     * Sets a multiplier that will influence all upcoming drawing operations. 
+     * Sets the alpha multiplier that will influence all upcoming drawing operations. 
      * @param multiplier  The multiplier ranging from 0 to 1. 
      */
     function SetAlphaMultiplier(multiplier: number): void;
@@ -61256,7 +62175,7 @@ declare namespace surface {
     function SetTextColor(r: number, g: number, b: number, a?: number): void;
     
     /**
-     * Set the position to draw any future text. 
+     * Set the top-left position to draw any future text at. 
      * @param x  The X integer co-ordinate. 
      * @param y  The Y integer co-ordinate. 
      */
@@ -61378,12 +62297,12 @@ declare namespace system {
  */
 declare namespace table {
     /**
-     * Adds the contents from one table into another.
+     * Adds the contents from one table into another. The target table will be modified.
      * 
      * See also `table.Inherit` and `table.Merge`. 
      * @param target  The table to insert the new values into. 
      * @param source  The table to retrieve the values from. 
-     * @returns The table the values were appended to. 
+     * @returns The target table. 
      */
     function Add(target: table, source: table): table;
     
@@ -61678,8 +62597,8 @@ declare namespace table {
     function Merge(destination: table, source: table): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns a random value from the supplied table.
      * 
      * **Note:**
@@ -61768,7 +62687,8 @@ declare namespace table {
  */
 declare class Task {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Initialises the AI task. Called by `ai_task.New`. 
      */
     public Init(): void;
@@ -61805,7 +62725,8 @@ declare class Task {
     public Run(target: NPC): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Runs the AI task as an NPC method. This requires the task to be of type ''TYPE_FNAME''. 
      * @param target  The NPC to run the task on. 
      */
@@ -61818,7 +62739,8 @@ declare class Task {
     public Start(target: NPC): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Starts the AI task as an NPC method. 
      * @param target  The NPC to start the task on. 
      */
@@ -61976,7 +62898,9 @@ declare namespace team {
 /**
  * Basic text input field. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class TextEntry extends Panel {
     /**
      * Performs the "CONTROL + C" key combination effect ( Copy selection to clipboard ) on selected text.
@@ -62356,7 +63280,9 @@ declare class TextEntry extends Panel {
 /**
  * A panel capable of loading .tga images. 
  *
- * !PureAbstract * @example
+ * @pureAbstract
+ *
+ * @example
  * 
  * local panel = vgui.Create( "DFrame" )
  * panel:SetSize( 500, 500 )
@@ -62603,7 +63529,8 @@ declare class Tool {
      * @param id  The id of the object to store. 
      * @param ent  The entity to store. 
      * @param pos  The position to store. 
-     *  **Note:**
+     *  
+     * **Note:**
      * >this position is in "global space" and is internally converted to "local space" relative to the object, so when you retrieve it later it will be corrected to the object's new position 
      * @param phys  The physics object to store. 
      * @param bone  The hit bone to store. 
@@ -62697,7 +63624,10 @@ declare class TOOL {
     public RightClick(tr: TraceResult): boolean;
     
     /**
-     * Called when `WEAPON.Think` of the toolgun is called. This only happens when the tool gun is currently equipped/selected by the player and the selected tool is this tool. 
+     * Called when `WEAPON.Think` of the toolgun is called. This only happens when the tool gun is currently equipped/selected by the player and the selected tool is this tool.
+     * 
+     * **Bug [#3682](https://github.com/Facepunch/garrysmod-issues/issues/3682):**
+     * >Pull=1547 
      */
     public Think(): void;
 }
@@ -62842,7 +63772,7 @@ declare namespace undo {
     function GetTable(): table;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Makes the UI dirty - it will re-create the controls the next time it is viewed. We also take this opportun 
      */
@@ -62869,7 +63799,7 @@ declare namespace undo {
     function SetPlayer(ply: Player): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Adds a hook (CPanelPaint) to the control panel paint function so we can determine when it is being drawn. 
      */
@@ -62879,7 +63809,9 @@ declare namespace undo {
 /**
  * A panel similar to `Label` used by `DLabelURL`. 
  *
- * !PureAbstract */
+ * @pureAbstract
+ *
+ */
 declare class URLLabel {
     /**
      * [[Category:DLabelURL]][[Category:URLLabel]]Sets the URL of a link-based panel such as `DLabelURL`. 
@@ -62981,8 +63913,8 @@ declare namespace utf8 {
     function force(str: string): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the number of UTF-8 sequences in the given string between positions startPos and endPos (both inclusive). If it finds any invalid UTF-8 byte sequence, returns false as well as the position of the first invalid byte. 
      * @param str  The string to calculate the length of. 
      * @param startPos [=1] The starting position to get the length from. 
@@ -63122,15 +64054,13 @@ declare namespace util {
      * Decompresses the given string using [[wikipedia:LZMA|LZMA]] algorithm. Used to decompress strings previously compressed with `util.Compress`. 
      * @param compressedString  The compressed string to decompress. 
      * @param maxSize [=nil] The maximal size in bytes it will decompress. 
-     * @returns The original, decompressed string.
-     * 
-     * {{NextUpdate|This now returns an empty string ("") when sent an empty string as the argument instead of no value.}} 
+     * @returns The original, decompressed string or an empty string on failure or invalid input. 
      */
     function Decompress(compressedString: string, maxSize?: number): string;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Gets the distance between a line and a point in 3d space. 
      * @param lineStart  Start of the line. 
      * @param lineEnd  End of the line. 
@@ -63175,10 +64105,9 @@ declare namespace util {
      * * _anm
      * * _include 
      * @param mdl  Model path 
-     * @returns The model info
-     * 
-     * number SkinCount
-     * string KeyValues ( Constraint Info, valve KeyValues format ) 
+     * @returns The model info as a table with the following keys:
+     * *`SkinCount: number` Identical to `Entity.SkinCount`.
+     * *`KeyValues: string` Valve key-value formatted info about the model ( Constraint Info, etc ) 
      */
     function GetModelInfo(mdl: string): table;
     
@@ -63213,8 +64142,6 @@ declare namespace util {
     function GetSunInfo(): SunInfo;
     
     /**
-     * {{NextUpdate}}
-     * 
      * Returns data of a surface property at given ID. 
      * @param id  Surface property ID. You can get it from `TraceResult`. 
      * @returns The data or no value if there is no valid surface property at given index.
@@ -63253,8 +64180,8 @@ declare namespace util {
     function GetUserGroups(): table;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Performs a "ray" box intersection and returns position, normal and the fraction. 
      * @param rayStart  Origin/start position of the ray. 
      * @param rayDelta  The ray vector itself. This can be thought of as: the ray end point relative to the start point.
@@ -63303,7 +64230,25 @@ declare namespace util {
     function IsSkyboxVisibleFromPoint(position: Vector): boolean;
     
     /**
-     * Checks if the specified model is valid. 
+     * Checks if the specified model is valid.
+     * 
+     * A model is considered invalid in following cases:
+     * * Starts with a space or "maps"
+     * * Doesn't start with "models"
+     * * Contains any of the following:
+     * ** _gestures
+     * ** _animations
+     * ** _postures
+     * ** _gst
+     * ** _pst
+     * ** _shd
+     * ** _ss
+     * ** _anm
+     * ** .bsp
+     * ** cs_fix
+     * * On server: If the model isn't precached, if the model file doesn't exist on the disk
+     * * If precache failed
+     * * Model is the error model 
      * @param modelName  Name/Path of the model to check. 
      * @returns Whether the model is valid or not. Returns false clientside if the model is not precached by the server. 
      */
@@ -63335,28 +64280,31 @@ declare namespace util {
      * Converts a JSON string to a Lua table.
      * 
      * **Warning:**
-     * >This function converts keys to numbers whenever possible 
+     * >This function converts keys to numbers whenever possible.
+     * 
+     * **Bug [#3561](https://github.com/Facepunch/garrysmod-issues/issues/3561):**
+     * >This will attempt cast the string keys "inf", "nan", "true", and "false" to their respective Lua values. This completely ignores nulls in arrays. 
      * @param json  The JSON string to convert. 
      * @returns The table containing converted information. Returns nothing on failure. 
      */
     function JSONToTable(json: string): table;
     
     /**
-     * Converts a KeyValue string to a Lua table. 
+     * Converts a KeyValue string to a Lua table.
+     * 
+     * **Note:**
+     * >Table keys will not repeat, see `util.KeyValuesToTablePreserveOrder`. 
      * @param keyValues  The KeyValue string to convert. 
-     * @param usesEscapeSequences [=false] 
+     * @param usesEscapeSequences [=false] If set to true, will replace \t, \n, \" and \\ in the input text with their escaped variants 
      * @param preserveKeyCase [=false] Whether we should preserve key case or not. 
      * @returns The converted table 
      */
     function KeyValuesToTable(keyValues: string, usesEscapeSequences?: boolean, preserveKeyCase?: boolean): table;
     
     /**
-     * Similar to `util.KeyValuesToTable` but it also preserves order of keys.
-     * 
-     * **Note:**
-     * >This creates a table of the same structure, but replaces keys with a table containing their value and their order 
+     * Similar to `util.KeyValuesToTable` but it also preserves order of keys. 
      * @param keyvals  The key value string 
-     * @param usesEscapeSequences [=false] 
+     * @param usesEscapeSequences [=false] If set to true, will replace \t, \n, \" and \\ in the input text with their escaped variants 
      * @param preserveKeyCase [=false] Whether we should preserve key case or not. 
      * @returns The output table 
      */
@@ -63510,8 +64458,8 @@ declare namespace util {
      * @param endWidth  End width of the trail 
      * @param lifetime  How long it takes to transition from startWidth to endWidth 
      * @param textureRes  The resolution of trails texture. A good value can be calculated using this formula: 1 / ( startWidth + endWidth ) * 0.5 
-     * @param texture  Path to the texture to use as a trail. Note that you should also include the ".vmt" or the game WILL crash! 
-     * @returns Entity of created trail (env_spritetrail) 
+     * @param texture  Path to the texture to use as a trail. 
+     * @returns Entity of created trail ([https://developer.valvesoftware.com/wiki/Env_spritetrail env_spritetrail]) 
      */
     function SpriteTrail(ent: Entity, attachmentID: number, color: table, additive: boolean, startWidth: number, endWidth: number, lifetime: number, textureRes: number, texture: string): Entity;
     
@@ -63548,9 +64496,11 @@ declare namespace util {
     /**
      * Converts a table to a JSON string.
      * **Warning:**
-     * >All keys are strings in the JSON format, so all keys will be converted to strings!
+     * >All integers will be converted to decimals (5 -> 5.0).
      * 
-     * {{Warning|All integers will be converted to decimals (5 -> 5.0).}} 
+     * {{Warning|All keys are strings in the JSON format, so all keys will be converted to strings!}}
+     * **Bug [#3561](https://github.com/Facepunch/garrysmod-issues/issues/3561):**
+     * >This will produce invalid JSON if the provided table contains nan or inf values. 
      * @param table  Table to convert. 
      * @param prettyPrint [=false] Format and indent the JSON. 
      * @returns JSON 
@@ -63657,7 +64607,9 @@ declare namespace util {
  * {{ClassField|number|z|The Z component of the vector}}
  * }} 
  *
- * !CustomConstructor Vector */
+ * @customConstructor Vector
+ *
+ */
 declare class Vector {
     /**
      * The X component of the vector 
@@ -63686,7 +64638,6 @@ declare class Vector {
      * @param z [=0] The z component of the vector. 
      */
     public constructor(x?: number, y?: number, z?: number);
-    public constructor(vec: Vector);
     
     /**
      * Adds the values of the argument vector to the orignal vector. This functions the same as vector1 + vector2 without creating a new vector object, skipping object construction and garbage collection. 
@@ -63880,10 +64831,7 @@ declare class Vector {
     public ToScreen(): ToScreenData;
     
     /**
-     * Returns whenever the given vector is in a box created by the 2 other vectors.
-     * 
-     * **Bug [#1146](https://github.com/Facepunch/garrysmod-issues/issues/1146):**
-     * >Fixed= 
+     * Returns whenever the given vector is in a box created by the 2 other vectors. 
      * @param boxStart  The first vector. 
      * @param boxEnd  The second vector. 
      * @returns Is the vector in the box or not 
@@ -63921,8 +64869,8 @@ declare class Vehicle extends Entity {
     public EnableEngine(enable: boolean): void;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns information about the ammo of the vehicle 
      * @returns [Ammo type of the vehicle ammo, Clip size, Count] 
      */
@@ -63966,8 +64914,8 @@ declare class Vehicle extends Entity {
     public GetPassenger(passenger: number): Entity;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the seat position and angle of a given passenger seat. 
      * @param role  The passenger role. ( 1 is the driver ) 
      * @returns [The seat position, The seat angle] 
@@ -64023,13 +64971,13 @@ declare class Vehicle extends Entity {
     public GetVehicleParams(): VehicleParams;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the view position and forward angle of a given passenger seat. 
-     * @param role  The passenger role. ( 1 is the driver ) 
-     * @returns [The view position, The view angles, The field of view] 
+     * @param role [=0] The passenger role. 0 is the driver. This parameter seems to be ignored by the game engine and is therefore optional. 
+     * @returns [The view position, will be 0, 0, 0 on failure, The view angles, will be 0, 0, 0 on failure, The field of view, will be 0 on failure] 
      */
-    public GetVehicleViewPosition(role: number): [Vector, Angle, number];
+    public GetVehicleViewPosition(role?: number): [Vector, Angle, number];
     
     /**
      * Returns the `PhysObj` of given wheel. 
@@ -64046,8 +64994,8 @@ declare class Vehicle extends Entity {
     public GetWheelBaseHeight(wheel: number): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Returns the wheel contact point. 
      * @param wheel  The wheel to check 
      * @returns [The contact position, The Surface Properties ID of hit surface., Whether the wheel is on ground or not] 
@@ -64158,9 +65106,10 @@ declare class Vehicle extends Entity {
     /**
      * Sets the steering of the vehicle.
      * {{Validate|The correct range, 0 to 1 or -1 to 1}} 
-     * @param steering  The new steering value. 
+     * @param front  Angle of the front wheels (-1 to 1) 
+     * @param rear  Angle of the rear wheels (-1 to 1) 
      */
-    public SetSteering(steering: number): void;
+    public SetSteering(front: number, rear: number): void;
     
     /**
      * Sets the maximum steering degrees of the vehicle 
@@ -64181,7 +65130,8 @@ declare class Vehicle extends Entity {
     public SetThrottle(throttle: number): void;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      * Sets the vehicle class name. 
      * @param classRef  The vehicle class name to set 
      */
@@ -64199,8 +65149,10 @@ declare class Vehicle extends Entity {
      * **Note:**
      * >Not all variables from the `VehicleParams` can be set.
      * 
-     * **Bug [#3625](https://github.com/Facepunch/garrysmod-issues/issues/3625):**
-     * >This modifies the vehicle engine's "maxSpeed" to an incorrect value even when not being set by this function. 
+     * **Bug [#2625](https://github.com/Facepunch/garrysmod-issues/issues/2625):**
+     * >Because this method uses miles per hour but `Vehicle.GetVehicleParams` returns Hammer units per second, this method incorrectly modifies the vehicle engine's "boostMaxSpeed", "maxRevSpeed" and "maxSpeed" even when not explicitly set in a call to this method.
+     * 
+     * "Workaround": In order to retain the original values for these fields, call `Vehicle.GetVehicleParams` yourself, convert the mentioned fields from Hammer units per second to miles per hour (1 MPH &asymp; 17.6 HU/s in this case) and add them to the table passed into the call to this setter. Avoid doing this repeatedly to avoid floating point inaccuracies over time (store the ready-calculated value for next time if possible). 
      * @param params  The new new vehicle parameters. See `VehicleParams` 
      */
     public SetVehicleParams(params: VehicleParams): void;
@@ -64243,7 +65195,8 @@ declare namespace vgui {
     function CreateFromTable(metatable: table, parent?: Panel, name?: string): Panel;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Creates a engine panel. 
      * @param classRef  Class of the panel to create 
      * @param parent [=nil] If specified, parents created panel to given one 
@@ -64333,8 +65286,8 @@ declare namespace vgui {
  */
 declare namespace video {
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Attempts to create an `IVideoWriter`. 
      * @param config  The video config. See `VideoData`. 
      * @returns [The video object (returns "false" if there is an error), The error string, if there is an error] 
@@ -64346,7 +65299,9 @@ declare namespace video {
  * List of all possible functions to manipulate matrices.
  * This object can be created by `Matrix` 
  *
- * !CustomConstructor Matrix */
+ * @customConstructor Matrix
+ *
+ */
 declare class VMatrix {
     /**
      * Returns a `VMatrix` object. 
@@ -64602,8 +65557,8 @@ declare class Weapon extends Entity {
     public Ammo2(): number;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Allows you to adjust player view while this weapon in use.
      * 
      * This hook is called from the default implementation of `GM.CalcView` ([https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/gamemode/cl_init.lua#L376-L383]). Therefore, it will not be called if any other hook added to CalcView returns any value, or if the current gamemode overrides the default hook and does not call the SWEP function.
@@ -64619,8 +65574,8 @@ declare class Weapon extends Entity {
     public CalcView(ply: Player, pos: Vector, ang: Angle, fov: number): [Vector, Angle, number];
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * Allows overriding the position and angle of the viewmodel. This hook only works if you haven't overridden `GM.CalcViewModelView`. 
      * @param vm  The viewmodel entity 
      * @param oldPos  Original position (before viewmodel bobbing and swaying) 
@@ -64638,6 +65593,7 @@ declare class Weapon extends Entity {
      * >This uses the {{Lib|usermessage}} internally, because of that, the combined length of the arguments of this function may not exceed 254 bytes/characters or the function will cease to function! 
      * @param functionName  Name of function to call. If you want to call SWEP:MyFunc() on client, you type in "MyFunc" 
      * @param arguments [=""] Arguments for the function, separated by spaces.
+     * 
      * **Note:**
      * >Only the second argument is passed as argument and must be a string 
      */
@@ -64671,7 +65627,13 @@ declare class Weapon extends Entity {
      * Allows you to use any numbers you want for the ammo display on the HUD.
      * 
      * Can be useful for weapons that don't use standard ammo. 
-     * @returns The new ammo display settings. 
+     * @returns The new ammo display settings. A table with 4 possible keys:
+     * * `Draw: boolean` Whether to draw the ammo display or not
+     * * `PrimaryClip: number` Amount of primary ammo in the clip
+     * * `PrimaryAmmo: number` Amount of primary ammo in the reserves
+     * * `SecondaryAmmo: number` Amount of secondary ammo. It is shown like alt-fire for SMG1 and AR2 are shown.
+     * 
+     * There is "no" SecondaryClip! 
      */
     public CustomAmmoDisplay(): table;
     
@@ -64867,8 +65829,8 @@ declare class Weapon extends Entity {
     public GetTracerOrigin(): Vector;
     
     /**
-     * !TupleReturn
-    
+     * @tupleReturn
+     *
      * This hook allows you to adjust view model position and angles. 
      * @param pos  Current position 
      * @param ang  Current angle 
@@ -65244,7 +66206,7 @@ declare namespace weapons {
     function IsBasedOn(name: string, base: string): boolean;
     
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
      * 
      * Called after all SWEPS have been loaded and runs `baseclass.Set` on each one.
      * 
@@ -65273,7 +66235,8 @@ declare namespace weapons {
  */
 declare namespace widgets {
     /**
-     * **INTERNAL**
+     * **[INTERNAL]**
+     * 
      *  Automatically called to update all widgets. 
      * @param ply  The player 
      * @param mv  Player move data 

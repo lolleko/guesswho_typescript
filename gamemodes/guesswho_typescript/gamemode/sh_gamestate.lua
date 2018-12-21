@@ -1,6 +1,4 @@
-
--- Lua Library Imports
-AddCSLuaFile()
+AddCSLuaFile();
 GWGameState={}
 GWGameState.NONE=0
 GWGameState.MESH_GENERATION=1

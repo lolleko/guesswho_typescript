@@ -1,9 +1,13 @@
 AddCSLuaFile();
 
+/**
+ * Debug: https://developer.valvesoftware.com/wiki/Nb_debug
+ */
+
 const eyeGlow = new IMaterial("sprites/redglow1");
 const white = Color(255, 255, 255, 255);
 
-/** !Extension ENT */
+/** @extension ENT */
 class GWNPCWalker extends NextBot {
 
     public get LastAct(): ACT {
@@ -104,7 +108,7 @@ class GWNPCWalker extends NextBot {
 
         this.loco.Jump();
         this.isJumping = true;
-        this.nextPossibleJump = CurTime() + 2;
+        this.nextPossibleJump = CurTime() + 3;
     }
 
     public SetupDataTables(): void {
@@ -323,6 +327,7 @@ class GWNPCWalker extends NextBot {
 
                 const goal = this.currentPath.GetCurrentGoal();
                 const distToGoal = this.GetPos().Distance(goal.pos);
+
                 if (goal.type === 3) {
                     this.isJumping = true;
                     this.loco.JumpAcrossGap(goal.pos, goal.forward);
