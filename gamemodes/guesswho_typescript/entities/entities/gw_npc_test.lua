@@ -14,8 +14,7 @@ function ENT.RunBehaviour(self)
             return BehaviourStatus.Failure
         end
         return BehaviourStatus.Success
-    end
-):action(function()
+    end):action(function()
         if (not self.currentPath:IsValid()) then
             return BehaviourStatus.Success
         end
@@ -28,13 +27,12 @@ function ENT.RunBehaviour(self)
             return BehaviourStatus.Failure
         end
         return BehaviourStatus.Running
-    end
-):finish():build();
+    end):finish():build();
     while true do
         do
             self.behaviourTree:tick();
             coroutine.yield();
         end
-        ::__continue0::
+        ::__continue13::
     end
 end

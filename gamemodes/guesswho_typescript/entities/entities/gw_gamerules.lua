@@ -2,7 +2,7 @@
 -- Lua Library Imports
 function __TS__ArraySome(arr,callbackfn)
     local i = 0
-    while(i<#arr) do
+    while (i<#arr) do
         do
             if callbackfn(arr[(i)+1],i,arr) then
                 return true
@@ -15,7 +15,7 @@ end
 
 function __TS__ArrayForEach(arr,callbackFn)
     local i = 0
-    while(i<#arr) do
+    while (i<#arr) do
         do
             callbackFn(arr[(i)+1],i,arr);
         end
@@ -25,9 +25,9 @@ end
 
 function __TS__ArrayPush(arr,...)
     local items = { ... }
-    local __loopVariable0 = items;
-    for i0=1, #__loopVariable0 do
-        local item = __loopVariable0[i0];
+    local __loopVariable1 = items;
+    for i1=1, #__loopVariable1 do
+        local item = __loopVariable1[i1];
         do
             arr[(#arr)+1] = item;
         end
@@ -76,6 +76,65 @@ end
 function ENT.get__GameState(self)
     return self:GetDTInt(0)
 end
+function ENT.get__GameStateLabel(self)
+    local roundToken = "ERROR!";
+    -------Switch statement start-------
+    local ____switch0 = self:get__GameState()
+    if GWGameState.MESH_GENERATION == ____switch0 then
+        goto ____switch0_case_0
+    end
+    if GWGameState.WAITING == ____switch0 then
+        goto ____switch0_case_1
+    end
+    if GWGameState.CREATING == ____switch0 then
+        goto ____switch0_case_2
+    end
+    if GWGameState.HIDING == ____switch0 then
+        goto ____switch0_case_3
+    end
+    if GWGameState.SEEKING == ____switch0 then
+        goto ____switch0_case_4
+    end
+    if GWGameState.POST_ROUND == ____switch0 then
+        goto ____switch0_case_5
+    end
+
+    goto ____switch0_end
+
+    ::____switch0_case_0::
+    do
+        roundToken = "game_state_nav_mesh_generation";
+        goto ____switch0_end
+    end
+    ::____switch0_case_1::
+    do
+        roundToken = "game_state_waiting";
+        goto ____switch0_end
+    end
+    ::____switch0_case_2::
+    do
+        roundToken = "game_state_creating";
+        goto ____switch0_end
+    end
+    ::____switch0_case_3::
+    do
+        roundToken = "game_state_hiding";
+        goto ____switch0_end
+    end
+    ::____switch0_case_4::
+    do
+        roundToken = "game_state_seeking";
+        goto ____switch0_end
+    end
+    ::____switch0_case_5::
+    do
+        roundToken = "game_state_post_round";
+        goto ____switch0_end
+    end
+    ::____switch0_end::
+    -------Switch statement end-------
+    return GWLocalization.GetInstance():Translate(roundToken)
+end
 function ENT.set__GameTimerEndTime(self,time)
     self:SetDTFloat(0,time);
 end
@@ -89,8 +148,7 @@ end
 function ENT.Initialize(self)
     hook.Add("PlayerDeath","gw_rules_player_death",function(victim,inflictor,attacker)
         self:HandlePlayerDeath(victim,attacker,inflictor);
-    end
-);
+    end);
     self:set__GameTimerEndTime(CurTime());
     self:HandleWaiting();
     print("updating spawnpoints");
@@ -111,6 +169,7 @@ function ENT.Think(self)
     end
     DebugInfo(0,"TIME: " .. self:get__GameTime());
     DebugInfo(1,"STATE: " .. self:get__GameState());
+    DebugInfo(2,"STATE: " .. self:get__GameStateLabel());
     return false
 end
 function ENT.UpdateTransmitState(self)
@@ -118,7 +177,9 @@ function ENT.UpdateTransmitState(self)
 end
 function ENT.HandlePlayerDeath(self,victim,inflictor,attacker)
     local playersOnVictimTeam = team.GetPlayers(victim:Team());
-    local someAlive = __TS__ArraySome(playersOnVictimTeam, function(ply) return ply:Alive() and (ply~=victim) end);
+    local someAlive = __TS__ArraySome(playersOnVictimTeam, function(ply)
+        return ply:Alive() and (ply~=victim)
+    end);
     print("dead ",someAlive);
     if (not someAlive) and (self:get__GameState()==GWGameState.SEEKING) then
         print(self);
@@ -141,68 +202,77 @@ function ENT.HandleCreating(self)
         local spawnRounds = math.ceil(self.maxWalkers/#self.spawnPoints);
         self:set__GameTimerEndTime((CurTime()+(spawnRounds*7)));
         local wave = 0
-        while(wave<spawnRounds) do
+        while (wave<spawnRounds) do
             do
                 timer.Simple(wave*7,function()
                     local walkersSpawned = self:SpawnNPCWave();
                     MsgN("GW Spawned ",walkersSpawned," NPCs in wave ",wave+1,".");
-                end
-);
+                end);
             end
-            ::__continue0::
+            ::__continue10::
             wave = (wave+1)
         end
         timer.Simple(spawnRounds*7,function()
             self:HandleHiding();
-        end
-);
+        end);
     end
 end
 function ENT.HandleHiding(self)
     self:set__GameState(GWGameState.HIDING);
     self:set__GameTimerEndTime((CurTime()+self:get__SettingHidingDuration()));
-    __TS__ArrayForEach((team.GetPlayers(HIDER)), function(ply) return ply:Spawn() end);
-    timer.Simple(self:get__SettingHidingDuration(),function() return self:HandleSeeking() end);
+    __TS__ArrayForEach((team.GetPlayers(HIDER)), function(ply)
+        return ply:Spawn()
+    end);
+    timer.Simple(self:get__SettingHidingDuration(),function()
+        return self:HandleSeeking()
+    end);
 end
 function ENT.HandleSeeking(self)
     self:set__GameState(GWGameState.SEEKING);
     self:set__GameTimerEndTime((CurTime()+self:get__SettingRoundDuration()));
-    timer.Create("GWRoundEndTimer",self:get__SettingRoundDuration(),1,function() return self:HandlePostRound() end);
+    timer.Create("GWRoundEndTimer",self:get__SettingRoundDuration(),1,function()
+        return self:HandlePostRound()
+    end);
 end
 function ENT.HandlePostRound(self)
     if timer.Exists("GWRoundEndTimer") then
         timer.Remove("GWRoundEndTimer");
     end
     local hiders = team.GetPlayers(HIDER);
-    local someHidersAlive = __TS__ArraySome(hiders, function(ply) return ply:Alive() end);
+    local someHidersAlive = __TS__ArraySome(hiders, function(ply)
+        return ply:Alive()
+    end);
     if someHidersAlive then
         print("Hiders Win");
     else
         print("Seekers Win");
     end
     game.CleanUpMap(false,{self:GetClass()});
-    __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(npc) return npc:Remove() end);
+    __TS__ArrayForEach(ents.FindByClass(GWClassName.NPC_WALKER), function(npc)
+        return npc:Remove()
+    end);
     __TS__ArrayForEach((player.GetAll()), function(ply)
         if ply:Team()==HIDER then
             ply:SetTeam(SEEKER);
         elseif ply:Team()==SEEKER then
             ply:SetTeam(HIDER);
         end
-    end
-);
+    end);
     self:set__GameTimerEndTime((CurTime()+self:get__SettingPostRoundDuration()));
-    timer.Simple(self:get__SettingPostRoundDuration(),function() return self:HandleWaiting() end);
+    timer.Simple(self:get__SettingPostRoundDuration(),function()
+        return self:HandleWaiting()
+    end);
 end
 function ENT.UpdateSpawnpoints(self)
     local spawnPointClasses = {"info_player_start","info_player_deathmatch","info_player_combine","info_player_rebel","info_player_counterterrorist","info_player_terrorist","info_player_axis","info_player_allies","gmod_player_start","info_player_teamspawn","ins_spawnpoint","aoc_spawnpoint","dys_spawn_point","info_player_pirate","info_player_viking","info_player_knight","diprip_start_team_blue","diprip_start_team_red","info_player_red","info_player_blue","info_player_coop","info_player_human","info_player_zombie","info_player_deathmatch","info_player_zombiemaster"};
     self.spawnPoints = {};
-    local __loopVariable1 = spawnPointClasses;
-    for i1=1, #__loopVariable1 do
-        local sp = __loopVariable1[i1];
+    local __loopVariable24 = spawnPointClasses;
+    for i24=1, #__loopVariable24 do
+        local sp = __loopVariable24[i24];
         do
             __TS__ArrayPush(self.spawnPoints, unpack(ents.FindByClass(sp)));
         end
-        ::__continue1::
+        ::__continue24::
     end
     local rand = math.random;
     local n = #self.spawnPoints-1;
@@ -214,7 +284,7 @@ function ENT.UpdateSpawnpoints(self)
             self.spawnPoints[(k)+1] = temp;
             n = (n-1);
         end
-        ::__continue3::
+        ::__continue26::
     end
 end
 function ENT.SpawnNPCWave(self)
@@ -223,7 +293,9 @@ function ENT.SpawnNPCWave(self)
         if self.walkerCount<self.maxWalkers then
             local mins = sp:GetPos()+Vector(-16,-16,0);
             local maxs = sp:GetPos()+Vector(16,16,64);
-            local occupied = __TS__ArraySome(ents.FindInBox(mins,maxs), function(ent) return ent:GetClass()==GWClassName.NPC_WALKER end);
+            local occupied = __TS__ArraySome(ents.FindInBox(mins,maxs), function(ent)
+                return ent:GetClass()==GWClassName.NPC_WALKER
+            end);
             if (not occupied) then
                 local walker = ents.Create(GWClassName.NPC_WALKER);
                 if IsValid(walker) then
@@ -234,8 +306,7 @@ function ENT.SpawnNPCWave(self)
                 spawnedWalkers = (spawnedWalkers+1);
             end
         end
-    end
-);
-    do local __TS_obj, __TS_index = self, "walkerCount"; local __TS_tmp = (__TS_obj[__TS_index]+(spawnedWalkers)); __TS_obj[__TS_index] = __TS_tmp; end;
+    end);
+    self.walkerCount = (self.walkerCount+spawnedWalkers);
     return spawnedWalkers
 end

@@ -2,7 +2,7 @@
 -- Lua Library Imports
 function __TS__ArraySome(arr,callbackfn)
     local i = 0
-    while(i<#arr) do
+    while (i<#arr) do
         do
             if callbackfn(arr[(i)+1],i,arr) then
                 return true
@@ -16,7 +16,7 @@ end
 function __TS__ArrayFilter(arr,callbackfn)
     local result = {};
     local i = 0
-    while(i<#arr) do
+    while (i<#arr) do
         do
             if callbackfn(arr[(i)+1],i,arr) then
                 result[(#result)+1] = arr[(i)+1];
@@ -85,18 +85,20 @@ function ENT.SetupDataTables(self)
     self:DTVar("Int",2,"WalkerModelIndex");
 end
 function ENT.Initialize(self)
-    local models = GWConfigManager:GetInstance():get__Data().HiderModels;
+    local models = GWConfigManager.GetInstance():get__Data().HiderModels;
     if SERVER then
         self:set__WalkerModelIndex((math.random(#models)-1));
     end
     self:SetModel(models[(self:get__WalkerModelIndex())+1]);
-    local walkerColors = GWConfigManager:GetInstance():get__Data().WalkerColors;
+    local walkerColors = GWConfigManager.GetInstance():get__Data().WalkerColors;
     if SERVER then
         self:set__WalkerColorIndex((math.random(#walkerColors)-1));
     end
     local walkerClr = walkerColors[(self:get__WalkerColorIndex())+1];
     self.walkerColor = Vector(walkerClr.r/255,walkerClr.g/255,walkerClr.b/255);
-    self.GetPlayerColor = function() return self.walkerColor end;
+    self.GetPlayerColor = function(____)
+        return self.walkerColor
+    end;
     self:SetHealth(100);
     if SERVER then
         self:SetCollisionBounds(Vector(-self.boundsSize,-self.boundsSize,0),Vector(self.boundsSize,self.boundsSize,70));
@@ -114,9 +116,9 @@ end
 function ENT.Think(self)
     if SERVER then
         local doors = ents.FindInSphere(self:GetPos(),60);
-        local __loopVariable0 = doors;
-        for i0=1, #__loopVariable0 do
-            local door = __loopVariable0[i0];
+        local __loopVariable8 = doors;
+        for i8=1, #__loopVariable8 do
+            local door = __loopVariable8[i8];
             do
                 local doorClass = door:GetClass();
                 if ((doorClass=="func_door") or (doorClass=="func_door_rotating")) or (doorClass=="prop_door_rotating") then
@@ -125,7 +127,7 @@ function ENT.Think(self)
                     door:SetCollisionGroup(COLLISION_GROUP_DEBRIS);
                 end
             end
-            ::__continue0::
+            ::__continue8::
         end
         if (self.isStuck and (CurTime()>(self.stuckTime+15))) and (self.stuckPos:DistToSqr(self:GetPos())<25) then
             local spawnPoints = (GAMEMODE):get__Gamerules():get__SpawnPoints();
@@ -134,12 +136,14 @@ function ENT.Think(self)
             self.isStuck = false;
             MsgN("Nextbot ["..tostring(tostring(self:EntIndex())).."]["..tostring(self:GetClass()).."]" .. "Got Stuck for over 15 seconds and will be repositioned, if this error gets spammed" .. "you might want to consider the following: Edit the navmesh or lower the walker amount.");
         end
-        if self.isStuck and (self.stuckPos:DistToSqr(self:GetPos())>100) then
+        if self.isStuck and (self.stuckPos:DistToSqr(self:GetPos())>400) then
             self.isStuck = false;
         end
         if self:GetSolidMask()==MASK_NPCSOLID_BRUSHONLY then
             local entsInBox = ents.FindInBox(self:GetPos()+Vector(-self.boundsSize,-self.boundsSize,0),self:GetPos()+Vector(self.boundsSize,self.boundsSize,70));
-            local occupied = __TS__ArraySome(entsInBox, function(ent) return (ent:GetClass()=="npc_walker") and (ent~=self) end);
+            local occupied = __TS__ArraySome(entsInBox, function(ent)
+                return (ent:GetClass()=="npc_walker") and (ent~=self)
+            end);
             if (not occupied) then
                 self:SetSolidMask(MASK_NPCSOLID);
             end
@@ -157,8 +161,12 @@ function ENT.RunBehaviour(self)
             self.loco:SetDesiredSpeed(200);
         elseif (rand>15) and (rand<22) then
             local entsAround = ents.FindInSphere(self:GetPos(),300);
-            local walkersAround = __TS__ArrayFilter(entsAround, function(ent) return ent:GetClass()==self:GetClass() end);
-            local doorsAround = __TS__ArrayFilter(entsAround, function(ent) return ((ent:GetClass()=="func_door") or (ent:GetClass()=="func_door_rotating")) or (ent:GetClass()=="prop_door_rotating") end);
+            local walkersAround = __TS__ArrayFilter(entsAround, function(ent)
+                return ent:GetClass()==self:GetClass()
+            end);
+            local doorsAround = __TS__ArrayFilter(entsAround, function(ent)
+                return ((ent:GetClass()=="func_door") or (ent:GetClass()=="func_door_rotating")) or (ent:GetClass()=="prop_door_rotating")
+            end);
             if (#walkersAround<3) and (#doorsAround==0) then
                 self:Sit(math.random(10,60));
             end
@@ -167,8 +175,7 @@ function ENT.RunBehaviour(self)
         end
         self.nextPossibleSettingsChange = (CurTime()+5);
         return BehaviourStatus.Success
-    end
-):action(function()
+    end):action(function()
         if (not self.isSitting) then
             return BehaviourStatus.Success
         end
@@ -180,8 +187,7 @@ function ENT.RunBehaviour(self)
             return BehaviourStatus.Success
         end
         return BehaviourStatus.Running
-    end
-):action(function()
+    end):action(function()
         if self.hasPath and self.currentPath:IsValid() then
             return BehaviourStatus.Success
         end
@@ -213,8 +219,7 @@ function ENT.RunBehaviour(self)
         self.isFirstPath = false;
         self.hasPath = true;
         return BehaviourStatus.Success
-    end
-):action(function()
+    end):action(function()
         if (not self.currentPath:IsValid()) then
             return BehaviourStatus.Success
         end
@@ -229,12 +234,6 @@ function ENT.RunBehaviour(self)
         end
         local goal = self.currentPath:GetCurrentGoal();
         local distToGoal = self:GetPos():Distance(goal.pos);
-        if self.isJumping then
-            self.loco:Approach(goal.pos,1);
-            self.loco:FaceTowards(goal.pos);
-            self.loco:SetVelocity((goal.pos-self:GetPos()):GetNormalized()*80);
-            return BehaviourStatus.Running
-        end
         if goal.type==3 then
             self.isJumping = true;
             self.loco:JumpAcrossGap(goal.pos,goal.forward);
@@ -257,18 +256,16 @@ function ENT.RunBehaviour(self)
             return BehaviourStatus.Failure
         end
         return BehaviourStatus.Running
-    end
-):finish():build();
+    end):finish():build();
     while true do
         do
             self.behaviourTree:tick();
             coroutine.yield();
         end
-        ::__continue2::
+        ::__continue136::
     end
 end
 function ENT.BodyUpdate(self)
-    local act = self:GetActivity();
     local idealAct = ACT_HL2MP_IDLE;
     local velocity = self:GetVelocity();
     local len2d = velocity:Length2D();
@@ -380,5 +377,4 @@ function ENT.PathGenerator(self)
         end
         return cost
     end
-
 end

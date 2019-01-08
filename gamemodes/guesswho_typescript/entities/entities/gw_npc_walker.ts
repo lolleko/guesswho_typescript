@@ -199,7 +199,7 @@ class GWNPCWalker extends NextBot {
                 }
             }
             if (this.isStuck && CurTime() > this.stuckTime + 15 && this.stuckPos.DistToSqr(this.GetPos()) < 25) {
-                const spawnPoints = (GAMEMODE as GWGamemode).Gamerules.SpawnPoints;
+                const spawnPoints = (GAMEMODE as GWGamemodeSH).Gamerules.SpawnPoints;
                 const spawnPoint = spawnPoints[math.random(spawnPoints.length) - 1].GetPos();
                 this.SetPos(spawnPoint);
                 this.isStuck = false;
@@ -207,7 +207,7 @@ class GWNPCWalker extends NextBot {
                     "Got Stuck for over 15 seconds and will be repositioned, if this error gets spammed" +
                     "you might want to consider the following: Edit the navmesh or lower the walker amount.");
             }
-            if (this.isStuck && this.stuckPos.DistToSqr(this.GetPos()) > 100) {
+            if (this.isStuck && this.stuckPos.DistToSqr(this.GetPos()) > 400) {
                 this.isStuck = false;
             }
             if (this.GetSolidMask() === MASK.MASK_NPCSOLID_BRUSHONLY) {
@@ -367,8 +367,6 @@ class GWNPCWalker extends NextBot {
     }
 
     public BodyUpdate(): void {
-        const act = this.GetActivity();
-
         let idealAct = ACT.ACT_HL2MP_IDLE;
 
         // if act != this:GetLastAct() then act = this:GetLastAct() this:StartActivity(act) end

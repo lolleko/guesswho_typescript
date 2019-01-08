@@ -1,5 +1,16 @@
 AddCSLuaFile();
 
+interface GWConfigData {
+    Version: string;
+    TeamHidingColor: Color;
+    TeamSeekingColor: Color;
+    HiderModels: string[];
+    SeekerModels: string[];
+    ActiveAbilities: string[];
+    AllAbilities: string[];
+    WalkerColors: Color[];
+}
+
 const GWDefaultConfigData: GWConfigData = {
     ActiveAbilities: [
         "weapon_gw_prophunt",
@@ -149,17 +160,6 @@ class GWConfigManager {
     private HandlePlayerInitialSpawn(ply: Player): void {
         this.SendConfig(ply);
     }
-}
-
-interface GWConfigData {
-    Version: string;
-    TeamHidingColor: Color;
-    TeamSeekingColor: Color;
-    HiderModels: string[];
-    SeekerModels: string[];
-    ActiveAbilities: string[];
-    AllAbilities: string[];
-    WalkerColors: Color[];
 }
 
 if (SERVER) {

@@ -62,6 +62,31 @@ class GWGamerules extends Entity {
         this.SetDTInt(0, state);
     }
 
+    public get GameStateLabel() {
+        let roundToken = "ERROR!";
+        switch (this.GameState) {
+            case GWGameState.MESH_GENERATION:
+                roundToken = "game_state_nav_mesh_generation";
+                break;
+            case GWGameState.WAITING:
+                roundToken = "game_state_waiting";
+                break;
+            case GWGameState.CREATING:
+                roundToken = "game_state_creating";
+                break;
+            case GWGameState.HIDING:
+                roundToken = "game_state_hiding";
+                break;
+            case GWGameState.SEEKING:
+                roundToken = "game_state_seeking";
+                break;
+            case GWGameState.POST_ROUND:
+                roundToken = "game_state_post_round";
+                break;
+        }
+        return GWLocalization.GetInstance().Translate(roundToken);
+    }
+
     public SetupDataTables(): void {
         this.DTVar("Float", 0, "GameTimerEndTime");
         this.DTVar("Int", 0, "GameState");
@@ -101,6 +126,7 @@ class GWGamerules extends Entity {
         }
         DebugInfo(0, "TIME: " + this.GameTime);
         DebugInfo(1, "STATE: " + this.GameState);
+        DebugInfo(2, "STATE: " + this.GameStateLabel);
 
         return false;
     }

@@ -1,7 +1,7 @@
 AddCSLuaFile();
 
 /** @extension GM */
-class GWGamemode extends Gamemode {
+class GWGamemodeSH extends Gamemode {
     public TeamBased = true;
 
     private gamerules: GWGamerules;

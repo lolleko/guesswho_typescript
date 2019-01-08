@@ -21,6 +21,8 @@ surface.CreateFont( "GWDefault" + GWFontSize.Huge, {font: "Roboto", size: GWFont
 
 // Libs
 include("vgui/cl_include.lua");
+include("cl_localization.lua");
 
 include("sh_init.lua");
 include("cl_gamemode.lua");
+include("cl_hud.lua");
