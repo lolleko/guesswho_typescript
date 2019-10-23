@@ -1,53 +1,57 @@
-BehaviourTreeBuilder = BehaviourTreeBuilder or {}
-BehaviourTreeBuilder.__index = BehaviourTreeBuilder
-function BehaviourTreeBuilder.new(construct, ...)
-    local self = setmetatable({}, BehaviourTreeBuilder)
-    if construct and BehaviourTreeBuilder.constructor then BehaviourTreeBuilder.constructor(self, ...) end
-    return self
-end
-function BehaviourTreeBuilder.constructor(self)
+--[[ Generated with https://github.com/Perryvw/TypescriptToLua ]]
+BehaviourTreeBuilder = BehaviourTreeBuilder or {};
+BehaviourTreeBuilder.__index = BehaviourTreeBuilder;
+BehaviourTreeBuilder.prototype = BehaviourTreeBuilder.prototype or {};
+BehaviourTreeBuilder.prototype.__index = BehaviourTreeBuilder.prototype;
+BehaviourTreeBuilder.prototype.constructor = BehaviourTreeBuilder;
+BehaviourTreeBuilder.new = function(...)
+    local self = setmetatable({}, BehaviourTreeBuilder.prototype);
+    self:____constructor(...);
+    return self;
+end;
+BehaviourTreeBuilder.prototype.____constructor = function(self)
     self.parentStack = {};
-    self.result = BehaviourTree.new(true);
-end
-function BehaviourTreeBuilder.action(self,func)
-    assert((not self:parentStackEmpty()),"Can\'t create this node without a parent (sequence/selector)");
-    self:peekParent():addChild(BehaviourAction.new(true,func));
-    return self
-end
-function BehaviourTreeBuilder.condition(self,func)
-    assert((not self:parentStackEmpty()),"Can\'t create this node without a parent (sequence/selector)");
-    self:peekParent():addChild(BehaviourCondition.new(true,func));
-    return self
-end
-function BehaviourTreeBuilder.sequence(self)
-    self:pushParent(BehaviourSequence.new(true));
-    return self
-end
-function BehaviourTreeBuilder.selector(self)
-    self:pushParent(BehaviourSelector.new(true));
-    return self
-end
-function BehaviourTreeBuilder.finish(self)
+    self.result = BehaviourTree.new();
+end;
+BehaviourTreeBuilder.prototype.action = function(self, func)
+    assert(not self:parentStackEmpty(), "Can\'t create this node without a parent (sequence/selector)");
+    self:peekParent():addChild(BehaviourAction.new(func));
+    return self;
+end;
+BehaviourTreeBuilder.prototype.condition = function(self, func)
+    assert(not self:parentStackEmpty(), "Can\'t create this node without a parent (sequence/selector)");
+    self:peekParent():addChild(BehaviourCondition.new(func));
+    return self;
+end;
+BehaviourTreeBuilder.prototype.sequence = function(self)
+    self:pushParent(BehaviourSequence.new());
+    return self;
+end;
+BehaviourTreeBuilder.prototype.selector = function(self)
+    self:pushParent(BehaviourSelector.new());
+    return self;
+end;
+BehaviourTreeBuilder.prototype.finish = function(self)
     self:popParent();
-    return self
-end
-function BehaviourTreeBuilder.build(self)
-    return self.result
-end
-function BehaviourTreeBuilder.pushParent(self,parent)
+    return self;
+end;
+BehaviourTreeBuilder.prototype.build = function(self)
+    return self.result;
+end;
+BehaviourTreeBuilder.prototype.pushParent = function(self, parent)
     if self:parentStackEmpty() then
         self.result:setRoot(parent);
     end
-    self.parentStack[(#self.parentStack)+1] = parent;
-end
-function BehaviourTreeBuilder.popParent(self)
+    self.parentStack[(#self.parentStack) + 1] = parent;
+end;
+BehaviourTreeBuilder.prototype.popParent = function(self)
     local old = self:peekParent();
-    self.parentStack[(#self.parentStack-1)+1]=nil;
-    return old
-end
-function BehaviourTreeBuilder.peekParent(self)
-    return self.parentStack[(#self.parentStack-1)+1]
-end
-function BehaviourTreeBuilder.parentStackEmpty(self)
-    return #self.parentStack==0
-end
+    self.parentStack[((#self.parentStack) - 1) + 1] = nil;
+    return old;
+end;
+BehaviourTreeBuilder.prototype.peekParent = function(self)
+    return self.parentStack[((#self.parentStack) - 1) + 1];
+end;
+BehaviourTreeBuilder.prototype.parentStackEmpty = function(self)
+    return (#self.parentStack) == 0;
+end;

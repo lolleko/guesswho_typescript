@@ -44,9 +44,6 @@ class GWHUD {
         this.teamColor = team.GetColor(this.hudTarget.Team());
 
         this.PaintTopBar()
-
-        this.Paint()
-
     }
 
     public PaintTopBar(): void {

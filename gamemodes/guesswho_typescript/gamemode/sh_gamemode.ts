@@ -12,7 +12,7 @@ class GWGamemodeSH extends Gamemode {
 
     public CreateTeams(): void {
         // TODO color in cfg or gamerules
-        team.SetUp(TEAM.HIDER, "Hiding", Color(0, 0, 0));
+        team.SetUp(TEAM.HIDER, "Hiding", GWConfigManager.GetInstance().Data.TeamHidingColor);
         team.SetClass(TEAM.HIDER, "player_hiding");
         team.SetSpawnPoint(TEAM.HIDER, "info_player_start");
         team.SetSpawnPoint(TEAM.HIDER, "info_player_deathmatch");
@@ -21,7 +21,7 @@ class GWGamemodeSH extends Gamemode {
         team.SetSpawnPoint(TEAM.HIDER, "info_player_counterterrorist");
         team.SetSpawnPoint(TEAM.HIDER, "info_player_terrorist");
 
-        team.SetUp(TEAM.SEEKER, "Seekers", Color(0, 0, 0));
+        team.SetUp(TEAM.SEEKER, "Seekers", GWConfigManager.GetInstance().Data.TeamSeekingColor);
         team.SetClass(TEAM.SEEKER, "player_seeker");
         team.SetSpawnPoint(TEAM.SEEKER, "info_player_start");
         team.SetSpawnPoint(TEAM.SEEKER, "info_player_deathmatch");

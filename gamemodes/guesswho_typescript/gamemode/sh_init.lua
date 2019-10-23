@@ -1,3 +1,4 @@
+--[[ Generated with https://github.com/Perryvw/TypescriptToLua ]]
 (table).unpack = unpack;
 include("sh_classname.lua");
 include("sh_netmessagename.lua");

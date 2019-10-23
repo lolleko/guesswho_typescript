@@ -1,13 +1,17 @@
-BehaviourAction = BehaviourAction or {}
-BehaviourAction.__index = BehaviourAction
-function BehaviourAction.new(construct, ...)
-    local self = setmetatable({}, BehaviourAction)
-    if construct and BehaviourAction.constructor then BehaviourAction.constructor(self, ...) end
-    return self
-end
-function BehaviourAction.constructor(self,func)
+--[[ Generated with https://github.com/Perryvw/TypescriptToLua ]]
+BehaviourAction = BehaviourAction or {};
+BehaviourAction.__index = BehaviourAction;
+BehaviourAction.prototype = BehaviourAction.prototype or {};
+BehaviourAction.prototype.__index = BehaviourAction.prototype;
+BehaviourAction.prototype.constructor = BehaviourAction;
+BehaviourAction.new = function(...)
+    local self = setmetatable({}, BehaviourAction.prototype);
+    self:____constructor(...);
+    return self;
+end;
+BehaviourAction.prototype.____constructor = function(self, func)
     self.func = func;
-end
-function BehaviourAction.tick(self)
-    return self.func()
-end
+end;
+BehaviourAction.prototype.tick = function(self)
+    return self:func();
+end;
